@@ -212,7 +212,7 @@ if (-not $token) {
 
 Ensure-GitHubRepository -Token $token -Repo $RepoName
 
-$pushUrl = "https://$GithubUser:$token@github.com/$GithubUser/$RepoName.git"
+$pushUrl = "https://${GithubUser}:${token}@github.com/$GithubUser/$RepoName.git"
 Write-Host "Pushing branch $Branch to GitHub..."
 Invoke-Git push -u $pushUrl $Branch
 
