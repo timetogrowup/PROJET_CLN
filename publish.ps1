@@ -14,8 +14,17 @@ function Invoke-Git {
         [string[]]$Args
     )
 
-    $result = & git @Args 2>&1
-    if ($LASTEXITCODE -ne 0) {
+    $previousPreference = $ErrorActionPreference
+    try {
+        $ErrorActionPreference = "Continue"
+        $result = & git @Args 2>&1
+        $exitCode = $LASTEXITCODE
+    }
+    finally {
+        $ErrorActionPreference = $previousPreference
+    }
+
+    if ($exitCode -ne 0) {
         throw "git $($Args -join ' '): $result"
     }
 
