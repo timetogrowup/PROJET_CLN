@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation du Projet CLN - Sommaire et Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('blur-hospital-clinic-interior.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+        h1, h2 {
+            color: #0056b3;
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="LOGO_CLN.png" alt="CLN Logo">
+        </div>
+        <h1>Présentation du Projet CLN</h1>
+        
+        <div class="section">
+            <h2>Sommaire</h2>
+            <ul>
+                <li><a href="#contexte">Contexte du Projet</a></li>
+                <li><a href="#criteres">Critères d'Analyse</a></li>
+                <li><a href="#solution1">Solution 1 - Pipeline de Données</a></li>
+                <li><a href="#solution2">Solution 2 - Architecture Microservices ou SOA</a></li>
+                <li><a href="#solution3">Solution 3 - Intégration directe via API</a></li>
+                <li><a href="#solution4">Solution 4 - Application Unique Centralisée (Interne)</a></li>
+                <li><a href="#solution5">Solution 5 - Application Unique Centralisée (Outil du Commerce avec Spécificités)</a></li>
+            </ul>
+        </div>
+
+        <div id="contexte" class="section">
+            <h2>Contexte du Projet</h2>
+            <p>Ce projet consiste à extraire des données à partir d'un datastore via une requête SQL, à les transformer et à les stocker dans un fichier historique de référence mis à jour quotidiennement. Ces données sont ensuite utilisées par une API qui est interrogée par une application pour des besoins métiers.</p>
+        </div>
+
+        <div id="criteres" class="section">
+            <h2>Critères d'Analyse</h2>
+            <ul>
+                <li><strong>Coût :</strong> Les coûts de mise en œuvre initiaux, de maintenance et d'évolution.</li>
+                <li><strong>Délais de mise en œuvre :</strong> Le temps nécessaire pour rendre chaque solution opérationnelle.</li>
+                <li><strong>Complexité :</strong> La difficulté technique à mettre en place la solution.</li>
+                <li><strong>Durabilité :</strong> Capacité de la solution à s'adapter et évoluer dans le temps.</li>
+                <li><strong>Formation (utilisateurs) :</strong> Impact pour les utilisateurs des applications.</li>
+                <li><strong>Risques :</strong> Les dangers liés à la mise en œuvre.</li>
+                <li><strong>Impact sur les ETP :</strong> Réduction ou optimisation des postes grâce à l'automatisation.</li>
+                <li><strong>ROI (Retour sur Investissement) :</strong> Gains financiers à long terme par rapport aux coûts.</li>
+                <li><strong>Scalabilité en Temps Réel :</strong> Capacité à gérer des demandes en temps réel.</li>
+            </ul>
+        </div>
+
+        <div id="solution1" class="section">
+            <h2>Solution 1 - Pipeline de Données</h2>
+            <p>Le pipeline de données est une solution flexible qui permet l'extraction, la transformation et le chargement (ETL) des données à partir d'un datastore. Voici ses principales caractéristiques :</p>
+            <ul>
+                <li><strong>Coût :</strong> Modéré, car le pipeline est mis en œuvre de manière progressive.</li>
+                <li><strong>Délais de mise en œuvre :</strong> Moyen à élevé, mais progressif avec des résultats obtenus dès les premières étapes.</li>
+                <li><strong>Complexité :</strong> Modérée à élevée, en particulier lors de la synchronisation de plusieurs sources de données.</li>
+                <li><strong>Durabilité :</strong> Flexible et évolutif à long terme, mais des ajustements sont nécessaires.</li>
+                <li><strong>Formation :</strong> Impact minime pour les utilisateurs, car les pipelines fonctionnent en back-end.</li>
+                <li><strong>Risques :</strong> Modérés, principalement liés à la synchronisation des données.</li>
+                <li><strong>Impact sur les ETP :</strong> Rapide et continu, chaque pipeline automatisé réduisant les tâches manuelles.</li>
+                <li><strong>ROI :</strong> Excellent, avec un retour sur investissement rapide.</li>
+                <li><strong>Scalabilité en Temps Réel :</strong> Très bonne, avec des ajustements et des optimisations faciles à mettre en place.</li>
+            </ul>
+        </div>
+
+        <div id="solution2" class="section">
+            <h2>Solution 2 - Architecture Microservices ou SOA</h2>
+            <p>L'architecture microservices décompose l'application en petits services indépendants qui communiquent entre eux via des API. Cette solution est particulièrement flexible et offre une grande évolutivité. Voici ses principales caractéristiques :</p>
+            <ul>
+                <li><strong>Coût :</strong> Élevé, en raison de l'investissement initial dans l'infrastructure microservices.</li>
+                <li><strong>Délais de mise en œuvre :</strong> Longs mais progressifs, avec des services pouvant être déployés par étapes.</li>
+                <li><strong>Complexité :</strong> Très élevée, avec une orchestration nécessaire entre plusieurs services.</li>
+                <li><strong>Durabilité :</strong> Très élevée, car les services peuvent être mis à jour ou remplacés indépendamment.</li>
+                <li><strong>Formation :</strong> Impact minime pour les utilisateurs, les changements étant principalement en back-end.</li>
+                <li><strong>Risques :</strong> Élevés, liés à la coordination entre services et la gestion de la performance.</li>
+                <li><strong>Impact sur les ETP :</strong> Progressif mais moins rapide que le pipeline en raison de la complexité.</li>
+                <li><strong>ROI :</strong> Excellent à long terme, grâce à la flexibilité et l'évolutivité des microservices.</li>
+                <li><strong>Scalabilité en Temps Réel :</strong> Excellente, chaque service étant indépendant et capable de s'adapter aux besoins en temps réel.</li>
+            </ul>
+        </div>
+
+        <div id="solution3" class="section">
+            <h2>Solution 3 - Intégration directe via API</h2>
+            <p>L'intégration via API permet de connecter directement les systèmes entre eux. Cette solution est rapide à mettre en place et moins coûteuse que les autres. Voici ses principales caractéristiques :</p>
+            <ul>
+                <li><strong>Coût :</strong> Faible à modéré, selon la complexité de l'API.</li>
+                <li><strong>Délais de mise en œuvre :</strong> Rapides, surtout si les bases de données sont bien structurées.</li>
+                <li><strong>Complexité :</strong> Modérée, avec des problèmes de performance à surveiller si la charge de travail est importante.</li>
+                <li><strong>Durabilité :</strong> Moyenne, les API étant efficaces à court terme mais limités pour des volumes de données importants.</li>
+                <li><strong>Formation :</strong> Impact minime pour les utilisateurs, car l'API est en back-end.</li>
+                <li><strong>Risques :</strong> Modérés, liés à la performance des bases de données sous-jacentes.</li>
+                <li><strong>Impact sur les ETP :</strong> Rapide mais limité en raison de la scalabilité de l'API.</li>
+                <li><strong>ROI :</strong> Bon à court terme, mais moins performant à long terme.</li>
+                <li><strong>Scalabilité en Temps Réel :</strong>Scalabilité en Temps Réel :</strong> Moyenne, les API peuvent gérer des demandes en temps réel, mais cela dépend de la performance des bases de données sous-jacentes.</li>
+            </ul>
+        </div>
+    
+        <div id="solution4" class="section">
+            <h2>Solution 4 - Application Unique Centralisée (Interne)</h2>
+            <p>Cette solution regroupe toutes les fonctionnalités en une seule application centralisée. Bien que cela puisse simplifier certains aspects, cela entraîne des délais et des coûts très élevés. Voici ses principales caractéristiques :</p>
+            <ul>
+                <li><strong>Coût :</strong> Très élevé, en raison de la complexité de remplacer plusieurs systèmes par une application unique.</li>
+                <li><strong>Délais de mise en œuvre :</strong> Très longs, car il faut intégrer toutes les fonctionnalités avant de rendre la solution opérationnelle.</li>
+                <li><strong>Complexité :</strong> Très élevée, car tout est centralisé et dépend d’une seule structure.</li>
+                <li><strong>Durabilité :</strong> Faible à modérée, la maintenance et l’évolution de l'application unique étant complexes.</li>
+                <li><strong>Formation :</strong> Impact très fort, car les utilisateurs doivent être formés à la nouvelle interface et aux nouvelles fonctionnalités.</li>
+                <li><strong>Risques :</strong> Élevés, en raison de la centralisation qui rend toute panne ou problème particulièrement critique.</li>
+                <li><strong>Impact sur les ETP :</strong> Lent, car les gains d'automatisation ne sont visibles qu'après le déploiement complet de l'application.</li>
+                <li><strong>ROI :</strong> Faible, car les délais de mise en œuvre et les coûts initiaux élevés ralentissent le retour sur investissement.</li>
+                <li><strong>Scalabilité en Temps Réel :</strong> Faible, la centralisation limite la flexibilité et les performances en temps réel.</li>
+            </ul>
+        </div>
+
+        <div id="solution5" class="section">
+            <h2>Solution 5 - Application Unique Centralisée (Outil du Commerce avec Spécificités)</h2>
+            <p>Cette solution utilise un outil commercial prêt à l'emploi (COTS) personnalisé selon les besoins de l'entreprise. Cela réduit les délais de mise en œuvre, mais les personnalisations peuvent ajouter de la complexité. Voici ses principales caractéristiques :</p>
+            <ul>
+                <li><strong>Coût :</strong> Élevé, mais moins que la création d'une application interne, les personnalisations spécifiques augmentant toutefois les coûts.</li>
+                <li><strong>Délais de mise en œuvre :</strong> Plus rapides qu’une application interne, mais allongés par les spécificités et personnalisations.</li>
+                <li><strong>Complexité :</strong> Très élevée, car l'ajout de spécificités à un outil commercial augmente la difficulté de mise en œuvre et de gestion.</li>
+                <li><strong>Durabilité :</strong> Moyenne à élevée, l’outil commercial étant mis à jour régulièrement par l’éditeur, mais les personnalisations peuvent compliquer la compatibilité.</li>
+                <li><strong>Formation :</strong> Impact très fort, car les utilisateurs devront se former à la nouvelle interface, surtout avec les personnalisations ajoutées.</li>
+                <li><strong>Risques :</strong> Élevés, les dépendances vis-à-vis du fournisseur et les personnalisations peuvent introduire des problèmes de compatibilité à long terme.</li>
+                <li><strong>Impact sur les ETP :</strong> Rapide si les personnalisations sont bien intégrées, permettant des gains d'automatisation rapides.</li>
+                <li><strong>ROI :</strong> Réduit à court terme en raison des coûts initiaux et des personnalisations, mais variable à long terme en fonction de l'efficacité des personnalisations.</li>
+                <li><strong>Scalabilité en Temps Réel :</strong> Moyenne à bonne, selon la capacité de l’outil commercial et la gestion des personnalisations.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+    

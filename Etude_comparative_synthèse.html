@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation du Projet CLN</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-image: url('blur-hospital-clinic-interior.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+        h1, h2 {
+            color: #0056b3;
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="LOGO_CLN.png" alt="CLN Logo">
+        </div>
+        <h1>Présentation du Projet CLN</h1>
+
+        <h2>Explication technique des solutions</h2>
+
+        <div class="solution-section">
+            <h3>Solution 1 - Pipeline de Données</h3>
+            <p>Le pipeline de données extrait, transforme, et charge des données de différentes sources vers un entrepôt de données ou un autre système cible. Cette approche repose sur un processus ETL (Extraction, Transformation, Chargement) pour traiter de grandes quantités de données et les rendre prêtes à l'utilisation.</p>
+            <ul>
+                <li>ETL : Processus pour extraire, transformer, et charger des données.</li>
+                <li>Orchestration : Utilisation d'outils comme Apache Airflow ou Talend pour automatiser et orchestrer les étapes du pipeline.</li>
+                <li>Automatisation : Le pipeline est souvent exécuté à intervalles réguliers ou en fonction d'événements.</li>
+            </ul>
+        </div>
+
+        <div class="solution-section">
+            <h3>Solution 2 - Architecture Microservices ou SOA</h3>
+            <p>Dans une architecture microservices, chaque fonctionnalité de l'application est décomposée en petits services indépendants, qui communiquent entre eux via des API. Chaque service peut avoir sa propre base de données, son propre cycle de développement et de déploiement, offrant une flexibilité accrue.</p>
+            <ul>
+                <li>API REST ou gRPC : Les microservices communiquent via des API exposées, souvent basées sur des protocoles REST ou gRPC.</li>
+                <li>Conteneurisation : Utilisation de Docker ou Kubernetes pour déployer et gérer les microservices dans des conteneurs.</li>
+                <li>Orchestration : Kubernetes gère l'automatisation du déploiement, la mise à l'échelle et la résilience des microservices.</li>
+            </ul>
+        </div>
+
+        <div class="solution-section">
+            <h3>Solution 3 - Intégration directe via API</h3>
+            <p>Cette solution consiste à utiliser des API pour connecter directement plusieurs systèmes ou applications. L'API sert d'interface permettant aux différents systèmes de communiquer et d'échanger des données en temps réel sans passer par un intermédiaire complexe.</p>
+            <ul>
+                <li>API REST : Les systèmes communiquent via des requêtes HTTP pour envoyer et recevoir des données en temps réel.</li>
+                <li>API Gateway : Un point d'entrée unique pour gérer les appels API, offrant des fonctionnalités telles que la gestion du trafic.</li>
+                <li>Sécurité : Utilisation d'authentifications OAuth ou JWT pour sécuriser les communications entre les applications.</li>
+            </ul>
+        </div>
+
+        <div class="solution-section">
+            <h3>Solution 4 - Application Unique Centralisée (Interne)</h3>
+            <p>Cette solution centralise toutes les fonctionnalités de l'entreprise dans une seule application. Ce type d'architecture monolithique regroupe toutes les fonctionnalités sous une seule structure, ce qui la rend complexe à maintenir et à faire évoluer.</p>
+            <ul>
+                <li>Monolithique : Toutes les fonctionnalités sont intégrées dans une seule base de code, avec un accès partagé à une base de données centralisée.</li>
+                <li>Transactions ACID : La gestion des données suit les principes de transactions ACID (Atomicité, Cohérence, Isolation, Durabilité).</li>
+                <li>Maintenance : Les mises à jour et modifications dans une partie de l'application peuvent impacter l'ensemble de la solution.</li>
+            </ul>
+        </div>
+
+        <div class="solution-section">
+            <h3>Solution 5 - Application Unique Centralisée (Outil du Commerce avec Spécificités)</h3>
+            <p>Cette solution utilise un outil commercial (COTS - Commercial Off-The-Shelf) qui est ensuite personnalisé pour répondre aux besoins spécifiques de l'entreprise. Cela permet de déployer rapidement un produit standard tout en ajoutant des fonctionnalités sur mesure.</p>
+            <ul>
+                <li>COTS : Outils tels que SAP, Salesforce, ou Microsoft Dynamics, utilisés comme base pour les processus métier.</li>
+                <li>Personnalisation : Ajout de modules personnalisés, intégrations, ou API pour adapter l'outil aux besoins spécifiques de l'entreprise.</li>
+                <li>Maintenance par l'éditeur : Les mises à jour sont gérées par l'éditeur du logiciel, mais les personnalisations peuvent compliquer l'application de ces mises à jour.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

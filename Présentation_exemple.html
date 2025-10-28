@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation d'exemple de projet hybride</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('blur-hospital-clinic-interior.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+        h1, h2 {
+            color: #0056b3;
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="LOGO_CLN.png" alt="CLN Logo">
+        </div>
+        <h1>Présentation d'exemple d'un projet hybride</h1>
+        
+        <h2>Contexte du Projet</h2>
+        <p>Dans ce projet, nous utilisons des requêtes SQL pour extraire des données depuis un datastore, que nous utilisons ensuite pour créer un fichier historique de référence. Ce fichier est mis à jour automatiquement chaque jour, et les données stockées servent de base pour une API qui est utilisée par une application.</p>
+
+        <h2>Fonctionnement</h2>
+        <p>Le processus se déroule en plusieurs étapes :</p>
+        <ul>
+            <li><strong>Extraction des données :</strong> Une requête SQL est utilisée pour extraire des données à partir du datastore, ce qui permet de collecter les informations nécessaires.</li>
+            <li><strong>Mise à jour quotidienne :</strong> Le fichier historique de référence est mis à jour automatiquement tous les jours à l'aide d'une routine planifiée.</li>
+            <li><strong>Exploitation de l'API :</strong> L'API est conçue pour utiliser ces données historiques, permettant à une application d'interroger directement les informations stockées.</li>
+        </ul>
+
+        <h2>Solutions techniques utilisées</h2>
+        <p>Ce projet s'appuie sur une combinaison de deux solutions :</p>
+        <ul>
+            <li><strong>Pipeline de données :</strong> Les données sont extraites, transformées et chargées dans un fichier historique de référence, ce qui correspond à une approche pipeline.</li>
+            <li><strong>Intégration directe via API :</strong> L'API exposée permet à une application d'accéder directement aux données mises à jour quotidiennement.</li>
+        </ul>
+
+        <h2>Bénéfices de cette approche</h2>
+        <p>Cette approche permet de garantir la mise à jour continue des données tout en offrant une solution flexible et évolutive à travers une API. En combinant les solutions de pipeline et d'intégration via API, le projet assure des performances optimales pour répondre aux besoins de l'application consommatrice des données.</p>
+    </div>
+</body>
+</html>

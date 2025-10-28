@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparatif des Solutions - Projet CLN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('blur-hospital-clinic-interior.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(247, 21, 21, 0.1); /* Légère transparence */
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Fond semi-transparent */
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #0056b3;
+            color: white;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .solution-section {
+            margin-bottom: 40px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="LOGO_CLN.png" alt="CLN Logo">
+        </div>
+        <h1>Comparatif des Solutions - Projet CLN</h1>
+
+        <h2>Tableau comparatif des solutions</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Critère</th>
+                    <th>Pipeline de Données</th>
+                    <th>Microservices ou SOA</th>
+                    <th>Intégration API</th>
+                    <th>Application Unique Centralisée (Interne)</th>
+                    <th>Application Unique (Outil du Commerce)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Coût</td>
+                    <td>Modéré</td>
+                    <td>Élevé</td>
+                    <td>Faible</td>
+                    <td>Très élevé</td>
+                    <td>Élevé</td>
+                </tr>
+                <tr>
+                    <td>Délais de mise en œuvre</td>
+                    <td>Moyen</td>
+                    <td>Élevé</td>
+                    <td>Rapide</td>
+                    <td>Très long</td>
+                    <td>Modéré</td>
+                </tr>
+                <tr>
+                    <td>Complexité</td>
+                    <td>Modérée</td>
+                    <td>Très élevée</td>
+                    <td>Faible</td>
+                    <td>Très élevée</td>
+                    <td>Modérée à élevée</td>
+                </tr>
+                <tr>
+                    <td>Durabilité</td>
+                    <td>Modérée</td>
+                    <td>Très élevée</td>
+                    <td>Moyenne</td>
+                    <td>Faible à modérée</td>
+                    <td>Élevée</td>
+                </tr>
+                <tr>
+                    <td>Formation (utilisateurs)</td>
+                    <td>Faible</td>
+                    <td>Faible</td>
+                    <td>Faible</td>
+                    <td>Élevée</td>
+                    <td>Élevée</td>
+                </tr>
+                <tr>
+                    <td>Risques</td>
+                    <td>Modérés</td>
+                    <td>Élevés</td>
+                    <td>Modérés</td>
+                    <td>Élevés</td>
+                    <td>Modérés</td>
+                </tr>
+                <tr>
+                    <td>Impact sur les ETP</td>
+                    <td>Fort</td>
+                    <td>Moyen</td>
+                    <td>Faible</td>
+                    <td>Lent</td>
+                    <td>Rapide</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Tableau de notation des solutions (pondération du ROI et des Risques)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Critère</th>
+                    <th>Pipeline de Données</th>
+                    <th>Microservices ou SOA</th>
+                    <th>Intégration API</th>
+                    <th>Application Unique Centralisée (Interne)</th>
+                    <th>Application Unique (Outil du Commerce)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Coût (1 à 5)</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Délais de mise en œuvre (1 à 5)</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Complexité (1 à 5)</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Durabilité (1 à 5)</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Formation (1 à 5)</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Risques (Coefficient 3)</td>
+                    <td>9</td>
+                    <td>6</td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>ROI (Coefficient 3)</td>
+                    <td>12</td>
+                    <td>9</td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>9</td>
+                </tr>
+                <!-- Ligne de somme des points -->
+                <tr>
+                    <th>Somme des Points</th>
+                    <td>40</td>
+                    <td>29</td>
+                    <td>37</td>
+                    <td>15</td>
+                    <td>29</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

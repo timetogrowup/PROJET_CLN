@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — CLN</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a class="brand" href="index.html">
+          <img src="LOGO_CLN.png" alt="Logo CLN" />
+          <span>CLN · Solutions intelligentes</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Accueil</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="approche.html">Notre approche</a>
+          <a href="realisations.html">Réalisations</a>
+          <a href="diagnostic.html">Diagnostic</a>
+          <a class="active" href="contact.html">Contact</a>
+        </nav>
+        <a class="cta-button" href="contact.html">Être recontacté</a>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h1 class="section-title">Parlons de vos projets</h1>
+        <p class="section-lead">
+          Décrivez-nous votre contexte et nous reviendrons vers vous sous 48 heures. Nous étudierons avec vous comment connecter, libérer et normaliser vos systèmes d'information.
+        </p>
+      </section>
+
+      <section class="contact-grid">
+        <div>
+          <h2>Nous contacter</h2>
+          <p>
+            CLN accompagne les organisations publiques et privées sur leurs enjeux data, automatisation et gouvernance.
+          </p>
+          <ul>
+            <li>Email : <a href="mailto:contact@cln-solutions.fr">contact@cln-solutions.fr</a></li>
+            <li>Téléphone : <a href="tel:+33700000000">+33 7 00 00 00 00</a></li>
+            <li>LinkedIn : <a href="#">@CLN-Solutions</a></li>
+          </ul>
+          <p>
+            Vous préférez fixer un créneau ? Proposez deux disponibilités et nous vous envoyons une invitation.
+          </p>
+        </div>
+        <div>
+          <form action="https://formspree.io/f/your-form-id" method="POST">
+            <p>
+              <small>
+                Remplacez <code>https://formspree.io/f/your-form-id</code> par l'URL fournie par votre service de formulaire (Formspree, Netlify Forms…).
+              </small>
+            </p>
+            <label for="name">Nom et prénom</label>
+            <input id="name" name="name" type="text" placeholder="Marie Dupont" required />
+
+            <label for="email">Email professionnel</label>
+            <input id="email" name="_replyto" type="email" placeholder="marie.dupont@organisation.fr" required />
+
+            <label for="company">Organisation</label>
+            <input id="company" name="company" type="text" placeholder="Organisation / Collectivité" />
+
+            <label for="message">Votre besoin</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou vos problématiques."></textarea>
+
+            <label class="checkbox">
+              <input type="checkbox" name="consent" required />
+              J'accepte que CLN me contacte au sujet de ma demande.
+            </label>
+
+            <button class="cta-button" type="submit">Envoyer la demande</button>
+            <input type="hidden" name="_redirect" value="merci.html" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <span>© CLN — Solutions intelligentes pour vos SI.</span>
+        <div class="footer-links">
+          <a href="mailto:contact@cln-solutions.fr">contact@cln-solutions.fr</a>
+          <a href="contact.html">Prendre rendez-vous</a>
+          <a href="#">Mentions légales</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

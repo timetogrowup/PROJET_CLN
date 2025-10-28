@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionnaire de pré-diagnostic — CLN</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a class="brand" href="index.html">
+          <img src="LOGO_CLN.png" alt="Logo CLN" />
+          <span>CLN · Solutions intelligentes</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Accueil</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="approche.html">Notre approche</a>
+          <a href="realisations.html">Réalisations</a>
+          <a class="active" href="diagnostic.html">Diagnostic</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="cta-button" href="contact.html">Être recontacté</a>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h1 class="section-title">Questionnaire de pré-diagnostic</h1>
+        <p class="section-lead">
+          En moins de deux minutes, précisez votre contexte et recevez une proposition d'accompagnement CLN adaptée. Nous vous suggérerons ensuite de planifier un rendez-vous pour aller plus loin.
+        </p>
+      </section>
+
+      <section class="questionnaire">
+        <form id="diagnostic-form">
+          <fieldset>
+            <legend>Quels sont vos enjeux principaux ?</legend>
+            <p class="helper-text">
+              Sélectionnez une ou plusieurs thématiques.
+            </p>
+            <div class="pill-group">
+              <label class="pill">
+                <input type="checkbox" name="modules" value="connecter" />
+                Connecter · Interopérabilité
+              </label>
+              <label class="pill">
+                <input type="checkbox" name="modules" value="liberer" />
+                Libérer · Automatisation
+              </label>
+              <label class="pill">
+                <input type="checkbox" name="modules" value="normaliser" />
+                Normaliser · Gouvernance des données
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Taille de votre organisation</legend>
+            <div class="radio-list">
+              <label><input type="radio" name="taille" value="petite" required /> Moins de 50 collaborateurs</label>
+              <label><input type="radio" name="taille" value="moyenne" /> 50 à 250 collaborateurs</label>
+              <label><input type="radio" name="taille" value="grande" /> Plus de 250 collaborateurs</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Priorité des 6 prochains mois</legend>
+            <select name="priorite" required>
+              <option value="">Sélectionnez une réponse</option>
+              <option value="visibilite">Avoir une vision consolidée et des KPI fiables</option>
+              <option value="efficacite">Accélérer des processus métiers critiques</option>
+              <option value="qualite">Mettre sous contrôle la qualité / conformité des données</option>
+              <option value="modernisation">Moderniser l'architecture et préparer de nouveaux services</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Horizon de mise en œuvre souhaité</legend>
+            <div class="radio-list">
+              <label><input type="radio" name="delai" value="court" required /> Moins de 3 mois</label>
+              <label><input type="radio" name="delai" value="moyen" /> 3 à 6 mois</label>
+              <label><input type="radio" name="delai" value="long" /> Plus de 6 mois</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Quel mode d'accompagnement imaginez-vous ?</legend>
+            <div class="radio-list">
+              <label><input type="radio" name="mode" value="flash" required /> Diagnostic flash pour prioriser</label>
+              <label><input type="radio" name="mode" value="projet" /> Pilotage complet du projet</label>
+              <label><input type="radio" name="mode" value="hybride" /> Coaching interne + expertise ciblée</label>
+            </div>
+          </fieldset>
+
+          <button class="cta-button" type="submit">Obtenir ma recommandation</button>
+        </form>
+
+        <div id="diagnostic-resultat" class="result-card" hidden>
+          <h2>Votre synthèse personnalisée</h2>
+          <div id="resultat-insights"></div>
+          <a class="cta-button" href="contact.html">Planifier un rendez-vous</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <span>© CLN — Solutions intelligentes pour vos SI.</span>
+        <div class="footer-links">
+          <a href="mailto:contact@cln-solutions.fr">contact@cln-solutions.fr</a>
+          <a href="contact.html">Prendre rendez-vous</a>
+          <a href="#">Mentions légales</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const form = document.getElementById('diagnostic-form');
+      const card = document.getElementById('diagnostic-resultat');
+      const insightsContainer = document.getElementById('resultat-insights');
+
+      function buildModuleSummary(modules) {
+        if (!modules.length) {
+          return "Nous vous proposons un diagnostic transversal pour identifier les priorités CLN.";
+        }
+        const labels = {
+          connecter: "Connecter vos systèmes et données pour une interopérabilité fluide.",
+          liberer: "Libérer du temps via l'automatisation de vos processus clés.",
+          normaliser: "Normaliser votre patrimoine de données pour sécuriser la décision."
+        };
+        return modules.map((value) => labels[value]).join(" ");
+      }
+
+      function recommendationFromPriority(priority) {
+        switch (priority) {
+          case 'visibilite':
+            return "Nous recommandons un premier focus sur la consolidation des indicateurs clés avec un socle de reporting partagé.";
+          case 'efficacite':
+            return "Une séquence d'automatisation des workflows critiques apportera un gain rapide et mesurable.";
+          case 'qualite':
+            return "La mise en place d'un référentiel et d'un plan qualité data durable garantira conformité et confiance.";
+          case 'modernisation':
+            return "Construisons ensemble une architecture cible interopérable pour supporter vos futurs services.";
+          default:
+            return "Explorons ensemble vos enjeux pour définir le plan d'action prioritaire.";
+        }
+      }
+
+      function rendezVousMessage(delai, mode) {
+        const delais = {
+          court: "Nous pouvons organiser un atelier d'immersion dans les 7 prochains jours pour cadrer les premières actions.",
+          moyen: "Planifions un rendez-vous découverte afin de co-construire une feuille de route sur le semestre.",
+          long: "Nous vous proposons un échange stratégique pour bâtir un programme progressif et maîtrisé."
+        };
+        const modes = {
+          flash: "Un diagnostic flash de 3 à 4 ateliers permettrait de prioriser vos chantiers.",
+          projet: "Nous pouvons constituer une équipe projet CLN pour piloter vos livrables de bout en bout.",
+          hybride: "Notre modèle hybride combine coaching de vos équipes et expertises ciblées CLN."
+        };
+        return `${delais[delai] || ""} ${modes[mode] || ""}`.trim();
+      }
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const modules = Array.from(
+          form.querySelectorAll('input[name="modules"]:checked')
+        ).map((input) => input.value);
+        const taille = form.elements['taille'].value;
+        const priorite = form.elements['priorite'].value;
+        const delai = form.elements['delai'].value;
+        const mode = form.elements['mode'].value;
+
+        const tailleLabel = {
+          petite: "une organisation agile en croissance.",
+          moyenne: "une structure en phase de structuration.",
+          grande: "un groupe établi avec plusieurs équipes métiers."
+        }[taille];
+
+        const moduleSummary = buildModuleSummary(modules);
+        const priorityRecommendation = recommendationFromPriority(priorite);
+        const meetingMessage = rendezVousMessage(delai, mode);
+
+        insightsContainer.innerHTML = `
+          <p>Vous nous indiquez être ${tailleLabel || "une organisation"} avec un horizon projet ${
+            delai === 'court' ? 'court terme' : delai === 'moyen' ? 'à moyen terme' : 'à long terme'
+          }.</p>
+          <p>${moduleSummary}</p>
+          <p>${priorityRecommendation}</p>
+          <p>${meetingMessage}</p>
+          <p>Transmettez-nous vos coordonnées et vos disponibilités via la page contact : nous reviendrons vers vous sous 48&nbsp;heures.</p>
+        `;
+
+        card.hidden = false;
+        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    </script>
+  </body>
+</html>
