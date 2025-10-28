@@ -67,7 +67,7 @@ function Ensure-Branch {
 
     if ($currentBranch -ne $TargetBranch) {
         Write-Host "Switching to branch $TargetBranch"
-        Invoke-Git checkout -B $TargetBranch
+        Invoke-Git checkout '-B' $TargetBranch
     }
 }
 
@@ -192,11 +192,11 @@ Ensure-GitRepository
 Ensure-GitIdentity -UserName $GithubUser -UserEmail $GithubEmail
 Ensure-Branch -TargetBranch $Branch
 
-Invoke-Git add -A
-$pendingChanges = Invoke-Git status --porcelain
+Invoke-Git add '-A'
+$pendingChanges = Invoke-Git status '--porcelain'
 if ($pendingChanges) {
     Write-Host "Committing local changes..."
-    Invoke-Git commit -m $CommitMessage
+    Invoke-Git commit '-m' $CommitMessage
 }
 else {
     Write-Host "No local changes to commit."
@@ -214,7 +214,7 @@ Ensure-GitHubRepository -Token $token -Repo $RepoName
 
 $pushUrl = "https://${GithubUser}:${token}@github.com/$GithubUser/$RepoName.git"
 Write-Host "Pushing branch $Branch to GitHub..."
-Invoke-Git push -u $pushUrl $Branch
+Invoke-Git push '-u' $pushUrl $Branch
 
 Set-GitHubPages -Token $token -Owner $GithubUser -Repo $RepoName -SourceBranch $Branch
 
