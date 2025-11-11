@@ -59,12 +59,8 @@
           </p>
         </div>
         <div>
-          <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-            <p>
-              <small>
-                Remplacez <code>https://formspree.io/f/your-form-id</code> par l'URL fournie par votre service de formulaire (Formspree, Netlify Forms…).
-              </small>
-            </p>
+          <form id="contact-form" action="contact.php" method="POST" novalidate>
+            <div id="form-alert" class="form-alert" hidden></div>
             <label for="name">Nom et prénom</label>
             <input id="name" name="name" type="text" placeholder="Marie Dupont" required />
 
@@ -83,7 +79,6 @@
             </label>
 
             <button class="cta-button" type="submit">Envoyer la demande</button>
-            <input type="hidden" name="_redirect" value="merci.html" />
           </form>
         </div>
       </section>
@@ -197,29 +192,40 @@
       })();
 
       (function () {
-        const form = document.getElementById('contact-form');
-        if (!form) {
+        const alertBox = document.getElementById('form-alert');
+        if (!alertBox) {
           return;
         }
 
-        const action = form.getAttribute('action') || '';
-        const isPlaceholder = action.includes('your-form-id');
-
-        if (!isPlaceholder) {
+        const params = new URLSearchParams(window.location.search);
+        const status = params.get('status');
+        if (!status) {
           return;
         }
 
-        const warning = document.createElement('div');
-        warning.className = 'form-warning';
-        warning.innerHTML = `
-          <strong>Configuration requise.</strong> Ajoutez l'identifiant de votre formulaire Formspree (ou l'URL de votre backend) dans l'attribut <code>action</code> du formulaire. Pour Formspree&nbsp;: remplacez <code>https://formspree.io/f/your-form-id</code> par le lien fourni dans votre tableau de bord.
-        `;
-        form.insertBefore(warning, form.firstElementChild);
+        let message = '';
+        let variant = '';
 
-        form.addEventListener('submit', (event) => {
-          event.preventDefault();
-          warning.classList.add('form-warning--visible');
-        });
+        switch (status) {
+          case 'success':
+            message = 'Merci ! Votre message a bien été envoyé. Nous revenons vers vous sous 48 heures.';
+            variant = 'form-alert--success';
+            break;
+          case 'invalid':
+            message = 'Certaines informations obligatoires sont manquantes ou invalides. Merci de vérifier les champs requis.';
+            variant = 'form-alert--error';
+            break;
+          case 'error':
+            message = 'Une erreur est survenue lors de l’envoi du message. Veuillez réessayer ou contactez-nous directement par email.';
+            variant = 'form-alert--error';
+            break;
+          default:
+            return;
+        }
+
+        alertBox.textContent = message;
+        alertBox.classList.add(variant);
+        alertBox.hidden = false;
       })();
     </script>
   </body>

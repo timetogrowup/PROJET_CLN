@@ -95,11 +95,10 @@ Chaque page suit la même structure :
 
 ### `contact.html`
 - Bloc de coordonnées directes + formulaire.
-- Formulaire `POST` vers Formspree (URL à personnaliser). Champs :
+- Formulaire `POST` vers `contact.php` (traitement PHP local). Champs :
   - `name`, `_replyto` (email), `company`, `message`.
-  - Checkbox de consentement.
-  - Champ caché `_redirect` -> `merci.html`.
-- Label de consigne pour remplacer l’URL Formspree.
+  - Case à cocher `consent` obligatoire pour l’accord RGPD.
+- Message d’alerte affiché selon le paramètre de requête `status` (`success`, `invalid`, `error`).
 
 ### `merci.html`
 - Hero de remerciement + bouton retour accueil.
@@ -135,7 +134,7 @@ Chaque page suit la même structure :
   1. Soumettre sans modules → vérifier message par défaut.
   2. Soumettre avec plusieurs modules → concaténation des messages.
   3. Changer priorité/délai → confirmer modifications de la synthèse.
-- Pour le formulaire contact : test manuel en renseignant un endpoint Formspree et en vérifiant la redirection `merci.html`.
+- Pour le formulaire contact : test manuel en environnement PHP/Hostinger, vérifier la redirection `merci.html` et la réception de l’email sur `patrick.lyonnet@cln-solutions.fr`.
 
 ---
 Mettre à jour ce référentiel dès qu’une modification de structure ou de composant est effectuée dans le code.***

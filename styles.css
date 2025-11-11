@@ -508,26 +508,24 @@ legend {
   margin-bottom: 0.5rem;
 }
 
-.form-warning {
+.form-alert {
   padding: 0.85rem 1rem;
-  border: 1px solid rgba(231, 76, 60, 0.4);
+  border: 1px solid transparent;
   border-radius: 12px;
-  background-color: rgba(231, 76, 60, 0.08);
-  color: #c0392b;
   font-size: 0.9rem;
   margin-bottom: 1rem;
-  display: none;
 }
 
-.form-warning code {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 0.1rem 0.35rem;
-  border-radius: 6px;
+.form-alert--success {
+  background-color: rgba(46, 204, 113, 0.12);
+  border-color: rgba(46, 204, 113, 0.4);
+  color: #1e8449;
 }
 
-.form-warning--visible {
-  display: block;
+.form-alert--error {
+  background-color: rgba(231, 76, 60, 0.1);
+  border-color: rgba(231, 76, 60, 0.4);
+  color: #c0392b;
 }
 
 label {

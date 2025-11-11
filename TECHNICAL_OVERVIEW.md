@@ -1,125 +1,119 @@
 # CLN Static Site — Technical Overview
 
-## 1. Purpose and Scope
-- Objectif : site vitrine statique présentant l’offre “Connecter · Libérer · Normaliser (CLN)”.
-- Cible : publication sur GitHub Pages ou tout hébergement statique.
-- Périmètre : pages HTML statiques, feuille de styles CSS, interactions JavaScript pour un questionnaire de pré-diagnostic.
+This document summarises the structure and technical choices of the CLN marketing site.
 
-## 2. Structure Du Projet
+## 1. Purpose And Scope
+- Static showcase site describing the Connecter – Liberer – Normaliser offering.
+- Target hosting: GitHub Pages historically, now migrated to Hostinger shared hosting.
+- Content: HTML pages, one CSS stylesheet, inline JavaScript for the diagnostic questionnaire.
+
+## 2. Project Layout
 ```
 PROJET_CLN/
-├── index.html          # Page d'accueil
-├── solutions.html      # Détails des offres
-├── approche.html       # Mission, vision, méthodologie
-├── realisations.html   # Cas d'usage + CTA questionnaire
-├── diagnostic.html     # Questionnaire de pré-diagnostic (JS)
-├── contact.html        # Formulaire de prise de contact
-├── merci.html          # Page de confirmation après contact
-├── styles.css          # Styles globaux et composants
-├── LOGO_CLN.png        # Logo principal
-├── *.jpg               # Visuels d'illustration
-└── TECHNICAL_OVERVIEW.md (ce document)
+├── index.html             # Landing page
+├── solutions.html         # Offer details
+├── approche.html          # Mission and methodology
+├── realisations.html      # Case studies + CTA
+├── diagnostic.html        # Interactive questionnaire
+├── contact.html           # Contact form (posts to contact.php)
+├── merci.html             # Confirmation page
+├── contact.php            # PHP handler for the contact form
+├── styles.css             # Global styles
+├── LOGO_CLN.png           # Main logo
+├── *.jpg / *.png          # Visual assets
+├── TECHNICAL_OVERVIEW.md  # This document
+└── ...                    # Supplementary files (presentations, scripts, docs)
 ```
 
-## 3. Technologies Utilisées
-- **HTML5** : pages statiques avec composant navigation commun.
-- **CSS3** : feuille unique `styles.css` (variables CSS, grid, flexbox).
-- **JavaScript Vanilla** : logique du questionnaire (`diagnostic.html`).
-- **Aucune dépendance externe** ; polices système (`Montserrat` fallback websafe). Peut être enrichi via Google Fonts si nécessaire.
+## 3. Technologies
+- HTML5 for page markup with a repeated header/footer structure.
+- CSS3 (single file `styles.css`) using flexbox, grid, and custom properties.
+- Vanilla JavaScript embedded in `diagnostic.html` and `contact.html`.
+- PHP 8+ minimal script (`contact.php`) used to send email from the form.
+- No external JS/CSS dependencies; fonts rely on system fallbacks (Montserrat stack).
 
-## 4. Design Système
-- Palette : `#5a4fcf` (primaire), `#3e36a8`, accent `#00b894`, arrière-plan clair.
-- Typographie : `Montserrat`, `Segoe UI`, `Helvetica Neue`, `Arial` (cascade).
-- Composants réutilisables :
-  - `header` + `.navbar` : navigation sticky, CTA “Être recontacté”.
-  - `card`, `card-grid` : vitrines de services, valeurs, actions.
-  - `timeline`, `projects-grid`, `contact-grid` : sections spécifiques.
-  - Bouton `.cta-button` : style uniforme pour actions clés.
-- Responsive : `grid-template-columns: repeat(auto-fit, minmax(...))` assure adaptation mobile. Menu compact (<720px) masque `.nav-links` (prévoir burger si croissance future).
+## 4. Design System
+- Palette: primary `#5a4fcf`, dark accent `#3e36a8`, secondary accent `#00b894`, neutral backgrounds.
+- Typography: `Montserrat`, `Segoe UI`, `Helvetica Neue`, `Arial`, sans-serif fallback.
+- Reusable components:
+  - Sticky header with `.navbar` container and CTA button.
+  - `.card` / `.card-grid` for most content sections.
+  - `.timeline`, `.projects-grid`, `.contact-grid` for specific layouts.
+  - `.cta-button` reused across pages for primary actions.
+- Responsiveness handled via CSS grid `auto-fit` patterns and media queries around 720px.
 
-## 5. Pages & Contenu
-1. **index.html**
-   - Hero avec slogan “Connecter · Libérer · Normaliser”.
-   - Engagements CLN, valeurs différenciatrices, citation clé.
-2. **solutions.html**
-   - Modules `Connecter`, `Libérer`, `Normaliser`.
-   - CTA orientés contact, méthodologie, réalisations.
-3. **approche.html**
-   - Mission, vision, valeurs.
-   - Timeline en 4 étapes (Diagnostic → Accompagnement).
-4. **realisations.html**
-   - Trois cas d’usage illustrés, tags thématiques.
-   - Invitation “Questionnaire de pré-diagnostic”.
-5. **diagnostic.html**
-   - Questionnaire multi-choix produisant synthèse dynamique.
-   - Redirection vers `contact.html` pour prise de rendez-vous.
-6. **contact.html**
-   - Coordonnées directes, formulaire HTML.
-   - Champs : nom, email, organisation, message, consentement.
-   - `action` à personnaliser (Formspree, Netlify Forms, etc.).
-7. **merci.html**
-   - Confirmation visuelle post-contact.
+## 5. Pages And Content
+1. **index.html** – hero message, key commitments, quote block.
+2. **solutions.html** – detailed presentation of the three modules (Connecter, Liberer, Normaliser).
+3. **approche.html** – mission/vision cards and four-step timeline.
+4. **realisations.html** – three case studies, tags, and calls to action.
+5. **diagnostic.html** – multi-step questionnaire producing a recommendation summary (results persisted in `localStorage` for reuse in contact form).
+6. **contact.html** – contact information, recommendation preview, and form posting to `contact.php`.
+7. **merci.html** – acknowledgement page with link back to the home page.
 
-## 6. Questionnaire De Pré-Diagnostic
-- Formulaire géré côté client (`diagnostic.html`).
-- Inputs :
-  - `modules` (checkbox) : Connecter, Libérer, Normaliser.
-  - `taille` (radio) : segments organisationnels.
-  - `priorite` (select) : visibilité, efficacité, qualité, modernisation.
-  - `delai` (radio) : court, moyen, long terme.
-  - `mode` (radio) : diagnostic flash, pilotage complet, hybride.
-- Traitement :
-  - `buildModuleSummary()` : message selon modules sélectionnés.
-  - `recommendationFromPriority()` : recommandation ciblée.
-  - `rendezVousMessage()` : message d’appel à rendez-vous.
-  - Résultat injecté via `innerHTML` dans `.result-card` + scroll automatique.
-- Extension possible : persistance via `localStorage`, export PDF, envoi API.
+## 6. Diagnostic Questionnaire
+- Form controls:
+  - Checkboxes `modules[]` to pick the levers (Connecter/Liberer/Normaliser).
+  - Radio groups for organisation size, project timeframe, and engagement mode.
+  - Select `priorite` to capture the main priority.
+- JavaScript (inline):
+  - `buildModuleSummary`, `recommendationFromPriority`, `rendezVousMessage` generate tailored text.
+  - Local storage stores the latest recommendation for reuse in `contact.html`.
+  - Smooth scroll to the result card when generated.
+- Possible extensions: export to PDF, server-side persistence, analytics of module selection.
 
-## 7. Formulaire De Contact
-- Champ hidden `_redirect` vers `merci.html`.
-- Tout service de formulaire compatible POST peut être utilisé.
-- Conformité RGPD : case à cocher obligatoire de consentement.
-- Ajouts possibles :
-  - reCAPTCHA v2/v3 (nécessite script externe).
-  - Double opt-in via outil CRM / marketing automation.
+## 7. Contact Form Flow
+- Front-end (`contact.html`):
+  - Required fields: `name`, `_replyto`, `message`, `consent`.
+  - Status banner shown based on query parameter `status` (`success`, `invalid`, `error`).
+  - Prefills the textarea with the recommendation stored in `localStorage` when available.
+- Back-end (`contact.php`):
+  - Accepts POST only; redirects to `contact.html` otherwise.
+  - Trims inputs, guards against header injection, validates email syntax and consent.
+  - Sends an email via PHP `mail()` to `patrick.lyonnet@cln-solutions.fr` with `Reply-To` set to the visitor email.
+  - Redirects with HTTP 303 to `merci.html?status=success` on success, or back to `contact.html?status=error` on failure.
+  - Easy upgrades: swap `mail()` for PHPMailer in SMTP mode, add CAPTCHA, log submissions.
 
-## 8. Déploiement Recommandé (GitHub Pages)
-1. Créer un dépôt GitHub et pousser l’intégralité du dossier.
-2. Activer GitHub Pages sur la branche `main` (paramètres > Pages).
-3. Choisir “root” ou dossier `/docs` selon organisation.
-4. GitHub Pages générera `https://<utilisateur>.github.io/<dépôt>/`.
-5. Option : ajouter `CNAME` pour domaine personnalisé.
+## 8. Deployment On Hostinger
+1. Keep this Git repository as the source of truth; ensure `contact.php` and HTML assets are current.
+2. In Hostinger hPanel, attach the domain `cln-solutions.fr` to the web hosting plan (Web Premium/Business).
+3. Deliver the site to `public_html`:
+   - **File Manager route**: create an archive locally (`Compress-Archive -Path * -DestinationPath site.zip`), upload it in hPanel > File Manager, extract inside `public_html`, remove the archive.
+   - **Git deployment route** (if enabled): hPanel > Git > Add repository, set URL `https://github.com/timetogrowup/PROJET_CLN.git`, target directory `public_html`, then Deploy.
+4. Confirm file layout on the server (`public_html/index.html`, `contact.php`, `styles.css`, assets folders).
+5. Test https://cln-solutions.fr after propagation:
+   - Browse each page.
+   - Submit the contact form (expect the email in `patrick.lyonnet@cln-solutions.fr` and a redirect to `merci.html`).
+6. DNS: keep Hostinger nameservers (`ns1.dns-parking.com`, `ns2.dns-parking.com`). Ensure the hosting plan populates the correct A records; remove legacy GitHub Pages records if present.
 
-## 9. Tests & Validation
-- **Local** : `python -m http.server 8000` puis `http://localhost:8000/index.html`.
-- Vérification manuelle :
-  - Navigation barre haute (toutes les pages).
-  - Questionnaire : scénarios multiples (aucun module, modules multiples).
-  - Formulaire contact : champs requis, redirection `merci.html`.
-- Accessibilité :
-  - Vérifier contrastes (ok via palette présente).
-  - Ajouter attributs `aria` / `role` si besoin d’amélioration.
-- SEO de base :
-  - Ajouter meta-description par page (TODO).
-  - Titre par page déjà défini.
+## 9. Testing & Validation
+- **Static preview**: `python -m http.server 8000` and open `http://localhost:8000/index.html`.
+- **PHP contact form locally**: `php -S localhost:8000` then POST to `http://localhost:8000/contact.php` (set `mail()` to log or use a dummy handler when developing).
+- **Questionnaire QA**: verify result generation with zero, single, and multiple modules; check `localStorage` persistence between diagnostic → contact.
+- **Accessibility & SEO**:
+  - Confirm readable contrasts, focus states, and keyboard navigation.
+  - Add page-level meta descriptions and image `alt` text where missing (tracked as future enhancement).
+- **Email deliverability**: regular test with the Python script `test_mailbox.py` or manual send/receive checks.
 
-## 10. Conseils d’Évolution
-- Intégrer un menu mobile hamburger et animation.
-- Ajouter favicon, manifest et métadonnées Open Graph.
-- Optimiser images (compression WebP, Lazy loading).
-- Brancher un outil analytics (Matomo, Plausible, GA4).
-- Envisager CMS headless (Contentful, Strapi) si besoin d’édition non-technique.
-- Internationalisation : dupliquer gabarits avec attribut `lang`.
+## 10. Evolution Ideas
+- Mobile navigation toggle (burger menu) replacing the simple hide/show behaviour.
+- Add favicon, web manifest, and Open Graph/Twitter cards.
+- Optimise large images (WebP exports, lazy loading).
+- Instrument analytics (Plausible, Matomo, GA4) once privacy policy is settled.
+- Consider templating or a lightweight static site generator to deduplicate header/footer.
+- Internationalisation (duplicate templates with `lang` and translated copy).
 
-## 11. Maintenance
-- Un seul fichier CSS : documenter les sections si croissance.
-- Centraliser variables (couleurs, spacing) dans `:root`.
-- Fichiers HTML modulaires : possibilité d’extraire header/footer via moteur templating (Jekyll, Eleventy) pour éviter duplications.
-- Versionner les assets (nomenclature stable, dossier `assets/`).
+## 11. Maintenance Notes
+- Keep `styles.css` organised by section; document new component blocks inline.
+- Reuse `.cta-button`, `.card`, `.contact-grid` classes to stay consistent.
+- Update contact information simultaneously across all pages when changes occur.
+- Secure credentials: `.env` stays local (SMTP password never committed).
+- Review GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) if GitHub Pages remains part of the workflow, otherwise disable when Hostinger deployment is final.
 
 ## 12. Annexes
-- Assets médias fournis : `LOGO_CLN.png`, photos Pexels, visuels blur hospital.
-- Scripts Python présents (`ANIMATION_LOGO.py`) non utilisés par le site, à archiver ou documenter si animation future.
+- `BUSINESS_OVERVIEW.md`, `CODE_REFERENCE.md` provide complementary documentation.
+- `PRESENTATION_PPT/` holds supporting decks plus Python utilities for email and language normalisation.
+- Static assets include `LOGO_CLN.png`, Pexels imagery, and diagnostic resources.
 
 ---
-Document rédigé pour fournir une vision technique complète du site CLN. Mettre à jour à chaque évolution majeure.***
+Last reviewed: migration to Hostinger with PHP mail handler (November 2025). Update this document after every significant architectural or hosting change.
