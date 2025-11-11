@@ -39,16 +39,16 @@ if (function_exists('mb_encode_mimeheader')) {
 }
 
 $bodyLines = [
-    "Nom et prénom : {$name}",
+    "Nom et prenom : {$name}",
     "Email : {$email}",
-    $company !== '' ? "Organisation : {$company}" : 'Organisation : (non renseignée)',
+    $company !== '' ? "Organisation : {$company}" : 'Organisation : (non renseignee)',
     "Consentement : oui",
     '',
     'Message :',
     $message,
     '',
-    '—',
-    'Message envoyé depuis le formulaire CLN (cln-solutions.fr).'
+    '----',
+    'Message envoye depuis le formulaire CLN (cln-solutions.fr).'
 ];
 
 $body = implode("\r\n", $bodyLines);
