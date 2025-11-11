@@ -37,7 +37,8 @@
           <fieldset>
             <legend>Quels sont vos enjeux principaux ?</legend>
             <p class="helper-text">
-              Sélectionnez une ou plusieurs thématiques.
+              Cochez toutes les thématiques les plus pertinentes pour vous
+              <span id="modules-count" class="selection-count">(0 sélectionnée)</span>
             </p>
             <div class="pill-group">
               <label class="pill">
@@ -52,6 +53,34 @@
                 <input type="checkbox" name="modules" value="normaliser" />
                 Normaliser · Gouvernance des données
               </label>
+              <label class="pill">
+                <input type="checkbox" name="modules" value="securiser" />
+                Sécuriser · Conformité
+              </label>
+              <label class="pill">
+                <input type="checkbox" name="modules" value="valoriser" />
+                Valoriser · Analytics
+              </label>
+              <label class="pill">
+                <input type="checkbox" name="modules" value="collaborer" />
+                Collaborer · Partage
+              </label>
+              <label class="pill">
+                <input type="checkbox" name="modules" value="anticiper" />
+                Anticiper · Innovation
+              </label>
+              <label class="pill pill--custom">
+                <input type="checkbox" name="modules" value="autre" />
+                <span>Autre enjeu</span>
+                <input
+                  type="text"
+                  id="autre-enjeu"
+                  name="autreEnjeu"
+                  class="pill-text-input"
+                  placeholder="Décrivez votre enjeu"
+                  autocomplete="off"
+                />
+              </label>
             </div>
           </fieldset>
 
@@ -61,18 +90,22 @@
               <label><input type="radio" name="taille" value="petite" required /> Moins de 50 collaborateurs</label>
               <label><input type="radio" name="taille" value="moyenne" /> 50 à 250 collaborateurs</label>
               <label><input type="radio" name="taille" value="grande" /> Plus de 250 collaborateurs</label>
+              <label><input type="radio" name="taille" value="tresgrande" /> Plus de 2&nbsp;500 collaborateurs</label>
             </div>
           </fieldset>
 
           <fieldset>
             <legend>Priorité des 6 prochains mois</legend>
-            <select name="priorite" required>
-              <option value="">Sélectionnez une réponse</option>
-              <option value="visibilite">Avoir une vision consolidée et des KPI fiables</option>
-              <option value="efficacite">Accélérer des processus métiers critiques</option>
-              <option value="qualite">Mettre sous contrôle la qualité / conformité des données</option>
-              <option value="modernisation">Moderniser l'architecture et préparer de nouveaux services</option>
-            </select>
+            <p class="helper-text">
+              Vous pouvez classer les axes ci-dessous par ordre d'importance (1 = priorité la plus forte).
+              Activez l'option si vous souhaitez préciser vos priorités.
+            </p>
+            <label class="priority-toggle">
+              <input type="checkbox" id="priorite-toggle" />
+              <span>Je souhaite indiquer l'ordre de priorité</span>
+            </label>
+            <div class="priority-list is-disabled" role="list" hidden></div>
+            <input type="hidden" name="priorite" id="priorite-input" />
           </fieldset>
 
           <fieldset>
@@ -81,6 +114,7 @@
               <label><input type="radio" name="delai" value="court" required /> Moins de 3 mois</label>
               <label><input type="radio" name="delai" value="moyen" /> 3 à 6 mois</label>
               <label><input type="radio" name="delai" value="long" /> Plus de 6 mois</label>
+              <label><input type="radio" name="delai" value="incertain" /> Je ne sais pas encore</label>
             </div>
           </fieldset>
 
@@ -118,39 +152,295 @@
       const form = document.getElementById('diagnostic-form');
       const card = document.getElementById('diagnostic-resultat');
       const insightsContainer = document.getElementById('resultat-insights');
+      const moduleInputs = form.querySelectorAll('input[name="modules"]');
+      const moduleCount = document.getElementById('modules-count');
+      const customCheckbox = form.querySelector('input[name="modules"][value="autre"]');
+      const customInput = document.getElementById('autre-enjeu');
+      const customPill = customInput ? customInput.closest('.pill--custom') : null;
+      const priorityList = document.querySelector('.priority-list');
+      const priorityInput = document.getElementById('priorite-input');
+      const priorityToggle = document.getElementById('priorite-toggle');
+      const PRIORITY_LABELS = {
+        connecter: 'Connecter · Interopérabilité',
+        liberer: 'Libérer · Automatisation',
+        normaliser: 'Normaliser · Gouvernance des données',
+        securiser: 'Sécuriser · Conformité',
+        valoriser: 'Valoriser · Analytics',
+        collaborer: 'Collaborer · Partage',
+        anticiper: 'Anticiper · Innovation'
+      };
 
-      function buildModuleSummary(modules) {
-        if (!modules.length) {
-          return "Nous vous proposons un diagnostic transversal pour identifier les priorités CLN.";
-        }
-        const labels = {
-          connecter: "Connecter vos systèmes et données pour une interopérabilité fluide.",
-          liberer: "Libérer du temps via l'automatisation de vos processus clés.",
-          normaliser: "Normaliser votre patrimoine de données pour sécuriser la décision."
-        };
-        return modules.map((value) => labels[value]).join(" ");
+      function escapeHtml(text) {
+        return text
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
       }
 
-      function recommendationFromPriority(priority) {
-        switch (priority) {
-          case 'visibilite':
-            return "Nous recommandons un premier focus sur la consolidation des indicateurs clés avec un socle de reporting partagé.";
-          case 'efficacite':
-            return "Une séquence d'automatisation des workflows critiques apportera un gain rapide et mesurable.";
-          case 'qualite':
-            return "La mise en place d'un référentiel et d'un plan qualité data durable garantira conformité et confiance.";
-          case 'modernisation':
-            return "Construisons ensemble une architecture cible interopérable pour supporter vos futurs services.";
-          default:
-            return "Explorons ensemble vos enjeux pour définir le plan d'action prioritaire.";
+      function ensureTrailingPunctuation(text) {
+        return /[.!?]$/.test(text.trim()) ? '' : '.';
+      }
+
+      function moduleDisplayLabel(value) {
+        if (PRIORITY_LABELS[value]) {
+          return PRIORITY_LABELS[value];
         }
+        const input = Array.from(moduleInputs).find((element) => element.value === value);
+        if (input && input.closest('label')) {
+          return input.closest('label').textContent.trim();
+        }
+        return value;
+      }
+
+      function buildEntry(value, label) {
+        return {
+          value,
+          label,
+          key: value === 'autre' ? `autre:${label}` : value
+        };
+      }
+
+      function getSelectedModuleEntries() {
+        const entries = [];
+        moduleInputs.forEach((input) => {
+          if (!input.checked) {
+            return;
+          }
+          if (input.value === 'autre') {
+            const text = customInput.value.trim();
+            if (text) {
+              entries.push(buildEntry('autre', text));
+            }
+            return;
+          }
+          const label = moduleDisplayLabel(input.value);
+          entries.push(buildEntry(input.value, label));
+        });
+        return entries;
+      }
+
+      function getPriorityItems() {
+        if (!priorityList) {
+          return [];
+        }
+        return Array.from(priorityList.querySelectorAll('.priority-item'));
+      }
+
+      function createPriorityItem(entry) {
+        const item = document.createElement('div');
+        item.className = 'priority-item';
+        item.dataset.value = entry.value;
+        item.dataset.label = entry.label;
+        item.dataset.key = entry.key;
+        item.setAttribute('role', 'listitem');
+
+        const rank = document.createElement('span');
+        rank.className = 'priority-rank';
+        rank.textContent = '0';
+        item.appendChild(rank);
+
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'priority-label';
+        labelSpan.textContent = entry.label;
+        item.appendChild(labelSpan);
+
+        const actions = document.createElement('div');
+        actions.className = 'priority-actions';
+
+        const upButton = document.createElement('button');
+        upButton.type = 'button';
+        upButton.className = 'priority-move priority-up';
+        upButton.setAttribute('aria-label', 'Monter');
+        upButton.textContent = '\u25B2';
+        actions.appendChild(upButton);
+
+        const downButton = document.createElement('button');
+        downButton.type = 'button';
+        downButton.className = 'priority-move priority-down';
+        downButton.setAttribute('aria-label', 'Descendre');
+        downButton.textContent = '\u25BC';
+        actions.appendChild(downButton);
+
+        item.appendChild(actions);
+        return item;
+      }
+
+      function buildPriorityList(entries) {
+        if (!priorityList) {
+          return;
+        }
+        const previousOrder = getPriorityOrder();
+        const orderMap = new Map(previousOrder.map((entry, index) => [entry.key, index]));
+        const sortedEntries = [...entries].sort((a, b) => {
+          const aIndex = orderMap.has(a.key) ? orderMap.get(a.key) : Number.MAX_SAFE_INTEGER;
+          const bIndex = orderMap.has(b.key) ? orderMap.get(b.key) : Number.MAX_SAFE_INTEGER;
+          if (aIndex !== bIndex) {
+            return aIndex - bIndex;
+          }
+          return entries.indexOf(a) - entries.indexOf(b);
+        });
+
+        priorityList.innerHTML = '';
+        sortedEntries.forEach((entry) => {
+          priorityList.appendChild(createPriorityItem(entry));
+        });
+
+        refreshPriorityUI();
+      }
+
+      function isPriorityEnabled() {
+        return priorityToggle ? priorityToggle.checked : true;
+      }
+
+      function refreshPriorityUI() {
+        if (!priorityList) {
+          return;
+        }
+        const items = getPriorityItems();
+        const hasItems = items.length > 0;
+
+        if (priorityToggle) {
+          if (!hasItems) {
+            priorityToggle.checked = false;
+          }
+          priorityToggle.disabled = !hasItems;
+        }
+
+        const enabled = hasItems && isPriorityEnabled();
+        priorityList.classList.toggle('is-disabled', !enabled);
+        priorityList.hidden = !enabled;
+        priorityList.style.display = enabled ? 'grid' : 'none';
+        priorityList.setAttribute('aria-disabled', enabled ? 'false' : 'true');
+
+        items.forEach((item, index) => {
+          const rank = item.querySelector('.priority-rank');
+          const upButton = item.querySelector('.priority-up');
+          const downButton = item.querySelector('.priority-down');
+          if (rank) {
+            rank.textContent = index + 1;
+          }
+          if (upButton) {
+            upButton.disabled = index === 0 || !enabled;
+          }
+          if (downButton) {
+            downButton.disabled = index === items.length - 1 || !enabled;
+          }
+        });
+        if (priorityInput) {
+          const firstItem = items[0];
+          priorityInput.value = enabled && firstItem ? firstItem.dataset.key : '';
+        }
+      }
+
+      function getPriorityOrder() {
+        return getPriorityItems().map((item) => ({
+          value: item.dataset.value,
+          label: item.dataset.label,
+          key: item.dataset.key
+        }));
+      }
+
+      function buildPriorityOrderSummary(order, enabled) {
+        if (!enabled) {
+          return "Vous n'avez pas activé le classement des priorités pour le moment. Activez l'option ci-dessus pour définir un ordre.";
+        }
+        if (!order.length) {
+          return "Vous n'avez pas encore classé vos priorités.";
+        }
+        const readable = order
+          .map((entry, index) => `${index + 1}. ${escapeHtml(entry.label)}`)
+          .join(' | ');
+        return `Priorités classées : ${readable}.`;
+      }
+
+      function updateModuleCount() {
+        if (!moduleCount) {
+          return;
+        }
+        const count = Array.from(moduleInputs).filter((input) => input.checked).length;
+        const label = count <= 1 ? 'sélectionnée' : 'sélectionnées';
+        moduleCount.textContent = `(${count} ${label})`;
+      }
+
+      function syncCustomField(options = {}) {
+        if (!customPill) {
+          return;
+        }
+        const { focus = false } = options;
+        if (customCheckbox.checked) {
+          customPill.classList.add('is-active');
+          customInput.required = true;
+          if (focus) {
+            customInput.focus();
+          }
+        } else {
+          customPill.classList.remove('is-active');
+          customInput.required = false;
+          customInput.value = '';
+          customInput.setCustomValidity('');
+        }
+      }
+
+      function buildModuleSummary(modules, customText) {
+        const labels = {
+          connecter: 'Connecter vos systèmes et données pour une interopérabilité fluide.',
+          liberer: 'Libérer du temps via l\'automatisation de vos processus clés.',
+          normaliser: 'Normaliser votre patrimoine de données pour sécuriser la décision.',
+          securiser: 'Sécuriser vos environnements et répondre aux exigences de conformité.',
+          valoriser: 'Valoriser vos données grâce à des analyses actionnables.',
+          collaborer: 'Faciliter la collaboration autour d\'espaces de partage unifiés.',
+          anticiper: 'Anticiper les évolutions par l\'innovation et l\'expérimentation.'
+        };
+
+        const sentences = modules
+          .map((value) => labels[value])
+          .filter(Boolean);
+
+        if (customText) {
+          const safeText = escapeHtml(customText.trim());
+          sentences.push(
+            `Vous mettez aussi en avant : ${safeText}${ensureTrailingPunctuation(customText)}`
+          );
+        }
+
+        if (!sentences.length) {
+          return 'Nous vous proposons un diagnostic transversal pour identifier les priorités CLN.';
+        }
+
+        return sentences.join(' ');
+      }
+
+      function recommendationFromPriority(priority, customLabel) {
+        const recommendations = {
+          connecter: "Nous recommandons de prioriser un chantier d'interopérabilité pour fluidifier les échanges entre vos systèmes clés.",
+          liberer: "Nous recommandons de lancer une séquence d'automatisation sur vos processus métiers critiques pour générer des gains rapides.",
+          normaliser: "Nous recommandons de cadrer un programme de gouvernance des données afin de fiabiliser vos référentiels et décisions.",
+          securiser: "Nous recommandons de bâtir une feuille de route conformité/sécurité pour renforcer vos environnements numériques.",
+          valoriser: "Nous recommandons de mettre en place un socle analytics partagé pour valoriser vos données et éclairer les décisions.",
+          collaborer: "Nous recommandons de structurer des espaces collaboratifs sécurisés pour fluidifier le partage entre équipes.",
+          anticiper: "Nous recommandons de réserver un sprint d'innovation pour tester et préparer vos futurs cas d'usage."
+        };
+
+        if (recommendations[priority]) {
+          return recommendations[priority];
+        }
+
+        if (priority === 'autre' && customLabel) {
+          const safeLabel = escapeHtml(customLabel);
+          return `Nous construirons avec vous un plan d'action spécifique autour de « ${safeLabel} ».`;
+        }
+
+        return "Explorons ensemble vos enjeux pour définir le plan d'action prioritaire.";
       }
 
       function rendezVousMessage(delai, mode) {
         const delais = {
           court: "Nous pouvons organiser un atelier d'immersion dans les 7 prochains jours pour cadrer les premières actions.",
           moyen: "Planifions un rendez-vous découverte afin de co-construire une feuille de route sur le semestre.",
-          long: "Nous vous proposons un échange stratégique pour bâtir un programme progressif et maîtrisé."
+          long: "Nous vous proposons un échange stratégique pour bâtir un programme progressif et maîtrisé.",
+          incertain: "Clarifions ensemble le calendrier lors d'un échange exploratoire."
         };
         const modes = {
           flash: "Un diagnostic flash de 3 à 4 ateliers permettrait de prioriser vos chantiers.",
@@ -160,36 +450,144 @@
         return `${delais[delai] || ""} ${modes[mode] || ""}`.trim();
       }
 
+      function horizonSummary(delai) {
+        const horizonLabels = {
+          court: 'un horizon court terme (< 3 mois)',
+          moyen: 'un horizon à moyen terme (3 à 6 mois)',
+          long: 'un horizon à plus de 6 mois',
+          incertain: 'un horizon encore à préciser'
+        };
+        return horizonLabels[delai] || 'un horizon à définir';
+      }
+
+      if (priorityList) {
+        priorityList.addEventListener('click', (event) => {
+          const button = event.target.closest('.priority-move');
+          if (!button) {
+            return;
+          }
+          const item = button.closest('.priority-item');
+          if (!item) {
+            return;
+          }
+          if (!isPriorityEnabled()) {
+            return;
+          }
+          if (button.classList.contains('priority-up')) {
+            const previous = item.previousElementSibling;
+            if (previous) {
+              priorityList.insertBefore(item, previous);
+            }
+          }
+          if (button.classList.contains('priority-down')) {
+            const next = item.nextElementSibling;
+            if (next) {
+              priorityList.insertBefore(next, item);
+            }
+          }
+          refreshPriorityUI();
+        });
+      }
+      if (priorityToggle) {
+        priorityToggle.addEventListener('change', () => {
+          refreshPriorityUI();
+        });
+      }
+
+      moduleInputs.forEach((input) => {
+        input.addEventListener('change', () => {
+          if (input === customCheckbox) {
+            syncCustomField({ focus: input.checked });
+          }
+          updateModuleCount();
+          buildPriorityList(getSelectedModuleEntries());
+        });
+      });
+
+      if (customInput) {
+        customInput.addEventListener('input', () => {
+          customInput.setCustomValidity('');
+          buildPriorityList(getSelectedModuleEntries());
+        });
+      }
+
+      syncCustomField();
+      updateModuleCount();
+      buildPriorityList(getSelectedModuleEntries());
+
       form.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        const modules = Array.from(
+        if (customCheckbox.checked && !customInput.value.trim()) {
+          customInput.setCustomValidity('Veuillez décrire votre enjeu.');
+          customInput.reportValidity();
+          return;
+        }
+        customInput.setCustomValidity('');
+
+        const selectedCheckboxes = Array.from(
           form.querySelectorAll('input[name="modules"]:checked')
-        ).map((input) => input.value);
+        );
+        const modules = selectedCheckboxes
+          .map((input) => input.value)
+          .filter((value) => value !== 'autre');
+        const customModule = customCheckbox.checked ? customInput.value.trim() : '';
         const taille = form.elements['taille'].value;
-        const priorite = form.elements['priorite'].value;
+        const priorityEnabled = isPriorityEnabled();
+        const priorityOrder = priorityEnabled ? getPriorityOrder() : [];
+        const prioriteEntry = priorityEnabled ? priorityOrder[0] || null : null;
+        const priorite = prioriteEntry ? prioriteEntry.value : '';
+        if (priorityInput) {
+          priorityInput.value = priorityEnabled && prioriteEntry ? prioriteEntry.key : '';
+        }
         const delai = form.elements['delai'].value;
         const mode = form.elements['mode'].value;
 
         const tailleLabel = {
-          petite: "une organisation agile en croissance.",
-          moyenne: "une structure en phase de structuration.",
-          grande: "un groupe établi avec plusieurs équipes métiers."
+          petite: "une organisation agile en croissance",
+          moyenne: "une structure en phase de structuration",
+          grande: "un groupe établi avec plusieurs équipes métiers",
+          tresgrande: "un grand groupe international avec plusieurs entités"
         }[taille];
 
-        const moduleSummary = buildModuleSummary(modules);
-        const priorityRecommendation = recommendationFromPriority(priorite);
+        const moduleSummary = buildModuleSummary(modules, customModule);
+        const priorityRecommendation = recommendationFromPriority(priorite, prioriteEntry ? prioriteEntry.label : '');
+        const prioritySummary = buildPriorityOrderSummary(priorityOrder, priorityEnabled);
         const meetingMessage = rendezVousMessage(delai, mode);
+        const horizonText = horizonSummary(delai);
+        const topPriorityLabel = prioriteEntry ? prioriteEntry.label : '';
+        const topPriorityLabelSafe = topPriorityLabel ? escapeHtml(topPriorityLabel) : '';
+        const topPriorityHighlight = priorityEnabled && topPriorityLabel
+          ? `Priorité #1 : ${topPriorityLabelSafe}.`
+          : "Priorité #1 : à déterminer (classement optionnel non activé).";
+        const organisationLine = `Vous êtes ${tailleLabel || "une organisation"} avec ${horizonText}.`;
+        const recommendationLine = `${topPriorityHighlight} ${priorityRecommendation}`;
+        const nextStepLine = meetingMessage || "Planifions un échange pour préciser les prochaines étapes.";
 
         insightsContainer.innerHTML = `
-          <p>Vous nous indiquez être ${tailleLabel || "une organisation"} avec un horizon projet ${
-            delai === 'court' ? 'court terme' : delai === 'moyen' ? 'à moyen terme' : 'à long terme'
-          }.</p>
-          <p>${moduleSummary}</p>
-          <p>${priorityRecommendation}</p>
-          <p>${meetingMessage}</p>
+          <p><strong>Profil.</strong> ${organisationLine}</p>
+          <p><strong>Enjeux principaux.</strong> ${moduleSummary}</p>
+          <p><strong>Feuille de route 6 mois.</strong> ${prioritySummary} ${recommendationLine}</p>
+          <p><strong>Prochain pas.</strong> ${nextStepLine}</p>
           <p>Transmettez-nous vos coordonnées et vos disponibilités via la page contact : nous reviendrons vers vous sous 48&nbsp;heures.</p>
         `;
+
+        try {
+          const payload = {
+            html: insightsContainer.innerHTML,
+            generatedAt: new Date().toISOString(),
+            meta: {
+              organisationLine,
+              moduleSummary,
+              prioritySummary,
+              recommendationLine,
+              nextStepLine
+            }
+          };
+          localStorage.setItem('clnRecommendation', JSON.stringify(payload));
+        } catch (error) {
+          console.warn('Impossible de stocker la recommandation localement.', error);
+        }
 
         card.hidden = false;
         card.scrollIntoView({ behavior: 'smooth', block: 'start' });
