@@ -75,17 +75,18 @@ PROJET_CLN/
   - Easy upgrades: swap `mail()` for PHPMailer in SMTP mode, add CAPTCHA, log submissions.
 
 ## 8. Deployment On Hostinger
-1. Keep this Git repository as the source of truth; ensure `contact.php` and HTML assets are current.
-2. In Hostinger hPanel, attach the domain `cln-solutions.fr` to the web hosting plan (Web Premium/Business).
-3. Deliver the site to `public_html`:
-   - **File Manager route**: create an archive locally (`Compress-Archive -Path * -DestinationPath site.zip`), upload it in hPanel > File Manager, extract inside `public_html`, remove the archive.
-   - **Git deployment route** (if enabled): hPanel > Git > Add repository, set URL `https://github.com/timetogrowup/PROJET_CLN.git`, target directory `public_html`, then Deploy.
-4. Confirm file layout on the server (`public_html/index.html`, `contact.php`, `styles.css`, assets folders).
-5. Test https://cln-solutions.fr after propagation:
-   - Browse each page.
-   - Submit the contact form (expect the email in `patrick.lyonnet@cln-solutions.fr` and a redirect to `merci.html`).
-6. DNS: keep Hostinger nameservers (`ns1.dns-parking.com`, `ns2.dns-parking.com`). Ensure the hosting plan populates the correct A records; remove legacy GitHub Pages records if present.
-
+- **Automated pipeline** - workflow .github/workflows/deploy-hostinger.yml triggers on every push to main (and on manual dispatch):
+  1. Checkout repository.
+  2. Sync web assets to Hostinger via FTPS (SamKirkland/FTP-Deploy-Action) while excluding tooling files; a state file prevents re-uploading unchanged content.
+  3. Wait about 10 seconds, then submit a POST request to contact.php to confirm a 303 redirect towards merci.html?status=success.
+  4. Expose HTTP status and redirect location via job outputs; any anomaly fails the workflow.
+- **Required secrets**: HOSTINGER_FTP_HOST, HOSTINGER_FTP_USER, HOSTINGER_FTP_PASSWORD, optional HOSTINGER_FTP_DIR, HOSTINGER_CONTACT_URL, HOSTINGER_CONTACT_TEST_EMAIL.
+- **Manual fallback** (if automation is paused):
+  1. Keep this repository as source of truth and ensure assets are current.
+  2. Upload the site to public_html via Hostinger File Manager (zip + extract) or hPanel Git deployment.
+  3. Verify server layout (public_html/index.html, contact.php, styles.css, assets).
+  4. Browse https://cln-solutions.fr and submit the contact form manually (expect success redirect plus email).
+  5. Maintain Hostinger nameservers ns1.dns-parking.com / ns2.dns-parking.com and remove legacy GitHub Pages DNS records.
 ## 9. Testing & Validation
 - **Static preview**: `python -m http.server 8000` and open `http://localhost:8000/index.html`.
 - **PHP contact form locally**: `php -S localhost:8000` then POST to `http://localhost:8000/contact.php` (set `mail()` to log or use a dummy handler when developing).
@@ -108,7 +109,7 @@ PROJET_CLN/
 - Reuse `.cta-button`, `.card`, `.contact-grid` classes to stay consistent.
 - Update contact information simultaneously across all pages when changes occur.
 - Secure credentials: `.env` stays local (SMTP password never committed).
-- Review GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) if GitHub Pages remains part of the workflow, otherwise disable when Hostinger deployment is final.
+- Monitor .github/workflows/deploy-hostinger.yml logs; rotate Hostinger credentials and update repository secrets when needed.
 
 ## 12. Annexes
 - `BUSINESS_OVERVIEW.md`, `CODE_REFERENCE.md` provide complementary documentation.

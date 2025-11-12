@@ -6,23 +6,39 @@ Static marketing site for CLN (Connecter – Libérer – Normaliser).
 
 - **Source control**: GitHub repository `timetogrowup/PROJET_CLN` (`main` branch).
 - **Production hosting**: Hostinger shared hosting serving `cln-solutions.fr` (files placed in `public_html`).
-- **Legacy preview**: GitHub Pages workflow `.github/workflows/deploy-pages.yml` still builds the site for preview at `https://timetogrowup.github.io/PROJET_CLN/`.
+- **Continuous delivery**: GitHub Actions workflow `.github/workflows/deploy-hostinger.yml` pushes the site on every `main` commit and performs a smoke test of the contact form.
 
-### Deploying to Hostinger (recommended)
+### GitHub Actions pipeline
+
+The `Deploy to Hostinger` workflow executes the following steps:
+
+1. Checkout the repository.
+2. Upload the web assets to Hostinger via FTPS, excluding local tooling files.
+3. Wait briefly, then submit an automated request to `contact.php` to confirm the form returns a `303` redirect to `merci.html?status=success`.
+
+#### Required secrets
+
+Configure these repository secrets in GitHub before enabling the workflow:
+
+| Secret | Description |
+| --- | --- |
+| `HOSTINGER_FTP_HOST` | Hostname of the Hostinger FTP/FTPS server (e.g. `ftp.cln-solutions.fr`). |
+| `HOSTINGER_FTP_USER` | FTP username. |
+| `HOSTINGER_FTP_PASSWORD` | FTP password. |
+| `HOSTINGER_FTP_DIR` | *(Optional)* target directory (defaults to `/public_html/`). |
+| `HOSTINGER_CONTACT_URL` | *(Optional)* full URL to `contact.php` (defaults to `https://cln-solutions.fr/contact.php`). |
+| `HOSTINGER_CONTACT_TEST_EMAIL` | *(Optional)* destination email for the smoke test (defaults to `patrick.lyonnet@cln-solutions.fr`). |
+
+The workflow runs automatically on pushes to `main`, and can be triggered manually from the Actions tab (workflow_dispatch).
+
+### Manual deployment fallback
+
+If you prefer a manual upload:
 
 1. Ensure local changes are committed and pushed to GitHub.
-2. Deliver the files to Hostinger:
-   - **File Manager route** – `Compress-Archive -Path * -DestinationPath site.zip`, upload the archive in hPanel > File Manager, extract inside `public_html`, then delete the archive.
-   - **Git deployment route** – hPanel > Git > Add repository, set the repository URL `https://github.com/timetogrowup/PROJET_CLN.git`, choose `public_html` as the deployment directory, click Deploy.
-3. Check that `index.html`, `contact.php`, `styles.css` and assets are present in `public_html`.
-4. Visit `https://cln-solutions.fr`, navigate across pages, submit a form test and confirm the email is received by `patrick.lyonnet@cln-solutions.fr`.
-5. DNS: keep Hostinger nameservers (`ns1.dns-parking.com`, `ns2.dns-parking.com`) and remove any legacy GitHub Pages A/CNAME records if they still exist.
-
-### GitHub Pages workflow (optional preview)
-
-1. Push to `origin/main`.
-2. Monitor the **Deploy static site** action; it publishes to `https://timetogrowup.github.io/PROJET_CLN/`.
-3. Disable the workflow once Hostinger hosting becomes the only delivery path.
+2. Create an archive: `Compress-Archive -Path * -DestinationPath site.zip`.
+3. Upload the archive via Hostinger hPanel > File Manager > `public_html`, then extract it and delete the archive.
+4. Browse `https://cln-solutions.fr` and submit a form test manually to confirm delivery.
 
 ## Contact Email Configuration
 
@@ -46,7 +62,8 @@ Update `SMTP_PASSWORD` locally before launching any automation that sends emails
 
 - `contact.php` processes POST submissions, validates the required fields, sends a message via PHP `mail()` (reply-to set to the sender), then redirects with status flags.
 - `contact.html` displays a status banner based on the `status` query parameter (`success`, `invalid`, `error`).
-- Local test command: `php -S localhost:8000` and submit `http://localhost:8000/contact.php`.
+- Local test command: `php -S localhost:8000` and submit `http://localhost:8000/contact.php`.  
+  The GitHub Actions smoke test described above performs the same call against production.
 
 ## Tooling & Useful Commands
 
