@@ -58,13 +58,13 @@ Chaque page suit la même structure :
 
 ### `index.html`
 - **Hero** : slogan, titre principal, description et CTA vers `solutions.html`, image illustrative.
-- **Section “CLN en trois engagements”** : trois `.card` orientant vers ancres `solutions.html#connecter|#liberer|#normaliser`.
+- **Section “CLN en trois engagements”** : trois `.card` orientant vers ancres `solutions.html#chirurgical|#liberer|#normaliser`.
 - **Citation** : `.quote-block` reprenant la vision CLN.
 - **Section “Pourquoi CLN ?”** : cartes mettant en avant vision alignée, solutions prêtes, accompagnement durable.
 
 ### `solutions.html`
 - Page axée sur le détail des offres.
-- Trois sections distinguées (`id` `connecter`, `liberer`, `normaliser`) chacune emballée dans `.card` avec listes à puces et CTA.
+- Trois sections distinguées (`id` `chirurgical`, `liberer`, `normaliser`) chacune emballée dans `.card` avec listes à puces et CTA.
 - Titles `h2` explicites pour SEO.
 
 ### `approche.html`

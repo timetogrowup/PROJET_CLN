@@ -42,16 +42,16 @@
             </p>
             <div class="pill-group">
               <label class="pill">
-                <input type="checkbox" name="modules" value="connecter" />
-                Connecter · Interopérabilité
+                <input type="checkbox" name="modules" value="chirurgical" />
+                Ciblé · Interventions ciblées
               </label>
               <label class="pill">
                 <input type="checkbox" name="modules" value="liberer" />
-                Libérer · Automatisation
+                Libéré · Automatisation
               </label>
               <label class="pill">
                 <input type="checkbox" name="modules" value="normaliser" />
-                Normaliser · Gouvernance des données
+                Normé · Gouvernance des données
               </label>
               <label class="pill">
                 <input type="checkbox" name="modules" value="securiser" />
@@ -161,9 +161,9 @@
       const priorityInput = document.getElementById('priorite-input');
       const priorityToggle = document.getElementById('priorite-toggle');
       const PRIORITY_LABELS = {
-        connecter: 'Connecter · Interopérabilité',
-        liberer: 'Libérer · Automatisation',
-        normaliser: 'Normaliser · Gouvernance des données',
+        chirurgical: 'Ciblé · Interventions ciblées',
+        liberer: 'Libéré · Automatisation',
+        normaliser: 'Normé · Gouvernance des données',
         securiser: 'Sécuriser · Conformité',
         valoriser: 'Valoriser · Analytics',
         collaborer: 'Collaborer · Partage',
@@ -385,7 +385,7 @@
 
       function buildModuleSummary(modules, customText) {
         const labels = {
-          connecter: 'Connecter vos systèmes et données pour une interopérabilité fluide.',
+          chirurgical: 'Intervenir de façon chirurgicale sur un point critique pour obtenir un résultat rapide et maîtrisé.',
           liberer: 'Libérer du temps via l\'automatisation de vos processus clés.',
           normaliser: 'Normaliser votre patrimoine de données pour sécuriser la décision.',
           securiser: 'Sécuriser vos environnements et répondre aux exigences de conformité.',
@@ -414,7 +414,7 @@
 
       function recommendationFromPriority(priority, customLabel) {
         const recommendations = {
-          connecter: "Nous recommandons de prioriser un chantier d'interopérabilité pour fluidifier les échanges entre vos systèmes clés.",
+          chirurgical: "Nous recommandons de lancer une intervention chirurgicale sur le périmètre critique pour sécuriser un gain rapide sans perturber l'existant.",
           liberer: "Nous recommandons de lancer une séquence d'automatisation sur vos processus métiers critiques pour générer des gains rapides.",
           normaliser: "Nous recommandons de cadrer un programme de gouvernance des données afin de fiabiliser vos référentiels et décisions.",
           securiser: "Nous recommandons de bâtir une feuille de route conformité/sécurité pour renforcer vos environnements numériques.",

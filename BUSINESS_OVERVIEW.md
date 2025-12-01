@@ -1,7 +1,7 @@
 # CLN — Dossier métier
 
 ## 1. Positionnement
-- **Marque** : CLN (Connecter · Libérer · Normaliser), solutions intelligentes pour les systèmes d’information.
+- **Marque** : CLN (Ciblé · Libéré · Normé), solutions intelligentes pour les systèmes d'information. Chirurgical traduit nos interventions rapides, précises et à impact collatéral minimal.
 - **Promesse** : rendre les organisations plus autonomes et intelligentes en alignant architecture, processus et gouvernance des données.
 - **Différenciation clé** : approche modulaire couvrant interopérabilité, automatisation et normalisation, avec accompagnement pédagogique et durable.
 
@@ -40,16 +40,16 @@
 
 ## 6. Questionnaire De Pré-Diagnostic
 - **Objectif** : fournir une première analyse personnalisée et alimenter le discours commercial.
-- **Structure** : thèmes prioritaires (connecter/libérer/normaliser), taille de l’organisation, priorité stratégique, horizon temporel, type d’accompagnement.
+- **Structure** : thèmes prioritaires (ciblé/libéré/normé), taille de l'organisation, priorité stratégique, horizon temporel, type d'accompagnement.
 - **Sortie** : synthèse textuelle guidant vers la prise de rendez-vous et renforçant la valeur consultative.
 - **Intégration Business** :
   - Les réponses peuvent être reprises manuellement dans un CRM.
   - Possibilité future d’automatiser l’envoi d’un PDF ou d’un email personnalisé.
 
 ## 7. Proposition De Valeur Détaillée
-- **Connecter** : combler les silos, orchestrer les flux, garantir disponibilité de la donnée.
-- **Libérer** : délester les équipes, accélérer les workflows, mettre la donnée en action.
-- **Normaliser** : instaurer des standards, renforcer la confiance et la conformité.
+- **Ciblé** : cibler un périmètre critique, intervenir vite avec un dispositif léger, et livrer un gain mesurable sans perturber l'existant.
+- **Libéré** : délester les équipes, accélérer les workflows, mettre la donnée en action.
+- **Normé** : instaurer des standards, renforcer la confiance et la conformité.
 - **Livrables types** : diagnostic flash, architecture cible, connecteurs/API, automatisations (Power Automate, RPA), référentiels et règles métiers.
 
 ## 8. Preuves & Signaux De Confiance

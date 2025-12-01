@@ -1,6 +1,6 @@
 # CLN Website
 
-Static marketing site for CLN (Connecter – Libérer – Normaliser).
+Static marketing site for CLN (Ciblé – Libéré – Normé), where "Ciblé" highlights targeted, rapid interventions with minimal collateral impact.
 
 ## Deployment Overview
 

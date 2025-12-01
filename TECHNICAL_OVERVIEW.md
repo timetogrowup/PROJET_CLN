@@ -3,7 +3,7 @@
 This document summarises the structure and technical choices of the CLN marketing site.
 
 ## 1. Purpose And Scope
-- Static showcase site describing the Connecter – Liberer – Normaliser offering.
+- Static showcase site describing the Ciblé – Libéré – Normé offering (Ciblé = interventions rapides, précises, à impact maîtrisé).
 - Target hosting: GitHub Pages historically, now migrated to Hostinger shared hosting.
 - Content: HTML pages, one CSS stylesheet, inline JavaScript for the diagnostic questionnaire.
 
@@ -44,7 +44,7 @@ PROJET_CLN/
 
 ## 5. Pages And Content
 1. **index.html** – hero message, key commitments, quote block.
-2. **solutions.html** – detailed presentation of the three modules (Connecter, Liberer, Normaliser).
+2. **solutions.html** – detailed presentation of the three modules (Ciblé, Libéré, Normé).
 3. **approche.html** – mission/vision cards and four-step timeline.
 4. **realisations.html** – three case studies, tags, and calls to action.
 5. **diagnostic.html** – multi-step questionnaire producing a recommendation summary (results persisted in `localStorage` for reuse in contact form).
@@ -53,7 +53,7 @@ PROJET_CLN/
 
 ## 6. Diagnostic Questionnaire
 - Form controls:
-  - Checkboxes `modules[]` to pick the levers (Connecter/Liberer/Normaliser).
+  - Checkboxes `modules[]` to pick the levers (Ciblé/Libéré/Normé).
   - Radio groups for organisation size, project timeframe, and engagement mode.
   - Select `priorite` to capture the main priority.
 - JavaScript (inline):
