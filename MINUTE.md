@@ -1,7 +1,7 @@
 # MINUTE — CLN Performance
 **Photographie métier et technique du projet**  
 **Date : 26 octobre 2026**  
-**Version : 1.0**  
+**Version : 1.1**  
 **Référentiel :** dépôt `timetogrowup/PROJET_CLN`, branche `main`  
 **Site :** https://cln-performance.com
 
@@ -112,3 +112,26 @@ Visite → consultation des offres → diagnostic facultatif → recommandation 
 5. Mettre à jour la présente MINUTE : nouvelle date, résultats factuels, décisions, anomalies résolues, points ouverts et liens vers commits.
 
 **Statut global : site vitrine consultable ; fonction commerciale de contact non opérationnelle ; infrastructure OVHcloud de remplacement partiellement disponible.**
+
+
+## 10. Mise à jour MINUTE V1.1 — 26 octobre 2026, après configuration OVHcloud
+
+### Avancées métier et techniques confirmées par les écrans et tests utilisateur
+- **Boîte officielle créée :** `contact@cln-performance.com`. L'utilisateur a confirmé avoir réalisé les tests d'envoi et de réception ; le tableau de bord OVHcloud indique désormais **Adresses e-mails : Actif**.
+- **Hébergement :** OVHcloud Starter actif, PHP 8.4, hôte `nkzkafh.cluster129.hosting.ovh.net`.
+- **Limite d'offre découverte :** tentative de création d'un second **site** `CLN-API` refusée avec `quota is reached for websites`. Cette tentative n'est pas le site installé.
+- **Contournement effectif :** sous-domaine `api.cln-performance.com` ajouté en tant que **domaine supplémentaire du site existant** `Website-www`; interface OVHcloud montrant deux domaines associés : domaine technique OVH et `api.cln-performance.com`. Tous deux sont rattachés au dossier racine `www` (et non `api`).
+- **Zone DNS :** deux entrées créées et visibles : `api A 51.91.236.255` et `api AAAA 2001:41d0:301::29`. Enregistrements du domaine principal et du mail visuellement préservés. Propagation effective non encore vérifiée par un test réseau externe.
+- **SSL :** certificat Let's Encrypt pour `api.cln-performance.com` affiché **En création** à la dernière capture. **Ne pas le qualifier d'actif avant vérification**.
+- **Déploiement :** la production du site principal reste sur GitHub Pages ; aucune modification fonctionnelle du formulaire dans `contact.html` n'a été effectuée à ce stade. L'erreur 405 est donc **toujours à corriger**.
+
+### Prochaines actions immédiates
+1. Vérifier le passage du certificat SSL de « En création » à « Actif » et tester `https://api.cln-performance.com` ; vérifier DNS résolus.
+2. Préparer un script PHP sûr et ciblé dans le répertoire racine `www` de l'hébergement OVH (ne pas supposer l'existence d'un dossier `api`). Ne publier ni mots de passe ni secrets dans GitHub.
+3. Définir un transport email opérationnel (SMTP approprié ou mail PHP réellement testé), validation serveur, antispam, réponses et gestion d'erreurs.
+4. Vérifier le fonctionnement du POST cross-domain du formulaire GitHub Pages vers OVHcloud, en gardant une confirmation fidèle à la réception réelle.
+5. Tester le trajet complet jusqu'à `contact@cln-performance.com` et vérifier la sécurité, puis déployer le formulaire corrigé et contrôler qu'aucun élément du site principal ne régresse.
+6. Mettre à jour le README historique Hostinger, ainsi que la documentation conformité / coordonnées légales.
+
+### Critère de sortie
+La correction du formulaire ne sera terminée que lorsqu'un message de test, envoyé depuis la page de production, produit une confirmation fiable et est **reçu** dans la boîte CLN. Jusqu'alors l'état métier du canal de contact demeure **bloqué**.
