@@ -95,6 +95,34 @@
     </footer>
     <script>
       (function () {
+        const contactForm = document.getElementById('contact-form');
+        const alertBox = document.getElementById('form-alert');
+        if (!contactForm || !alertBox) return;
+        contactForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+          const name = contactForm.elements.namedItem('name').value.trim();
+          const emailField = contactForm.elements.namedItem('_replyto');
+          const email = emailField.value.trim();
+          const company = contactForm.elements.namedItem('company').value.trim();
+          const message = contactForm.elements.namedItem('message').value.trim();
+          const consent = contactForm.elements.namedItem('consent').checked;
+          if (!name || !emailField.checkValidity() || !message || !consent) {
+            alertBox.textContent = 'Merci de renseigner votre nom, une adresse e-mail valide, votre besoin et votre consentement.';
+            alertBox.className = 'form-alert form-alert--error';
+            alertBox.hidden = false;
+            return;
+          }
+          const subject = 'Demande de contact CLN Performance';
+          const body = ['Nom : ' + name, 'E-mail : ' + email, 'Organisation : ' + (company || 'Non renseignée'), '', 'Besoin :', message].join('\n');
+          alertBox.textContent = "Votre messagerie va s'ouvrir. Vous devrez envoyer le message depuis votre application e-mail.";
+          alertBox.className = 'form-alert';
+          alertBox.hidden = false;
+          window.location.href = 'mailto:patrick.lyonnet@cln-performance.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
         const container = document.getElementById('recommendation-preview');
         const content = document.getElementById('recommendation-content');
         const clearBtn = document.getElementById('recommendation-clear');
