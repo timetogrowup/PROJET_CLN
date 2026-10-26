@@ -50,7 +50,7 @@
             CLN accompagne les organisations publiques et privées sur leurs enjeux data, automatisation et gouvernance.
           </p>
           <ul>
-            <li>Email : <a href="mailto:patrick.lyonnet@cln-solutions.fr">patrick.lyonnet@cln-solutions.fr</a></li>
+            <li>Email : <a href="mailto:patrick.lyonnet@cln-performance.com">patrick.lyonnet@cln-performance.com</a></li>
             <li>Téléphone : <a href="tel:+33700000000">+33 7 00 00 00 00</a></li>
             <li>LinkedIn : <a href="#">@CLN-Solutions</a></li>
           </ul>
@@ -59,7 +59,7 @@
           </p>
         </div>
         <div>
-          <form id="contact-form" action="contact.php" method="POST" novalidate>
+          <form id="contact-form" method="POST" novalidate>
             <div id="form-alert" class="form-alert" hidden></div>
             <label for="name">Nom et prénom</label>
             <input id="name" name="name" type="text" placeholder="Marie Dupont" required />
@@ -78,7 +78,7 @@
               J'accepte que CLN me contacte au sujet de ma demande.
             </label>
 
-            <button class="cta-button" type="submit">Envoyer la demande</button>
+            <p class="helper-text">Le bouton ouvre votre logiciel de messagerie avec un e-mail prérempli. Vérifiez le contenu, puis envoyez le message depuis votre messagerie.</p>\n            <button class="cta-button" type="submit">Préparer mon e-mail</button>
           </form>
         </div>
       </section>
@@ -87,7 +87,7 @@
       <div class="footer-inner">
         <span>© CLN — Solutions intelligentes pour vos SI.</span>
         <div class="footer-links">
-          <a href="mailto:patrick.lyonnet@cln-solutions.fr">patrick.lyonnet@cln-solutions.fr</a>
+          <a href="mailto:patrick.lyonnet@cln-performance.com">patrick.lyonnet@cln-performance.com</a>
           <a href="contact.html">Prendre rendez-vous</a>
           <a href="#">Mentions légales</a>
         </div>
@@ -208,7 +208,7 @@
 
         switch (status) {
           case 'success':
-            message = 'Merci ! Votre message a bien été envoyé. Nous revenons vers vous sous 48 heures.';
+            message = 'Votre messagerie a préparé votre demande. Vérifiez son envoi dans votre application e-mail.';
             variant = 'form-alert--success';
             break;
           case 'invalid':
