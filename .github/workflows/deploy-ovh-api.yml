@@ -1,0 +1,24 @@
+name: Deploy OVH contact API
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ovh-contact-api
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout reviewed source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Validate PHP syntax
+        run: php -l contact.php
+      - name: Deploy only contact.php via FTPS
+        env:
+          OVH_FTP_PASSWORD: ${{ secrets.OVH_FTP_PASSWORD }}
+        run: python3 scripts/deploy_ovh_api.py
