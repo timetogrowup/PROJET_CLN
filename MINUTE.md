@@ -172,3 +172,9 @@ La correction du formulaire ne sera terminée que lorsqu'un message de test, env
 5. Mettre à jour cette MINUTE avec les preuves de déploiement et résultats réels.
 
 **Statut : fiabilisation partielle du site ; formulaire non activé ; finalisation dépendante de la connexion OVHcloud et de la validation de livraison.**
+
+
+### Complément du 27 octobre 2026 — coordonnées et accès
+- Téléphone validé explicitement par Patrick : +33 6 14 36 55 26 ; ajouté à contact.html avec lien tel:+33614365526 (commit bcc04b6cbeafae196a9dd2272e429f30e57dfdbd).
+- Corrections et audit sauvegardés : commit a3cdbff8f1b4a63d3a55ff2a5dcedfc2c41f0b41.
+- Tentative de connexion sécurisée OVHcloud : refus explicite « Incorrect or invalid email address, username or password ». Aucun accès authentifié obtenu, aucun fichier OVH modifié. Intervention utilisateur requise pour poursuivre la connexion.
