@@ -178,3 +178,14 @@ La correction du formulaire ne sera terminée que lorsqu'un message de test, env
 - Téléphone validé explicitement par Patrick : +33 6 14 36 55 26 ; ajouté à contact.html avec lien tel:+33614365526 (commit bcc04b6cbeafae196a9dd2272e429f30e57dfdbd).
 - Corrections et audit sauvegardés : commit a3cdbff8f1b4a63d3a55ff2a5dcedfc2c41f0b41.
 - Tentative de connexion sécurisée OVHcloud : refus explicite « Incorrect or invalid email address, username or password ». Aucun accès authentifié obtenu, aucun fichier OVH modifié. Intervention utilisateur requise pour poursuivre la connexion.
+
+
+### Reprise authentifiée du 27 octobre 2026 — vérification OVHcloud
+- Connexion au Manager OVHcloud réussie avec validation par email. Aucun secret enregistré dans ce document.
+- Hébergement Starter actif, PHP 8.4 ; email de l'hébergement indiqué actif.
+- Certificat Let's Encrypt api.cln-performance.com : Active, créé le 26/10/2026, expiration affichée le 24/01/2027.
+- Site Website-www : deux domaines associés, racine www, intégration Git désactivée.
+- SFTP activé : ftp.cluster129.hosting.ovh.net, port 22, utilisateur nkzkafh ; cible du script /home/nkzkafh/www/contact.php.
+- Le bouton FTP Explorer ouvre un avis : Net2FTP n'est plus disponible, utilisation d'un client FTP/SFTP externe nécessaire. Le Manager authentifié ne donne donc pas d'éditeur de fichiers utilisable par cette voie.
+- Aucun fichier OVH déployé ou modifié pendant cette vérification ; aucun email de test envoyé. Le formulaire reste masqué jusqu'au déploiement et aux tests de livraison.
+- Prochaine dépendance : accès de transfert sécurisé ou dépôt du contact.php existant dans www par SFTP, avec sauvegarde préalable de tout fichier homonyme. Ne pas fournir de mot de passe dans le chat.
