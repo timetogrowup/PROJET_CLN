@@ -135,3 +135,40 @@ Visite → consultation des offres → diagnostic facultatif → recommandation 
 
 ### Critère de sortie
 La correction du formulaire ne sera terminée que lorsqu'un message de test, envoyé depuis la page de production, produit une confirmation fiable et est **reçu** dans la boîte CLN. Jusqu'alors l'état métier du canal de contact demeure **bloqué**.
+
+
+## 11. Audit et corrections du 27 octobre 2026 — reprise Work
+
+### Vérifications réalisées
+- Dépôt identifié : timetogrowup/PROJET_CLN, branche main, base 836a7bf935364b70a5f59ae90f7b5b5bd0990f56.
+- Les six pages principales et merci.html répondent HTTP 200 en HTTPS.
+- HTTP et https://www.cln-performance.com redirigent vers le domaine principal HTTPS.
+- https://api.cln-performance.com/ répond 200 avec vérification TLS normale du client ; certificat accepté pour cet hôte. Date d'expiration et renouvellement OVH non audités.
+- https://api.cln-performance.com/contact.php répond 404. Le backend n'est donc pas disponible au chemin cible.
+- Cause du 405 établie dans le code : action relative contact.php sur GitHub Pages.
+- Références locales des liens et images vérifiées sur les sept pages : aucune cible de fichier manquante. Les liens # (mentions légales) restent ouverts.
+
+### Corrections préparées dans ce changement
+- Adresse officielle contact@cln-performance.com sur les sept pages ; retrait du téléphone fictif et du lien LinkedIn fictif.
+- Navigation mobile désormais visible et repliée sur plusieurs lignes, sans changement de palette.
+- Suppression de l'injection directe du HTML conservé dans localStorage sur la page Contact ; synthèse rendue en texte.
+- Formulaire préparé pour l'URL absolue de l'API, validation native, longueurs maximales et champ piège antispam.
+- **Mesure provisoire explicite : formulaire masqué tant que le backend n'est pas validé ; lien email officiel visible.** Cela évite de proposer un envoi connu comme défaillant. Ce lien ouvre le logiciel de messagerie du visiteur ; ce n'est pas un formulaire opérationnel.
+- Script PHP révisé : adresse officielle, redirections absolues vers GitHub Pages, validation de types/tailles, contrôle Origin, piège antispam, limitation à cinq tentatives par heure et une par minute par IP avec verrouillage de fichier privé, erreurs sans données personnelles.
+- Déclenchement automatique de l'ancien workflow Hostinger retiré ; lancement manuel conservé pour historique. Aucun service payant modifié.
+
+### Limites et blocages
+- Administration OVHcloud : écran de connexion, aucune session authentifiée disponible dans le navigateur de travail. Déploiement www/contact.php bloqué par authentification.
+- PHP non disponible dans le runtime local : validation syntaxique et tests du script PHP **non exécutés**. Code à valider sur PHP 8.4 avant activation.
+- Aucun message de test envoyé pendant cette reprise ; réception en boîte non vérifiée. mail() ne garantit que l'acceptation par le transport, pas la livraison.
+- Navigation mobile corrigée dans CSS mais contrôle visuel mobile restant à effectuer. DNS MX/SPF/DKIM/DMARC et échéance TLS restant à contrôler.
+- Mentions légales et politique de confidentialité à compléter avec identité juridique, adresse et données éditeur validées ; ne pas inventer ces informations.
+
+### Suite exacte après accès OVHcloud
+1. Sauvegarder les fichiers déjà présents dans www sans supprimer ni écraser sans copie.
+2. Valider PHP 8.4, déployer contact.php et tester les rejets (GET, mauvais Origin, tableaux, tailles, consentement, piège, débit).
+3. Tester le transport mail vers contact@cln-performance.com et vérifier le message reçu ainsi que Reply-To ; corriger le transport si nécessaire.
+4. Retirer hidden du formulaire et le message provisoire, tester une soumission réelle depuis la page publique, vérifier réception avant de conclure.
+5. Mettre à jour cette MINUTE avec les preuves de déploiement et résultats réels.
+
+**Statut : fiabilisation partielle du site ; formulaire non activé ; finalisation dépendante de la connexion OVHcloud et de la validation de livraison.**

@@ -586,8 +586,13 @@ footer {
 }
 
 @media (max-width: 720px) {
+  .navbar { flex-wrap: wrap; }
   .nav-links {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.65rem 1rem;
+    order: 3;
   }
 
   header {

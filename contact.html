@@ -50,28 +50,28 @@
             CLN accompagne les organisations publiques et privées sur leurs enjeux data, automatisation et gouvernance.
           </p>
           <ul>
-            <li>Email : <a href="mailto:patrick.lyonnet@cln-solutions.fr">patrick.lyonnet@cln-solutions.fr</a></li>
-            <li>Téléphone : <a href="tel:+33700000000">+33 7 00 00 00 00</a></li>
-            <li>LinkedIn : <a href="#">@CLN-Solutions</a></li>
+            <li>Email : <a href="mailto:contact@cln-performance.com">contact@cln-performance.com</a></li>
           </ul>
           <p>
             Vous préférez fixer un créneau ? Proposez deux disponibilités et nous vous envoyons une invitation.
           </p>
         </div>
         <div>
-          <form id="contact-form" action="contact.php" method="POST" novalidate>
-            <div id="form-alert" class="form-alert" hidden></div>
+          <p class="form-alert">Le formulaire est en cours de mise en service. Écrivez-nous à <a href="mailto:contact@cln-performance.com">contact@cln-performance.com</a>.</p>
+          <form id="contact-form" action="https://api.cln-performance.com/contact.php" method="POST" hidden>
+            <div id="form-alert" class="form-alert" role="status" hidden></div>
+            <div hidden aria-hidden="true"><label>Site web<input name="website" tabindex="-1" autocomplete="off" /></label></div>
             <label for="name">Nom et prénom</label>
-            <input id="name" name="name" type="text" placeholder="Marie Dupont" required />
+            <input id="name" name="name" type="text" placeholder="Marie Dupont" maxlength="200" required />
 
             <label for="email">Email professionnel</label>
             <input id="email" name="_replyto" type="email" placeholder="marie.dupont@organisation.fr" required />
 
             <label for="company">Organisation</label>
-            <input id="company" name="company" type="text" placeholder="Organisation / Collectivité" />
+            <input id="company" name="company" type="text" placeholder="Organisation / Collectivité" maxlength="300" />
 
             <label for="message">Votre besoin</label>
-            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou vos problématiques."></textarea>
+            <textarea id="message" name="message" rows="5" maxlength="10000" required placeholder="Décrivez votre projet ou vos problématiques."></textarea>
 
             <label class="checkbox">
               <input type="checkbox" name="consent" required />
@@ -87,7 +87,7 @@
       <div class="footer-inner">
         <span>© CLN — Solutions intelligentes pour vos SI.</span>
         <div class="footer-links">
-          <a href="mailto:patrick.lyonnet@cln-solutions.fr">patrick.lyonnet@cln-solutions.fr</a>
+          <a href="mailto:contact@cln-performance.com">contact@cln-performance.com</a>
           <a href="contact.html">Prendre rendez-vous</a>
           <a href="#">Mentions légales</a>
         </div>
@@ -127,7 +127,12 @@
           return;
         }
 
-        content.innerHTML = data.html;
+        // Stored HTML is untrusted. Render the diagnostic summary as plain text.
+        const summary = data.meta && [data.meta.organisationLine, data.meta.moduleSummary,
+          data.meta.prioritySummary, data.meta.recommendationLine, data.meta.nextStepLine]
+          .filter(value => typeof value === 'string').join('\n');
+        content.textContent = summary || 'Retrouvez votre recommandation dans le diagnostic.';
+        content.style.whiteSpace = 'pre-line';
         if (dateLabel && data.generatedAt) {
           const generated = new Date(data.generatedAt);
           if (!Number.isNaN(generated.getTime())) {

@@ -1,3 +1,5 @@
+> État courant au 27 octobre 2026 : site statique sur GitHub Pages, domaine cln-performance.com ; backend cible OVHcloud sur api.cln-performance.com. Voir MINUTE.md, section 11. Les instructions Hostinger ci-dessous sont historiques. Le formulaire reste masqué jusqu’au déploiement et à la validation du backend ; contact direct : contact@cln-performance.com.
+
 # CLN Website
 
 Static marketing site for CLN (Ciblé – Libéré – Normé), where "Ciblé" highlights targeted, rapid interventions with minimal collateral impact.
