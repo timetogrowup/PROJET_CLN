@@ -189,3 +189,12 @@ La correction du formulaire ne sera terminée que lorsqu'un message de test, env
 - Le bouton FTP Explorer ouvre un avis : Net2FTP n'est plus disponible, utilisation d'un client FTP/SFTP externe nécessaire. Le Manager authentifié ne donne donc pas d'éditeur de fichiers utilisable par cette voie.
 - Aucun fichier OVH déployé ou modifié pendant cette vérification ; aucun email de test envoyé. Le formulaire reste masqué jusqu'au déploiement et aux tests de livraison.
 - Prochaine dépendance : accès de transfert sécurisé ou dépôt du contact.php existant dans www par SFTP, avec sauvegarde préalable de tout fichier homonyme. Ne pas fournir de mot de passe dans le chat.
+
+
+### Déploiement sans FileZilla — préparation du 27 octobre 2026
+- Intégration Git native OVH inspectée : dépôt public en HTTPS accepté, dossier d'installation obligatoirement vide. Racine www affichée désactivée dans l'édition du domaine. Aucune association Git native appliquée.
+- Ajout de scripts/deploy_ovh_api.py et .github/workflows/deploy-ovh-api.yml (commits 5c5fae8378fbcdc24a9f1cf226c4d70b91219f1f et b46e488a791a7cd9c6fcbc1c973fbba7f07ae149).
+- Workflow manuel, branche main uniquement, token lecture seule, transfert du seul contact.php par FTPS avec validation du certificat et protection du canal de données. Sauvegarde d'un fichier préexistant hors www dans .cln-deploy-backups, comparaison des octets et retour arrière si le contrôle HTTP 405 / Allow: POST échoue.
+- Tests locaux simulés réussis : premier déploiement, sauvegarde et remplacement, retour arrière avec et sans fichier précédent ; compilation Python et structure YAML vérifiées. PHP lint prévu dans le workflow mais non exécuté localement (PHP absent).
+- Aucun lancement réel : secret GitHub OVH_FTP_PASSWORD manquant/non vérifié. Le mot de passe FTP de nkzkafh doit être saisi directement par l'utilisateur dans un secret Actions du dépôt ; il est distinct de l'authentification Manager. Cette configuration donnerait aux workflows du dépôt accès au compte FTP existant et nécessite validation explicite de l'utilisateur avant ajout.
+- FTPS et les permissions de sauvegarde restent à valider sur le serveur réel. Aucun changement sur le stockage OVH, aucun email envoyé et formulaire toujours masqué.
