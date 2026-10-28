@@ -1,3 +1,5 @@
+> **État courant — 28 octobre 2026 :** validation de syntaxe PHP réussie dans GitHub Actions. Déploiement réel tenté puis arrêté avant connexion FTP : secret `OVH_FTP_PASSWORD` absent. Aucun fichier OVH transféré, formulaire toujours masqué. Voir le complément du 28 octobre en fin de document ; les sections précédentes sont historiques.
+
 # MINUTE — CLN Performance
 **Photographie métier et technique du projet**  
 **Date : 26 octobre 2026**  
@@ -198,3 +200,15 @@ La correction du formulaire ne sera terminée que lorsqu'un message de test, env
 - Tests locaux simulés réussis : premier déploiement, sauvegarde et remplacement, retour arrière avec et sans fichier précédent ; compilation Python et structure YAML vérifiées. PHP lint prévu dans le workflow mais non exécuté localement (PHP absent).
 - Aucun lancement réel : secret GitHub OVH_FTP_PASSWORD manquant/non vérifié. Le mot de passe FTP de nkzkafh doit être saisi directement par l'utilisateur dans un secret Actions du dépôt ; il est distinct de l'authentification Manager. Cette configuration donnerait aux workflows du dépôt accès au compte FTP existant et nécessite validation explicite de l'utilisateur avant ajout.
 - FTPS et les permissions de sauvegarde restent à valider sur le serveur réel. Aucun changement sur le stockage OVH, aucun email envoyé et formulaire toujours masqué.
+
+
+## Mise en œuvre du 28 octobre 2026
+
+- Workflow manuel Deploy OVH contact API lancé sur main, version 7d99034.
+- Exécution : https://github.com/timetogrowup/PROJET_CLN/actions/runs/40745708340
+- Vérification `php -l contact.php` réussie : No syntax errors detected in contact.php. Cela ne remplace pas les essais de comportement sur PHP 8.4 OVHcloud.
+- Transfert arrêté avant ouverture de la connexion FTP : RuntimeError: Missing OVH_FTP_PASSWORD repository secret. Aucun fichier OVH modifié par cette exécution, aucun mail envoyé.
+- README réécrit pour décrire GitHub Pages, OVHcloud, les conditions d'activation du formulaire et le caractère historique des outils Hostinger (commit 139d168).
+- Prochaine dépendance : saisie directe du mot de passe FTP dans le secret Actions OVH_FTP_PASSWORD. Ne pas le transmettre dans le chat. Cet accès permet au workflow de déployer sur le compte FTP OVH concerné.
+- Après configuration : relancer le workflow, vérifier FTPS/sauvegarde/exécution PHP, tester les rejets puis la livraison et Reply-To ; compléter les informations légales avant ouverture du formulaire ; tester le parcours public et mobile.
+- Les informations juridiques de l'éditeur restent à valider ; aucune identité ou adresse inventée et aucune conformité déclarée acquise.
