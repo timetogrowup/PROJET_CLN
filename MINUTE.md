@@ -1,4 +1,4 @@
-> **État courant — 28 octobre 2026 :** validation de syntaxe PHP réussie dans GitHub Actions. Déploiement réel tenté puis arrêté avant connexion FTP : secret `OVH_FTP_PASSWORD` absent. Aucun fichier OVH transféré, formulaire toujours masqué. Voir le complément du 28 octobre en fin de document ; les sections précédentes sont historiques.
+> **État courant — 28 octobre 2026, reprise après ajout du secret :** `OVH_FTP_PASSWORD` présent. Syntaxe PHP validée. FTPS refusé par le serveur (AUTH TLS non pris en charge), avant authentification. Adaptation SFTP enregistrée ; connexion au port 22 confirmée, clé serveur découverte mais pas encore corroborée par une source de confiance. Déploiement arrêté avant authentification SFTP, aucun fichier OVH transféré, aucun test mail effectué. Le formulaire reste masqué.
 
 # MINUTE — CLN Performance
 **Photographie métier et technique du projet**  
@@ -212,3 +212,14 @@ La correction du formulaire ne sera terminée que lorsqu'un message de test, env
 - Prochaine dépendance : saisie directe du mot de passe FTP dans le secret Actions OVH_FTP_PASSWORD. Ne pas le transmettre dans le chat. Cet accès permet au workflow de déployer sur le compte FTP OVH concerné.
 - Après configuration : relancer le workflow, vérifier FTPS/sauvegarde/exécution PHP, tester les rejets puis la livraison et Reply-To ; compléter les informations légales avant ouverture du formulaire ; tester le parcours public et mobile.
 - Les informations juridiques de l'éditeur restent à valider ; aucune identité ou adresse inventée et aucune conformité déclarée acquise.
+
+
+## Reprise du 28 octobre 2026 après ajout du secret
+
+- Secret OVH_FTP_PASSWORD visible dans la liste GitHub Actions, valeur non consultée.
+- Exécution 40745708340, tentative 2 : syntaxe PHP valide ; refus AUTH TLS `500 This security scheme is not implemented`. Le mot de passe n'a pas été validé, car l'échec précède l'authentification.
+- Script et workflow adaptés au SFTP avec rejet des clés inconnues, sauvegarde privée et remplacement atomique ; compilation Python réussie localement. Comportement complet et retour arrière SFTP non encore testés.
+- Diagnostic sans authentification : https://github.com/timetogrowup/PROJET_CLN/actions/runs/40747714677 ; serveur port 22 joignable, bannière OpenSSH_9.2p1.
+- Empreinte ED25519 observée : SHA256:xhieLplnoEvvl7+a8sq8wLCh/bvOQvQFIVewi+fK2og. Empreinte RSA observée : SHA256:itDZ6cuojUbG3+jrh5F/igkXa2xjzejbYJkNAlw8/VM.
+- Ces empreintes proviennent de la connexion réseau elle-même, sans preuve indépendante d'identité. Avant dépôt de deploy/ovh_known_hosts, comparer à une clé déjà approuvée pour ce serveur ou à une confirmation OVHcloud fiable. Ne pas désactiver la vérification ni considérer ssh-keyscan comme preuve indépendante.
+- Aucun fichier OVH transféré ; livraison mail, tests de sécurité et activation du formulaire restent à effectuer après cette dépendance.
