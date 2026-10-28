@@ -60,9 +60,42 @@ $times[] = $now;
 ftruncate($handle, 0); rewind($handle); fwrite($handle, json_encode($times));
 flock($handle, LOCK_UN); fclose($handle);
 $body = "Nom : $name\r\nEmail : $email\r\nOrganisation : $company\r\nConsentement : oui\r\n\r\n$message\r\n\r\nFormulaire cln-performance.com";
-$headers = ['From: CLN Performance <' . CONTACT . '>', 'Reply-To: ' . $email,
-    'MIME-Version: 1.0', 'Content-Type: text/plain; charset=UTF-8'];
-// mail() acceptance is not proof of mailbox delivery. Verify receipt before enabling the form.
-$sent = @mail(CONTACT, 'Demande de contact CLN Performance', $body, implode("\r\n", $headers));
-if (!$sent) error_log('CLN contact: mail transport failed');
-finish($sent ? 'success' : 'error');
+// Credentials and mailer live outside the public web root.
+try {
+    $privateRoot = dirname(__DIR__);
+    $configPath = $privateRoot . '/.cln-secrets/mail.json';
+    $autoload = $privateRoot . '/.cln-mailer/7.1.1/autoload.php';
+    if (!is_readable($configPath) || !is_readable($autoload)) {
+        throw new RuntimeException('SMTP configuration unavailable');
+    }
+    $config = json_decode(file_get_contents($configPath), true, 8, JSON_THROW_ON_ERROR);
+    if (!is_array($config) || !is_string($config['password'] ?? null) || $config['password'] === '') {
+        throw new RuntimeException('SMTP credential unavailable');
+    }
+    require_once $autoload;
+    $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
+    $mail->isSMTP();
+    $mail->Host = 'ssl0.ovh.net';
+    $mail->Port = 465;
+    $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
+    $mail->SMTPAuth = true;
+    $mail->Username = CONTACT;
+    $mail->Password = $config['password'];
+    $mail->SMTPDebug = 0;
+    $mail->Timeout = 20;
+    $mail->CharSet = 'UTF-8';
+    $mail->Encoding = 'base64';
+    $mail->setFrom(CONTACT, 'CLN Performance');
+    $mail->Sender = CONTACT;
+    $mail->addAddress(CONTACT);
+    $mail->addReplyTo($email, $name);
+    $mail->Subject = 'Demande de contact CLN Performance';
+    $mail->Body = $body;
+    $mail->send();
+} catch (\Throwable $error) {
+    // Never expose SMTP diagnostics, credentials or visitor content.
+    error_log('CLN contact: authenticated SMTP send failed');
+    finish('error');
+}
+// SMTP acceptance still requires an independent mailbox delivery check.
+finish('success');
