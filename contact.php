@@ -13,7 +13,7 @@ function finish(string $status,int $wait=0): never {
 }
 $origin=$_SERVER['HTTP_ORIGIN']??'';
 $allowed=in_array($origin,[SITE,'https://www.cln-performance.com'],true);
-$challenge=($_SERVER['REQUEST_METHOD']??'')==='GET'&&value('op',$_GET)==='challenge';
+$challenge=($_SERVER['REQUEST_METHOD']??'')==='GET'&&value('op',$_GET)==='human';
 if($challenge){
     header('Content-Type: application/json; charset=utf-8');header('Vary: Origin');
     if(!$allowed){http_response_code(403);exit(json_encode(['error'=>'forbidden']));}
@@ -35,8 +35,8 @@ try {
     if($name===''||strlen($name)>800||strlen($company)>1200||strlen($message)>40000||$message===''||strlen($email)>254||!filter_var($email,FILTER_VALIDATE_EMAIL)||preg_match('/[\r\n\x00]/',$name.$email.$company)||value('consent')!=='on')finish('invalid');
     // Character limits match maxlength while the overall request retains its 20 kB cap.
     if(mb_strlen($name,'UTF-8')>200||mb_strlen($company,'UTF-8')>300||mb_strlen($message,'UTF-8')>10000)finish('invalid');
-    $token=value('captcha_token');$answer=value('captcha_answer');if($token===''||$answer==='')finish('captcha_required');
-    $result=$security->submit($email,$_SERVER['REMOTE_ADDR']??'unknown',$token,$answer,time(),function()use($config,$name,$email,$company,$message,$lang){
+    $token=value('human_token');$confirmed=value('human_confirmed');if($token===''||$confirmed!=='1')finish('human_required');
+    $result=$security->submit($email,$_SERVER['REMOTE_ADDR']??'unknown',$token,$confirmed,time(),function()use($config,$name,$email,$company,$message,$lang){
         require_once dirname(__DIR__).'/.cln-mailer/7.1.1/autoload.php';
         $mail=new \PHPMailer\PHPMailer\PHPMailer(true);$mail->isSMTP();$mail->Host='ssl0.ovh.net';$mail->Port=465;$mail->SMTPSecure=\PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;$mail->SMTPAuth=true;$mail->Username=CONTACT;$mail->Password=$config['password'];$mail->SMTPDebug=0;$mail->Timeout=15;$mail->Timelimit=20;$mail->CharSet='UTF-8';$mail->Encoding='base64';$mail->setFrom(CONTACT,'CLN Performance');$mail->Sender=CONTACT;$mail->addAddress(CONTACT);$mail->addReplyTo($email,$name);$mail->Subject='Demande de contact CLN Performance';
         $names=['fr'=>'Français','en'=>'English','pt-BR'=>'Português (Brasil)','es'=>'Español'];

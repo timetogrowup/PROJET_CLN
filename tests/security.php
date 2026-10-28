@@ -5,13 +5,17 @@ $dir=sys_get_temp_dir().'/cln-test-'.bin2hex(random_bytes(8));mkdir($dir,0700);
 $key=str_repeat('k',64);$checks=0;
 function check(bool $condition,string $label):void{global $checks;if(!$condition)throw new RuntimeException('FAIL '.$label);$checks++;}
 function core(string $name):CLNSecurity{global $dir,$key;return new CLNSecurity($dir.'/'.$name.'.json',$key);}
-function send(CLNSecurity $s,string $email,int $time,string $ip='192.0.2.1',?array $c=null,?callable $transport=null):array{$c??=$s->challenge($time);return $s->submit($email,$ip,$c['token'],(string)($c['a']+$c['b']),$time,$transport??fn()=>true);}
-$t=1000000;$s=core('captcha');$c=$s->challenge($t);
-$r=$s->submit('test@example.invalid','192.0.2.1',$c['token'],'99',$t,fn()=>throw new Exception('Must not send'));check($r['status']==='captcha_invalid','wrong captcha');
+function send(CLNSecurity $s,string $email,int $time,string $ip='192.0.2.1',?array $c=null,?callable $transport=null):array{$c??=$s->challenge($time);return $s->submit($email,$ip,$c['token'],'1',$time,$transport??fn()=>true);}
+$t=1000000;$s=core('human');$c=$s->challenge($t);
+check(!isset($c['a'])&&!isset($c['b']),'no arithmetic payload');
+check($s->submit('test@example.invalid','192.0.2.9',$c['token'],'0',$t,fn()=>throw new Exception('Must not send'))['status']==='human_invalid','unchecked blocks SMTP');
+$legacy=['id'=>str_repeat('a',32),'expires'=>$t+600,'sig'=>hash_hmac('sha256',str_repeat('a',32).'|'.($t+600).'|1',$key)];$legacyToken=rtrim(strtr(base64_encode(json_encode($legacy)),'+/','-_'),'=');
+check($s->submit('test@example.invalid','192.0.2.8',$legacyToken,'1',$t,fn()=>throw new Exception('Must not send'))['status']==='human_invalid','legacy purpose rejected');
+$r=$s->submit('test@example.invalid','192.0.2.1',$c['token'],'99',$t,fn()=>throw new Exception('Must not send'));check($r['status']==='human_invalid','unchecked confirmation');
 check(send($s,'test@example.invalid',$t,'192.0.2.1',$c)['status']==='success','invalid does not consume send quota');
-check(send($s,'other@example.invalid',$t+61,'192.0.2.2',$c)['status']==='captcha_used','single use');
-$c=$s->challenge($t);check(send($s,'a@example.invalid',$t+600,'192.0.2.3',$c)['status']==='captcha_invalid','expiry at boundary');
-$c=$s->challenge($t);$c['token'].='x';check(send($s,'b@example.invalid',$t,'192.0.2.4',$c)['status']==='captcha_invalid','forged token');
+check(send($s,'other@example.invalid',$t+61,'192.0.2.2',$c)['status']==='human_used','single use');
+$c=$s->challenge($t);check(send($s,'a@example.invalid',$t+600,'192.0.2.3',$c)['status']==='human_invalid','expiry at boundary');
+$c=$s->challenge($t);$c['token'].='x';check(send($s,'b@example.invalid',$t,'192.0.2.4',$c)['status']==='human_invalid','forged token');
 $s=core('email');check(send($s,'User@Example.invalid',$t)['status']==='success','first');
 $r=send($s,' user@example.INVALID ',$t+599,'192.0.2.2');check($r['status']==='rate'&&$r['wait']===1,'normalisation and different IP');
 check(send($s,'USER@example.invalid',$t+600,'192.0.2.2')['status']==='success','gap exact');
