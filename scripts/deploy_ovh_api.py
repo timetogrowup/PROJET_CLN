@@ -1,5 +1,6 @@
 """Deploy contact.php and private SMTP dependencies over pinned-key SFTP."""
 import hashlib
+import secrets
 import io
 import os
 from pathlib import Path
@@ -73,7 +74,29 @@ def deploy():
             secret_root = home + '/.cln-secrets'
             private_dir(secret_root)
             staged_config = secret_root + '/.mail-' + uuid4().hex + '.json'
-            config_data = json.dumps({'password': smtp_password}).encode('utf-8')
+            config = {}
+            if 'mail.json' in sftp.listdir(secret_root):
+                with sftp.open(secret_root + '/mail.json', 'rb') as stream:
+                    previous_config = stream.read()
+                config = json.loads(previous_config)
+                # Configuration backup remains private; never print its content.
+                config_backup = secret_root + '/.mail-backup-' + uuid4().hex + '.json'
+                with sftp.open(config_backup, 'wb') as stream:
+                    stream.write(previous_config)
+                sftp.chmod(config_backup, 0o600)
+            config['password'] = smtp_password
+            if not isinstance(config.get('security_key'), str) or len(config['security_key']) < 32:
+                config['security_key'] = secrets.token_hex(32)
+            helper = Path('contact_security.php').read_bytes()
+            helper_tmp = secret_root + '/.security-' + uuid4().hex + '.php'
+            with sftp.open(helper_tmp, 'wb') as stream:
+                stream.write(helper)
+            sftp.chmod(helper_tmp, 0o600)
+            with sftp.open(helper_tmp, 'rb') as stream:
+                if stream.read() != helper:
+                    raise RuntimeError('Security helper verification failed')
+            sftp.posix_rename(helper_tmp, secret_root + '/contact_security.php')
+            config_data = json.dumps(config).encode('utf-8')
             with sftp.open(staged_config, 'wb') as stream:
                 stream.write(config_data)
             sftp.chmod(staged_config, 0o600)
@@ -129,3 +152,4 @@ def deploy():
 
 if __name__ == '__main__':
     deploy()
+

@@ -17,7 +17,10 @@ jobs:
         with:
           persist-credentials: false
       - name: Validate PHP syntax
-        run: php -l contact.php
+        run: |
+          php -l contact.php
+          php -l contact_security.php
+          php tests/security.php
       - name: Verify reviewed SFTP identity is available
         run: |
           if [ ! -s deploy/ovh_known_hosts ]; then
@@ -39,3 +42,4 @@ jobs:
           OVH_FTP_PASSWORD: ${{ secrets.OVH_FTP_PASSWORD }}
           CLN_SMTP_PASSWORD: ${{ secrets.CLN_SMTP_PASSWORD }}
         run: /usr/bin/python3 scripts/deploy_ovh_api.py
+
