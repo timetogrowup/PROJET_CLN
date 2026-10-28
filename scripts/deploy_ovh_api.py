@@ -1,4 +1,4 @@
-"""Deploy only contact.php via SFTP with a pinned server identity."""
+"""Deploy contact.php and private SMTP dependencies over pinned-key SFTP."""
 import hashlib
 import io
 import os
@@ -31,6 +31,56 @@ def deploy():
             target = home + '/www'
             remote = target + '/contact.php'
             temporary = target + '/.cln-upload-' + uuid4().hex + '.php'
+            smtp_password = os.environ.get('CLN_SMTP_PASSWORD')
+            vendor = Path('deploy/mail/vendor')
+            if not smtp_password:
+                raise RuntimeError('Missing CLN_SMTP_PASSWORD; no file transferred')
+            if not (vendor / 'autoload.php').is_file():
+                raise RuntimeError('Missing built PHPMailer dependency')
+            # Provision dependencies and credentials outside every public web root.
+            def private_dir(path):
+                import stat
+                try:
+                    entry = sftp.lstat(path)
+                except FileNotFoundError:
+                    sftp.mkdir(path, mode=0o700)
+                    entry = sftp.lstat(path)
+                if not stat.S_ISDIR(entry.st_mode):
+                    raise RuntimeError('Private directory is not a real directory')
+                sftp.chmod(path, 0o700)
+            mail_root = home + '/.cln-mailer'
+            private_dir(mail_root)
+            release = mail_root + '/7.1.1'
+            private_dir(release)
+            for local in sorted(vendor.rglob('*')):
+                relative = local.relative_to(vendor).as_posix()
+                destination = release + '/' + relative
+                if local.is_symlink():
+                    raise RuntimeError('Unexpected dependency symlink')
+                if local.is_dir():
+                    private_dir(destination)
+                elif local.is_file():
+                    staged = destination + '.upload-' + uuid4().hex
+                    data = local.read_bytes()
+                    with sftp.open(staged, 'wb') as stream:
+                        stream.write(data)
+                    sftp.chmod(staged, 0o600)
+                    with sftp.open(staged, 'rb') as stream:
+                        if stream.read() != data:
+                            raise RuntimeError('Dependency verification failed')
+                    sftp.posix_rename(staged, destination)
+            import json
+            secret_root = home + '/.cln-secrets'
+            private_dir(secret_root)
+            staged_config = secret_root + '/.mail-' + uuid4().hex + '.json'
+            config_data = json.dumps({'password': smtp_password}).encode('utf-8')
+            with sftp.open(staged_config, 'wb') as stream:
+                stream.write(config_data)
+            sftp.chmod(staged_config, 0o600)
+            with sftp.open(staged_config, 'rb') as stream:
+                if stream.read() != config_data:
+                    raise RuntimeError('Private configuration verification failed')
+            sftp.posix_rename(staged_config, secret_root + '/mail.json')
             old = None
             if 'contact.php' in sftp.listdir(target):
                 with sftp.open(remote, 'rb') as stream:
