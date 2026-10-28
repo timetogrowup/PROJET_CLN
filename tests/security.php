@@ -9,6 +9,8 @@ function send(CLNSecurity $s,string $email,int $time,string $ip='192.0.2.1',?arr
 $t=1000000;$s=core('human');$c=$s->challenge($t);
 check(!isset($c['a'])&&!isset($c['b']),'no arithmetic payload');
 check($s->submit('test@example.invalid','192.0.2.9',$c['token'],'0',$t,fn()=>throw new Exception('Must not send'))['status']==='human_invalid','unchecked blocks SMTP');
+$legacy=['id'=>str_repeat('a',32),'expires'=>$t+600,'sig'=>hash_hmac('sha256',str_repeat('a',32).'|'.($t+600).'|1',$key)];$legacyToken=rtrim(strtr(base64_encode(json_encode($legacy)),'+/','-_'),'=');
+check($s->submit('test@example.invalid','192.0.2.8',$legacyToken,'1',$t,fn()=>throw new Exception('Must not send'))['status']==='human_invalid','legacy purpose rejected');
 $r=$s->submit('test@example.invalid','192.0.2.1',$c['token'],'99',$t,fn()=>throw new Exception('Must not send'));check($r['status']==='human_invalid','unchecked confirmation');
 check(send($s,'test@example.invalid',$t,'192.0.2.1',$c)['status']==='success','invalid does not consume send quota');
 check(send($s,'other@example.invalid',$t+61,'192.0.2.2',$c)['status']==='human_used','single use');

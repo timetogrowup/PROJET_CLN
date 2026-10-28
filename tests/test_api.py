@@ -23,7 +23,9 @@ try:
  assert request('?op=human',origin='https://evil.invalid')[0]==403
  base={'name':'Test','_replyto':'contact@cln-performance.com','company':'','message':'Test without sending','consent':'on','lang':'es'}
  code,h,b=request(data=base);assert code==303 and 'status=human_required' in h['Location'] and 'lang=es' in h['Location']
- code,h,b=request(data=dict(base,human_token=c['token'],human_confirmed='0'));assert 'status=human_invalid' in h['Location']
+ code,h,b=request(data=dict(base,human_token=c['token'],human_confirmed='0'));assert 'status=human_required' in h['Location']
+ code,h,b=request(data=dict(base,human_token='forged',human_confirmed='1'));assert 'status=human_invalid' in h['Location']
+ code,h,b=request(data=dict(base,captcha_token='legacy',captcha_answer='2'));assert 'status=human_required' in h['Location']
  code,h,b=request(data=dict(base,lang='https://evil.invalid'));assert 'lang=fr' in h['Location'] and 'evil' not in h['Location']
  code,h,b=request(data=base,origin='https://evil.invalid');assert 'status=forbidden' in h['Location']
  code,h,b=request(data={'name[]':'array','lang':'en'});assert 'status=invalid' in h['Location']
