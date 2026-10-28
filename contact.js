@@ -21,6 +21,8 @@ CLN.ready.then(async () => {
     confirm.disabled=state!=='ready'||!check.checked||!challenge;
     check.disabled=state!=='ready';cancel.disabled=state==='sending';
     retry.hidden=state!=='error';
+    const active=document.activeElement;
+    if(dialog.open&&dialog.contains(active)&&(active.disabled||active.hidden))(state==='ready'?check:cancel).focus();
   }
   function positionDialog(randomise=false){
     if(!dialog.open)return;
@@ -54,6 +56,14 @@ CLN.ready.then(async () => {
   cancel.addEventListener('click',()=>dialog.close());
   dialog.addEventListener('cancel',event=>{if(state==='sending')event.preventDefault();});
   dialog.addEventListener('close',reset);
+  dialog.addEventListener('keydown',event=>{
+    if(event.key!=='Tab')return;
+    const items=[...dialog.querySelectorAll('button,input,[tabindex]')].filter(el=>!el.disabled&&!el.hidden&&el.getClientRects().length);
+    if(!items.length){event.preventDefault();return;}
+    const index=items.indexOf(document.activeElement);
+    if(event.shiftKey&&index<=0){event.preventDefault();items.at(-1).focus();}
+    else if(!event.shiftKey&&(index<0||index===items.length-1)){event.preventDefault();items[0].focus();}
+  });
   check.addEventListener('change',renderHuman);
   retry.addEventListener('click',prepare);
   window.addEventListener('resize',()=>positionDialog());
