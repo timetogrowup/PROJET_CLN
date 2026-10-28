@@ -1,6 +1,9 @@
 name: Verify CLN V2 languages and form security
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feature/cln-v2-security-i18n
 permissions:
   contents: read
 jobs:
@@ -17,7 +20,7 @@ jobs:
           php -l contact.php
           php -l contact_security.php
           php tests/security.php
-          python3 tests/http.py
+          python3 tests/test_api.py
       - name: JavaScript syntax and catalogues
         run: |
           node --check site.js
