@@ -1,3 +1,5 @@
+> **Validation finale du 28 octobre 2026 :** après demande de vérifier le message `CLN RECETTE PUBLIQUE 20261028`, Patrick répond « C'est fait », interprété comme confirmation de réception. Parcours formulaire public → SMTP OVHcloud → boîte officielle validé sur ce test. Les points ouverts détaillés ci-dessous restent suivis séparément.
+
 > **État courant — 28 octobre 2026 : formulaire public activé et parcours de soumission testé.** SMTP et réception du premier test confirmés par Patrick ; nouvel envoi depuis l'interface publique abouti à merci.html?status=success. Pages Mentions légales et Confidentialité publiées selon le périmètre expressément retenu par Patrick (sans les trois dernières informations demandées). Il ne s'agit pas d'une certification de conformité juridique ou d'un audit complet de sécurité.
 
 # MINUTE — CLN Performance
