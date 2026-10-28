@@ -30,7 +30,12 @@ jobs:
           fi
       - name: Install distribution SFTP client library
         run: sudo apt-get update -qq && sudo apt-get install -y python3-paramiko
-      - name: Deploy only contact.php via SFTP
+      - name: Build pinned PHPMailer dependency
+        run: composer install --working-dir=deploy/mail --no-dev --no-interaction --prefer-dist --no-scripts --no-plugins
+      - name: Validate mailer PHP syntax
+        run: find deploy/mail/vendor -name '*.php' -print0 | xargs -0 -n 1 php -l
+      - name: Deploy contact API and private SMTP configuration
         env:
           OVH_FTP_PASSWORD: ${{ secrets.OVH_FTP_PASSWORD }}
+          CLN_SMTP_PASSWORD: ${{ secrets.CLN_SMTP_PASSWORD }}
         run: /usr/bin/python3 scripts/deploy_ovh_api.py
