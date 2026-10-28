@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact — CLN</title>
+    <meta name="description" content="Contactez CLN Performance pour échanger sur vos projets data, automatisation et gouvernance." />
+    <link rel="canonical" href="https://cln-performance.com/contact.html" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -58,8 +60,7 @@
           </p>
         </div>
         <div>
-          <p class="form-alert">Le formulaire est en cours de mise en service. Écrivez-nous à <a href="mailto:contact@cln-performance.com">contact@cln-performance.com</a>.</p>
-          <form id="contact-form" action="https://api.cln-performance.com/contact.php" method="POST" hidden>
+          <form id="contact-form" action="https://api.cln-performance.com/contact.php" method="POST">
             <div id="form-alert" class="form-alert" role="status" hidden></div>
             <div hidden aria-hidden="true"><label>Site web<input name="website" tabindex="-1" autocomplete="off" /></label></div>
             <label for="name">Nom et prénom</label>
@@ -68,7 +69,7 @@
             <label for="email">Email professionnel</label>
             <input id="email" name="_replyto" type="email" placeholder="marie.dupont@organisation.fr" required />
 
-            <label for="company">Organisation</label>
+            <label for="company">Organisation (facultatif)</label>
             <input id="company" name="company" type="text" placeholder="Organisation / Collectivité" maxlength="300" />
 
             <label for="message">Votre besoin</label>
@@ -76,9 +77,10 @@
 
             <label class="checkbox">
               <input type="checkbox" name="consent" required />
-              J'accepte que CLN me contacte au sujet de ma demande.
+              J’ai pris connaissance de la <a href="confidentialite.html">politique de confidentialité</a> concernant ma demande.
             </label>
 
+            <p class="helper-text">Nom, email et message sont obligatoires ; l’organisation est facultative. Vos données servent à répondre à votre demande. <a href="confidentialite.html">Utilisation, conservation et droits</a>.</p>
             <button class="cta-button" type="submit">Envoyer la demande</button>
           </form>
         </div>
@@ -90,11 +92,26 @@
         <div class="footer-links">
           <a href="mailto:contact@cln-performance.com">contact@cln-performance.com</a>
           <a href="contact.html">Prendre rendez-vous</a>
-          <a href="#">Mentions légales</a>
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
         </div>
       </div>
     </footer>
     <script>
+      (function () {
+        try {
+          const raw = localStorage.getItem('clnRecommendation');
+          if (!raw) return;
+          const item = JSON.parse(raw);
+          const date = Date.parse(item.generatedAt);
+          if (!Number.isFinite(date) || date > Date.now() || Date.now() - date > 30 * 86400000) {
+            localStorage.removeItem('clnRecommendation');
+          }
+        } catch (error) {
+          try { localStorage.removeItem('clnRecommendation'); } catch (ignored) {}
+        }
+      })();
+
       (function () {
         const container = document.getElementById('recommendation-preview');
         const content = document.getElementById('recommendation-content');

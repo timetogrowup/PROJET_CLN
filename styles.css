@@ -603,3 +603,14 @@ footer {
     padding-top: 1.5rem;
   }
 }
+
+/* Native hidden semantics take precedence over grid and flex component styles. */
+[hidden] { display: none !important; }
+.cta-button { background-color: #007c66; }
+.cta-button:hover, .cta-button:focus { background-color: #006552; }
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 4px; }
+.legal-content { max-width: 850px; overflow-wrap: anywhere; }
+.legal-content section { margin: 2rem 0; }
+.legal-content a, .helper-text a, .checkbox a { text-decoration: underline; text-underline-offset: 0.18em; }
+.checkbox { display: block; }
+.checkbox input { margin-right: 0.6rem; }

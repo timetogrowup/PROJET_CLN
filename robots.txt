@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cln-performance.com/sitemap.xml
