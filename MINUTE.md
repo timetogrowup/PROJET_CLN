@@ -1,4 +1,4 @@
-> **État courant — 28 octobre 2026 : correction SMTP préparée, non déployée.** Le test mail() a été rejeté par la politique de réception : 550 5.7.1, domaine From non aligné avec domaine authentifié. PHPMailer et SMTP authentifié OVHcloud préparés ; syntaxe PHP et dépendances validées dans GitHub Actions. Déploiement arrêté avant transfert faute du nouveau secret CLN_SMTP_PASSWORD. Formulaire toujours masqué.
+> **État courant — 28 octobre 2026 : correction SMTP déployée.** Déploiement SFTP de PHPMailer, configuration privée et contact.php réussi après ajout du secret CLN_SMTP_PASSWORD. Soumission de test SMTP acceptée : HTTP 303 vers merci.html?status=success. Réception réelle dans la boîte officielle à confirmer par Patrick. Formulaire toujours masqué.
 
 # MINUTE — CLN Performance
 **Photographie métier et technique du projet**  
@@ -261,3 +261,12 @@ La correction du formulaire ne sera terminée que lorsqu'un message de test, env
 - Validation : https://github.com/timetogrowup/PROJET_CLN/actions/runs/40753600853 ; construction PHPMailer et toutes syntaxes PHP réussies. Compilation Python réussie localement. Exécution arrêtée avant transfert avec Missing CLN_SMTP_PASSWORD; no file transferred. L'ancien backend mail() reste sur OVHcloud.
 - Prochaine action utilisateur : créer CLN_SMTP_PASSWORD avec le mot de passe de la boîte mail officielle (distinct du FTP). Cela autorise le workflow à utiliser cette boîte pour l'envoi et stocke son accès privé sur l'hébergement.
 - Puis relancer cette exécution, vérifier installation privée, refaire un message technique vers la boîte officielle et constater réception avant ouverture publique. Tests complets du transport SMTP, erreur SMTP et retour arrière encore à réaliser.
+
+
+## Déploiement SMTP après ajout du secret — 28 octobre 2026
+
+- Exécution https://github.com/timetogrowup/PROJET_CLN/actions/runs/40753600853, job 123048264881 : toutes étapes réussies, y compris validation PHP, construction PHPMailer 7.1.1, transfert SFTP des dépendances et du secret hors www, et contrôle HTTPS du backend.
+- Le backend SMTP authentifié est désormais déployé. Pas de repli mail(). Le mot de passe n'a pas été consulté ni affiché par l'assistant.
+- Soumission de recette autorisée vers contact@cln-performance.com, Reply-To identique, repère CLN TEST SMTP 20261028. HTTP 303 Location https://cln-performance.com/merci.html?status=success : PHPMailer a obtenu l'acceptation du message par le serveur SMTP, pas une preuve de livraison dans la boîte.
+- Objet : Demande de contact CLN Performance. Vérification de réception par Patrick dans Roundcube, boîte officielle et indésirables, attendue.
+- Formulaire public toujours masqué. Après réception : finir recette, données légales et confidentialité, puis ouvrir le formulaire et contrôler le parcours public.
