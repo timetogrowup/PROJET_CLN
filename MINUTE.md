@@ -278,3 +278,8 @@ La correction du formulaire ne sera terminée que lorsqu'un message de test, env
 - Résultat métier : livraison du test SMTP dans la boîte officielle confirmée. Le problème précédent de rejet d'alignement est résolu sur ce trajet.
 - Limites : Reply-To a été testé avec l'adresse officielle elle-même ; réponse vers un prospect distinct non testée. Débit, indisponibilité SMTP et parcours public à terminer. Aucune ouverture du formulaire dans cette mise à jour.
 - Pages légales/confidentialité absentes du dépôt ; lien Mentions légales encore #. Informations d'identité et de contact juridique de l'éditeur nécessaires avant publication de ces pages.
+
+
+## Informations éditeur fournies par Patrick — 28 octobre 2026
+
+CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège communiqué au 14 rue du Bac, 78955 Carrières-sous-Poissy. Données déclarées par Patrick, non recoupées dans une fiche de registre publique. Préparation dans docs/PREPARATION_MENTIONS_CONFIDENTIALITE.md ; manquent directeur de publication, mention RCS et TVA si applicable. Politique de conservation à arrêter concrètement. Pages publiques légales non publiées, formulaire toujours masqué.
