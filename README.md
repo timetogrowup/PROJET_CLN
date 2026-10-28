@@ -1,87 +1,55 @@
-> État courant au 27 octobre 2026 : site statique sur GitHub Pages, domaine cln-performance.com ; backend cible OVHcloud sur api.cln-performance.com. Voir MINUTE.md, section 11. Les instructions Hostinger ci-dessous sont historiques. Le formulaire reste masqué jusqu’au déploiement et à la validation du backend ; contact direct : contact@cln-performance.com.
+# CLN Performance
 
-# CLN Website
+Site vitrine CLN — Ciblé, Libéré, Normé.
 
-Static marketing site for CLN (Ciblé – Libéré – Normé), where "Ciblé" highlights targeted, rapid interventions with minimal collateral impact.
+## Architecture actuelle
 
-## Deployment Overview
+- Référentiel : `timetogrowup/PROJET_CLN`, branche `main`.
+- Site public : https://cln-performance.com, hébergé sur GitHub Pages.
+- Traitement du formulaire : `https://api.cln-performance.com/contact.php`, sur OVHcloud Starter, PHP 8.4, racine `www`.
+- Boîte officielle : `contact@cln-performance.com`.
+- État détaillé et résultats datés : [MINUTE.md](MINUTE.md).
 
-- **Source control**: GitHub repository `timetogrowup/PROJET_CLN` (`main` branch).
-- **Production hosting**: Hostinger shared hosting serving `cln-solutions.fr` (files placed in `public_html`).
-- **Continuous delivery**: GitHub Actions workflow `.github/workflows/deploy-hostinger.yml` pushes the site on every `main` commit and performs a smoke test of the contact form.
+Le formulaire reste masqué tant que le serveur et la livraison des messages ne sont pas validés. Le contact direct par email reste disponible.
 
-### GitHub Actions pipeline
+## Publication
 
-The `Deploy to Hostinger` workflow executes the following steps:
+Les changements de `main` sont publiés par GitHub Pages. GitHub Pages ne peut pas exécuter `contact.php`.
 
-1. Checkout the repository.
-2. Upload the web assets to Hostinger via FTPS, excluding local tooling files.
-3. Wait briefly, then submit an automated request to `contact.php` to confirm the form returns a `303` redirect to `merci.html?status=success`.
+Le workflow manuel **Deploy OVH contact API** (`.github/workflows/deploy-ovh-api.yml`) s'exécute sur `main` :
 
-#### Required secrets
+1. Vérification de syntaxe PHP.
+2. Transfert du seul `contact.php` par FTPS avec validation du certificat.
+3. Sauvegarde d'un éventuel fichier précédent hors de `www`, vérification du transfert et retour arrière si le contrôle HTTP échoue.
 
-Configure these repository secrets in GitHub before enabling the workflow:
+Il nécessite le secret Actions `OVH_FTP_PASSWORD`, saisi directement dans GitHub par le titulaire de l'accès. Ne jamais publier un mot de passe dans le dépôt ou dans une conversation. Le mot de passe FTP est distinct de celui du Manager OVHcloud.
 
-| Secret | Description |
-| --- | --- |
-| `HOSTINGER_FTP_HOST` | Hostname of the Hostinger FTP/FTPS server (e.g. `ftp.cln-solutions.fr`). |
-| `HOSTINGER_FTP_USER` | FTP username. |
-| `HOSTINGER_FTP_PASSWORD` | FTP password. |
-| `HOSTINGER_FTP_DIR` | *(Optional)* target directory (defaults to `/public_html/`). |
-| `HOSTINGER_CONTACT_URL` | *(Optional)* full URL to `contact.php` (defaults to `https://cln-solutions.fr/contact.php`). |
-| `HOSTINGER_CONTACT_TEST_EMAIL` | *(Optional)* destination email for the smoke test (defaults to `patrick.lyonnet@cln-solutions.fr`). |
+Le contrôle de déploiement attend **405 et Allow: POST** pour une requête GET : c'est le rejet normal d'une méthode non autorisée, et non une preuve d'envoi de mail.
 
-The workflow runs automatically on pushes to `main`, and can be triggered manually from the Actions tab (workflow_dispatch).
+## Validation avant activation du formulaire
 
-### Manual deployment fallback
+- Vérifier HTTPS et l'exécution du PHP sur OVHcloud.
+- Tester les données invalides, consentement, origine, champ piège et limitation du débit.
+- Tester un envoi contrôlé et constater sa réception dans la boîte officielle, puis vérifier Reply-To.
+- Compléter les mentions légales et l'information de confidentialité avec les données validées de l'éditeur.
+- Afficher le formulaire seulement après validation du backend, puis tester le parcours public complet, mobile compris.
 
-If you prefer a manual upload:
+Le script utilise actuellement PHP `mail()`. Son succès signifie que le transport accepte le message, sans garantir la livraison. La réception réelle est un critère de validation distinct.
 
-1. Ensure local changes are committed and pushed to GitHub.
-2. Create an archive: `Compress-Archive -Path * -DestinationPath site.zip`.
-3. Upload the archive via Hostinger hPanel > File Manager > `public_html`, then extract it and delete the archive.
-4. Browse `https://cln-solutions.fr` and submit a form test manually to confirm delivery.
+## Prévisualisation locale
 
-## Contact Email Configuration
-
-- Official inbox: `patrick.lyonnet@cln-solutions.fr` (Hostinger).
-- `.env` keeps SMTP credentials for local scripts (file is ignored by Git):
-
-```env
-SMTP_HOST=smtp.hostinger.com
-SMTP_PORT=465
-SMTP_SENDER=patrick.lyonnet@cln-solutions.fr
-SMTP_USERNAME=patrick.lyonnet@cln-solutions.fr
-SMTP_PASSWORD=CHANGE_ME   # replace locally; never commit the real secret
-SMTP_USE_SSL=1
-SMTP_USE_TLS=0
-CLN_NOTIFICATION_EMAIL=patrick.lyonnet@cln-solutions.fr
-```
-
-Update `SMTP_PASSWORD` locally before launching any automation that sends emails (e.g., `test_mailbox.py`).
-
-## Contact Form Back-End
-
-- `contact.php` processes POST submissions, validates the required fields, sends a message via PHP `mail()` (reply-to set to the sender), then redirects with status flags.
-- `contact.html` displays a status banner based on the `status` query parameter (`success`, `invalid`, `error`).
-- Local test command: `php -S localhost:8000` and submit `http://localhost:8000/contact.php`.  
-  The GitHub Actions smoke test described above performs the same call against production.
-
-## Tooling & Useful Commands
-
-- `test_mailbox.py` — CLI helper to exercise SMTP/IMAP for the Hostinger mailbox.
-- `publish.ps1` — legacy automation for GitHub Pages (kept for archival purposes).
-- Quick previews:
-
-```powershell
-# Static preview
+```sh
 python -m http.server 8000
-
-# PHP preview (contact form)
-php -S localhost:8000
-
-# Create archive for Hostinger File Manager
-Compress-Archive -Path * -DestinationPath site.zip
 ```
 
-Keep documentation and deployment notes up to date whenever the hosting strategy or form handling changes.
+Pour valider la syntaxe du backend dans un environnement équipé de PHP :
+
+```sh
+php -l contact.php
+```
+
+Une simple prévisualisation locale ne reproduit pas l'origine autorisée et le transport mail de production.
+
+## Éléments historiques
+
+`deploy-hostinger.yml` est limité à un lancement manuel ; il ne constitue plus la procédure de publication actuelle. `publish.ps1`, `test_mailbox.py` et les anciens exemples SMTP doivent être considérés comme historiques et vérifiés avant toute réutilisation. Ne pas lancer l'ancien déploiement Hostinger pour publier sur l'architecture actuelle.
