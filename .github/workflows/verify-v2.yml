@@ -1,9 +1,10 @@
-name: Verify CLN V2 languages and form security
+name: Verify CLN languages and form security
 on:
   workflow_dispatch:
   push:
     branches:
       - feature/cln-v2-security-i18n
+      - feature/cln-v3-human-dialog
 permissions:
   contents: read
 jobs:
@@ -37,3 +38,4 @@ jobs:
           server_pid=$!
           trap 'kill "$server_pid"' EXIT
           node tests/browser.mjs
+          node tests/human-dialog.mjs

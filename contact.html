@@ -6,10 +6,10 @@
     <title>Contact — CLN</title>
     <meta name="description" content="Contactez CLN Performance pour échanger sur vos projets data, automatisation et gouvernance." />
     <link rel="canonical" href="https://cln-performance.com/contact.html" />
-    <link rel="stylesheet" href="styles.css?v=20261028-v2" />
-  <script defer src="site.js?v=20261028-v2"></script>
-<script defer src="diagnostic.js?v=20261028-v2"></script>
-<script defer src="contact.js?v=20261028-v2"></script>
+    <link rel="stylesheet" href="styles.css?v=20261028-v3" />
+  <script defer src="site.js?v=20261028-v3"></script>
+<script defer src="diagnostic.js?v=20261028-v3"></script>
+<script defer src="contact.js?v=20261028-v3"></script>
 </head>
   <body>
     <header>
@@ -84,22 +84,26 @@
             </label>
 
             <p class="helper-text">Nom, email et message sont obligatoires ; l’organisation est facultative. Vos données servent à répondre à votre demande. <a href="confidentialite.html">Utilisation, conservation et droits</a>.</p>
-            <fieldset class="captcha-box">
-              <legend data-msg="captcha_title" data-dynamic>Contrôle de sécurité</legend>
-              <p id="captcha-help" class="helper-text" data-msg="captcha_help" data-dynamic>Répondez au calcul pour envoyer votre demande. La question est valable 10 minutes.</p>
-              <label id="captcha-question" for="captcha-answer" data-dynamic>Chargement du contrôle de sécurité…</label>
-              <input id="captcha-answer" name="captcha_answer" type="number" inputmode="numeric" step="1" min="0" max="18" required aria-describedby="captcha-help captcha-status" />
-              <input name="captcha_token" type="hidden" />
-              <input name="lang" type="hidden" value="fr" />
-              <button id="captcha-refresh" class="link-button" type="button" data-msg="captcha_refresh" data-dynamic>Changer de question</button>
-              <p id="captcha-status" role="status" aria-live="polite" data-dynamic></p>
-            </fieldset>
-            <noscript><p>Activez JavaScript pour utiliser le contrôle de sécurité, ou écrivez à contact@cln-performance.com.</p></noscript>
+            <input name="human_token" type="hidden" />
+            <input name="human_confirmed" type="hidden" />
+            <input name="lang" type="hidden" value="fr" />
+            <noscript><p>Activez JavaScript pour utiliser le formulaire, ou écrivez à contact@cln-performance.com.</p></noscript>
             <button class="cta-button" type="submit" disabled>Envoyer la demande</button>
           </form>
         </div>
       </section>
     </main>
+    <dialog id="human-dialog" aria-labelledby="human-title" aria-describedby="human-description">
+      <h2 id="human-title" data-msg="human_title" data-dynamic>Vérification humaine</h2>
+      <p id="human-description" data-msg="human_description" data-dynamic>Veuillez confirmer que vous êtes un humain pour envoyer votre demande.</p>
+      <label class="checkbox" for="human-check"><input id="human-check" type="checkbox" autocomplete="off" /> <span data-msg="human_label" data-dynamic>Je suis un humain</span></label>
+      <p id="human-status" role="status" aria-live="polite" data-dynamic></p>
+      <div class="human-actions">
+        <button id="human-cancel" class="link-button" type="button" data-msg="human_cancel" data-dynamic autofocus>Annuler</button>
+        <button id="human-retry" class="link-button" type="button" data-msg="human_retry" data-dynamic hidden>Réessayer</button>
+        <button id="human-confirm" class="cta-button" type="button" data-msg="human_send" data-dynamic disabled>Confirmer et envoyer</button>
+      </div>
+    </dialog>
     <footer>
       <div class="footer-inner">
         <span>© CLN — Solutions intelligentes pour vos SI.</span>

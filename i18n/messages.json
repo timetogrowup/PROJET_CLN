@@ -11,60 +11,6 @@
     "pt-BR": "Carregando a verificação de segurança…",
     "es": "Cargando la verificación de seguridad…"
   },
-  "captcha_title": {
-    "fr": "Contrôle de sécurité",
-    "en": "Security check",
-    "pt-BR": "Verificação de segurança",
-    "es": "Verificación de seguridad"
-  },
-  "captcha_question": {
-    "fr": "Combien font {a} + {b} ?",
-    "en": "What is {a} + {b}?",
-    "pt-BR": "Quanto é {a} + {b}?",
-    "es": "¿Cuánto es {a} + {b}?"
-  },
-  "captcha_answer": {
-    "fr": "Votre réponse au calcul",
-    "en": "Your answer",
-    "pt-BR": "Sua resposta",
-    "es": "Su respuesta"
-  },
-  "captcha_refresh": {
-    "fr": "Changer de question",
-    "en": "Get another question",
-    "pt-BR": "Trocar a pergunta",
-    "es": "Cambiar la pregunta"
-  },
-  "captcha_help": {
-    "fr": "Répondez au calcul pour envoyer votre demande. La question est valable 10 minutes.",
-    "en": "Answer the calculation to send your enquiry. The question is valid for 10 minutes.",
-    "pt-BR": "Responda ao cálculo para enviar sua solicitação. A pergunta é válida por 10 minutos.",
-    "es": "Responda al cálculo para enviar su solicitud. La pregunta es válida durante 10 minutos."
-  },
-  "captcha_unavailable": {
-    "fr": "Le contrôle de sécurité est indisponible. Réessayez ou contactez-nous par email.",
-    "en": "The security check is unavailable. Try again or contact us by email.",
-    "pt-BR": "A verificação de segurança está indisponível. Tente novamente ou entre em contato por email.",
-    "es": "La verificación de seguridad no está disponible. Inténtelo de nuevo o contacte por correo."
-  },
-  "captcha_required": {
-    "fr": "Veuillez répondre à la question de sécurité avant l’envoi.",
-    "en": "Please answer the security question before sending.",
-    "pt-BR": "Responda à pergunta de segurança antes de enviar.",
-    "es": "Responda a la pregunta de seguridad antes de enviar."
-  },
-  "captcha_invalid": {
-    "fr": "La réponse de sécurité est incorrecte ou la question a expiré. Répondez à la nouvelle question.",
-    "en": "The security answer is incorrect or the question has expired. Answer the new question.",
-    "pt-BR": "A resposta está incorreta ou a pergunta expirou. Responda à nova pergunta.",
-    "es": "La respuesta es incorrecta o la pregunta ha caducado. Responda a la nueva pregunta."
-  },
-  "captcha_used": {
-    "fr": "Cette question a déjà été utilisée. Répondez à la nouvelle question.",
-    "en": "This question has already been used. Answer the new question.",
-    "pt-BR": "Esta pergunta já foi utilizada. Responda à nova pergunta.",
-    "es": "Esta pregunta ya se ha utilizado. Responda a la nueva pregunta."
-  },
   "success": {
     "fr": "Merci ! Votre demande a été prise en charge. Nous revenons vers vous sous 48 heures.",
     "en": "Thank you! Your enquiry has been accepted. We will reply within 48 hours.",
@@ -414,9 +360,81 @@
     "es": "El modelo híbrido combina asesoramiento a los equipos y experiencia especializada de CLN."
   },
   "security_notice": {
-    "fr": "Un calcul simple et des limites par email et IP protègent le formulaire. Les compteurs utilisent des empreintes protégées, sans email ni IP en clair, et sont purgés à chaque accès après expiration. La langue est mémorisée 365 jours ; un brouillon de contact reste au maximum 30 minutes dans cet onglet et est effacé après succès.",
-    "en": "A simple calculation and email/IP limits protect this form. Counters use protected fingerprints, with no plain-text email or IP, and expired records are purged on access. Language is remembered for 365 days; a contact draft stays in this tab for up to 30 minutes and is cleared after success.",
-    "pt-BR": "Um cálculo simples e limites por email e IP protegem o formulário. Os contadores usam impressões protegidas, sem email ou IP em texto claro, e os registros expirados são removidos a cada acesso. O idioma é lembrado por 365 dias; um rascunho fica nesta aba por até 30 minutos e é apagado após o sucesso.",
-    "es": "Un cálculo sencillo y límites por correo e IP protegen el formulario. Los contadores usan huellas protegidas, sin correo ni IP en texto claro, y los registros caducados se eliminan en cada acceso. El idioma se recuerda durante 365 días; un borrador permanece en esta pestaña hasta 30 minutos y se borra tras el envío correcto."
+    "fr": "Une confirmation déclarative et des limites par email et IP protègent le formulaire. Les compteurs utilisent des empreintes protégées, sans email ni IP en clair, et sont purgés à chaque accès après expiration. La langue est mémorisée 365 jours ; un brouillon de contact reste au maximum 30 minutes dans cet onglet et est effacé après succès.",
+    "en": "A self-declared human confirmation and email/IP limits protect this form. Counters use protected fingerprints, with no plain-text email or IP, and expired records are purged on access. Language is remembered for 365 days; a contact draft stays in this tab for up to 30 minutes and is cleared after success.",
+    "pt-BR": "Uma confirmação declarativa e limites por email e IP protegem o formulário. Os contadores usam impressões protegidas, sem email ou IP em texto claro, e os registros expirados são removidos a cada acesso. O idioma é lembrado por 365 dias; um rascunho fica nesta aba por até 30 minutos e é apagado após o sucesso.",
+    "es": "Una confirmación declarativa y límites por correo e IP protegen el formulario. Los contadores usan huellas protegidas, sin correo ni IP en texto claro, y los registros caducados se eliminan en cada acceso. El idioma se recuerda durante 365 días; un borrador permanece en esta pestaña hasta 30 minutos y se borra tras el envío correcto."
+  },
+  "human_title": {
+    "fr": "Vérification humaine",
+    "en": "Human verification",
+    "pt-BR": "Verificação humana",
+    "es": "Verificación humana"
+  },
+  "human_description": {
+    "fr": "Veuillez confirmer que vous êtes un humain pour envoyer votre demande.",
+    "en": "Please confirm you are human to send your enquiry.",
+    "pt-BR": "Confirme que você é humano para enviar sua solicitação.",
+    "es": "Confirme que es humano para enviar su solicitud."
+  },
+  "human_label": {
+    "fr": "Je suis un humain",
+    "en": "I am human",
+    "pt-BR": "Sou humano",
+    "es": "Soy humano"
+  },
+  "human_cancel": {
+    "fr": "Annuler",
+    "en": "Cancel",
+    "pt-BR": "Cancelar",
+    "es": "Cancelar"
+  },
+  "human_retry": {
+    "fr": "Réessayer",
+    "en": "Try again",
+    "pt-BR": "Tentar novamente",
+    "es": "Volver a intentar"
+  },
+  "human_send": {
+    "fr": "Confirmer et envoyer",
+    "en": "Confirm and send",
+    "pt-BR": "Confirmar e enviar",
+    "es": "Confirmar y enviar"
+  },
+  "human_loading": {
+    "fr": "Préparation de la vérification…",
+    "en": "Preparing verification…",
+    "pt-BR": "Preparando a verificação…",
+    "es": "Preparando la verificación…"
+  },
+  "human_unavailable": {
+    "fr": "La vérification est indisponible. Réessayez ou contactez-nous par email.",
+    "en": "Verification is unavailable. Try again or contact us by email.",
+    "pt-BR": "A verificação está indisponível. Tente novamente ou entre em contato por email.",
+    "es": "La verificación no está disponible. Inténtelo de nuevo o contacte por correo."
+  },
+  "human_required": {
+    "fr": "Veuillez confirmer que vous êtes un humain avant l’envoi.",
+    "en": "Please confirm you are human before sending.",
+    "pt-BR": "Confirme que você é humano antes de enviar.",
+    "es": "Confirme que es humano antes de enviar."
+  },
+  "human_invalid": {
+    "fr": "La vérification a expiré ou est invalide. Veuillez confirmer à nouveau.",
+    "en": "Verification has expired or is invalid. Please confirm again.",
+    "pt-BR": "A verificação expirou ou é inválida. Confirme novamente.",
+    "es": "La verificación ha caducado o no es válida. Confirme de nuevo."
+  },
+  "human_used": {
+    "fr": "Cette vérification a déjà été utilisée. Veuillez confirmer à nouveau.",
+    "en": "This verification has already been used. Please confirm again.",
+    "pt-BR": "Esta verificação já foi utilizada. Confirme novamente.",
+    "es": "Esta verificación ya se ha utilizado. Confirme de nuevo."
+  },
+  "human_sending": {
+    "fr": "Envoi de votre demande…",
+    "en": "Sending your enquiry…",
+    "pt-BR": "Enviando sua solicitação…",
+    "es": "Enviando su solicitud…"
   }
 }

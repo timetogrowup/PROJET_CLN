@@ -17,16 +17,17 @@ try:
   try:request();break
   except OSError:time.sleep(.1)
  code,h,b=request();assert code==405 and h.get('Allow')=='POST'
- code,h,b=request('?op=challenge');c=json.loads(b);assert code==200 and h['Access-Control-Allow-Origin']=='https://cln-performance.com' and c['a']+c['b']<=18
+ code,h,b=request('?op=human');c=json.loads(b);assert code==200 and h['Access-Control-Allow-Origin']=='https://cln-performance.com' and 'a' not in c and 'b' not in c
  assert 'password' not in b and 'security_key' not in b
- assert request('?op=challenge',origin='https://evil.invalid')[0]==403
+ assert request('?op=challenge')[0]==405
+ assert request('?op=human',origin='https://evil.invalid')[0]==403
  base={'name':'Test','_replyto':'contact@cln-performance.com','company':'','message':'Test without sending','consent':'on','lang':'es'}
- code,h,b=request(data=base);assert code==303 and 'status=captcha_required' in h['Location'] and 'lang=es' in h['Location']
- code,h,b=request(data=dict(base,captcha_token=c['token'],captcha_answer='99'));assert 'status=captcha_invalid' in h['Location']
+ code,h,b=request(data=base);assert code==303 and 'status=human_required' in h['Location'] and 'lang=es' in h['Location']
+ code,h,b=request(data=dict(base,human_token=c['token'],human_confirmed='0'));assert 'status=human_invalid' in h['Location']
  code,h,b=request(data=dict(base,lang='https://evil.invalid'));assert 'lang=fr' in h['Location'] and 'evil' not in h['Location']
  code,h,b=request(data=base,origin='https://evil.invalid');assert 'status=forbidden' in h['Location']
  code,h,b=request(data={'name[]':'array','lang':'en'});assert 'status=invalid' in h['Location']
  code,h,b=request(data={'message':'a'*21000});assert 'status=too_large' in h['Location']
- print('PASS HTTP: CORS, challenge, field types, payload limit, localised redirects and missing/invalid CAPTCHA. No mail sent.')
+ print('PASS HTTP: CORS, challenge, field types, payload limit, localised redirects and missing/unchecked human confirmation. No mail sent.')
 finally:
  server.terminate();server.wait(timeout=5);shutil.rmtree(private)
