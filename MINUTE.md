@@ -1,4 +1,4 @@
-> **État courant — 28 octobre 2026, reprise après ajout du secret :** `OVH_FTP_PASSWORD` présent. Syntaxe PHP validée. FTPS refusé par le serveur (AUTH TLS non pris en charge), avant authentification. Adaptation SFTP enregistrée ; connexion au port 22 confirmée, clé serveur découverte mais pas encore corroborée par une source de confiance. Déploiement arrêté avant authentification SFTP, aucun fichier OVH transféré, aucun test mail effectué. Le formulaire reste masqué.
+> **État courant — 28 octobre 2026 :** clé SFTP ED25519 épinglée après concordance avec la connexion de Patrick. Connexion chiffrée et vérification de clé réussies dans GitHub Actions ; authentification du compte nkzkafh refusée (`Authentication failed`). Aucun fichier OVH transféré. Vérifier mot de passe FTP du compte et activation SFTP, puis mettre à jour le secret si nécessaire. Formulaire toujours masqué.
 
 # MINUTE — CLN Performance
 **Photographie métier et technique du projet**  
@@ -223,3 +223,12 @@ La correction du formulaire ne sera terminée que lorsqu'un message de test, env
 - Empreinte ED25519 observée : SHA256:xhieLplnoEvvl7+a8sq8wLCh/bvOQvQFIVewi+fK2og. Empreinte RSA observée : SHA256:itDZ6cuojUbG3+jrh5F/igkXa2xjzejbYJkNAlw8/VM.
 - Ces empreintes proviennent de la connexion réseau elle-même, sans preuve indépendante d'identité. Avant dépôt de deploy/ovh_known_hosts, comparer à une clé déjà approuvée pour ce serveur ou à une confirmation OVHcloud fiable. Ne pas désactiver la vérification ni considérer ssh-keyscan comme preuve indépendante.
 - Aucun fichier OVH transféré ; livraison mail, tests de sécurité et activation du formulaire restent à effectuer après cette dépendance.
+
+
+## Reprise après acceptation de la clé sur l'ordinateur de Patrick — 28 octobre 2026
+
+- Patrick a transmis la sortie du client SFTP Windows : empreinte ED25519 identique, clé ajoutée au known_hosts local ; connexion ensuite fermée sans succès d'authentification rapporté.
+- Clé publique épinglée dans deploy/ovh_known_hosts (commit 2c5a514). Concordance depuis deux connexions, pas attestation officielle OVHcloud.
+- Workflow https://github.com/timetogrowup/PROJET_CLN/actions/runs/40748650732 : syntaxe PHP valide, clé serveur acceptée, dépendance Paramiko installée. Échec à auth_password : AuthenticationException: Authentication failed.
+- Aucun open_sftp ni transfert effectué. Le secret existe mais n'authentifie pas le compte tel que configuré. Ne pas déclarer un mot de passe incorrect comme seule cause certaine ; vérifier également compte et activation SFTP.
+- Suite : vérifier l'accès FTP/SFTP nkzkafh auprès d'OVHcloud, corriger le secret OVH_FTP_PASSWORD si nécessaire, relancer puis effectuer les tests backend et de réception avant activation publique.
