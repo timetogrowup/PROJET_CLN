@@ -629,4 +629,4 @@ form input:not([type=checkbox]):not([type=radio]), form textarea {max-width:100%
 #human-dialog input[type=checkbox] {width:1.2rem;height:1.2rem;flex:0 0 auto;margin:.15rem 0 0;accent-color:#007c66;}
 .human-actions {display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:flex-end;}
 .human-actions button {white-space:normal;}
-#human-status {overflow-wrap:anywhere;}
+#human-status {overflow-wrap:anywhere;min-height:4.5em;}

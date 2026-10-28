@@ -35,7 +35,7 @@ CLN.ready.then(async () => {
     const request=++generation;controller?.abort();controller=new AbortController();
     state='loading';statusKey='human_loading';challenge=null;check.checked=false;
     form.elements.human_token.value='';form.elements.human_confirmed.value='';renderHuman();
-    const timeout=setTimeout(()=>controller?.abort(),20000);
+    const timeout=setTimeout(()=>{if(request===generation)controller?.abort();},20000);
     try{
       const url=new URL(form.action);url.searchParams.set('op','human');
       const r=await fetch(url,{credentials:'omit',cache:'no-store',signal:controller.signal});
