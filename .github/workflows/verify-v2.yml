@@ -1,0 +1,36 @@
+name: Verify CLN V2 languages and form security
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: PHP syntax and security rules
+        run: |
+          php -l contact.php
+          php -l contact_security.php
+          php tests/security.php
+          python3 tests/http.py
+      - name: JavaScript syntax and catalogues
+        run: |
+          node --check site.js
+          node --check diagnostic.js
+          node --check contact.js
+          node tests/i18n.mjs
+      - name: Install pinned browser tests
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1
+          npx playwright install --with-deps chromium webkit
+      - name: Multilingual responsive and user journeys
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 >/tmp/cln-v2-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          node tests/browser.mjs
