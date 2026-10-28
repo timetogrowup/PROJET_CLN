@@ -19,8 +19,10 @@ Les changements de `main` sont publiés par GitHub Pages. GitHub Pages ne peut p
 Le workflow manuel **Deploy OVH contact API** (`.github/workflows/deploy-ovh-api.yml`) s'exécute sur `main` :
 
 1. Vérification de syntaxe PHP.
-2. Transfert du seul `contact.php` par FTPS avec validation du certificat.
+2. Transfert du seul `contact.php` par SFTP avec clé serveur épinglée dans `deploy/ovh_known_hosts`.
 3. Sauvegarde d'un éventuel fichier précédent hors de `www`, vérification du transfert et retour arrière si le contrôle HTTP échoue.
+
+Sans clé serveur vérifiée, le workflow effectue uniquement une découverte des clés publiques et s'arrête avant toute authentification. Les clés découvertes doivent être comparées à une source OVHcloud de confiance avant leur ajout à `deploy/ovh_known_hosts`. Ne pas accepter automatiquement une nouvelle clé ou désactiver sa vérification.
 
 Il nécessite le secret Actions `OVH_FTP_PASSWORD`, saisi directement dans GitHub par le titulaire de l'accès. Ne jamais publier un mot de passe dans le dépôt ou dans une conversation. Le mot de passe FTP est distinct de celui du Manager OVHcloud.
 
