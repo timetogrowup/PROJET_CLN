@@ -1,0 +1,26 @@
+name: Check CLN responsive layout and TLS
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Verify public TLS certificates
+        run: python3 scripts/check_tls.py
+      - name: Install pinned browser test dependency
+        run: npm install --no-save --package-lock=false playwright@1.56.1
+      - name: Install test browsers
+        run: npx playwright install --with-deps chromium webkit
+      - name: Check mobile layouts and required fields
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 > /tmp/cln-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          node scripts/check_responsive.mjs
