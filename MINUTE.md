@@ -1,4 +1,4 @@
-> **État courant — 28 octobre 2026 :** backend déployé, soumission technique autorisée acceptée par le transport PHP (303 vers merci.html?status=success). Rejets GET, origine absente, champs manquants, piège et type tableau conformes aux cas testés. Réception réelle dans contact@cln-performance.com non encore confirmée ; formulaire toujours masqué.
+> **État courant — 28 octobre 2026 : correction SMTP préparée, non déployée.** Le test mail() a été rejeté par la politique de réception : 550 5.7.1, domaine From non aligné avec domaine authentifié. PHPMailer et SMTP authentifié OVHcloud préparés ; syntaxe PHP et dépendances validées dans GitHub Actions. Déploiement arrêté avant transfert faute du nouveau secret CLN_SMTP_PASSWORD. Formulaire toujours masqué.
 
 # MINUTE — CLN Performance
 **Photographie métier et technique du projet**  
@@ -251,3 +251,13 @@ La correction du formulaire ne sera terminée que lorsqu'un message de test, env
 - Rejets vérifiés sur l'API publique : GET 405 et Allow POST ; POST sans Origin 403 ; champs absents 303 vers status=invalid ; champ piège 400 ; name[] au lieu d'une chaîne 303 vers status=invalid.
 - Recherche ciblée dans Gmail connecté sans résultat. Cela ne prouve pas une absence de réception dans la boîte OVHcloud, qui n'a pas été consultée par ce connecteur.
 - À confirmer par lecture de la boîte officielle (indésirables compris) : présence du message et en-têtes. Limitation de débit et cas complémentaires restent à tester. Aucune activation du formulaire effectuée.
+
+
+## Correction SMTP authentifiée — 28 octobre 2026
+
+- Capture OVHcloud fournie par Patrick : service Scripts e-mail actif, 0 envoyé, 1 erreur, 1 usurpation détectée ; détail 550 5.7.1 Rejected by policy: From header domain does not align with authenticated domain. Cet échec invalide toute conclusion de livraison basée sur mail().
+- Préparation : PHPMailer 7.1.1, SMTP ssl0.ovh.net:465 avec TLS et authentification contact@cln-performance.com. From et enveloppe alignés sur le compte ; prospect en Reply-To ; aucun repli vers mail().
+- Configuration privée prévue : ~/.cln-secrets/mail.json (0600, dossier 0700), hors de www. Dépendances dans ~/.cln-mailer/7.1.1 ; le secret Actions CLN_SMTP_PASSWORD sera provisionné par le workflow. Ne pas mettre le mot de passe en clair dans le dépôt ou le chat.
+- Validation : https://github.com/timetogrowup/PROJET_CLN/actions/runs/40753600853 ; construction PHPMailer et toutes syntaxes PHP réussies. Compilation Python réussie localement. Exécution arrêtée avant transfert avec Missing CLN_SMTP_PASSWORD; no file transferred. L'ancien backend mail() reste sur OVHcloud.
+- Prochaine action utilisateur : créer CLN_SMTP_PASSWORD avec le mot de passe de la boîte mail officielle (distinct du FTP). Cela autorise le workflow à utiliser cette boîte pour l'envoi et stocke son accès privé sur l'hébergement.
+- Puis relancer cette exécution, vérifier installation privée, refaire un message technique vers la boîte officielle et constater réception avant ouverture publique. Tests complets du transport SMTP, erreur SMTP et retour arrière encore à réaliser.
