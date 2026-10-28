@@ -19,7 +19,7 @@ Les changements de `main` sont publiés par GitHub Pages. GitHub Pages ne peut p
 Le workflow manuel **Deploy OVH contact API** (`.github/workflows/deploy-ovh-api.yml`) s'exécute sur `main` :
 
 1. Vérification de syntaxe PHP.
-2. Transfert du seul `contact.php` par SFTP avec clé serveur épinglée dans `deploy/ovh_known_hosts`.
+2. Transfert de `contact.php` et des dépendances/configurations SMTP privées par SFTP, avec clé serveur épinglée dans `deploy/ovh_known_hosts`.
 3. Sauvegarde d'un éventuel fichier précédent hors de `www`, vérification du transfert et retour arrière si le contrôle HTTP échoue.
 
 Sans clé serveur vérifiée, le workflow effectue uniquement une découverte des clés publiques et s'arrête avant toute authentification. Les clés découvertes doivent être comparées à une source OVHcloud de confiance avant leur ajout à `deploy/ovh_known_hosts`. Ne pas accepter automatiquement une nouvelle clé ou désactiver sa vérification.
@@ -36,7 +36,11 @@ Le contrôle de déploiement attend **405 et Allow: POST** pour une requête GET
 - Compléter les mentions légales et l'information de confidentialité avec les données validées de l'éditeur.
 - Afficher le formulaire seulement après validation du backend, puis tester le parcours public complet, mobile compris.
 
-Le script utilise actuellement PHP `mail()`. Son succès signifie que le transport accepte le message, sans garantir la livraison. La réception réelle est un critère de validation distinct.
+Le script préparé utilise PHPMailer 7.1.1 et le SMTP authentifié OVHcloud (`ssl0.ovh.net`, port 465, TLS). Expéditeur, enveloppe et compte SMTP : `contact@cln-performance.com`. Le prospect reste en Reply-To. Aucun repli vers `mail()`.
+
+Le secret Actions `CLN_SMTP_PASSWORD` contient le mot de passe de la boîte officielle. Le workflow le provisionne dans `~/.cln-secrets/mail.json`, hors de `www`, dossier 0700 et fichier 0600. Les dépendances sont installées dans `~/.cln-mailer/7.1.1`. Aucun secret n'est commité ni affiché. Le workflow a ainsi accès à l'envoi via cette boîte : protéger les droits d'écriture et d'exécution du dépôt.
+
+La réception réelle reste un critère distinct de l'acceptation SMTP. La correction doit être déployée et testée avant activation du formulaire.
 
 ## Prévisualisation locale
 
