@@ -37,5 +37,5 @@ jobs:
           python3 -m http.server 8000 --bind 127.0.0.1 >/tmp/cln-v2-http.log 2>&1 &
           server_pid=$!
           trap 'kill "$server_pid"' EXIT
-          node tests/browser.mjs
           node tests/human-dialog.mjs
+          node tests/browser.mjs
