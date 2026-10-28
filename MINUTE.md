@@ -1,3 +1,5 @@
+> **Dernier contrôle du 28 octobre 2026 :** débordement tablette corrigé ; 144/144 affichages simulés validés. DKIM actif confirmé, DMARC p=none ajouté et propagé. Certificats du site et de l'API valides jusqu'au 24 janvier 2027. Renouvellements automatiques des abonnements domaine/hébergement confirmés pour octobre 2027. Validation de l'adresse du titulaire à confirmer, échéance du message OVH : 10 décembre 2026.
+
 > **Validation finale du 28 octobre 2026 :** après demande de vérifier le message `CLN RECETTE PUBLIQUE 20261028`, Patrick répond « C'est fait », interprété comme confirmation de réception. Parcours formulaire public → SMTP OVHcloud → boîte officielle validé sur ce test. Les points ouverts détaillés ci-dessous restent suivis séparément.
 
 > **État courant — 28 octobre 2026 : formulaire public activé et parcours de soumission testé.** SMTP et réception du premier test confirmés par Patrick ; nouvel envoi depuis l'interface publique abouti à merci.html?status=success. Pages Mentions légales et Confidentialité publiées selon le périmètre expressément retenu par Patrick (sans les trois dernières informations demandées). Il ne s'agit pas d'une certification de conformité juridique ou d'un audit complet de sécurité.
@@ -319,3 +321,15 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 5. Procédure opérationnelle de suppression des échanges devenus inutiles ; purge des fichiers temporaires antispam et test du plafond horaire à compléter.
 6. Reply-To vers une adresse de prospect distincte et indisponibilité SMTP à tester. Ne pas envoyer de messages à de vrais prospects pour la recette.
 7. Pages légales publiées avec les exclusions demandées ; absence de revendication de conformité complète.
+
+
+
+## Complément responsive, DNS, HTTPS et domaine — 28 octobre 2026
+- Rapport détaillé : docs/RECETTE_RESPONSIVE_DNS_TLS_2026-10-28.md.
+- Échec responsive initial exploité : menu débordant à 768 px. Seuil de réorganisation porté à 1024 px ; huit largeurs × neuf pages × Chromium/WebKit : 144 réussites après correction, exécution 40758870893.
+- DKIM activé confirmé dans OVHcloud ; clés publiques des deux sélecteurs disponibles.
+- DMARC ajouté en observation et visible dans le DNS public : v=DMARC1; p=none; rua=mailto:contact@cln-performance.com. Pas de rejet ou de quarantaine imposés ; aucun changement des autres entrées.
+- Certificats vérifiés avec validation TLS normale, expiration le 24 janvier 2027 pour le site et l'API. Pas de renouvellement immédiat nécessaire ; pas de surveillance récurrente configurée.
+- Domaine Registered/Active ; renouvellement automatique au 26 octobre 2027. Hébergement Starter actif, renouvellement automatique au 25 octobre 2027. Aucun achat, modification de facturation ou changement de contacts.
+- Formalité du titulaire : demande OVH du 26 octobre retrouvée, échéance 10 décembre 2026 ; aucune preuve explicite de confirmation. Action du titulaire encore nécessaire si non déjà accomplie.
+- Les points historiques de sécurité supplémentaires (en-têtes DKIM reçus, réponse vers prospect distinct, panne SMTP, compteur horaire et purge des temporaires) restent distincts du succès de ces contrôles.
