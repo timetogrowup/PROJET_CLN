@@ -1,4 +1,4 @@
-> **État courant — 28 octobre 2026 :** clé SFTP ED25519 épinglée après concordance avec la connexion de Patrick. Connexion chiffrée et vérification de clé réussies dans GitHub Actions ; authentification du compte nkzkafh refusée (`Authentication failed`). Aucun fichier OVH transféré. Vérifier mot de passe FTP du compte et activation SFTP, puis mettre à jour le secret si nécessaire. Formulaire toujours masqué.
+> **État courant — 28 octobre 2026 : déploiement SFTP réussi.** Après mise à jour du secret, l'authentification et le transfert de contact.php réussissent. Le contrôle HTTPS GET renvoie 405 / Allow: POST, comportement attendu. Livraison email et recette fonctionnelle non confirmées ; formulaire toujours masqué.
 
 # MINUTE — CLN Performance
 **Photographie métier et technique du projet**  
@@ -232,3 +232,12 @@ La correction du formulaire ne sera terminée que lorsqu'un message de test, env
 - Workflow https://github.com/timetogrowup/PROJET_CLN/actions/runs/40748650732 : syntaxe PHP valide, clé serveur acceptée, dépendance Paramiko installée. Échec à auth_password : AuthenticationException: Authentication failed.
 - Aucun open_sftp ni transfert effectué. Le secret existe mais n'authentifie pas le compte tel que configuré. Ne pas déclarer un mot de passe incorrect comme seule cause certaine ; vérifier également compte et activation SFTP.
 - Suite : vérifier l'accès FTP/SFTP nkzkafh auprès d'OVHcloud, corriger le secret OVH_FTP_PASSWORD si nécessaire, relancer puis effectuer les tests backend et de réception avant activation publique.
+
+
+## Essai après correction du secret — 28 octobre 2026
+
+- Exécution 40748650732, job 123036051986 : conclusion success ; syntaxe PHP, clé serveur, authentification SFTP, transfert et contrôle HTTPS réussis.
+- Journal : SFTP deployment and GET rejection verified. Mail delivery still requires testing.
+- La disponibilité du backend est désormais établie, contrairement aux états historiques ci-dessus.
+- Tests de soumission et livraison non confirmés : contrôle automatique ayant refusé la commande de test contenant une adresse personnelle et susceptible de déclencher un email. Ne pas conclure à l'envoi ou à la réception.
+- Prochaine étape : autorisation explicite d'un message technique vers contact@cln-performance.com, contrôle des rejets puis réception/Reply-To, et finalisation des informations légales avant activation du formulaire.
