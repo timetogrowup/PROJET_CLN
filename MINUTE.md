@@ -1,4 +1,4 @@
-> **État courant — 28 octobre 2026 : réception SMTP confirmée par Patrick.** Le message CLN TEST SMTP 20261028 est arrivé dans la boîte officielle après déploiement du transport SMTP authentifié. Le blocage de livraison est résolu pour ce test. Formulaire public toujours masqué ; restent informations légales/confidentialité, vérifications complémentaires et recette du parcours public avant ouverture.
+> **État courant — 28 octobre 2026 : formulaire public activé et parcours de soumission testé.** SMTP et réception du premier test confirmés par Patrick ; nouvel envoi depuis l'interface publique abouti à merci.html?status=success. Pages Mentions légales et Confidentialité publiées selon le périmètre expressément retenu par Patrick (sans les trois dernières informations demandées). Il ne s'agit pas d'une certification de conformité juridique ou d'un audit complet de sécurité.
 
 # MINUTE — CLN Performance
 **Photographie métier et technique du projet**  
@@ -283,3 +283,37 @@ La correction du formulaire ne sera terminée que lorsqu'un message de test, env
 ## Informations éditeur fournies par Patrick — 28 octobre 2026
 
 CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège communiqué au 14 rue du Bac, 78955 Carrières-sous-Poissy. Données déclarées par Patrick, non recoupées dans une fiche de registre publique. Préparation dans docs/PREPARATION_MENTIONS_CONFIDENTIALITE.md ; manquent directeur de publication, mention RCS et TVA si applicable. Politique de conservation à arrêter concrètement. Pages publiques légales non publiées, formulaire toujours masqué.
+
+
+
+## Publication et recette publique — 28 octobre 2026
+
+### Changements publiés
+- Création de mentions-legales.html et confidentialite.html ; liens sur les neuf pages publiques. Publication des données d'éditeur fournies (CLN Performance, SASU, capital 5 000 €, SIRET et siège).
+- Décision explicite de Patrick : ne pas publier les trois dernières informations demandées (direction de publication, RCS et TVA). Aucune valeur inventée. La publication ne signifie pas validation de conformité des mentions.
+- Formulaire activé, retrait du message de mise en service, information sur les données et lien confidentialité au niveau du formulaire. Case de lecture de la politique cohérente avec les bases décrites, sans inscription marketing.
+- Synthèse du diagnostic ignorée et supprimée à la visite suivante après 30 jours ; suppression également si date invalide ou future.
+- Styles [hidden] prioritaires corrigés, case de confidentialité rendue lisible, boutons verts assombris pour le contraste et focus clavier visible.
+- Versionnement de la feuille de styles pour éviter le maintien des anciens styles en cache.
+- Descriptions de pages, liens canoniques, robots.txt et sitemap.xml ajoutés.
+- Version publiée : ada1a4f5e31f9946068629fe14856a0e921cf5ee. Déploiements Pages 40756396267 et 40756630669.
+
+### Résultats vérifiés
+- Syntaxe des deux scripts JavaScript valide ; cinq cas d'expiration testés (récente, expirée, JSON malformé, date future et date absente).
+- 136 références locales vérifiées sans cible manquante.
+- Neuf pages publiques, feuille de styles, robots et sitemap : HTTP 200 sur la nouvelle version.
+- API : GET 405/Allow POST ; mauvaise origine 403 ; case non cochée, type tableau et texte trop long vers status=invalid ; corps trop volumineux 413 ; champ piège 400.
+- Limitation : un POST de test accepté (303 succès), deuxième POST immédiat refusé (429/Retry-After 60).
+- Contrôle visuel ordinateur : formulaire, liens et masquage de la carte de recommandation sans données corrects après rafraîchissement des styles.
+- Interface réelle : formulaire rempli avec les coordonnées de test de la boîte officielle, case cochée, clic Envoyer ; arrivée sur https://cln-performance.com/merci.html?status=success. Repère du mail : CLN RECETTE PUBLIQUE 20261028. Acceptation SMTP établie ; réception de ce dernier message non encore rapportée par Patrick (le précédent test SMTP a été reçu).
+- Diagnostic réel : calcul d'une synthèse, passage à Contact, message prérempli ; bouton Effacer supprime la synthèse et le texte prérempli.
+- DNS publics : MX mx1/mx2/mx3.mail.ovh.net et SPF v=spf1 include:mx.ovh.com -all observés. Aucun TXT DMARC trouvé au nom _dmarc lors du contrôle.
+
+### Points ouverts, sans bloquer le constat de fonctionnement
+1. Contrôle visuel sur téléphones et tablettes réels ; navigation clavier complète et audit d'accessibilité non certifiés.
+2. Vérification DKIM depuis les en-têtes d'un mail reçu ; préparation DMARC après état des lieux. Aucune modification DNS automatique.
+3. Confirmation administrative du titulaire du domaine avant le 10 décembre 2026 ; session Manager non disponible et reconnexion déclinée, statut non revérifié.
+4. Vérification du renouvellement TLS OVHcloud avant l'expiration connue du 24 janvier 2027.
+5. Procédure opérationnelle de suppression des échanges devenus inutiles ; purge des fichiers temporaires antispam et test du plafond horaire à compléter.
+6. Reply-To vers une adresse de prospect distincte et indisponibilité SMTP à tester. Ne pas envoyer de messages à de vrais prospects pour la recette.
+7. Pages légales publiées avec les exclusions demandées ; absence de revendication de conformité complète.
