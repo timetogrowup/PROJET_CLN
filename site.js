@@ -11,7 +11,8 @@
     if (item && item.expires > Date.now()) lang = valid(item.lang) || 'fr';
     else localStorage.removeItem('clnLanguage');
   } catch (_) {}
-  lang = valid(new URLSearchParams(location.search).get('lang')) || lang;
+  const initialParams = new URLSearchParams(location.search);
+  if (initialParams.has('lang')) lang = valid(initialParams.get('lang')) || 'fr';
   const CLN = window.CLN = {
     get lang() { return lang; },
     langs,
