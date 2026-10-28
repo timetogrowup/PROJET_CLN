@@ -2,7 +2,13 @@
 
 Site vitrine CLN — Ciblé, Libéré, Normé.
 
-## Version V2 — 28 octobre 2026
+## Version V3 — 28 octobre 2026
+
+Le calcul a été supprimé. Après validation des champs, « Envoyer la demande » ouvre une fenêtre « Vérification humaine » avec case « Je suis un humain », confirmation et annulation. Position variable bornée sur ordinateur, centrage sur petit écran, clavier et quatre langues. Autorisation signée à usage unique demandée uniquement à l’ouverture ; les limites email/IP restent appliquées. Il s’agit d’une déclaration, pas d’une preuve d’humanité.
+
+[Besoin V3](docs/BESOIN_CONFIRMATION_HUMAINE_V3.md) · [Expression détaillée](docs/EXPRESSION_BESOIN_DETAILLEE_V3.md) · [Spécification](docs/SPECIFICATION_TECHNIQUE_V3.md) · [Stratégie](docs/STRATEGIE_DEVELOPPEMENT_V3.md).
+
+## Historique V2 — 28 octobre 2026
 
 Sélecteur FR (défaut), EN, pt-BR et ES sur les neuf pages, diagnostic et messages du formulaire compris. La langue suit les liens et reste mémorisée ; les saisies libres restent inchangées. Traductions côté navigateur avec JavaScript.
 

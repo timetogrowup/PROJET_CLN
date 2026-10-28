@@ -1,9 +1,10 @@
-name: Verify CLN V2 languages and form security
+name: Verify CLN languages and form security
 on:
   workflow_dispatch:
   push:
     branches:
       - feature/cln-v2-security-i18n
+      - feature/cln-v3-human-dialog
 permissions:
   contents: read
 jobs:
@@ -36,4 +37,5 @@ jobs:
           python3 -m http.server 8000 --bind 127.0.0.1 >/tmp/cln-v2-http.log 2>&1 &
           server_pid=$!
           trap 'kill "$server_pid"' EXIT
+          node tests/human-dialog.mjs
           node tests/browser.mjs
