@@ -4,8 +4,8 @@ let checks=0;
 for(const [engineName,engine] of Object.entries({chromium,webkit})){
  const browser=await engine.launch();
  for(const width of [320,390,768,1024,1280]){
-  const context=await browser.newContext({viewport:{width,height:844},locale:'fr-FR'});const page=await context.newPage();
-  await page.route('https://api.cln-performance.com/**',async route=>{const url=new URL(route.request().url());if(url.searchParams.get('op')==='challenge'){await route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({a:3,b:4,expires:Math.floor(Date.now()/1000)+600,token:'test-token'})});}else await route.abort();});
+  const context=await browser.newContext({viewport:{width,height:844},locale:'fr-FR'});context.setDefaultTimeout(15000);context.setDefaultNavigationTimeout(15000);const page=await context.newPage();
+  await page.route('https://api.cln-performance.com/**',async route=>{const url=new URL(route.request().url());if(url.searchParams.get('op')==='challenge'){await route.fulfill({status:200,headers:{'Access-Control-Allow-Origin':'http://127.0.0.1:8000'},contentType:'application/json',body:JSON.stringify({a:3,b:4,expires:Math.floor(Date.now()/1000)+600,token:'test-token'})});}else await route.abort();});
   for(const lang of langs)for(const name of pages){
    await page.goto(`http://127.0.0.1:8000/${name}.html?lang=${lang}`);await page.waitForFunction(()=>document.documentElement.dataset.i18nReady==='true');assert.equal(await page.locator('html').getAttribute('lang'),lang);assert.equal(await page.locator('#site-language').inputValue(),lang);
    const overflow=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,width:document.documentElement.clientWidth}));assert(overflow.scroll<=overflow.width+1,`${engineName} ${width} ${lang} ${name} overflow ${JSON.stringify(overflow)}`);
