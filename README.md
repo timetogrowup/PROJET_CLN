@@ -2,6 +2,14 @@
 
 Site vitrine CLN — Ciblé, Libéré, Normé.
 
+## Version V2 — 28 octobre 2026
+
+Sélecteur FR (défaut), EN, pt-BR et ES sur les neuf pages, diagnostic et messages du formulaire compris. La langue suit les liens et reste mémorisée ; les saisies libres restent inchangées. Traductions côté navigateur avec JavaScript.
+
+Captcha signé, valable dix minutes et utilisable une seule fois. Vérification PHP : dix minutes entre deux demandes par email, trois par heure ; contrôle IP complémentaire (une par minute, cinq par heure, trente tentatives par heure). Compteurs privés sous verrou avec empreintes HMAC.
+
+[Besoins détaillés](docs/EXPRESSION_BESOIN_DETAILLEE_V2.md) · [Spécification](docs/SPECIFICATION_TECHNIQUE_V2.md) · [Stratégie](docs/STRATEGIE_DEVELOPPEMENT_V2.md) · [Recette et retour arrière](docs/RECETTE_PRODUCTION_V2.md).
+
 ## Architecture actuelle
 
 - Référentiel : `timetogrowup/PROJET_CLN`, branche `main`.
@@ -59,3 +67,4 @@ Une simple prévisualisation locale ne reproduit pas l'origine autorisée et le 
 ## Éléments historiques
 
 `deploy-hostinger.yml` est limité à un lancement manuel ; il ne constitue plus la procédure de publication actuelle. `publish.ps1`, `test_mailbox.py` et les anciens exemples SMTP doivent être considérés comme historiques et vérifiés avant toute réutilisation. Ne pas lancer l'ancien déploiement Hostinger pour publier sur l'architecture actuelle.
+
