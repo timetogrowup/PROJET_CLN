@@ -1,4 +1,4 @@
-> **État courant — 28 octobre 2026 : correction SMTP déployée.** Déploiement SFTP de PHPMailer, configuration privée et contact.php réussi après ajout du secret CLN_SMTP_PASSWORD. Soumission de test SMTP acceptée : HTTP 303 vers merci.html?status=success. Réception réelle dans la boîte officielle à confirmer par Patrick. Formulaire toujours masqué.
+> **État courant — 28 octobre 2026 : réception SMTP confirmée par Patrick.** Le message CLN TEST SMTP 20261028 est arrivé dans la boîte officielle après déploiement du transport SMTP authentifié. Le blocage de livraison est résolu pour ce test. Formulaire public toujours masqué ; restent informations légales/confidentialité, vérifications complémentaires et recette du parcours public avant ouverture.
 
 # MINUTE — CLN Performance
 **Photographie métier et technique du projet**  
@@ -270,3 +270,11 @@ La correction du formulaire ne sera terminée que lorsqu'un message de test, env
 - Soumission de recette autorisée vers contact@cln-performance.com, Reply-To identique, repère CLN TEST SMTP 20261028. HTTP 303 Location https://cln-performance.com/merci.html?status=success : PHPMailer a obtenu l'acceptation du message par le serveur SMTP, pas une preuve de livraison dans la boîte.
 - Objet : Demande de contact CLN Performance. Vérification de réception par Patrick dans Roundcube, boîte officielle et indésirables, attendue.
 - Formulaire public toujours masqué. Après réception : finir recette, données légales et confidentialité, puis ouvrir le formulaire et contrôler le parcours public.
+
+
+## Validation de réception par Patrick — 28 octobre 2026
+
+- Après demande de vérifier le message CLN TEST SMTP 20261028 dans contact@cln-performance.com, Patrick confirme : « Oui c'est bon ».
+- Résultat métier : livraison du test SMTP dans la boîte officielle confirmée. Le problème précédent de rejet d'alignement est résolu sur ce trajet.
+- Limites : Reply-To a été testé avec l'adresse officielle elle-même ; réponse vers un prospect distinct non testée. Débit, indisponibilité SMTP et parcours public à terminer. Aucune ouverture du formulaire dans cette mise à jour.
+- Pages légales/confidentialité absentes du dépôt ; lien Mentions légales encore #. Informations d'identité et de contact juridique de l'éditeur nécessaires avant publication de ces pages.
