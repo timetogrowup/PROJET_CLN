@@ -10,7 +10,7 @@ Site vitrine CLN — Ciblé, Libéré, Normé.
 - Boîte officielle : `contact@cln-performance.com`.
 - État détaillé et résultats datés : [MINUTE.md](MINUTE.md).
 
-Le formulaire reste masqué tant que le serveur et la livraison des messages ne sont pas validés. Le contact direct par email reste disponible.
+Le formulaire reste masqué en attendant la finalisation des informations légales et la recette publique. Le serveur SMTP et la livraison d'un message de test ont été validés le 28 octobre 2026. Le contact direct par email reste disponible.
 
 ## Publication
 
@@ -36,11 +36,11 @@ Le contrôle de déploiement attend **405 et Allow: POST** pour une requête GET
 - Compléter les mentions légales et l'information de confidentialité avec les données validées de l'éditeur.
 - Afficher le formulaire seulement après validation du backend, puis tester le parcours public complet, mobile compris.
 
-Le script préparé utilise PHPMailer 7.1.1 et le SMTP authentifié OVHcloud (`ssl0.ovh.net`, port 465, TLS). Expéditeur, enveloppe et compte SMTP : `contact@cln-performance.com`. Le prospect reste en Reply-To. Aucun repli vers `mail()`.
+Le script déployé utilise PHPMailer 7.1.1 et le SMTP authentifié OVHcloud (`ssl0.ovh.net`, port 465, TLS). Expéditeur, enveloppe et compte SMTP : `contact@cln-performance.com`. Le prospect reste en Reply-To. Aucun repli vers `mail()`.
 
 Le secret Actions `CLN_SMTP_PASSWORD` contient le mot de passe de la boîte officielle. Le workflow le provisionne dans `~/.cln-secrets/mail.json`, hors de `www`, dossier 0700 et fichier 0600. Les dépendances sont installées dans `~/.cln-mailer/7.1.1`. Aucun secret n'est commité ni affiché. Le workflow a ainsi accès à l'envoi via cette boîte : protéger les droits d'écriture et d'exécution du dépôt.
 
-La réception réelle reste un critère distinct de l'acceptation SMTP. La correction doit être déployée et testée avant activation du formulaire.
+La réception réelle reste un critère distinct de l'acceptation SMTP. Le 28 octobre 2026, le déploiement SMTP a réussi et Patrick a confirmé la réception du message de recette. Les vérifications complémentaires, les pages légales et la recette du parcours public restent à finaliser avant activation du formulaire.
 
 ## Prévisualisation locale
 
