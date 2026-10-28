@@ -1,4 +1,4 @@
-> **État courant — 28 octobre 2026 : déploiement SFTP réussi.** Après mise à jour du secret, l'authentification et le transfert de contact.php réussissent. Le contrôle HTTPS GET renvoie 405 / Allow: POST, comportement attendu. Livraison email et recette fonctionnelle non confirmées ; formulaire toujours masqué.
+> **État courant — 28 octobre 2026 :** backend déployé, soumission technique autorisée acceptée par le transport PHP (303 vers merci.html?status=success). Rejets GET, origine absente, champs manquants, piège et type tableau conformes aux cas testés. Réception réelle dans contact@cln-performance.com non encore confirmée ; formulaire toujours masqué.
 
 # MINUTE — CLN Performance
 **Photographie métier et technique du projet**  
@@ -241,3 +241,13 @@ La correction du formulaire ne sera terminée que lorsqu'un message de test, env
 - La disponibilité du backend est désormais établie, contrairement aux états historiques ci-dessus.
 - Tests de soumission et livraison non confirmés : contrôle automatique ayant refusé la commande de test contenant une adresse personnelle et susceptible de déclencher un email. Ne pas conclure à l'envoi ou à la réception.
 - Prochaine étape : autorisation explicite d'un message technique vers contact@cln-performance.com, contrôle des rejets puis réception/Reply-To, et finalisation des informations légales avant activation du formulaire.
+
+
+## Test de soumission autorisé par Patrick — 28 octobre 2026
+
+- Accord explicite reçu pour un message technique vers contact@cln-performance.com, avec cette même adresse en Reply-To.
+- Soumission POST avec Origin https://cln-performance.com : HTTP 303, Location https://cln-performance.com/merci.html?status=success. Le code PHP indique que mail() a accepté le message ; ceci ne garantit pas sa livraison.
+- Repère du message : CLN TEST LIVRAISON 20261028. Objet généré : Demande de contact CLN Performance.
+- Rejets vérifiés sur l'API publique : GET 405 et Allow POST ; POST sans Origin 403 ; champs absents 303 vers status=invalid ; champ piège 400 ; name[] au lieu d'une chaîne 303 vers status=invalid.
+- Recherche ciblée dans Gmail connecté sans résultat. Cela ne prouve pas une absence de réception dans la boîte OVHcloud, qui n'a pas été consultée par ce connecteur.
+- À confirmer par lecture de la boîte officielle (indésirables compris) : présence du message et en-têtes. Limitation de débit et cas complémentaires restent à tester. Aucune activation du formulaire effectuée.
