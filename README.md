@@ -10,7 +10,7 @@ Site vitrine CLN — Ciblé, Libéré, Normé.
 - Boîte officielle : `contact@cln-performance.com`.
 - État détaillé et résultats datés : [MINUTE.md](MINUTE.md).
 
-Le formulaire reste masqué en attendant la finalisation des informations légales et la recette publique. Le serveur SMTP et la livraison d'un message de test ont été validés le 28 octobre 2026. Le contact direct par email reste disponible.
+Le formulaire public est actif depuis le 28 octobre 2026. Le transport SMTP, la réception d'un test et le parcours de soumission public ont été vérifiés. Le contact direct par email reste disponible. Voir MINUTE.md pour les limites de recette et les points ouverts.
 
 ## Publication
 
@@ -40,7 +40,7 @@ Le script déployé utilise PHPMailer 7.1.1 et le SMTP authentifié OVHcloud (`s
 
 Le secret Actions `CLN_SMTP_PASSWORD` contient le mot de passe de la boîte officielle. Le workflow le provisionne dans `~/.cln-secrets/mail.json`, hors de `www`, dossier 0700 et fichier 0600. Les dépendances sont installées dans `~/.cln-mailer/7.1.1`. Aucun secret n'est commité ni affiché. Le workflow a ainsi accès à l'envoi via cette boîte : protéger les droits d'écriture et d'exécution du dépôt.
 
-La réception réelle reste un critère distinct de l'acceptation SMTP. Le 28 octobre 2026, le déploiement SMTP a réussi et Patrick a confirmé la réception du message de recette. Les vérifications complémentaires, les pages légales et la recette du parcours public restent à finaliser avant activation du formulaire.
+La réception réelle reste un critère distinct de l'acceptation SMTP. Le formulaire contient l'information de confidentialité, des liens vers les deux pages dédiées et une synthèse de diagnostic à expiration de 30 jours. Le 28 octobre 2026, le déploiement SMTP a réussi et Patrick a confirmé la réception du message de recette. Les pages légales et de confidentialité sont publiées selon les informations retenues par Patrick ; le formulaire a ensuite été activé et testé depuis son interface publique. Les contrôles complémentaires sont suivis dans MINUTE.md.
 
 ## Prévisualisation locale
 
