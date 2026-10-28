@@ -5,7 +5,7 @@ const pages = ['index.html','solutions.html','approche.html','realisations.html'
 let failures = 0;
 for (const [engineName, engine] of Object.entries({chromium, webkit})) {
   const browser = await engine.launch();
-  for (const width of [320,375,390,768]) {
+  for (const width of [320,375,390,768,820,1024,1100,1280]) {
     const context = await browser.newContext({viewport:{width,height:844},isMobile:true,hasTouch:true,locale:'fr-FR',timezoneId:'Europe/Paris'});
     const page = await context.newPage();
     for (const name of pages) {
