@@ -614,3 +614,14 @@ footer {
 .legal-content a, .helper-text a, .checkbox a { text-decoration: underline; text-underline-offset: 0.18em; }
 .checkbox { display: block; }
 .checkbox input { margin-right: 0.6rem; }
+
+
+.language-picker {display:flex;align-items:center;gap:.5rem;flex:1 0 100%;justify-content:flex-end;font-size:.85rem;}
+.language-picker select {max-width:190px;padding:.4rem .6rem;border:1px solid #5a4fcf;border-radius:8px;background:white;font:inherit;color:#302b70;}
+.navbar {flex-wrap:wrap;row-gap:.6rem;}
+.captcha-box {display:grid;gap:.65rem;min-width:0;}
+.captcha-box input {width:100%;min-width:0;}
+.captcha-box .link-button {text-align:left;text-decoration:underline;}
+button:disabled {opacity:.55;cursor:not-allowed;transform:none;}
+#captcha-status {margin:0;overflow-wrap:anywhere;}
+form input:not([type=checkbox]):not([type=radio]), form textarea {max-width:100%;min-width:0;}

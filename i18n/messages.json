@@ -1,0 +1,422 @@
+{
+  "language": {
+    "fr": "Langue",
+    "en": "Language",
+    "pt-BR": "Idioma",
+    "es": "Idioma"
+  },
+  "loading": {
+    "fr": "Chargement du contrôle de sécurité…",
+    "en": "Loading security check…",
+    "pt-BR": "Carregando a verificação de segurança…",
+    "es": "Cargando la verificación de seguridad…"
+  },
+  "captcha_title": {
+    "fr": "Contrôle de sécurité",
+    "en": "Security check",
+    "pt-BR": "Verificação de segurança",
+    "es": "Verificación de seguridad"
+  },
+  "captcha_question": {
+    "fr": "Combien font {a} + {b} ?",
+    "en": "What is {a} + {b}?",
+    "pt-BR": "Quanto é {a} + {b}?",
+    "es": "¿Cuánto es {a} + {b}?"
+  },
+  "captcha_answer": {
+    "fr": "Votre réponse au calcul",
+    "en": "Your answer",
+    "pt-BR": "Sua resposta",
+    "es": "Su respuesta"
+  },
+  "captcha_refresh": {
+    "fr": "Changer de question",
+    "en": "Get another question",
+    "pt-BR": "Trocar a pergunta",
+    "es": "Cambiar la pregunta"
+  },
+  "captcha_help": {
+    "fr": "Répondez au calcul pour envoyer votre demande. La question est valable 10 minutes.",
+    "en": "Answer the calculation to send your enquiry. The question is valid for 10 minutes.",
+    "pt-BR": "Responda ao cálculo para enviar sua solicitação. A pergunta é válida por 10 minutos.",
+    "es": "Responda al cálculo para enviar su solicitud. La pregunta es válida durante 10 minutos."
+  },
+  "captcha_unavailable": {
+    "fr": "Le contrôle de sécurité est indisponible. Réessayez ou contactez-nous par email.",
+    "en": "The security check is unavailable. Try again or contact us by email.",
+    "pt-BR": "A verificação de segurança está indisponível. Tente novamente ou entre em contato por email.",
+    "es": "La verificación de seguridad no está disponible. Inténtelo de nuevo o contacte por correo."
+  },
+  "captcha_required": {
+    "fr": "Veuillez répondre à la question de sécurité avant l’envoi.",
+    "en": "Please answer the security question before sending.",
+    "pt-BR": "Responda à pergunta de segurança antes de enviar.",
+    "es": "Responda a la pregunta de seguridad antes de enviar."
+  },
+  "captcha_invalid": {
+    "fr": "La réponse de sécurité est incorrecte ou la question a expiré. Répondez à la nouvelle question.",
+    "en": "The security answer is incorrect or the question has expired. Answer the new question.",
+    "pt-BR": "A resposta está incorreta ou a pergunta expirou. Responda à nova pergunta.",
+    "es": "La respuesta es incorrecta o la pregunta ha caducado. Responda a la nueva pregunta."
+  },
+  "captcha_used": {
+    "fr": "Cette question a déjà été utilisée. Répondez à la nouvelle question.",
+    "en": "This question has already been used. Answer the new question.",
+    "pt-BR": "Esta pergunta já foi utilizada. Responda à nova pergunta.",
+    "es": "Esta pregunta ya se ha utilizado. Responda a la nueva pregunta."
+  },
+  "success": {
+    "fr": "Merci ! Votre demande a été prise en charge. Nous revenons vers vous sous 48 heures.",
+    "en": "Thank you! Your enquiry has been accepted. We will reply within 48 hours.",
+    "pt-BR": "Obrigado! Sua solicitação foi recebida pelo serviço de envio. Responderemos em até 48 horas.",
+    "es": "¡Gracias! Su solicitud se ha tramitado. Le responderemos en un plazo de 48 horas."
+  },
+  "invalid": {
+    "fr": "Certaines informations sont manquantes ou invalides. Vérifiez les champs obligatoires.",
+    "en": "Some information is missing or invalid. Check the required fields.",
+    "pt-BR": "Algumas informações estão ausentes ou inválidas. Verifique os campos obrigatórios.",
+    "es": "Falta información o hay datos no válidos. Compruebe los campos obligatorios."
+  },
+  "error": {
+    "fr": "L’envoi a échoué. Vos saisies sont conservées dans cet onglet pour réessayer. Vous pouvez aussi nous contacter par email.",
+    "en": "Sending failed. Your entries are kept in this tab so you can try again. You can also contact us by email.",
+    "pt-BR": "O envio falhou. Seus dados foram mantidos nesta aba para uma nova tentativa. Você também pode entrar em contato por email.",
+    "es": "El envío ha fallado. Sus datos se conservan en esta pestaña para volver a intentarlo. También puede contactar por correo."
+  },
+  "rate": {
+    "fr": "Veuillez patienter avant un nouvel envoi. Vous pourrez réessayer dans environ {minutes} min.",
+    "en": "Please wait before sending again. You can try again in about {minutes} min.",
+    "pt-BR": "Aguarde antes de enviar novamente. Você poderá tentar de novo em cerca de {minutes} min.",
+    "es": "Espere antes de volver a enviar. Podrá intentarlo de nuevo en unos {minutes} min."
+  },
+  "forbidden": {
+    "fr": "Cette demande ne peut pas être envoyée depuis cette page. Utilisez le formulaire du site.",
+    "en": "This enquiry cannot be sent from this page. Use the site's contact form.",
+    "pt-BR": "Esta solicitação não pode ser enviada desta página. Use o formulário do site.",
+    "es": "Esta solicitud no puede enviarse desde esta página. Utilice el formulario del sitio."
+  },
+  "too_large": {
+    "fr": "Votre message est trop volumineux. Raccourcissez-le avant de réessayer.",
+    "en": "Your message is too large. Shorten it before trying again.",
+    "pt-BR": "Sua mensagem é muito longa. Reduza o texto antes de tentar novamente.",
+    "es": "Su mensaje es demasiado largo. Acórtelo antes de volver a intentarlo."
+  },
+  "required": {
+    "fr": "Veuillez renseigner ce champ.",
+    "en": "Please complete this field.",
+    "pt-BR": "Preencha este campo.",
+    "es": "Complete este campo."
+  },
+  "email_invalid": {
+    "fr": "Veuillez saisir une adresse email valide.",
+    "en": "Please enter a valid email address.",
+    "pt-BR": "Digite um endereço de email válido.",
+    "es": "Introduzca una dirección de correo válida."
+  },
+  "number_invalid": {
+    "fr": "Veuillez saisir un nombre entier.",
+    "en": "Please enter a whole number.",
+    "pt-BR": "Digite um número inteiro.",
+    "es": "Introduzca un número entero."
+  },
+  "check_required": {
+    "fr": "Veuillez cocher cette case pour poursuivre.",
+    "en": "Please tick this box to continue.",
+    "pt-BR": "Marque esta caixa para continuar.",
+    "es": "Marque esta casilla para continuar."
+  },
+  "old_summary": {
+    "fr": "Cette ancienne synthèse doit être recalculée dans le diagnostic pour être affichée dans la langue choisie.",
+    "en": "Recalculate this older summary in the assessment to display it in your chosen language.",
+    "pt-BR": "Refaça este resumo antigo no diagnóstico para exibi-lo no idioma escolhido.",
+    "es": "Vuelva a calcular este resumen antiguo en el diagnóstico para mostrarlo en el idioma elegido."
+  },
+  "summary_date": {
+    "fr": "Synthèse générée le {date}.",
+    "en": "Summary generated on {date}.",
+    "pt-BR": "Resumo gerado em {date}.",
+    "es": "Resumen generado el {date}."
+  },
+  "meeting_request": {
+    "fr": "Pouvez-vous me proposer un créneau pour approfondir ?",
+    "en": "Could you suggest a time to discuss this further?",
+    "pt-BR": "Você pode sugerir um horário para conversarmos melhor?",
+    "es": "¿Puede proponerme una hora para profundizar?"
+  },
+  "selected": {
+    "fr": "({count} sélectionné(s))",
+    "en": "({count} selected)",
+    "pt-BR": "({count} selecionado(s))",
+    "es": "({count} seleccionados)"
+  },
+  "up": {
+    "fr": "Monter",
+    "en": "Move up",
+    "pt-BR": "Mover para cima",
+    "es": "Subir"
+  },
+  "down": {
+    "fr": "Descendre",
+    "en": "Move down",
+    "pt-BR": "Mover para baixo",
+    "es": "Bajar"
+  },
+  "custom_required": {
+    "fr": "Veuillez décrire votre enjeu.",
+    "en": "Please describe your priority.",
+    "pt-BR": "Descreva seu desafio.",
+    "es": "Describa su reto."
+  },
+  "profile": {
+    "fr": "Profil",
+    "en": "Profile",
+    "pt-BR": "Perfil",
+    "es": "Perfil"
+  },
+  "main_needs": {
+    "fr": "Enjeux principaux",
+    "en": "Main priorities",
+    "pt-BR": "Principais desafios",
+    "es": "Principales retos"
+  },
+  "roadmap": {
+    "fr": "Feuille de route 6 mois",
+    "en": "Six-month roadmap",
+    "pt-BR": "Roteiro de seis meses",
+    "es": "Hoja de ruta de seis meses"
+  },
+  "next_step": {
+    "fr": "Prochain pas",
+    "en": "Next step",
+    "pt-BR": "Próximo passo",
+    "es": "Siguiente paso"
+  },
+  "organisation": {
+    "fr": "Vous êtes {size} avec {horizon}.",
+    "en": "You are {size}, with {horizon}.",
+    "pt-BR": "Sua organização é {size}, com {horizon}.",
+    "es": "Su organización es {size}, con {horizon}."
+  },
+  "size.petite": {
+    "fr": "une organisation agile en croissance",
+    "en": "an agile, growing organisation",
+    "pt-BR": "uma organização ágil em crescimento",
+    "es": "una organización ágil en crecimiento"
+  },
+  "size.moyenne": {
+    "fr": "une structure en phase de structuration",
+    "en": "an organisation building its structures",
+    "pt-BR": "uma organização em fase de estruturação",
+    "es": "una organización en fase de estructuración"
+  },
+  "size.grande": {
+    "fr": "un groupe établi avec plusieurs équipes métiers",
+    "en": "an established group with several business teams",
+    "pt-BR": "um grupo consolidado com várias equipes de negócio",
+    "es": "un grupo consolidado con varios equipos de negocio"
+  },
+  "size.tresgrande": {
+    "fr": "un grand groupe international avec plusieurs entités",
+    "en": "a large international group with several entities",
+    "pt-BR": "um grande grupo internacional com várias unidades",
+    "es": "un gran grupo internacional con varias entidades"
+  },
+  "horizon.court": {
+    "fr": "un horizon court terme (moins de 3 mois)",
+    "en": "a short-term timeframe (under 3 months)",
+    "pt-BR": "um prazo curto (menos de 3 meses)",
+    "es": "un plazo corto (menos de 3 meses)"
+  },
+  "horizon.moyen": {
+    "fr": "un horizon à moyen terme (3 à 6 mois)",
+    "en": "a medium-term timeframe (3 to 6 months)",
+    "pt-BR": "um prazo médio (de 3 a 6 meses)",
+    "es": "un plazo medio (de 3 a 6 meses)"
+  },
+  "horizon.long": {
+    "fr": "un horizon à plus de 6 mois",
+    "en": "a timeframe beyond 6 months",
+    "pt-BR": "um prazo superior a 6 meses",
+    "es": "un plazo superior a 6 meses"
+  },
+  "horizon.incertain": {
+    "fr": "un horizon encore à préciser",
+    "en": "a timeframe still to be clarified",
+    "pt-BR": "um prazo ainda a definir",
+    "es": "un plazo todavía por concretar"
+  },
+  "priorities_off": {
+    "fr": "Vous n’avez pas activé le classement des priorités.",
+    "en": "You have not enabled priority ranking.",
+    "pt-BR": "Você não ativou a classificação das prioridades.",
+    "es": "No ha activado la clasificación de prioridades."
+  },
+  "priorities_order": {
+    "fr": "Priorités classées : {order}.",
+    "en": "Ranked priorities: {order}.",
+    "pt-BR": "Prioridades classificadas: {order}.",
+    "es": "Prioridades ordenadas: {order}."
+  },
+  "top": {
+    "fr": "Priorité n° 1 : {label}.",
+    "en": "Top priority: {label}.",
+    "pt-BR": "Prioridade nº 1: {label}.",
+    "es": "Prioridad n.º 1: {label}."
+  },
+  "rec.default": {
+    "fr": "Explorons ensemble vos enjeux pour définir le plan d’action prioritaire.",
+    "en": "Let's explore your needs together to define the priority action plan.",
+    "pt-BR": "Vamos explorar suas necessidades para definir o plano de ação prioritário.",
+    "es": "Exploremos sus necesidades para definir el plan de acción prioritario."
+  },
+  "rec.autre": {
+    "fr": "Nous construirons avec vous un plan d’action autour de « {label} ».",
+    "en": "We will work with you on an action plan for “{label}”.",
+    "pt-BR": "Construiremos com você um plano de ação para “{label}”.",
+    "es": "Elaboraremos con usted un plan de acción para «{label}»."
+  },
+  "custom_summary": {
+    "fr": "Vous mettez aussi en avant : {text}.",
+    "en": "You also highlight: {text}.",
+    "pt-BR": "Você também destaca: {text}.",
+    "es": "También destaca: {text}."
+  },
+  "summary.default": {
+    "fr": "Nous vous proposons un diagnostic transversal pour identifier les priorités CLN.",
+    "en": "We suggest a cross-functional assessment to identify your priorities.",
+    "pt-BR": "Sugerimos um diagnóstico transversal para identificar suas prioridades.",
+    "es": "Proponemos un diagnóstico transversal para identificar sus prioridades."
+  },
+  "summary.chirurgical": {
+    "fr": "Intervenir sur un point critique pour obtenir un résultat rapide et maîtrisé.",
+    "en": "Target a critical area for fast, controlled results.",
+    "pt-BR": "Atuar em um ponto crítico para obter resultados rápidos e controlados.",
+    "es": "Actuar en un punto crítico para obtener resultados rápidos y controlados."
+  },
+  "summary.liberer": {
+    "fr": "Libérer du temps par l’automatisation des processus clés.",
+    "en": "Free up time by automating key processes.",
+    "pt-BR": "Liberar tempo automatizando os processos principais.",
+    "es": "Liberar tiempo automatizando los procesos clave."
+  },
+  "summary.normaliser": {
+    "fr": "Normaliser les données pour sécuriser les décisions.",
+    "en": "Standardise data to support reliable decisions.",
+    "pt-BR": "Padronizar dados para apoiar decisões confiáveis.",
+    "es": "Estandarizar datos para respaldar decisiones fiables."
+  },
+  "summary.securiser": {
+    "fr": "Sécuriser les environnements et répondre aux exigences de conformité.",
+    "en": "Secure environments and meet compliance requirements.",
+    "pt-BR": "Proteger os ambientes e atender às exigências de conformidade.",
+    "es": "Proteger los entornos y cumplir los requisitos normativos."
+  },
+  "summary.valoriser": {
+    "fr": "Valoriser les données grâce à des analyses utiles.",
+    "en": "Unlock data value through actionable analysis.",
+    "pt-BR": "Gerar valor com os dados por meio de análises úteis.",
+    "es": "Generar valor con los datos mediante análisis útiles."
+  },
+  "summary.collaborer": {
+    "fr": "Faciliter la collaboration dans des espaces de partage unifiés.",
+    "en": "Enable collaboration through unified sharing spaces.",
+    "pt-BR": "Facilitar a colaboração em espaços de compartilhamento unificados.",
+    "es": "Facilitar la colaboración en espacios de intercambio unificados."
+  },
+  "summary.anticiper": {
+    "fr": "Anticiper les évolutions par l’innovation et l’expérimentation.",
+    "en": "Prepare for change through innovation and experimentation.",
+    "pt-BR": "Antecipar mudanças por meio da inovação e da experimentação.",
+    "es": "Anticipar los cambios mediante innovación y experimentación."
+  },
+  "rec.chirurgical": {
+    "fr": "Lancer une intervention ciblée sur le périmètre critique pour obtenir un gain rapide sans perturber l’existant.",
+    "en": "Launch a targeted intervention in the critical area for a quick gain without disrupting existing operations.",
+    "pt-BR": "Iniciar uma intervenção pontual na área crítica para obter ganhos rápidos sem comprometer as operações.",
+    "es": "Iniciar una intervención específica en el área crítica para obtener una mejora rápida sin alterar las operaciones."
+  },
+  "rec.liberer": {
+    "fr": "Lancer une séquence d’automatisation sur les processus métiers critiques.",
+    "en": "Launch an automation initiative for critical business processes.",
+    "pt-BR": "Iniciar uma iniciativa de automação dos processos de negócio críticos.",
+    "es": "Iniciar una iniciativa de automatización de los procesos de negocio críticos."
+  },
+  "rec.normaliser": {
+    "fr": "Cadrer un programme de gouvernance des données pour fiabiliser les référentiels et décisions.",
+    "en": "Scope a data governance programme to improve reference data and decision reliability.",
+    "pt-BR": "Definir um programa de governança de dados para tornar os dados de referência e as decisões mais confiáveis.",
+    "es": "Definir un programa de gobernanza de datos para mejorar la fiabilidad de los datos de referencia y las decisiones."
+  },
+  "rec.securiser": {
+    "fr": "Bâtir une feuille de route conformité et sécurité pour renforcer les environnements numériques.",
+    "en": "Build a compliance and security roadmap to strengthen digital environments.",
+    "pt-BR": "Criar um roteiro de conformidade e segurança para reforçar os ambientes digitais.",
+    "es": "Crear una hoja de ruta de cumplimiento y seguridad para reforzar los entornos digitales."
+  },
+  "rec.valoriser": {
+    "fr": "Mettre en place un socle analytics partagé pour éclairer les décisions.",
+    "en": "Create a shared analytics foundation to inform decisions.",
+    "pt-BR": "Criar uma base compartilhada de análise de dados para orientar decisões.",
+    "es": "Crear una base compartida de análisis de datos para orientar las decisiones."
+  },
+  "rec.collaborer": {
+    "fr": "Structurer des espaces collaboratifs sécurisés pour fluidifier le partage entre équipes.",
+    "en": "Set up secure collaborative spaces to streamline sharing between teams.",
+    "pt-BR": "Estruturar espaços colaborativos seguros para facilitar o compartilhamento entre equipes.",
+    "es": "Estructurar espacios colaborativos seguros para facilitar el intercambio entre equipos."
+  },
+  "rec.anticiper": {
+    "fr": "Réserver un sprint d’innovation pour tester les futurs cas d’usage.",
+    "en": "Set aside an innovation sprint to test future use cases.",
+    "pt-BR": "Reservar um ciclo de inovação para testar futuros casos de uso.",
+    "es": "Reservar un ciclo de innovación para probar futuros casos de uso."
+  },
+  "meeting.court": {
+    "fr": "Organisons un atelier d’immersion dans les 7 prochains jours pour cadrer les premières actions.",
+    "en": "Arrange an immersion workshop within the next 7 days to scope initial actions.",
+    "pt-BR": "Vamos organizar uma oficina de imersão nos próximos 7 dias para definir as primeiras ações.",
+    "es": "Organicemos un taller de inmersión en los próximos 7 días para definir las primeras acciones."
+  },
+  "meeting.moyen": {
+    "fr": "Planifions un rendez-vous découverte pour construire une feuille de route sur le semestre.",
+    "en": "Schedule an introductory meeting to build a six-month roadmap.",
+    "pt-BR": "Vamos agendar uma conversa inicial para criar um roteiro para o semestre.",
+    "es": "Concertemos una reunión inicial para elaborar una hoja de ruta para el semestre."
+  },
+  "meeting.long": {
+    "fr": "Un échange stratégique permettra de bâtir un programme progressif et maîtrisé.",
+    "en": "A strategic discussion will help build a gradual, controlled programme.",
+    "pt-BR": "Uma conversa estratégica ajudará a criar um programa progressivo e controlado.",
+    "es": "Una conversación estratégica ayudará a crear un programa progresivo y controlado."
+  },
+  "meeting.incertain": {
+    "fr": "Clarifions ensemble le calendrier lors d’un échange exploratoire.",
+    "en": "Clarify the timeline together during an exploratory discussion.",
+    "pt-BR": "Vamos esclarecer o calendário em uma conversa exploratória.",
+    "es": "Aclaremos el calendario en una conversación exploratoria."
+  },
+  "mode.flash": {
+    "fr": "Un diagnostic flash de 3 à 4 ateliers permettrait de prioriser vos chantiers.",
+    "en": "A rapid assessment of 3 to 4 workshops could help prioritise your initiatives.",
+    "pt-BR": "Um diagnóstico rápido de 3 a 4 oficinas pode ajudar a priorizar suas iniciativas.",
+    "es": "Un diagnóstico rápido de 3 a 4 talleres podría ayudar a priorizar sus iniciativas."
+  },
+  "mode.projet": {
+    "fr": "Une équipe projet CLN peut piloter les livrables de bout en bout.",
+    "en": "A CLN project team can manage delivery end to end.",
+    "pt-BR": "Uma equipe de projeto CLN pode gerenciar as entregas de ponta a ponta.",
+    "es": "Un equipo de proyecto CLN puede gestionar las entregas de principio a fin."
+  },
+  "mode.hybride": {
+    "fr": "Le modèle hybride combine coaching des équipes et expertises ciblées CLN.",
+    "en": "The hybrid model combines team coaching with targeted CLN expertise.",
+    "pt-BR": "O modelo híbrido combina orientação das equipes e conhecimento especializado da CLN.",
+    "es": "El modelo híbrido combina asesoramiento a los equipos y experiencia especializada de CLN."
+  },
+  "security_notice": {
+    "fr": "Un calcul simple et des limites par email et IP protègent le formulaire. Les compteurs utilisent des empreintes protégées, sans email ni IP en clair, et sont purgés à chaque accès après expiration. La langue est mémorisée 365 jours ; un brouillon de contact reste au maximum 30 minutes dans cet onglet et est effacé après succès.",
+    "en": "A simple calculation and email/IP limits protect this form. Counters use protected fingerprints, with no plain-text email or IP, and expired records are purged on access. Language is remembered for 365 days; a contact draft stays in this tab for up to 30 minutes and is cleared after success.",
+    "pt-BR": "Um cálculo simples e limites por email e IP protegem o formulário. Os contadores usam impressões protegidas, sem email ou IP em texto claro, e os registros expirados são removidos a cada acesso. O idioma é lembrado por 365 dias; um rascunho fica nesta aba por até 30 minutos e é apagado após o sucesso.",
+    "es": "Un cálculo sencillo y límites por correo e IP protegen el formulario. Los contadores usan huellas protegidas, sin correo ni IP en texto claro, y los registros caducados se eliminan en cada acceso. El idioma se recuerda durante 365 días; un borrador permanece en esta pestaña hasta 30 minutos y se borra tras el envío correcto."
+  }
+}
