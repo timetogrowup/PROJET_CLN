@@ -17,7 +17,7 @@ jobs:
           php -l contact.php
           php -l contact_security.php
           php tests/security.php
-          python3 tests/http.py
+          python3 tests/test_api.py
       - name: JavaScript syntax and catalogues
         run: |
           node --check site.js

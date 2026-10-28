@@ -58,9 +58,11 @@ final class CLNSecurity {
             // Persist consumption before SMTP so a crash cannot replay the challenge.
             $this->save($file,$state);
             if($wait>0)return ['status'=>'rate','wait'=>$wait];
+            $started=microtime(true);
             try {$accepted=$send();} catch(Throwable $error) {$accepted=false;}
             if(!$accepted)return ['status'=>'error'];
-            $state['email'][$mail][]=$now;$state['ip'][$address][]=$now;
+            $acceptedAt=$now+(int)floor(microtime(true)-$started);
+            $state['email'][$mail][]=$acceptedAt;$state['ip'][$address][]=$acceptedAt;
             $this->save($file,$state);
             return ['status'=>'success'];
         } finally {flock($file,LOCK_UN);fclose($file);}
