@@ -30,7 +30,7 @@ def page(name,title,desc,body,scripts=()):
  head=re.sub(r'<header>.*?</header>',header,head,flags=re.S)
  head=re.sub(r'<main>.*?</main>','<main id="main-content">'+body+'</main>',head,flags=re.S)
  head=re.sub(r'<footer>.*?</footer>',foot,head,flags=re.S)
- head=re.sub(r'<script defer src="(?:diagnostic|contact)\.js[^\"]*"></script>\s*','',head)
+ head=re.sub(r'<script defer src="(?:diagnostic|contact)\.js[^\"]*">\s*</script>\s*','',head)
  for script in scripts:head=head.replace('</head>',f'<script defer src="{script}.js?v=20261029-v4"></script>\n</head>')
  head=re.sub(r'\?v=20261028-v[23]','?v=20261029-v4',head)
  if 'class="skip-link"' not in head:head=head.replace('<body>','<body>'+A('#main-content','Aller au contenu','Skip to content','Ir para o conteúdo','Ir al contenido',cls='skip-link'))

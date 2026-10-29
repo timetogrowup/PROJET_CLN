@@ -26,6 +26,9 @@ class Page(HTMLParser):
 root=Path(__file__).resolve().parents[1];names=['index','solutions','approche','realisations','diagnostic','contact','merci','mentions-legales','confidentialite'];pages={n+'.html':Page(root/(n+'.html')) for n in names};catalog=json.loads((root/'i18n/static.json').read_text())
 for required in ['recommendation-add','need-context','need-add','human-dialog','contact-form']:
  assert required in pages['contact.html'].ids,required
+for name,page in pages.items():
+ scripts=[urlsplit(u).path for u in page.links if urlsplit(u).path.endswith('.js')]
+ assert len(scripts)==len(set(scripts)),(name,'duplicate scripts')
 links=0;missing=set()
 for name,page in pages.items():
  assert page.h1==1,(name,'h1',page.h1)
