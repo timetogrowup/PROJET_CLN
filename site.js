@@ -83,3 +83,50 @@
     return CLN;
   }).catch(()=>{document.documentElement.dataset.i18nReady='error';const send=document.querySelector('#contact-form button[type="submit"]');if(send)send.disabled=true;});
 })();
+
+/* V7: progressive animated identity. Still image works without JS or playback. */
+(() => {
+  const video = document.querySelector('#brand-animation');
+  if (!video) return;
+  const figure = video.closest('.brand-signature');
+  const button = figure.querySelector('.brand-motion-toggle');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  let loaded = false, manuallyPaused = false, inView = true;
+  video.muted = true;
+  function label() {
+    const key = video.paused ? 'brand.play' : 'brand.pause';
+    button.dataset.msg = key;
+    button.textContent = window.CLN?.t(key) || (video.paused ? 'Lire l’animation' : 'Mettre l’animation en pause');
+  }
+  function stop() { video.pause(); figure.classList.remove('is-playing'); label(); }
+  async function play() {
+    if (reduced.matches || manuallyPaused || !inView || document.hidden) return;
+    if (!loaded) {
+      video.querySelectorAll('source').forEach(s => {s.src = s.dataset.src;});
+      video.load(); loaded = true;
+    }
+    try { await video.play(); } catch (_) { label(); }
+  }
+  video.addEventListener('playing', () => {figure.classList.add('is-playing'); label();});
+  video.addEventListener('pause', label);
+  video.addEventListener('error', stop);
+  button.addEventListener('click', () => {
+    if (video.paused) {manuallyPaused = false; play();}
+    else {manuallyPaused = true; video.pause(); label();}
+  });
+  function preference() {
+    button.hidden = reduced.matches;
+    if (reduced.matches) stop(); else play();
+  }
+  reduced.addEventListener('change', preference);
+  document.addEventListener('visibilitychange', () => {if (document.hidden) video.pause(); else play();});
+  window.addEventListener('cln:language', label);
+  window.CLN?.ready.then(label);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      inView = entries[0].isIntersecting;
+      if (inView) play(); else video.pause();
+    }, {threshold:.15}).observe(figure);
+  }
+  preference();
+})();

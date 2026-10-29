@@ -796,5 +796,17 @@
     "en": "Review again",
     "pt-BR": "Avaliar novamente",
     "es": "Revisar de nuevo"
+  },
+  "brand.pause": {
+    "fr": "Mettre l’animation en pause",
+    "en": "Pause animation",
+    "pt-BR": "Pausar animação",
+    "es": "Pausar animación"
+  },
+  "brand.play": {
+    "fr": "Lire l’animation",
+    "en": "Play animation",
+    "pt-BR": "Reproduzir animação",
+    "es": "Reproducir animación"
   }
 }

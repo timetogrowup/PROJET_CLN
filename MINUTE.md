@@ -390,3 +390,10 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - Domaine Registered/Active ; renouvellement automatique au 26 octobre 2027. Hébergement Starter actif, renouvellement automatique au 25 octobre 2027. Aucun achat, modification de facturation ou changement de contacts.
 - Formalité du titulaire : demande OVH du 26 octobre retrouvée, échéance 10 décembre 2026 ; aucune preuve explicite de confirmation. Action du titulaire encore nécessaire si non déjà accomplie.
 - Les points historiques de sécurité supplémentaires (en-têtes DKIM reçus, réponse vers prospect distinct, panne SMTP, compteur horaire et purge des temporaires) restent distincts du succès de ces contrôles.
+
+## 29 octobre 2026 — V7 : présence du logo et signature animée
+- Besoin, spécifications et stratégie dédiés dans docs/*LOGO_V7.md et BESOIN_METIER_IDENTITE_VISUELLE_LOGO_V7.md.
+- Signature d'en-tête recadrée agrandie sur les dix pages ; grande animation d'accueil avec vague bleu-gris intense et 120 scintillements. Exemple métier conservé sous l'introduction.
+- Vidéos web optimisées (WebM ~48 Ko, MP4 ~85 Ko), poster fixe, pause/reprise en quatre langues, réduction des mouvements et suspension hors vue / onglet masqué.
+- Générateur mis à jour, contrôles statiques, catalogues, idempotence et cycle de vie de l'animation réussis. Aperçu Chrome : lecture et commande fonctionnelles, quatre langues sans débordement à la largeur contrôlée.
+- Publication suivie dans docs/RECETTE_LOGO_V7.md ; limites multi-appareils explicites, aucun changement de l'API de contact.

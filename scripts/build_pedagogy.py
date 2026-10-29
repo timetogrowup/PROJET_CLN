@@ -133,6 +133,8 @@ for key, labels in {'v4.intro': ('Voici les possibilités que vous avez indiqué
 # Confirmation copy follows the same positioning; no submission behaviour changes.
 confirmation=T('Nous reviendrons vers vous pour explorer vos applications existantes, les données à enrichir et la valeur attendue dans vos outils métier.','We will get back to you to explore existing applications, data to enrich and expected value in your business tools.','Entraremos em contato para explorar suas aplicações existentes, os dados a enriquecer e o valor esperado nas ferramentas de trabalho.','Le contactaremos para explorar sus aplicaciones existentes, los datos que enriquecer y el valor esperado en sus herramientas de gestión.')
 p=root/'merci.html';text=p.read_text();text=re.sub(r'(<p class="hero-subtitle">).*?(</p>)',lambda m:m[1]+confirmation+m[2],text,flags=re.S);p.write_text(text)
+from brand_identity import apply as apply_brand_identity
+apply_brand_identity(root, messages)
 (root/'i18n/static.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
 (root/'i18n/messages.json').write_text(json.dumps(messages,ensure_ascii=False,indent=2)+'\n')
 import runpy
