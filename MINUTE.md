@@ -414,3 +414,10 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - https://cln-performance.com/solutions.html : bloc d'animation unique entre introduction et besoins. Dix-sept fichiers publics contrôlés après déploiement : HTTP 200 et empreintes identiques à la livraison.
 - Vidéos et posters effectivement sélectionnés en FR/EN/PT-BR/ES ; lecture, pause, agrandissement 1100 px, fermeture Échap, focus et pause conservée vérifiés dans Chrome public.
 - Recette et trois documents de cadrage actualisés. Les smartphones physiques et Safari ne sont pas testés dans cette session ; sans JS et réduction de mouvement couverts par structure et tests unitaires. Aucun changement de l'API ni envoi de formulaire.
+
+## 29 octobre 2026 — V9 : cas chantier PROTYS en quatre langues
+- Besoin reformulé : les quatre langues sont livrées dès le départ, sans masquer le cas ni conserver de vidéo française dans les autres langues.
+- Cadrage enregistré avant réalisation : BESOIN_METIER_CAS_CHANTIER_PROTYS_V9, SPECIFICATIONS_TECHNIQUES_CAS_CHANTIER_PROTYS_V9 et STRATEGIE_DEVELOPPEMENT_CAS_CHANTIER_PROTYS_V9.
+- Nouveau cas après l'introduction de Nos pipelines en action ; ancien exemple générique dépliable conservant #exemple. Vidéo de 28 s, vague, scintillements, enrichissement du dossier et retour des résultats du robot.
+- Douze médias web et scripts/traductions versionnés ; quatre GIF de présentation remis séparément. Lecteur partagé et animation de Vos besoins préservés.
+- Contrôles syntaxiques, catalogues, médias, générateur et aperçu Chrome réussis ; limites et publication suivies dans docs/RECETTE_CAS_CHANTIER_PROTYS_V9.md.

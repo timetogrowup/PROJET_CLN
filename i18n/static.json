@@ -2653,5 +2653,75 @@
     "en": "Explore a complete process",
     "pt-BR": "Descobrir um processo completo",
     "es": "Descubrir un proceso completo"
+  },
+  "Déclarations de chantier : transformer des échanges dispersés en actions suivies": {
+    "en": "Work declarations: turn scattered exchanges into tracked actions",
+    "pt-BR": "Declarações de obras: transformar informações dispersas em ações acompanhadas",
+    "es": "Declaraciones de obra: transformar intercambios dispersos en acciones seguidas"
+  },
+  "Avant des travaux à proximité de réseaux, les déclarations de chantier permettent de recueillir les informations nécessaires auprès des exploitants concernés. Leur suivi implique de réunir des déclarations, des réponses, des plans et des échéances.": {
+    "en": "Before work near utility networks, work declarations help obtain the necessary information from the relevant network operators. Tracking them involves bringing together declarations, responses, plans and deadlines.",
+    "pt-BR": "Antes de obras próximas a redes, as declarações permitem reunir as informações necessárias junto aos operadores envolvidos. Seu acompanhamento exige reunir declarações, respostas, plantas e prazos.",
+    "es": "Antes de realizar obras cerca de redes, las declaraciones permiten reunir la información necesaria de los operadores implicados. Su seguimiento exige reunir declaraciones, respuestas, planos y plazos."
+  },
+  "Exemple fictif illustrant un processus de suivi autour de PROTYS": {
+    "en": "Fictional example illustrating a tracking process around PROTYS",
+    "pt-BR": "Exemplo fictício de um processo de acompanhamento com o PROTYS",
+    "es": "Ejemplo ficticio de un proceso de seguimiento con PROTYS"
+  },
+  "À chaque étape, le dossier gagne en contexte.": {
+    "en": "At each stage, the case gains context.",
+    "pt-BR": "A cada etapa, o dossiê ganha contexto.",
+    "es": "En cada etapa, el expediente gana contexto."
+  },
+  "Les déclarations sont rattachées au bon chantier, complétées par les informations internes, puis rapprochées des réponses et des documents reçus. Le bilan permet de préparer les actions du robot. Leurs résultats reviennent ensuite enrichir le suivi, y compris lorsqu’une réponse manque ou qu’une tâche doit être reprise.": {
+    "en": "Declarations are linked to the right worksite, enriched with internal information, then matched with responses and documents received. The overview prepares the robot’s actions. Their results then feed back into tracking, including pending responses and tasks that need retrying.",
+    "pt-BR": "As declarações são vinculadas à obra correta, complementadas por informações internas e cruzadas com as respostas e os documentos recebidos. O balanço prepara as ações do robô. Os resultados voltam a enriquecer o acompanhamento, inclusive quando falta uma resposta ou uma tarefa precisa ser repetida.",
+    "es": "Las declaraciones se vinculan a la obra correcta, se completan con información interna y se cruzan con las respuestas y los documentos recibidos. El balance permite preparar las acciones del robot. Sus resultados enriquecen el seguimiento, incluso si falta una respuesta o debe repetirse una tarea."
+  },
+  "Ce principe peut s’appliquer à d’autres processus et à vos applications existantes.": {
+    "en": "This principle can apply to other processes and your existing applications.",
+    "pt-BR": "Esse princípio pode ser aplicado a outros processos e às suas aplicações existentes.",
+    "es": "Este principio puede aplicarse a otros procesos y a sus aplicaciones existentes."
+  },
+  "Lire les étapes du suivi de chantier": {
+    "en": "Read the worksite tracking steps",
+    "pt-BR": "Ler as etapas do acompanhamento da obra",
+    "es": "Leer las etapas del seguimiento de obra"
+  },
+  "Collecter les déclarations, réponses, plans et informations internes.": {
+    "en": "Collect declarations, responses, plans and internal information.",
+    "pt-BR": "Coletar declarações, respostas, plantas e informações internas.",
+    "es": "Recopilar declaraciones, respuestas, planos e información interna."
+  },
+  "Harmoniser les données et les rattacher au chantier, à sa localisation et à l’équipe concernée.": {
+    "en": "Harmonise data and link it to the worksite, its location and the responsible team.",
+    "pt-BR": "Harmonizar os dados e vinculá-los à obra, à localização e à equipe responsável.",
+    "es": "Armonizar los datos y vincularlos a la obra, su ubicación y el equipo responsable."
+  },
+  "Enrichir le bilan avec les exploitants attendus, les réponses reçues, les pièces, les délais et l’historique.": {
+    "en": "Enrich the overview with expected operators, responses received, documents, elapsed time and history.",
+    "pt-BR": "Enriquecer o balanço com operadores esperados, respostas recebidas, documentos, prazos e histórico.",
+    "es": "Enriquecer el balance con operadores esperados, respuestas recibidas, documentos, plazos e historial."
+  },
+  "Préparer les tâches de relance, de récupération des documents et de dépôt en gestion documentaire.": {
+    "en": "Prepare reminder, document retrieval and document management upload tasks.",
+    "pt-BR": "Preparar tarefas de cobrança de respostas, recuperação e arquivamento de documentos.",
+    "es": "Preparar tareas de recordatorio, recuperación y archivo de documentos."
+  },
+  "Faire exécuter les tâches par le robot et réintégrer leurs résultats dans le suivi.": {
+    "en": "Have the robot execute tasks and feed their results back into tracking.",
+    "pt-BR": "Executar as tarefas com o robô e reintegrar os resultados ao acompanhamento.",
+    "es": "Ejecutar las tareas con el robot y reintegrar los resultados al seguimiento."
+  },
+  "Restituer les documents et le bilan aux équipes ; conserver visibles une réponse attendue et un dépôt à reprendre.": {
+    "en": "Deliver documents and the overview to the teams; keep a pending response and an upload to retry visible.",
+    "pt-BR": "Disponibilizar documentos e balanço às equipes; manter visíveis uma resposta pendente e um envio a repetir.",
+    "es": "Entregar documentos y balance a los equipos; mantener visibles una respuesta pendiente y una carga por reintentar."
+  },
+  "Découvrir un autre exemple : la planification d’une demande": {
+    "en": "Discover another example: scheduling a request",
+    "pt-BR": "Descobrir outro exemplo: planejar uma solicitação",
+    "es": "Descubrir otro ejemplo: planificar una solicitud"
   }
 }

@@ -713,3 +713,10 @@ button,a {overflow-wrap:anywhere;}
 .pipeline-zoom-scroll img{width:1100px;min-width:1000px;max-width:none;height:auto;}
 @media(max-width:600px){.pipeline-controls{align-items:flex-start;gap:.75rem;}.pipeline-dialog-header{flex-wrap:wrap;}#pipeline-dialog{padding:.75rem;}.pipeline-dialog-header h2{font-size:1.1rem;}}
 @media(prefers-reduced-motion:reduce){.pipeline-media video{visibility:hidden!important;}}
+
+/* V9: worksite case, shared controls, and preserved planning example. */
+.protys-media{aspect-ratio:33 / 20;}
+#pipeline-dialog[data-kind=protys] .pipeline-zoom-scroll img{width:1320px;min-width:1320px;}
+.pipeline-other-example{padding:1rem 0;}
+.pipeline-other-example>summary{font-size:1.1rem;}
+.pipeline-other-example .pipeline-steps{margin-top:1.5rem;}
