@@ -695,3 +695,21 @@ button,a {overflow-wrap:anywhere;}
 @media(min-width:1025px){.hero{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:2rem;}}
 @media(max-width:600px){.brand{gap:.6rem;white-space:normal;}.brand img{width:100px;height:44px;}.brand span{font-size:1.05rem;}.brand-signature{order:-1;max-width:300px;}.hero{gap:1.5rem;}.brand-signature figcaption{font-size:1.3rem;padding-bottom:.6rem;}.brand-motion-toggle{margin-bottom:.75rem;}}
 @media(prefers-reduced-motion:reduce){.brand-signature video{visibility:hidden!important;}}
+
+/* V8: wide illustration, no extra frame; readable scrollable enlargement. */
+.pipeline-demo{margin:1.5rem 0;max-width:100%;}
+.pipeline-media{position:relative;aspect-ratio:55 / 34;background:#142c43;overflow:hidden;}
+.pipeline-media img,.pipeline-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;}
+.pipeline-media video{visibility:hidden;}
+.pipeline-playing video{visibility:visible;}
+.pipeline-demo figcaption{font-size:.9rem;color:var(--muted);margin-top:.75rem;}
+.pipeline-controls{margin-block:.75rem;}
+.pipeline-toggle,#pipeline-dialog button{font:inherit;padding:.65rem 1rem;border:1px solid #315d7c;border-radius:8px;background:#193b57;color:#fff;cursor:pointer;}
+#pipeline-dialog{width:min(1200px,calc(100vw - 24px));max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);padding:1rem;border:0;border-radius:12px;overflow:auto;}
+#pipeline-dialog::backdrop{background:rgb(9 24 39 / .8);}
+.pipeline-dialog-header{display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:-1rem;background:white;padding-block:.5rem;z-index:1;}
+.pipeline-dialog-header h2{font-size:1.25rem;margin:0;}
+.pipeline-zoom-scroll{max-width:100%;overflow:auto;}
+.pipeline-zoom-scroll img{width:1100px;min-width:1000px;max-width:none;height:auto;}
+@media(max-width:600px){.pipeline-controls{align-items:flex-start;gap:.75rem;}.pipeline-dialog-header{flex-wrap:wrap;}#pipeline-dialog{padding:.75rem;}.pipeline-dialog-header h2{font-size:1.1rem;}}
+@media(prefers-reduced-motion:reduce){.pipeline-media video{visibility:hidden!important;}}

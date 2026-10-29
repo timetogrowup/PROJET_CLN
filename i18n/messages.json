@@ -808,5 +808,35 @@
     "en": "Play animation",
     "pt-BR": "Reproduzir animação",
     "es": "Reproducir animación"
+  },
+  "pipeline.play": {
+    "fr": "Lire l’animation",
+    "en": "Play animation",
+    "pt-BR": "Reproduzir animação",
+    "es": "Reproducir animación"
+  },
+  "pipeline.pause": {
+    "fr": "Mettre l’animation en pause",
+    "en": "Pause animation",
+    "pt-BR": "Pausar animação",
+    "es": "Pausar animación"
+  },
+  "pipeline.expand": {
+    "fr": "Agrandir le schéma",
+    "en": "Enlarge diagram",
+    "pt-BR": "Ampliar o diagrama",
+    "es": "Ampliar el esquema"
+  },
+  "pipeline.close": {
+    "fr": "Fermer",
+    "en": "Close",
+    "pt-BR": "Fechar",
+    "es": "Cerrar"
+  },
+  "pipeline.dialog": {
+    "fr": "Vue agrandie du pipeline CLN",
+    "en": "Enlarged CLN pipeline diagram",
+    "pt-BR": "Diagrama ampliado do pipeline CLN",
+    "es": "Esquema ampliado del pipeline CLN"
   }
 }

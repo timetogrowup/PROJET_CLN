@@ -402,3 +402,9 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - Commit applicatif 1731d07b8ed0330e2edf8b8dc20a5b550b4020ec ; Pages 40882512018 terminé avec succès.
 - https://cln-performance.com/ : dix pages et six ressources contrôlées en HTTP 200, empreintes identiques au code livré.
 - Lecture WebM, pause/reprise, traduction anglaise et navigation Contact vérifiées dans Chrome sur le domaine public ; rapport docs/RECETTE_LOGO_V7.md actualisé. Limites : matrice multi-largeurs et Safari non relancée ; appareils physiques non testés.
+
+## 29 octobre 2026 — V8 : animation pipeline multilingue dans Vos besoins
+- Cadrage enregistré avant développement : besoin métier, spécifications et stratégie ANIMATION_PIPELINE_V8.
+- Bloc bout-en-bout remonté après l'introduction, animation plein contenu, commandes traduites et synthèse agrandie ; les quatre besoins restent à la suite.
+- Quatre vidéos localisées (FR, EN, PT-BR, ES), vague et scintillements approuvés, contours ×5 ; formats WebM/MP4 et posters, génération reproductible versionnée.
+- Contrôles du lecteur, traductions et générateur exécutés ; recette détaillée dans docs/RECETTE_ANIMATION_PIPELINE_V8.md. Publication et vérifications publiques consignées dans la clôture à suivre.

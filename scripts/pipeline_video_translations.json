@@ -1,0 +1,224 @@
+{
+  "Vos données circulent. Leur valeur grandit.": {
+    "fr": "Vos données circulent. Leur valeur grandit.",
+    "en": "Your data flows. Its value grows.",
+    "pt-BR": "Seus dados circulam. Seu valor cresce.",
+    "es": "Sus datos circulan. Su valor crece."
+  },
+  "Un exemple : traiter une demande en utilisant vos applications existantes.": {
+    "fr": "Un exemple : traiter une demande en utilisant vos applications existantes.",
+    "en": "An example: process a request using your existing applications.",
+    "pt-BR": "Um exemplo: tratar uma solicitação com suas aplicações existentes.",
+    "es": "Un ejemplo: tramitar una solicitud con sus aplicaciones existentes."
+  },
+  "APPLICATIONS SOURCES": {
+    "fr": "APPLICATIONS SOURCES",
+    "en": "SOURCE APPLICATIONS",
+    "pt-BR": "APLICAÇÕES DE ORIGEM",
+    "es": "APLICACIONES DE ORIGEN"
+  },
+  "APPLICATIONS DESTINATAIRES": {
+    "fr": "APPLICATIONS DESTINATAIRES",
+    "en": "DESTINATION APPLICATIONS",
+    "pt-BR": "APLICAÇÕES DE DESTINO",
+    "es": "APLICACIONES DE DESTINO"
+  },
+  "Gestion des demandes": {
+    "fr": "Gestion des demandes",
+    "en": "Request management",
+    "pt-BR": "Gestão de solicitações",
+    "es": "Gestión de solicitudes"
+  },
+  "Demande #1042": {
+    "fr": "Demande #1042",
+    "en": "Request #1042",
+    "pt-BR": "Solicitação #1042",
+    "es": "Solicitud #1042"
+  },
+  "Référentiel clients": {
+    "fr": "Référentiel clients",
+    "en": "Customer records",
+    "pt-BR": "Cadastro de clientes",
+    "es": "Registro de clientes"
+  },
+  "Client · contrat · localisation": {
+    "fr": "Client · contrat · localisation",
+    "en": "Customer · contract · location",
+    "pt-BR": "Cliente · contrato · local",
+    "es": "Cliente · contrato · ubicación"
+  },
+  "Planning": {
+    "fr": "Planning",
+    "en": "Scheduling",
+    "pt-BR": "Planejamento",
+    "es": "Planificación"
+  },
+  "Disponibilités des équipes": {
+    "fr": "Disponibilités des équipes",
+    "en": "Team availability",
+    "pt-BR": "Equipes disponíveis",
+    "es": "Disponibilidad de equipos"
+  },
+  "Rapprocher": {
+    "fr": "Rapprocher",
+    "en": "Match data",
+    "pt-BR": "Cruzar dados",
+    "es": "Cruzar datos"
+  },
+  "Demande + client": {
+    "fr": "Demande + client",
+    "en": "Request + customer",
+    "pt-BR": "Solicitação + cliente",
+    "es": "Solicitud + cliente"
+  },
+  "Enrichir / calculer": {
+    "fr": "Enrichir / calculer",
+    "en": "Enrich / calculate",
+    "pt-BR": "Enriquecer / calcular",
+    "es": "Enriquecer / calcular"
+  },
+  "Règles métier": {
+    "fr": "Règles métier",
+    "en": "Business rules",
+    "pt-BR": "Regras de negócio",
+    "es": "Reglas de negocio"
+  },
+  "Dossier #1042": {
+    "fr": "Dossier #1042",
+    "en": "Case #1042",
+    "pt-BR": "Dossiê #1042",
+    "es": "Expediente #1042"
+  },
+  "Priorité : HAUTE": {
+    "fr": "Priorité : HAUTE",
+    "en": "Priority: HIGH",
+    "pt-BR": "Prioridade: ALTA",
+    "es": "Prioridad: ALTA"
+  },
+  "Priorité à calculer": {
+    "fr": "Priorité à calculer",
+    "en": "Priority pending",
+    "pt-BR": "Prioridade a calcular",
+    "es": "Prioridad por calcular"
+  },
+  "Planning enrichi": {
+    "fr": "Planning enrichi",
+    "en": "Enriched schedule",
+    "pt-BR": "Plano enriquecido",
+    "es": "Plan enriquecido"
+  },
+  "Priorité haute · délai 24 h": {
+    "fr": "Priorité haute · délai 24 h",
+    "en": "High priority · within 24 h",
+    "pt-BR": "Prioridade alta · 24 h",
+    "es": "Prioridad alta · 24 h"
+  },
+  "Priorité et délai à recevoir": {
+    "fr": "Priorité et délai à recevoir",
+    "en": "Priority and timing pending",
+    "pt-BR": "Prioridade e prazo a receber",
+    "es": "Prioridad y plazo pendientes"
+  },
+  "Dossier complété": {
+    "fr": "Dossier complété",
+    "en": "Completed case",
+    "pt-BR": "Dossiê completo",
+    "es": "Expediente completo"
+  },
+  "Contexte client intégré": {
+    "fr": "Contexte client intégré",
+    "en": "Customer context added",
+    "pt-BR": "Contexto do cliente integrado",
+    "es": "Contexto del cliente añadido"
+  },
+  "Contexte client à recevoir": {
+    "fr": "Contexte client à recevoir",
+    "en": "Customer context pending",
+    "pt-BR": "Contexto do cliente a receber",
+    "es": "Contexto del cliente pendiente"
+  },
+  "Tableau de bord": {
+    "fr": "Tableau de bord",
+    "en": "Dashboard",
+    "pt-BR": "Painel de indicadores",
+    "es": "Cuadro de mando"
+  },
+  "Indicateurs actualisés": {
+    "fr": "Indicateurs actualisés",
+    "en": "Updated indicators",
+    "pt-BR": "Indicadores atualizados",
+    "es": "Indicadores actualizados"
+  },
+  "Résultats à recevoir": {
+    "fr": "Résultats à recevoir",
+    "en": "Results pending",
+    "pt-BR": "Resultados a receber",
+    "es": "Resultados pendientes"
+  },
+  "1. Collecter": {
+    "fr": "1. Collecter",
+    "en": "1. Collect",
+    "pt-BR": "1. Coletar",
+    "es": "1. Recopilar"
+  },
+  "Les données utiles quittent plusieurs applications.": {
+    "fr": "Les données utiles quittent plusieurs applications.",
+    "en": "Useful data comes from several applications.",
+    "pt-BR": "Os dados úteis vêm de várias aplicações.",
+    "es": "Los datos útiles provienen de varias aplicaciones."
+  },
+  "2. Rapprocher": {
+    "fr": "2. Rapprocher",
+    "en": "2. Match",
+    "pt-BR": "2. Cruzar",
+    "es": "2. Cruzar"
+  },
+  "Le pipeline relie la demande aux informations du client.": {
+    "fr": "Le pipeline relie la demande aux informations du client.",
+    "en": "The pipeline matches the request with customer information.",
+    "pt-BR": "O pipeline cruza a solicitação com os dados do cliente.",
+    "es": "El pipeline cruza la solicitud con los datos del cliente."
+  },
+  "3. Enrichir et calculer": {
+    "fr": "3. Enrichir et calculer",
+    "en": "3. Enrich and calculate",
+    "pt-BR": "3. Enriquecer e calcular",
+    "es": "3. Enriquecer y calcular"
+  },
+  "Il applique les règles et calcule la priorité et le délai.": {
+    "fr": "Il applique les règles et calcule la priorité et le délai.",
+    "en": "It applies rules and calculates priority and timing.",
+    "pt-BR": "Ele aplica as regras e calcula a prioridade e o prazo.",
+    "es": "Aplica las reglas y calcula la prioridad y el plazo."
+  },
+  "4. Redistribuer": {
+    "fr": "4. Redistribuer",
+    "en": "4. Deliver results",
+    "pt-BR": "4. Distribuir resultados",
+    "es": "4. Distribuir resultados"
+  },
+  "Les résultats enrichis rejoignent plusieurs outils métier.": {
+    "fr": "Les résultats enrichis rejoignent plusieurs outils métier.",
+    "en": "Enriched results reach several business applications.",
+    "pt-BR": "Os resultados enriquecidos chegam às aplicações de trabalho.",
+    "es": "Los resultados enriquecidos llegan a varias aplicaciones."
+  },
+  "Des applications reliées. Des résultats utiles.": {
+    "fr": "Des applications reliées. Des résultats utiles.",
+    "en": "Connected applications. Useful results.",
+    "pt-BR": "Aplicações conectadas. Resultados úteis.",
+    "es": "Aplicaciones conectadas. Resultados útiles."
+  },
+  "Vos outils existants bénéficient de données enrichies.": {
+    "fr": "Vos outils existants bénéficient de données enrichies.",
+    "en": "Your existing tools benefit from enriched data.",
+    "pt-BR": "Suas ferramentas existentes recebem dados enriquecidos.",
+    "es": "Sus herramientas existentes reciben datos enriquecidos."
+  },
+  "Scénario illustratif": {
+    "fr": "Scénario illustratif",
+    "en": "Illustrative scenario",
+    "pt-BR": "Cenário ilustrativo",
+    "es": "Escenario ilustrativo"
+  }
+}

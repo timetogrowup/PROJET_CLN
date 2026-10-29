@@ -135,6 +135,8 @@ confirmation=T('Nous reviendrons vers vous pour explorer vos applications exista
 p=root/'merci.html';text=p.read_text();text=re.sub(r'(<p class="hero-subtitle">).*?(</p>)',lambda m:m[1]+confirmation+m[2],text,flags=re.S);p.write_text(text)
 from brand_identity import apply as apply_brand_identity
 apply_brand_identity(root, messages)
+from pipeline_animation import apply as apply_pipeline_animation
+apply_pipeline_animation(root, messages, catalog)
 (root/'i18n/static.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
 (root/'i18n/messages.json').write_text(json.dumps(messages,ensure_ascii=False,indent=2)+'\n')
 import runpy

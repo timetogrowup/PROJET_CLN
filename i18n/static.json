@@ -2608,5 +2608,50 @@
     "en": "We will get back to you to explore existing applications, data to enrich and expected value in your business tools.",
     "pt-BR": "Entraremos em contato para explorar suas aplicações existentes, os dados a enriquecer e o valor esperado nas ferramentas de trabalho.",
     "es": "Le contactaremos para explorar sus aplicaciones existentes, los datos que enriquecer y el valor esperado en sus herramientas de gestión."
+  },
+  "Comment vos applications peuvent travailler ensemble": {
+    "en": "How your applications can work together",
+    "pt-BR": "Como suas aplicações podem trabalhar juntas",
+    "es": "Cómo pueden trabajar juntas sus aplicaciones"
+  },
+  "Un exemple : rapprocher les informations d’une demande et d’un client, calculer une priorité, puis transmettre les résultats aux outils concernés.": {
+    "en": "An example: match request and customer information, calculate a priority, then deliver results to the relevant tools.",
+    "pt-BR": "Um exemplo: cruzar informações de uma solicitação e de um cliente, calcular uma prioridade e enviar os resultados às ferramentas envolvidas.",
+    "es": "Un ejemplo: cruzar la información de una solicitud y de un cliente, calcular una prioridad y enviar los resultados a las herramientas correspondientes."
+  },
+  "Scénario illustratif : les règles, les délais et les applications dépendent de votre contexte.": {
+    "en": "Illustrative scenario: rules, timings and applications depend on your context.",
+    "pt-BR": "Cenário ilustrativo: regras, prazos e aplicações dependem do seu contexto.",
+    "es": "Escenario ilustrativo: las reglas, los plazos y las aplicaciones dependen de su contexto."
+  },
+  "Lire les étapes du schéma": {
+    "en": "Read the diagram steps",
+    "pt-BR": "Ler as etapas do diagrama",
+    "es": "Leer las etapas del esquema"
+  },
+  "Collecter les données de la demande, du référentiel clients et du planning.": {
+    "en": "Collect data from request management, customer records and scheduling.",
+    "pt-BR": "Coletar dados da solicitação, do cadastro de clientes e do planejamento.",
+    "es": "Recopilar datos de la solicitud, del registro de clientes y de la planificación."
+  },
+  "Rapprocher les informations du même dossier.": {
+    "en": "Match information belonging to the same case.",
+    "pt-BR": "Cruzar as informações do mesmo dossiê.",
+    "es": "Cruzar la información del mismo expediente."
+  },
+  "Appliquer les règles métier pour enrichir le dossier et calculer une priorité et un délai.": {
+    "en": "Apply business rules to enrich the case and calculate priority and timing.",
+    "pt-BR": "Aplicar as regras de negócio para enriquecer o dossiê e calcular uma prioridade e um prazo.",
+    "es": "Aplicar reglas de negocio para enriquecer el expediente y calcular una prioridad y un plazo."
+  },
+  "Transmettre les résultats au planning, au dossier et au tableau de bord existants.": {
+    "en": "Deliver results to the existing schedule, case and dashboard.",
+    "pt-BR": "Enviar os resultados ao planejamento, ao dossiê e ao painel existentes.",
+    "es": "Enviar los resultados a la planificación, al expediente y al cuadro de mando existentes."
+  },
+  "Découvrir un processus complet": {
+    "en": "Explore a complete process",
+    "pt-BR": "Descobrir um processo completo",
+    "es": "Descubrir un proceso completo"
   }
 }
