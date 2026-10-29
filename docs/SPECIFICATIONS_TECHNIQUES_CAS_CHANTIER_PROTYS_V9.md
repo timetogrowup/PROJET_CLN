@@ -15,3 +15,6 @@ Textes intégrés aux médias traduits à la génération, jamais superposés en
 
 ## Tests et publication
 Syntaxe JS, catalogues, références/ancres, structure, contrôles V7/V8, tests du préfixe média partagé et d'ouverture du scénario générique. Tester les codecs, dimensions, durées, tailles et couverture des chaînes ; examiner les quatre posters et les phases. Vérifier idempotence des pages. Recette Chrome avec quatre langues, pause et dialogue en aperçu puis sur site public ; consigner les limites concernant Safari et les appareils physiques. Déploiement Pages lié au commit, puis HTTP 200 et empreintes des médias. Journal et recette mis à jour après livraison.
+
+## État livré
+Réalisé dans le commit 383adf95e6e96b8dd2526e789e1d793d6422944b ; déploiement Pages 40925612190 réussi. Douze médias web et quatre GIF contrôlés. Recette publique et limites : RECETTE_CAS_CHANTIER_PROTYS_V9.md.

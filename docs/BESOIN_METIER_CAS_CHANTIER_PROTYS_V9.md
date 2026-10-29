@@ -1,5 +1,5 @@
 # Besoin métier — cas chantier PROTYS multilingue — V9
-29 octobre 2026. Statut : besoin approuvé à réaliser ; recette dans RECETTE_CAS_CHANTIER_PROTYS_V9.md.
+29 octobre 2026. Statut : besoin réalisé, publié et vérifié ; résultats et limites dans RECETTE_CAS_CHANTIER_PROTYS_V9.md.
 
 ## Besoin reformulé
 Montrer dès le début de « Nos pipelines en action » un cas concret de suivi des déclarations de chantier autour de PROTYS. L'animation doit rendre visible l'enrichissement progressif d'un même dossier, les tâches préparées pour un robot et le retour de leurs résultats dans le suivi. Elle est disponible dès cette livraison en français, anglais, portugais du Brésil et espagnol, avec tous ses textes traduits. Aucune langue du site ne masque le cas ou n'affiche la vidéo française à défaut de traduction.

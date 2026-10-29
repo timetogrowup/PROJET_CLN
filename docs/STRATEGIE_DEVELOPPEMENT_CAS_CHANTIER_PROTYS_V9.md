@@ -8,3 +8,6 @@
 5. Exécuter contrôles syntaxiques/statiques, catalogues, tests du lecteur, codecs et génération idempotente ; examiner l'aperçu et corriger les anomalies.
 6. Enregistrer les développements sur GitHub et publier via GitHub Pages ; vérifier le SHA, les ressources et le fonctionnement public dans les quatre langues.
 7. Finaliser recette et journal, livrer les liens et les quatre GIF. Retour arrière par commit inverse, sans réécriture de l'historique ni changement de domaine.
+
+## État livré
+Réalisé dans le commit 383adf95e6e96b8dd2526e789e1d793d6422944b ; déploiement Pages 40925612190 réussi. Douze médias web et quatre GIF contrôlés. Recette publique et limites : RECETTE_CAS_CHANTIER_PROTYS_V9.md.

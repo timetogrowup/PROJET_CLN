@@ -421,3 +421,9 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - Nouveau cas après l'introduction de Nos pipelines en action ; ancien exemple générique dépliable conservant #exemple. Vidéo de 28 s, vague, scintillements, enrichissement du dossier et retour des résultats du robot.
 - Douze médias web et scripts/traductions versionnés ; quatre GIF de présentation remis séparément. Lecteur partagé et animation de Vos besoins préservés.
 - Contrôles syntaxiques, catalogues, médias, générateur et aperçu Chrome réussis ; limites et publication suivies dans docs/RECETTE_CAS_CHANTIER_PROTYS_V9.md.
+
+### Clôture V9 — publication multilingue vérifiée
+- Commit applicatif 383adf95e6e96b8dd2526e789e1d793d6422944b ; GitHub Pages 40925612190 réussi sur ce SHA.
+- Cas chantier PROTYS visible après l'introduction de Nos pipelines en action dans les quatre langues ; ancien exemple dépliable et lien #exemple fonctionnels.
+- Dix-sept fichiers publics en HTTP 200, empreintes identiques à la livraison. Lecture FR/EN/PT-BR/ES, pause, agrandissement 1320 px, Échap, retour du focus et pause volontaire conservée vérifiés dans Chrome public.
+- Quatre GIF de présentation sauvegardés et remis ; rapport et trois documents de cadrage actualisés. Les tests sur téléphones physiques et Safari restent à effectuer ; modes sans JS/réduction de mouvement couverts par structure et tests unitaires. Aucun changement de l'API ni envoi de formulaire.
