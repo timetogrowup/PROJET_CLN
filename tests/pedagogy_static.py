@@ -24,6 +24,8 @@ class Page(HTMLParser):
   s=re.sub(r'\s+',' ',s).strip()
   if s:self.text.append(s)
 root=Path(__file__).resolve().parents[1];names=['index','solutions','approche','realisations','diagnostic','contact','merci','mentions-legales','confidentialite'];pages={n+'.html':Page(root/(n+'.html')) for n in names};catalog=json.loads((root/'i18n/static.json').read_text())
+for required in ['recommendation-add','need-context','need-add','human-dialog','contact-form']:
+ assert required in pages['contact.html'].ids,required
 links=0;missing=set()
 for name,page in pages.items():
  assert page.h1==1,(name,'h1',page.h1)
