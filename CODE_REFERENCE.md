@@ -1,3 +1,16 @@
+# Référence de code V5 du 29 octobre 2026
+
+- `scripts/pipeline_content.py` : textes des cinq étapes, quatre capacités, exceptions, rôles, bénéfices et blocs d’intégration, en quatre langues.
+- `scripts/build_pedagogy.py` : génération de pipelines.html et du menu commun à sept liens ; prise en charge des attributs de main lors de la régénération.
+- `pipelines.html` : page complète et lisible sans script de démonstration ; détails natifs et liste ordonnée.
+- `styles.css` : classes pipeline-overview, pipeline-steps et pipeline-case ; adaptation aux petits écrans.
+- `tests/pipelines.mjs` : parcours et clavier dans quatre langues sur deux moteurs ; absence de requêtes tierces.
+- `tests/pedagogy_static.py`, `tests/browser.mjs` : périmètre étendu à dix pages et sept liens, sitemap et nouveaux blocs.
+
+Les références V4 et antérieures ci-dessous restent historiques. Les résultats réellement exécutés figurent dans la recette V5.
+
+---
+
 # Référence de code V4 du 29 octobre 2026
 
 - `scripts/build_pedagogy.py` : génération éditoriale des six pages et navigation commune, quatre langues.

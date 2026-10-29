@@ -1,3 +1,11 @@
+# Mise à jour métier V5 du 29 octobre 2026
+
+Les pipelines rendent explicite le savoir-faire de CLN : relier plusieurs outils et enchaîner réception, contrôle, traitement, transmission et suivi, selon des règles définies avec les équipes. Le nouveau parcours présente les exceptions, les validations humaines et les conditions de reprise. Les exemples restent illustratifs ; le positionnement d’autonomie et de rémunération liée aux bénéfices constatés est conservé.
+
+Référence courante complémentaire : [besoin métier pipelines V5](docs/BESOIN_METIER_PIPELINES_V5.md). Les contenus V4 restent applicables sauf évolution précisée dans ce besoin.
+
+---
+
 # État métier V4 du 29 octobre 2026
 
 Le besoin courant est [BESOIN_METIER_PEDAGOGIE_BENEFICES_V4.md](docs/BESOIN_METIER_PEDAGOGIE_BENEFICES_V4.md). Le site présente les problèmes clients, les bénéfices attendus, une méthode de mesure et l’autonomie. La rémunération peut être liée aux bénéfices effectivement constatés, selon accord préalable ; aucune facturation récurrente n’est recherchée. Les exemples sont illustratifs. Le questionnaire donne une orientation et ne calcule ni prix ni gains garantis. Les éléments antérieurs ci-dessous restent historiques.

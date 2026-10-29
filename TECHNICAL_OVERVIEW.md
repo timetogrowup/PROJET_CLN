@@ -1,3 +1,11 @@
+# Mise à jour technique V5 du 29 octobre 2026
+
+Nouvelle page statique pipelines.html et module éditorial scripts/pipeline_content.py appelé par le générateur commun. Dix pages, sept liens de navigation, quatre langues, sitemap et cache V5. Pas de nouveau script de production, de stockage visiteur, d’API ni de moteur d’exécution de pipelines. Questionnaire V4 et backend V3 préservés.
+
+Voir les [spécifications V5](docs/SPECIFICATIONS_TECHNIQUES_PIPELINES_V5.md) et la [recette V5](docs/RECETTE_PIPELINES_V5.md). Les références V4 et antérieures ci-dessous constituent la base historique.
+
+---
+
 # État technique V4 du 29 octobre 2026
 
 Référence courante : [spécifications V4](docs/SPECIFICATIONS_TECHNIQUES_PEDAGOGIE_V4.md). HTML/CSS/JS sur Pages, API OVH V3 inchangée, quatre langues. Questionnaire à codes fermés, synthèse V4, sauvegarde au choix du transfert, ajout volontaire au message, brouillon préservé. Pas de nouvelle dépendance de production. Les sections antérieures ci-dessous sont historiques.

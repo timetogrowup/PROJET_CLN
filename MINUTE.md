@@ -1,3 +1,19 @@
+# État courant au 29 octobre 2026 après livraison V5
+
+**Les pipelines sont mis en avant et la V5 est publiée.** L’accueil comporte un bloc après la présentation ; une nouvelle page « Nos pipelines en action » explique cinq étapes, quatre capacités, les chemins d’exception et le rôle des équipes. Vos besoins, Méthode et Exemples renvoient vers ce parcours. Le menu comporte sept liens sur dix pages, en quatre langues. Le positionnement commercial V4 reste inchangé : autonomie, absence de recherche de revenu récurrent et possibilité de rémunération liée aux bénéfices effectivement constatés selon accord préalable.
+
+- [Besoin métier V5](docs/BESOIN_METIER_PIPELINES_V5.md), [spécifications V5](docs/SPECIFICATIONS_TECHNIQUES_PIPELINES_V5.md), [stratégie V5](docs/STRATEGIE_DEVELOPPEMENT_PIPELINES_V5.md).
+- Documents préalables : [77bd27c](https://github.com/timetogrowup/PROJET_CLN/commit/77bd27c165633e1f34f6480b53187c3f2a0de399). Code livré : [57a238e](https://github.com/timetogrowup/PROJET_CLN/commit/57a238e1d1ef8e0e67abee07a3c832b63f570dc2).
+- [CI finale 40868321448](https://github.com/timetogrowup/PROJET_CLN/actions/runs/40868321448) réussie : 400 affichages, 84 assertions V5, 42 assertions V4, 26 contrôles de sécurité et HTTP ; régression de la fenêtre humaine sur deux moteurs. 443 textes statiques et 133 messages vérifiés.
+- [Publication Pages 40868687159](https://github.com/timetogrowup/PROJET_CLN/actions/runs/40868687159) réussie. [Page publique](https://cln-performance.com/pipelines.html). Dix-sept ressources HTTP 200 et identiques aux sources testées. Ouverture d’un complément d’incident et navigation vers la méthode observées en production.
+- Anomalie corrigée avant publication : réinjection des blocs dans une balise main avec attributs. Génération répétable vérifiée et nouvelles ancres contrôlées.
+- Formulaire, questionnaire et API OVH conservés ; aucune nouvelle collecte, aucun pipeline réel connecté au client, aucun mail réel envoyé. La page est illustrative. Pas de nouvelle dépendance de production.
+- Limites : téléphones physiques, lecteur d’écran et compréhension par prospects restent à vérifier. Les bénéfices effectifs et les conditions financières se définissent par mission.
+
+[Rapport de recette V5](docs/RECETTE_PIPELINES_V5.md). Les états V4 et antérieurs ci-dessous sont historiques ; les mentions anciennes « État courant » ne priment pas sur la présente synthèse.
+
+---
+
 # État courant au 29 octobre 2026
 
 **Livraison V4 pédagogique publiée et vérifiée.** Le site présente désormais les difficultés quotidiennes, les bénéfices attendus, une méthode en quatre étapes, trois scénarios clairement illustratifs et un questionnaire de sept questions. CLN ne recherche pas un revenu récurrent et peut convenir d’une rémunération liée aux bénéfices effectivement constatés, avec des critères fixés avant l’intervention. L’autonomie du client est explicitée.

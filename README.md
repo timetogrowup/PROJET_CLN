@@ -1,3 +1,13 @@
+# Mise à jour V5 du 29 octobre 2026
+
+Les pipelines deviennent un savoir-faire visible de CLN Performance : bloc sur l’accueil, page [Nos pipelines en action](https://cln-performance.com/pipelines.html), cinq étapes, gestion des exceptions, rôle humain et lien avec les bénéfices constatés. Menu de sept liens et quatre langues. Les éléments V4 restent applicables.
+
+Documents : [besoin métier V5](docs/BESOIN_METIER_PIPELINES_V5.md), [spécifications V5](docs/SPECIFICATIONS_TECHNIQUES_PIPELINES_V5.md), [stratégie V5](docs/STRATEGIE_DEVELOPPEMENT_PIPELINES_V5.md), [recette V5](docs/RECETTE_PIPELINES_V5.md).
+
+Le générateur `python3 scripts/build_pedagogy.py` utilise désormais `scripts/pipeline_content.py`. La matrice navigateur couvre dix pages ; `tests/pipelines.mjs` vérifie le nouveau parcours. Les sections V4 et antérieures ci-dessous sont conservées comme historique.
+
+---
+
 # CLN Performance
 
 ## Version pédagogique V4 du 29 octobre 2026

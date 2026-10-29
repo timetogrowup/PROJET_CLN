@@ -47,3 +47,7 @@ Bénéfices attendus : expliquer l’étendue d’une intervention, réduire les
 ## Hors périmètre
 
 Construction d’un moteur de pipelines, connexion aux emails d’un client, prestation facturée, nouvel abonnement, modification de l’API OVH ou migration d’hébergement. Les témoignages réels et la compréhension par des prospects restent à évaluer séparément de la recette technique.
+
+## État de prise en compte
+
+P01 à P09 implémentés et vérifiés par les contrôles statiques, la prévisualisation et la CI. La validation de compréhension par de nouveaux lecteurs reste distincte. P10 est clôturé : publication Pages réussie et dix-sept ressources conformes aux sources, avec parcours public observé. Les preuves figurent dans RECETTE_PIPELINES_V5.md.

@@ -18,3 +18,9 @@ La page dédiée et ses traductions précèdent les liens. Le menu commun doit �
 ## Conditions de clôture
 
 P01 à P10 documentés, tests techniques réussis, code et documentation versionnés, publication vérifiée. Pas de nouveau moteur métier ni de déploiement OVH. Toute vérification non réalisée est indiquée comme telle. Les retours utilisateurs et les bénéfices réels d’une mission ne se déduisent pas de la réussite de la CI.
+
+## Exécution
+
+Les documents ont été enregistrés avant les développements. La branche feature/cln-v5-pipelines a porté le code et sa CI avant promotion de main. Un défaut de réinjection des blocs dans les pages existantes a été détecté et corrigé avant publication. Les contrôles finaux du commit 57a238e1d1ef8e0e67abee07a3c832b63f570dc2 ont réussi ; la recette précise les preuves de publication et les limites de vérification.
+
+Étapes 1 à 8 terminées : CI 40868321448 réussie, promotion de main, publication Pages 40868687159 réussie, contrôles HTTP et parcours public effectués, puis mise à jour du rapport et de MINUTE. Les limites sont explicites et aucun mail réel n’a été envoyé.

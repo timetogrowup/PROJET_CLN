@@ -1,6 +1,6 @@
 # Spécifications techniques V5 — Présentation des pipelines
 
-Date : 29 octobre 2026. Statut : conception avant réalisation. Complément des spécifications V4, sans changement de l’architecture de production.
+Date : 29 octobre 2026. Statut : implémenté, publié et vérifié ; preuves dans la recette V5. Complément des spécifications V4, sans changement de l’architecture de production.
 
 ## Architecture et composants
 
@@ -36,3 +36,9 @@ Conserver navigation et identité visuelle V4 ; sept liens peuvent se répartir 
 ## Livraison et retour arrière
 
 Documents préalables enregistrés avant développement ; code et tests sur feature/cln-v5-pipelines ; promotion de main après contrôles réussis avec vérification du parent. Retour arrière par commit correctif limité aux fichiers V5, sans réinitialisation de l’historique ni retrait des travaux concurrents. Résultats et limites dans RECETTE_PIPELINES_V5.md et MINUTE.md.
+
+## Réalisation vérifiée
+
+Le module, les blocs d’intégration, la page et le menu commun sont implémentés. Le générateur accepte maintenant les attributs de main pour réinjecter les contenus dans les pages V4 ; la présence des blocs et la stabilité de deux exécutions sont vérifiées. CI complète réussie au commit 57a238e1d1ef8e0e67abee07a3c832b63f570dc2 : 400 affichages, 84 assertions V5, 42 assertions V4, sécurité et HTTP V3. Aucun script métier, stockage ou traitement de pipeline ajouté en production.
+
+Publication Pages 40868687159 réussie ; dix-sept ressources publiques HTTP 200 identiques aux sources vérifiées, et parcours de la page pipelines observé en ligne. Aucun déploiement OVH ni changement de données visiteur.
