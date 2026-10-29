@@ -408,3 +408,9 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - Bloc bout-en-bout remonté après l'introduction, animation plein contenu, commandes traduites et synthèse agrandie ; les quatre besoins restent à la suite.
 - Quatre vidéos localisées (FR, EN, PT-BR, ES), vague et scintillements approuvés, contours ×5 ; formats WebM/MP4 et posters, génération reproductible versionnée.
 - Contrôles du lecteur, traductions et générateur exécutés ; recette détaillée dans docs/RECETTE_ANIMATION_PIPELINE_V8.md. Publication et vérifications publiques consignées dans la clôture à suivre.
+
+### Clôture V8 — publication et recette publique
+- Commit applicatif 66be840326187a7422851aeda1c50bb90ba03c7a ; GitHub Pages 40894964249 terminé avec succès.
+- https://cln-performance.com/solutions.html : bloc d'animation unique entre introduction et besoins. Dix-sept fichiers publics contrôlés après déploiement : HTTP 200 et empreintes identiques à la livraison.
+- Vidéos et posters effectivement sélectionnés en FR/EN/PT-BR/ES ; lecture, pause, agrandissement 1100 px, fermeture Échap, focus et pause conservée vérifiés dans Chrome public.
+- Recette et trois documents de cadrage actualisés. Les smartphones physiques et Safari ne sont pas testés dans cette session ; sans JS et réduction de mouvement couverts par structure et tests unitaires. Aucun changement de l'API ni envoi de formulaire.

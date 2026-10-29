@@ -17,3 +17,6 @@ Le dialogue natif possède titre traduit et bouton Fermer. Une image fixe dans l
 
 ## Tests
 Syntaxe JS, catalogues, références locales, structure et conservation V6/V7, idempotence. ffprobe : codecs, dimensions et 15 secondes dans huit vidéos ; contrôler visuellement les quatre posters et un instant de chaque phase. Tests unitaires du cycle de vie avec événements de langue et refus de lecture. Navigateur réel en aperçu et production : lecture, pause, langues, agrandissement et fermeture. Contrôler les ressources publiques par statut et empreinte. Préciser les limites d'appareils/moteurs dans la recette.
+
+## État livré
+Implémentation et douze médias livrés dans le commit 66be840326187a7422851aeda1c50bb90ba03c7a. Générateur, tests et script de rendu versionnés. Recette publique et limites documentées dans RECETTE_ANIMATION_PIPELINE_V8.md.

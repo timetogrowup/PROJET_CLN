@@ -1,5 +1,5 @@
 # Besoin métier — animation pédagogique dans Vos besoins — V8
-29 octobre 2026. Statut : cadrage approuvé ; suivi de livraison dans RECETTE_ANIMATION_PIPELINE_V8.md.
+29 octobre 2026. Statut : besoin réalisé et publié ; résultats et limites dans RECETTE_ANIMATION_PIPELINE_V8.md.
 
 ## Objectifs, utilisateurs, bénéfices
 Permettre aux prospects de comprendre visuellement comment CLN collecte des informations depuis plusieurs applications, les rapproche, applique des règles et restitue les résultats dans leurs outils existants. Public : visiteurs sur ordinateur et mobile, dans les quatre langues du site, avec ou sans préférence de réduction du mouvement. Le bénéfice attendu est la compréhension du lien entre les besoins exprimés et le pipeline ; aucun gain métier chiffré n'est garanti.
