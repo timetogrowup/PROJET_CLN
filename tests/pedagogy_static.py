@@ -23,7 +23,7 @@ class Page(HTMLParser):
   if any(t in ['script','style','noscript'] or 'data-dynamic' in a or 'data-msg' in a for t,a in self.stack):return
   s=re.sub(r'\s+',' ',s).strip()
   if s:self.text.append(s)
-root=Path(__file__).resolve().parents[1];names=['index','solutions','approche','realisations','diagnostic','contact','merci','mentions-legales','confidentialite'];pages={n+'.html':Page(root/(n+'.html')) for n in names};catalog=json.loads((root/'i18n/static.json').read_text())
+root=Path(__file__).resolve().parents[1];names=['index','solutions','pipelines','approche','realisations','diagnostic','contact','merci','mentions-legales','confidentialite'];pages={n+'.html':Page(root/(n+'.html')) for n in names};catalog=json.loads((root/'i18n/static.json').read_text())
 for required in ['recommendation-add','need-context','need-add','human-dialog','contact-form']:
  assert required in pages['contact.html'].ids,required
 for name,page in pages.items():
@@ -46,6 +46,25 @@ for name,page in pages.items():
   missing.add((name,text))
 assert not missing,'Missing translations: '+repr(sorted(missing))
 for key in ['ressaisies','repetitif','chiffres','suivi']:assert key in pages['solutions.html'].ids
-for name in ['index','solutions','approche','realisations','contact']:
+for name in ['index','solutions','pipelines','approche','realisations','contact']:
  text=(root/(name+'.html')).read_text();assert 'chirurgicale' not in text and '40 %' not in text and '60 %' not in text
 print('PASS',len(pages),'pages,',links,'local references/anchors, metadata, skip links and complete visible translation coverage.')
+
+# V5 structural invariants for the explanatory page and shared menu.
+pipeline=(root/'pipelines.html').read_text()
+assert pipeline.count('class="pipeline-case"')==4
+assert 'class="pipeline-steps"' in pipeline and 'id="exemple"' in pipeline
+for anchor in ['capacites','situations','equipes','benefices']:
+ assert anchor in pages['pipelines.html'].ids,anchor
+assert 'bout-en-bout' in pages['solutions.html'].ids
+assert 'pipeline' in pages['approche.html'].ids
+assert 'pipelines' in pages['index.html'].ids
+for name in pages:
+ text=(root/name).read_text()
+ nav=re.search(r'<nav\b.*?</nav>',text,re.S).group(0)
+ assert len(re.findall(r'<a\b',nav))==7,(name,'seven navigation links')
+ assert 'pipelines.html' in nav,(name,'pipeline navigation')
+import xml.etree.ElementTree as ET
+urls={node.text for node in ET.parse(root/'sitemap.xml').iter() if node.tag.endswith('}loc')}
+assert 'https://cln-performance.com/pipelines.html' in urls
+print('PASS V5 pipeline structure, seven-link shared navigation and sitemap.')

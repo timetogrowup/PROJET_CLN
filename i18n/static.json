@@ -1908,5 +1908,310 @@
     "en": "Review your situation — CLN Performance",
     "pt-BR": "Avalie sua situação — CLN Performance",
     "es": "Revise su situación — CLN Performance"
+  },
+  "Vos logiciels savent souvent réaliser une partie du travail. CLN Performance les relie pour que les informations circulent et que les actions s’enchaînent, avec des contrôles et un suivi. Cet enchaînement s’appelle un pipeline.": {
+    "en": "Your applications can often do part of the work. CLN Performance connects them so information flows and actions follow one another, with checks and tracking. This connected sequence is called a pipeline.",
+    "pt-BR": "Seus sistemas geralmente conseguem realizar parte do trabalho. A CLN Performance os conecta para que as informações circulem e as ações se encadeiem, com verificações e acompanhamento. Essa sequência conectada é chamada de pipeline.",
+    "es": "Sus programas suelen realizar una parte del trabajo. CLN Performance los conecta para que la información circule y las acciones se encadenen, con controles y seguimiento. Esta secuencia conectada se llama pipeline."
+  },
+  "Réception": {
+    "en": "Receive",
+    "pt-BR": "Recepção",
+    "es": "Recepción"
+  },
+  "Contrôle": {
+    "en": "Check",
+    "pt-BR": "Verificação",
+    "es": "Control"
+  },
+  "Traitement": {
+    "en": "Process",
+    "pt-BR": "Tratamento",
+    "es": "Tratamiento"
+  },
+  "Transmission": {
+    "en": "Transfer",
+    "pt-BR": "Transmissão",
+    "es": "Transmisión"
+  },
+  "Suivi": {
+    "en": "Track",
+    "pt-BR": "Acompanhamento",
+    "es": "Seguimiento"
+  },
+  "Le savoir faire CLN": {
+    "en": "CLN expertise",
+    "pt-BR": "O saber fazer da CLN",
+    "es": "El saber hacer de CLN"
+  },
+  "Relier vos outils pour automatiser toute une chaîne de travail": {
+    "en": "Connect your tools to automate a whole workflow",
+    "pt-BR": "Conectar suas ferramentas para automatizar toda uma cadeia de trabalho",
+    "es": "Conectar sus herramientas para automatizar toda una cadena de trabajo"
+  },
+  "Comprendre avec un exemple": {
+    "en": "Understand through an example",
+    "pt-BR": "Entender com um exemplo",
+    "es": "Comprender con un ejemplo"
+  },
+  "Nos pipelines en action": {
+    "en": "Our pipelines in action",
+    "pt-BR": "Nossos pipelines em ação",
+    "es": "Nuestros pipelines en acción"
+  },
+  "L’intérêt est de relier les étapes d’un même processus : une information reçue devient une action utile, dont le résultat peut être suivi. Vos équipes gardent la main sur les règles et les situations sensibles.": {
+    "en": "The value lies in connecting the stages of one process: incoming information becomes a useful action whose result can be tracked. Your teams retain control over rules and sensitive situations.",
+    "pt-BR": "O valor está em conectar as etapas de um mesmo processo: uma informação recebida se torna uma ação útil, cujo resultado pode ser acompanhado. Suas equipes mantêm o controle das regras e das situações sensíveis.",
+    "es": "El valor está en conectar las etapas de un mismo proceso: una información recibida se convierte en una acción útil cuyo resultado puede seguirse. Sus equipos mantienen el control de las reglas y las situaciones sensibles."
+  },
+  "Exemple traiter une demande reçue par email": {
+    "en": "Example processing a request received by email",
+    "pt-BR": "Exemplo tratar uma solicitação recebida por email",
+    "es": "Ejemplo tramitar una solicitud recibida por correo"
+  },
+  "Ce scénario explique une possibilité d’intervention. Cette page ne consulte aucun email, ne récupère aucune pièce jointe et n’exécute pas de traitement réel. Aucun gain chiffré ni résultat client n’est annoncé.": {
+    "en": "This scenario explains a possible engagement. This page does not read emails, collect attachments or run real processing. No numerical gain or client result is claimed.",
+    "pt-BR": "Este cenário explica uma possibilidade de intervenção. Esta página não consulta emails, não coleta anexos e não executa tratamentos reais. Nenhum ganho numérico ou resultado de cliente é anunciado.",
+    "es": "Este escenario explica una posible intervención. Esta página no consulta correos, no recoge adjuntos ni ejecuta tratamientos reales. No se anuncia ninguna ganancia numérica ni resultado de cliente."
+  },
+  "Une demande arrive par email avec ses pièces jointes. Le pipeline récupère les éléments prévus dans le périmètre autorisé. Utilité : éviter de collecter et ranger chaque élément à la main.": {
+    "en": "A request arrives by email with attachments. The pipeline collects the items covered by the authorised scope. Benefit: avoid collecting and filing each item by hand.",
+    "pt-BR": "Uma solicitação chega por email com anexos. O pipeline reúne os elementos previstos no escopo autorizado. Utilidade: evitar coletar e organizar cada elemento manualmente.",
+    "es": "Una solicitud llega por correo con sus adjuntos. El pipeline recoge los elementos previstos en el alcance autorizado. Utilidad: evitar recopilar y archivar cada elemento a mano."
+  },
+  "Les informations nécessaires et les formats sont vérifiés. Un dossier incomplet est signalé avant la suite. Utilité : repérer tôt ce qui manque, au lieu de découvrir le problème en fin de traitement.": {
+    "en": "Required information and formats are checked. An incomplete case is flagged before proceeding. Benefit: identify missing items early rather than at the end of processing.",
+    "pt-BR": "As informações necessárias e os formatos são verificados. Um processo incompleto é sinalizado antes de continuar. Utilidade: identificar cedo o que falta, em vez de descobrir o problema no final.",
+    "es": "Se comprueban la información necesaria y los formatos. Un expediente incompleto se señala antes de continuar. Utilidad: detectar pronto qué falta, en lugar de descubrirlo al final."
+  },
+  "Les données sont préparées et les règles convenues sont appliquées. Une validation humaine peut être demandée. Utilité : réduire les manipulations répétitives tout en conservant les décisions qui nécessitent une personne.": {
+    "en": "Data is prepared and agreed rules are applied. Human approval may be requested. Benefit: reduce repetitive handling while retaining decisions that require a person.",
+    "pt-BR": "Os dados são preparados e as regras acordadas são aplicadas. Uma validação humana pode ser solicitada. Utilidade: reduzir manipulações repetitivas preservando as decisões que exigem uma pessoa.",
+    "es": "Se preparan los datos y se aplican las reglas acordadas. Puede solicitarse una validación humana. Utilidad: reducir las manipulaciones repetitivas conservando las decisiones que requieren una persona."
+  },
+  "Les outils concernés sont alimentés et les actions autorisées sont déclenchées. Utilité : limiter les ressaisies entre services et les oublis de transmission.": {
+    "en": "Relevant tools are updated and authorised actions are triggered. Benefit: limit re-entry between departments and missed transfers.",
+    "pt-BR": "As ferramentas envolvidas são alimentadas e as ações autorizadas são acionadas. Utilidade: limitar redigitações entre setores e esquecimentos de transmissão.",
+    "es": "Se actualizan las herramientas correspondientes y se activan las acciones autorizadas. Utilidad: limitar la doble introducción entre departamentos y los olvidos de transmisión."
+  },
+  "Le résultat de chaque étape est enregistré et les anomalies sont signalées. Utilité : savoir ce qui est terminé, ce qui attend une intervention et ce qui doit être repris selon les règles prévues.": {
+    "en": "The result of each stage is recorded and anomalies are flagged. Benefit: know what is complete, what awaits intervention and what needs to be resumed under the agreed rules.",
+    "pt-BR": "O resultado de cada etapa é registrado e as anomalias são sinalizadas. Utilidade: saber o que terminou, o que aguarda uma intervenção e o que deve ser retomado conforme as regras previstas.",
+    "es": "Se registra el resultado de cada etapa y se señalan las anomalías. Utilidad: saber qué ha terminado, qué espera una intervención y qué debe retomarse según las reglas previstas."
+  },
+  "Ce qui donne sa puissance au pipeline": {
+    "en": "What makes a pipeline powerful",
+    "pt-BR": "O que dá potência ao pipeline",
+    "es": "Qué da potencia a un pipeline"
+  },
+  "Relier plusieurs outils": {
+    "en": "Connect several tools",
+    "pt-BR": "Conectar várias ferramentas",
+    "es": "Conectar varias herramientas"
+  },
+  "Les fichiers, les logiciels métier et les tableaux de suivi peuvent participer à un même enchaînement. Les possibilités d’accès et de connexion sont vérifiées avant réalisation.": {
+    "en": "Files, business applications and tracking dashboards can be part of one sequence. Access and connection capabilities are checked before implementation.",
+    "pt-BR": "Arquivos, sistemas de trabalho e painéis de acompanhamento podem participar de uma mesma sequência. As possibilidades de acesso e conexão são verificadas antes da realização.",
+    "es": "Los archivos, programas de gestión y cuadros de seguimiento pueden participar en una misma secuencia. Se verifican las posibilidades de acceso y conexión antes de la realización."
+  },
+  "Adapter le chemin au dossier": {
+    "en": "Adapt the path to the case",
+    "pt-BR": "Adaptar o caminho ao processo",
+    "es": "Adaptar el recorrido al expediente"
+  },
+  "Les règles peuvent orienter un dossier complet vers la suite, un dossier incomplet vers une demande de complément ou une situation sensible vers une validation.": {
+    "en": "Rules can send a complete case to the next stage, an incomplete one to a request for more information or a sensitive situation for approval.",
+    "pt-BR": "As regras podem encaminhar um processo completo para a próxima etapa, um incompleto para um pedido de complemento ou uma situação sensível para validação.",
+    "es": "Las reglas pueden enviar un expediente completo a la siguiente etapa, uno incompleto a una petición de información o una situación sensible a validación."
+  },
+  "Repérer les incidents et préparer la reprise": {
+    "en": "Detect incidents and prepare recovery",
+    "pt-BR": "Identificar incidentes e preparar a retomada",
+    "es": "Detectar incidentes y preparar la reanudación"
+  },
+  "Un échec est identifié et signalé. Les contrôles prévus déterminent si la suite peut être reprise, à quelle étape et avec quelle validation, en évitant les doublons.": {
+    "en": "A failure is identified and flagged. Agreed checks determine whether processing can resume, at which stage and with what approval, while avoiding duplicates.",
+    "pt-BR": "Uma falha é identificada e sinalizada. Os controles previstos determinam se o tratamento pode ser retomado, em qual etapa e com qual validação, evitando duplicidades.",
+    "es": "Un fallo se identifica y se señala. Los controles previstos determinan si se puede reanudar, en qué etapa y con qué validación, evitando duplicados."
+  },
+  "Mesurer le fonctionnement": {
+    "en": "Measure operation",
+    "pt-BR": "Medir o funcionamento",
+    "es": "Medir el funcionamiento"
+  },
+  "Volumes traités, délais, erreurs et interventions humaines rendent le processus observable. Ces indicateurs aident à identifier les améliorations utiles.": {
+    "en": "Processed volumes, lead times, errors and human interventions make the process observable. These indicators help identify useful improvements.",
+    "pt-BR": "Volumes tratados, prazos, erros e intervenções humanas tornam o processo observável. Esses indicadores ajudam a identificar melhorias úteis.",
+    "es": "Los volúmenes tratados, plazos, errores e intervenciones humanas permiten observar el proceso. Estos indicadores ayudan a identificar mejoras útiles."
+  },
+  "Quand tout ne se déroule pas comme prévu": {
+    "en": "When things do not go as planned",
+    "pt-BR": "Quando nem tudo acontece como previsto",
+    "es": "Cuando no todo sale según lo previsto"
+  },
+  "Le parcours dépend des règles et de l’état du dossier. Ouvrez les situations ci-dessous pour voir la place des contrôles et des personnes.": {
+    "en": "The path depends on the rules and the case status. Open the situations below to see the role of checks and people.",
+    "pt-BR": "O caminho depende das regras e do estado do processo. Abra as situações abaixo para ver o papel dos controles e das pessoas.",
+    "es": "El recorrido depende de las reglas y del estado del expediente. Abra las situaciones siguientes para ver el papel de los controles y de las personas."
+  },
+  "Si le dossier est complet": {
+    "en": "If the case is complete",
+    "pt-BR": "Se o processo estiver completo",
+    "es": "Si el expediente está completo"
+  },
+  "Il poursuit les étapes autorisées après les contrôles. Les actions sensibles restent soumises aux validations convenues.": {
+    "en": "It continues through the authorised stages after checks. Sensitive actions remain subject to agreed approvals.",
+    "pt-BR": "Ele continua pelas etapas autorizadas após as verificações. Ações sensíveis continuam sujeitas às validações acordadas.",
+    "es": "Continúa por las etapas autorizadas tras los controles. Las acciones sensibles siguen sujetas a las validaciones acordadas."
+  },
+  "Si une information manque": {
+    "en": "If information is missing",
+    "pt-BR": "Se faltar uma informação",
+    "es": "Si falta información"
+  },
+  "Le dossier est signalé et la suite concernée est suspendue. Une demande de complément peut être préparée selon les règles définies avec les équipes.": {
+    "en": "The case is flagged and the affected processing is paused. A request for more information can be prepared under rules defined with the teams.",
+    "pt-BR": "O processo é sinalizado e a continuação afetada é suspensa. Um pedido de complemento pode ser preparado conforme as regras definidas com as equipes.",
+    "es": "Se señala el expediente y se suspende la continuación afectada. Puede prepararse una petición de información según las reglas definidas con los equipos."
+  },
+  "Si une personne doit valider": {
+    "en": "If a person must approve",
+    "pt-BR": "Se uma pessoa precisar validar",
+    "es": "Si una persona debe validar"
+  },
+  "La personne désignée examine la situation et décide de la suite. Le pipeline organise le passage de relais sans décider à sa place.": {
+    "en": "The designated person reviews the situation and decides what happens next. The pipeline organises the handover without deciding for them.",
+    "pt-BR": "A pessoa designada examina a situação e decide a continuação. O pipeline organiza a passagem sem decidir no lugar dela.",
+    "es": "La persona designada examina la situación y decide cómo continuar. El pipeline organiza el relevo sin decidir en su lugar."
+  },
+  "Si un outil ne répond plus": {
+    "en": "If a tool stops responding",
+    "pt-BR": "Se uma ferramenta parar de responder",
+    "es": "Si una herramienta deja de responder"
+  },
+  "L’incident est signalé avec l’étape concernée. Une reprise n’est engagée qu’après les contrôles prévus, notamment pour vérifier ce qui a déjà été effectué.": {
+    "en": "The incident is flagged with the affected stage. Recovery only starts after the agreed checks, including verifying what has already been done.",
+    "pt-BR": "O incidente é sinalizado com a etapa afetada. A retomada só é iniciada após os controles previstos, inclusive para verificar o que já foi realizado.",
+    "es": "Se señala el incidente con la etapa afectada. La reanudación solo se inicia tras los controles previstos, en particular para verificar lo que ya se ha realizado."
+  },
+  "Vos équipes gardent la main": {
+    "en": "Your teams remain in control",
+    "pt-BR": "Suas equipes mantêm o controle",
+    "es": "Sus equipos mantienen el control"
+  },
+  "Les équipes définissent les règles, valident les étapes sensibles et traitent les exceptions. CLN construit et teste l’enchaînement avec elles, puis transmet la documentation et les conditions d’exploitation pour préparer leur autonomie.": {
+    "en": "Teams define the rules, approve sensitive stages and handle exceptions. CLN builds and tests the sequence with them, then hands over documentation and operating conditions to prepare their autonomy.",
+    "pt-BR": "As equipes definem as regras, validam as etapas sensíveis e tratam as exceções. A CLN constrói e testa a sequência com elas, depois transmite a documentação e as condições de operação para preparar sua autonomia.",
+    "es": "Los equipos definen las reglas, validan las etapas sensibles y atienden las excepciones. CLN construye y prueba la secuencia con ellos y después transmite la documentación y las condiciones de funcionamiento para preparar su autonomía."
+  },
+  "Relier le fonctionnement aux bénéfices constatés": {
+    "en": "Connect operation to observed benefits",
+    "pt-BR": "Relacionar o funcionamento aos benefícios constatados",
+    "es": "Relacionar el funcionamiento con los beneficios constatados"
+  },
+  "Avant de commencer, nous définissons une situation de départ, un périmètre et une période de mesure. Nous suivons ensuite les délais, les erreurs ou le temps consacré, en tenant compte des volumes et des changements d’organisation.": {
+    "en": "Before starting, we define a starting situation, scope and measurement period. We then track lead times, errors or time spent, taking account of volumes and organisational changes.",
+    "pt-BR": "Antes de começar, definimos uma situação inicial, um escopo e um período de medição. Depois acompanhamos prazos, erros ou tempo dedicado, levando em conta os volumes e as mudanças de organização.",
+    "es": "Antes de empezar, definimos una situación inicial, un alcance y un período de medición. Después seguimos los plazos, errores o tiempo dedicado, considerando los volúmenes y los cambios de organización."
+  },
+  "Voir comment nous mesurons et convenons de la rémunération": {
+    "en": "See how we measure and agree remuneration",
+    "pt-BR": "Veja como medimos e acordamos a remuneração",
+    "es": "Vea cómo medimos y acordamos la remuneración"
+  },
+  "Quel processus aimeriez vous simplifier ?": {
+    "en": "Which process would you like to simplify?",
+    "pt-BR": "Qual processo gostaria de simplificar?",
+    "es": "¿Qué proceso le gustaría simplificar?"
+  },
+  "Décrivez une activité et les outils utilisés. Vous n’avez pas besoin d’avoir conçu le pipeline ni de connaître une solution technique.": {
+    "en": "Describe an activity and the tools used. You do not need to have designed the pipeline or know a technical solution.",
+    "pt-BR": "Descreva uma atividade e as ferramentas utilizadas. Você não precisa ter projetado o pipeline nem conhecer uma solução técnica.",
+    "es": "Describa una actividad y las herramientas utilizadas. No necesita haber diseñado el pipeline ni conocer una solución técnica."
+  },
+  "Parlons de votre processus": {
+    "en": "Let’s discuss your process",
+    "pt-BR": "Vamos conversar sobre seu processo",
+    "es": "Hablemos de su proceso"
+  },
+  "Automatiser un processus de bout en bout": {
+    "en": "Automate a process from end to end",
+    "pt-BR": "Automatizar um processo de ponta a ponta",
+    "es": "Automatizar un proceso de principio a fin"
+  },
+  "Vos difficultés se situent entre plusieurs étapes ou plusieurs outils ? Un pipeline peut relier leur traitement, leurs contrôles et leur suivi dans une chaîne cohérente, en conservant les validations nécessaires.": {
+    "en": "Do your difficulties sit between several stages or tools? A pipeline can connect processing, checks and tracking into a coherent sequence while retaining necessary approvals.",
+    "pt-BR": "Suas dificuldades estão entre várias etapas ou ferramentas? Um pipeline pode conectar o tratamento, os controles e o acompanhamento em uma sequência coerente, mantendo as validações necessárias.",
+    "es": "¿Sus dificultades se sitúan entre varias etapas o herramientas? Un pipeline puede conectar el tratamiento, los controles y el seguimiento en una cadena coherente, manteniendo las validaciones necesarias."
+  },
+  "Voir un processus complet": {
+    "en": "See a complete process",
+    "pt-BR": "Ver um processo completo",
+    "es": "Ver un proceso completo"
+  },
+  "Construire un premier pipeline utile": {
+    "en": "Build a first useful pipeline",
+    "pt-BR": "Construir um primeiro pipeline útil",
+    "es": "Construir un primer pipeline útil"
+  },
+  "Nous choisissons avec vos équipes un processus précis, les outils concernés et les règles de passage entre étapes. Nous testons le parcours normal et les exceptions avant la mise en service. La documentation et la prise en main font partie du travail.": {
+    "en": "With your teams, we choose a specific process, the tools involved and the rules for moving between stages. We test the normal path and exceptions before launch. Documentation and adoption are part of the work.",
+    "pt-BR": "Escolhemos com suas equipes um processo preciso, as ferramentas envolvidas e as regras de passagem entre etapas. Testamos o caminho normal e as exceções antes da entrada em serviço. A documentação e a utilização fazem parte do trabalho.",
+    "es": "Elegimos con sus equipos un proceso concreto, las herramientas implicadas y las reglas de paso entre etapas. Probamos el recorrido normal y las excepciones antes de la puesta en servicio. La documentación y la adopción forman parte del trabajo."
+  },
+  "Les mesures avant et après servent à constater les bénéfices : temps consacré, erreurs, délais et interventions humaines. Leur interprétation tient compte du volume traité. Si la rémunération dépend des bénéfices, les critères de constat et de calcul sont convenus avant l’intervention.": {
+    "en": "Before-and-after measurements establish benefits: time spent, errors, lead times and human interventions. They are interpreted in light of processed volumes. If remuneration depends on benefits, verification and calculation criteria are agreed before work begins.",
+    "pt-BR": "As medições antes e depois servem para constatar benefícios: tempo dedicado, erros, prazos e intervenções humanas. Sua interpretação considera o volume tratado. Se a remuneração depender dos benefícios, os critérios de constatação e cálculo são acordados antes da intervenção.",
+    "es": "Las mediciones de antes y después sirven para constatar beneficios: tiempo dedicado, errores, plazos e intervenciones humanas. Su interpretación considera el volumen tratado. Si la remuneración depende de los beneficios, los criterios de verificación y cálculo se acuerdan antes de intervenir."
+  },
+  "Découvrir un pipeline en cinq étapes": {
+    "en": "Discover a pipeline in five stages",
+    "pt-BR": "Conheça um pipeline em cinco etapas",
+    "es": "Descubra un pipeline en cinco etapas"
+  },
+  "Voir toutes les étapes d’un même processus": {
+    "en": "See all stages of one process",
+    "pt-BR": "Ver todas as etapas de um mesmo processo",
+    "es": "Ver todas las etapas de un mismo proceso"
+  },
+  "Découvrez comment une demande reçue peut être contrôlée, traitée, transmise et suivie, avec des chemins différents selon les situations.": {
+    "en": "Discover how an incoming request can be checked, processed, transferred and tracked, with different paths depending on the situation.",
+    "pt-BR": "Descubra como uma solicitação recebida pode ser verificada, tratada, transmitida e acompanhada, com caminhos diferentes conforme as situações.",
+    "es": "Descubra cómo una solicitud recibida puede comprobarse, tratarse, transmitirse y seguirse, con recorridos distintos según las situaciones."
+  },
+  "Voir le pipeline illustratif": {
+    "en": "See the illustrative pipeline",
+    "pt-BR": "Ver o pipeline ilustrativo",
+    "es": "Ver el pipeline ilustrativo"
+  },
+  "Comprendre comment CLN relie vos outils et enchaîne des traitements contrôlés pour améliorer un processus complet.": {
+    "en": "Understand how CLN connects tools and links controlled steps to improve a whole process.",
+    "pt-BR": "Entenda como a CLN conecta ferramentas e encadeia etapas controladas para melhorar um processo completo.",
+    "es": "Comprenda cómo CLN conecta herramientas y encadena etapas controladas para mejorar un proceso completo."
+  },
+  "Nos pipelines en action — CLN Performance": {
+    "en": "Our pipelines in action — CLN Performance",
+    "pt-BR": "Nossos pipelines em ação — CLN Performance",
+    "es": "Nuestros pipelines en acción — CLN Performance"
+  },
+  "Le savoir-faire CLN": {
+    "en": "CLN expertise",
+    "pt-BR": "O saber fazer da CLN",
+    "es": "El saber hacer de CLN"
+  },
+  "Exemple : traiter une demande reçue par email": {
+    "en": "Example processing a request received by email",
+    "pt-BR": "Exemplo tratar uma solicitação recebida por email",
+    "es": "Ejemplo tramitar una solicitud recibida por correo"
+  },
+  "Quel processus aimeriez-vous simplifier ?": {
+    "en": "Which process would you like to simplify?",
+    "pt-BR": "Qual processo gostaria de simplificar?",
+    "es": "¿Qué proceso le gustaría simplificar?"
+  },
+  "Ce scénario illustre un fonctionnement possible. Les étapes sont à adapter à vos outils et aux règles de votre organisation.": {
+    "en": "This scenario illustrates a possible workflow. The stages need to be adapted to your tools and your organisation’s rules.",
+    "pt-BR": "Este cenário ilustra um funcionamento possível. As etapas devem ser adaptadas às suas ferramentas e às regras da sua organização.",
+    "es": "Este escenario ilustra un funcionamiento posible. Las etapas deben adaptarse a sus herramientas y a las reglas de su organización."
   }
 }

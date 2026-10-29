@@ -668,3 +668,14 @@ form select {width:100%;min-width:0;}
 button,a {overflow-wrap:anywhere;}
 .recommendation-header {flex-wrap:wrap;}
 @media(max-width:600px){.contact-grid{grid-template-columns:minmax(0,1fr);}.result-card{padding:1.1rem;}}
+
+/* V5: meaningful ordered sequences, readable without animation or script. */
+.pipeline-overview {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.75rem;list-style-position:inside;padding:0;margin:1.75rem 0;}
+.pipeline-overview li {background:var(--bg-light);border:1px solid #d9d5ed;border-radius:12px;padding:1rem .75rem;font-weight:600;color:var(--primary-dark);overflow-wrap:anywhere;}
+.pipeline-steps {counter-reset:pipeline;list-style:none;display:grid;gap:1rem;padding:0;}
+.pipeline-steps li {counter-increment:pipeline;position:relative;max-width:none;border:1px solid #d9d5ed;border-radius:14px;padding:1.2rem 1.4rem 1.2rem 4.75rem;background:var(--bg-light);}
+.pipeline-steps li::before {content:counter(pipeline);position:absolute;left:1.1rem;top:1.2rem;width:2.4rem;height:2.4rem;display:grid;place-items:center;background:var(--primary-dark);color:white;border-radius:50%;font-weight:700;}
+.pipeline-steps h3 {margin:0 0 .4rem;color:var(--primary-dark);}
+.pipeline-steps p {margin:.4rem 0;}
+#pipelines {border-block:1px solid #dedbec;padding-block:2rem;}
+@media(max-width:760px){.pipeline-overview{grid-template-columns:minmax(0,1fr);gap:.5rem;}.pipeline-overview li{padding:.7rem 1rem;}.pipeline-steps li{padding:1.1rem;}.pipeline-steps li::before{position:static;margin-bottom:.6rem;} .nav-links a{white-space:normal;}}

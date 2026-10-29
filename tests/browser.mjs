@@ -1,5 +1,5 @@
 import {chromium,webkit} from 'playwright';import assert from 'node:assert/strict';
-const langs=['fr','en','pt-BR','es'],pages=['index','solutions','approche','realisations','diagnostic','contact','merci','mentions-legales','confidentialite'];
+const langs=['fr','en','pt-BR','es'],pages=['index','solutions','pipelines','approche','realisations','diagnostic','contact','merci','mentions-legales','confidentialite'];
 let checks=0;
 for(const [engineName,engine] of Object.entries({chromium,webkit})){
  const browser=await engine.launch();
@@ -9,7 +9,7 @@ for(const [engineName,engine] of Object.entries({chromium,webkit})){
   for(const lang of langs)for(const name of pages){
    await page.goto(`http://127.0.0.1:8000/${name}.html?lang=${lang}`);await page.waitForFunction(()=>document.documentElement.dataset.i18nReady==='true');assert.equal(await page.locator('html').getAttribute('lang'),lang);assert.equal(await page.locator('#site-language').inputValue(),lang);
    const overflow=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,width:document.documentElement.clientWidth,offenders:[...document.querySelectorAll('main *,header *,footer *')].filter(e=>e.getBoundingClientRect().right>document.documentElement.clientWidth+1).slice(0,5).map(e=>({tag:e.tagName,id:e.id,cls:e.className,right:e.getBoundingClientRect().right}))}));assert(overflow.scroll<=overflow.width+1,`${engineName} ${width} ${lang} ${name} overflow ${JSON.stringify(overflow)}`);
-   assert.equal(await page.locator('nav a').count(),6);assert(!(await page.title()).includes('undefined'));
+   assert.equal(await page.locator('nav a').count(),7);assert(!(await page.title()).includes('undefined'));
    if(lang!=='fr'){const home=await page.locator('nav a').first().textContent();assert(!home.includes('Accueil'));}
    if(name==='contact'){
     await page.waitForFunction(()=>!document.querySelector('#contact-form [type=submit]').disabled);

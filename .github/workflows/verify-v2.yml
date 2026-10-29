@@ -6,6 +6,7 @@ on:
       - feature/cln-v2-security-i18n
       - feature/cln-v3-human-dialog
       - feature/cln-v4-benefits
+      - feature/cln-v5-pipelines
 permissions:
   contents: read
 jobs:
@@ -42,3 +43,4 @@ jobs:
           node tests/human-dialog.mjs
           node tests/browser.mjs
           node tests/pedagogy.mjs
+          node tests/pipelines.mjs
