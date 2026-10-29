@@ -1,5 +1,19 @@
 # CLN Performance
 
+## Version pédagogique V4 du 29 octobre 2026
+
+Site statique publié sur GitHub Pages : https://cln-performance.com. API de contact OVHcloud conservée. Navigation orientée besoins, exemples illustratifs, questionnaire quotidien et transfert volontaire de synthèse. CLN privilégie une amélioration durable et l’autonomie du client ; une rémunération liée aux bénéfices effectivement constatés peut être convenue, sans revenu récurrent recherché.
+
+Documents : [besoin métier](docs/BESOIN_METIER_PEDAGOGIE_BENEFICES_V4.md), [spécifications techniques](docs/SPECIFICATIONS_TECHNIQUES_PEDAGOGIE_V4.md), [stratégie](docs/STRATEGIE_DEVELOPPEMENT_PEDAGOGIE_V4.md), [référence des pages V2](docs/REFERENCE_DESCRIPTION_PAGES_V2.md), [recette V4](docs/RECETTE_PEDAGOGIE_V4.md).
+
+Maintenance : `python3 scripts/build_pedagogy.py` régénère les contenus éditoriaux et leurs traductions. Contrôles : `node tests/i18n.mjs`, `python3 tests/pedagogy_static.py`, tests PHP et navigateur dans le workflow de vérification. Les tests navigateur utilisent une API simulée et ne doivent jamais envoyer de mail réel.
+
+Les sections antérieures ci-dessous sont historiques, notamment les références à Hostinger et à cln-solutions.fr.
+
+---
+
+# CLN Performance
+
 Site vitrine CLN — Ciblé, Libéré, Normé.
 
 ## Version V3 — 28 octobre 2026

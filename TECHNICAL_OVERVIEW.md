@@ -1,3 +1,9 @@
+# État technique V4 du 29 octobre 2026
+
+Référence courante : [spécifications V4](docs/SPECIFICATIONS_TECHNIQUES_PEDAGOGIE_V4.md). HTML/CSS/JS sur Pages, API OVH V3 inchangée, quatre langues. Questionnaire à codes fermés, synthèse V4, sauvegarde au choix du transfert, ajout volontaire au message, brouillon préservé. Pas de nouvelle dépendance de production. Les sections antérieures ci-dessous sont historiques.
+
+---
+
 # CLN Static Site — Technical Overview
 
 This document summarises the structure and technical choices of the CLN marketing site.

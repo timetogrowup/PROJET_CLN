@@ -1,6 +1,6 @@
 # Spécifications techniques V4 — Parcours pédagogique CLN
 
-Date : 29 octobre 2026. Statut initial : à implémenter puis compléter par le rapport de recette V4.
+Date : 29 octobre 2026. Statut : implémenté ; résultats de vérification et publication suivis dans [RECETTE_PEDAGOGIE_V4.md](RECETTE_PEDAGOGIE_V4.md).
 
 ## Architecture et déploiement
 
@@ -39,3 +39,9 @@ Préserver API, jeton à usage unique, durée, anti-rejeu, limitation de débit,
 ## Retour arrière
 
 Créer un commit correctif rétablissant uniquement les fichiers V4 depuis le parent de livraison, sans réinitialiser la branche ni écraser d’autres travaux. Une panne d’API externe n’est pas une preuve de régression éditoriale ; documenter séparément.
+
+## État réalisé
+
+Les composants, le schéma V4 et les choix de transfert décrits sont implémentés. Les anciennes synthèses V2 sont conservées comme format reconnu mais non réinterprété. Les neuf pages conservent leurs URL ; les compléments techniques utilisent les éléments natifs details et summary. La sécurité V3 et les quatre langues sont préservées. Le générateur s’appuie sur la structure du formulaire V3 et ne doit pas être utilisé pour modifier les règles serveur. Les tests et leurs limites sont détaillés dans la recette.
+
+Publication confirmée sur GitHub Pages au commit de code f8610edc7850e465e4adb3078231348b044da471. Les quinze ressources exécutables et éditoriales contrôlées sur le domaine correspondent aux fichiers testés. Aucun redéploiement de l’API OVH n’a été nécessaire.

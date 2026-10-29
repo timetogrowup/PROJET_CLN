@@ -18,3 +18,9 @@ Les textes doivent être présents dans les quatre langues avant la publication.
 ## Sortie attendue
 
 Documents et code versionnés ; tests pertinents verts ; publication Pages vérifiée ; journal reflétant le livré. Si un contrôle nécessite une infrastructure indisponible, le qualifier comme non effectué, sans assimiler cela à une réussite. Les tests humains de compréhension et la réception SMTP ne sont pas déduits de tests automatisés.
+
+## Exécution et ajustements
+
+Documents formalisés et enregistrés avant livraison. Développement et corrections sur feature/cln-v4-benefits, séparés de la production jusqu’à validation. Contrôles PHP et navigateur exécutés par GitHub Actions ; contrôles statiques et prévisualisation exécutés également dans l’environnement de travail. Trois anomalies de génération et de responsive ont été détectées et corrigées. La recette précise les commits, les résultats et la publication finale. Les outils de publication GitHub ont remplacé le push Git local, indisponible faute d’authentification locale ; aucun secret n’a été demandé ni stocké.
+
+Étapes 1 à 8 terminées : recette finale 40863452204 réussie, promotion de main et publication Pages 40863813611 réussies, contrôle HTTP des quinze ressources et parcours public réalisés. Le rapport et MINUTE sont mis à jour après constat de la publication. Aucun changement de source n’a été introduit par la clôture documentaire.

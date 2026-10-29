@@ -1,3 +1,9 @@
+# État métier V4 du 29 octobre 2026
+
+Le besoin courant est [BESOIN_METIER_PEDAGOGIE_BENEFICES_V4.md](docs/BESOIN_METIER_PEDAGOGIE_BENEFICES_V4.md). Le site présente les problèmes clients, les bénéfices attendus, une méthode de mesure et l’autonomie. La rémunération peut être liée aux bénéfices effectivement constatés, selon accord préalable ; aucune facturation récurrente n’est recherchée. Les exemples sont illustratifs. Le questionnaire donne une orientation et ne calcule ni prix ni gains garantis. Les éléments antérieurs ci-dessous restent historiques.
+
+---
+
 # CLN — Dossier métier
 
 ## 1. Positionnement

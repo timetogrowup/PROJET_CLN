@@ -1,3 +1,19 @@
+# État courant au 29 octobre 2026
+
+**Livraison V4 pédagogique publiée et vérifiée.** Le site présente désormais les difficultés quotidiennes, les bénéfices attendus, une méthode en quatre étapes, trois scénarios clairement illustratifs et un questionnaire de sept questions. CLN ne recherche pas un revenu récurrent et peut convenir d’une rémunération liée aux bénéfices effectivement constatés, avec des critères fixés avant l’intervention. L’autonomie du client est explicitée.
+
+- Code livré : [f8610ed](https://github.com/timetogrowup/PROJET_CLN/commit/f8610edc7850e465e4adb3078231348b044da471), après documents préalables dans [730b17e](https://github.com/timetogrowup/PROJET_CLN/commit/730b17ef187ab45c77e1245068bfde4066387334).
+- [Besoin métier V4](docs/BESOIN_METIER_PEDAGOGIE_BENEFICES_V4.md), [spécifications V4](docs/SPECIFICATIONS_TECHNIQUES_PEDAGOGIE_V4.md), [stratégie V4](docs/STRATEGIE_DEVELOPPEMENT_PEDAGOGIE_V4.md), [description des pages de référence](docs/REFERENCE_DESCRIPTION_PAGES_V2.md).
+- [Recette finale](https://github.com/timetogrowup/PROJET_CLN/actions/runs/40863452204) réussie : 26 contrôles de sécurité, HTTP local, 382 textes statiques et 133 messages, 360 affichages multilingues et 42 assertions V4 ; fenêtre humaine V3 sur deux moteurs conservée.
+- [Déploiement Pages](https://github.com/timetogrowup/PROJET_CLN/actions/runs/40863813611) réussi. Quinze ressources publiques HTTP 200, identiques aux sources testées. Nouvel accueil et parcours questionnaire → synthèse → transfert → ajout volontaire → effacement vérifiés en production.
+- Architecture : GitHub Pages et API OVH V3 conservés. Aucun email réel V4 envoyé. Le message saisi n’est pas traduit ni remplacé par la synthèse. Aucun abonnement ni contrat commercial n’est créé par le site.
+- Anomalies corrigées avant livraison : insertion du bouton de synthèse après formatage HTML, débordement espagnol à 320 px, chargement du script dupliqué lors de la régénération.
+- Limites : tests sur téléphones physiques, lecteur d’écran et compréhension par prospects restent à réaliser ; pas de nouvelle preuve de réception SMTP V4. Exemples illustratifs et modalités commerciales détaillées à convenir par mission. Exclusions légales historiques respectées.
+
+[Rapport complet de livraison V4](docs/RECETTE_PEDAGOGIE_V4.md). Les sections datées du 28 octobre et antérieures ci-dessous sont conservées comme historique ; leurs intitulés « État courant » ne priment pas sur la présente synthèse.
+
+---
+
 > **État courant — livraison V3 du 28 octobre 2026 :** le contrôle par calcul est supprimé et remplacé par une fenêtre de confirmation humaine ouverte uniquement après validation du formulaire. Case « Je suis un humain », confirmation désactivée avant cochage, annulation sans perte de saisie, position variable bornée sur ordinateur et centrage sur petit écran. Quatre langues conservées. Autorisation signée de dix minutes à usage unique ; quotas email/IP inchangés. API OVH et GitHub Pages déployés avec succès. Recette : 26 contrôles de sécurité, HTTP, 236 textes statiques / 73 messages et 360 affichages simulés, plus scénarios de fenêtre dans Chromium et WebKit. Contrôle public : ouverture, état décoché et annulation observés ; envois sans confirmation et jetons falsifiés refusés. Aucun email réel V3 envoyé. [Rapport de livraison V3](docs/RECETTE_PRODUCTION_V3.md).
 
 > **Portée :** confirmation déclarative, sans preuve automatisée d’humanité. Les états V2 et antérieurs ci-dessous sont historiques. Les contrôles sur téléphone physique et lecteur d’écran réel restent à réaliser.

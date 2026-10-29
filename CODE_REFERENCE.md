@@ -1,3 +1,18 @@
+# Référence de code V4 du 29 octobre 2026
+
+- `scripts/build_pedagogy.py` : génération éditoriale des six pages et navigation commune, quatre langues.
+- `scripts/templates/contact_v3.html` : structure protégée du formulaire V3 réutilisée par le générateur.
+- `scripts/update_privacy_v4.py` : mise en cohérence des explications de stockage, appelé par le générateur.
+- `diagnostic.js` : orientation par codes, synthèse, transfert volontaire.
+- `contact.js` : import choisi, contexte autorisé, fenêtre humaine et envoi V3.
+- `tests/pedagogy_static.py` : références locales, ancres, métadonnées et traductions.
+- `tests/pedagogy.mjs` : cas limites et parcours V4 sur deux moteurs.
+- `tests/browser.mjs`, `tests/human-dialog.mjs` : matrice responsive et régression V3.
+
+Les références antérieures ci-dessous sont historiques. Voir la recette V4 pour les résultats effectivement observés.
+
+---
+
 # CLN Static Site — Code Reference
 
 Ce document décrit précisément la structure du code, fichier par fichier, afin de faciliter la maintenance et l’évolution du site.

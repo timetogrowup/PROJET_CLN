@@ -49,3 +49,7 @@ RG09. Conserver les quatre langues, les URL, les protections serveur, la fenêtr
 ## Hors périmètre et limites
 
 Pas de migration d’hébergement, de nouveau logo, de contrat commercial à signer, de nouvelle mesure d’audience, de modification DNS ou de base clients. Les observations d’utilisabilité auprès de prospects et les preuves de références restent à réunir. Le site peut être publié avec des scénarios honnêtement illustratifs.
+
+## État de prise en compte
+
+Périmètre implémenté selon A01 à A10, avec critères automatisables vérifiés dans la recette. A11 est clôturé : publication Pages réussie et parcours public vérifié, avec quinze ressources identiques aux sources testées. La compréhension effective par des nouveaux lecteurs reste une validation humaine distincte. Le retrait des chiffres non justifiés et le caractère illustratif des scénarios sont des choix de livraison explicites.
