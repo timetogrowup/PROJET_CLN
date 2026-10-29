@@ -397,3 +397,8 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - Vidéos web optimisées (WebM ~48 Ko, MP4 ~85 Ko), poster fixe, pause/reprise en quatre langues, réduction des mouvements et suspension hors vue / onglet masqué.
 - Générateur mis à jour, contrôles statiques, catalogues, idempotence et cycle de vie de l'animation réussis. Aperçu Chrome : lecture et commande fonctionnelles, quatre langues sans débordement à la largeur contrôlée.
 - Publication suivie dans docs/RECETTE_LOGO_V7.md ; limites multi-appareils explicites, aucun changement de l'API de contact.
+
+### Clôture V7 — publication vérifiée
+- Commit applicatif 1731d07b8ed0330e2edf8b8dc20a5b550b4020ec ; Pages 40882512018 terminé avec succès.
+- https://cln-performance.com/ : dix pages et six ressources contrôlées en HTTP 200, empreintes identiques au code livré.
+- Lecture WebM, pause/reprise, traduction anglaise et navigation Contact vérifiées dans Chrome sur le domaine public ; rapport docs/RECETTE_LOGO_V7.md actualisé. Limites : matrice multi-largeurs et Safari non relancée ; appareils physiques non testés.
