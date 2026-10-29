@@ -436,5 +436,365 @@
     "en": "Sending your enquiry…",
     "pt-BR": "Enviando sua solicitação…",
     "es": "Enviando su solicitud…"
+  },
+  "v4.problems.ressaisies": {
+    "fr": "Éviter les ressaisies",
+    "en": "Avoid re-entering information",
+    "pt-BR": "Evitar a redigitação",
+    "es": "Evitar volver a introducir datos"
+  },
+  "v4.problems.repetitif": {
+    "fr": "Réduire les tâches répétitives",
+    "en": "Reduce repetitive tasks",
+    "pt-BR": "Reduzir tarefas repetitivas",
+    "es": "Reducir tareas repetitivas"
+  },
+  "v4.problems.chiffres": {
+    "fr": "Disposer de chiffres fiables",
+    "en": "Work with reliable figures",
+    "pt-BR": "Dispor de números confiáveis",
+    "es": "Disponer de cifras fiables"
+  },
+  "v4.problems.suivi": {
+    "fr": "Savoir où en sont les dossiers",
+    "en": "Know the status of your cases",
+    "pt-BR": "Saber como estão os processos",
+    "es": "Conocer el estado de los expedientes"
+  },
+  "v4.problems.personne": {
+    "fr": "Réduire la dépendance à une seule personne",
+    "en": "Reduce reliance on one person",
+    "pt-BR": "Reduzir a dependência de uma única pessoa",
+    "es": "Reducir la dependencia de una sola persona"
+  },
+  "v4.problems.autre": {
+    "fr": "Une autre difficulté",
+    "en": "Another difficulty",
+    "pt-BR": "Outra dificuldade",
+    "es": "Otra dificultad"
+  },
+  "v4.problems.inconnu": {
+    "fr": "Je ne sais pas encore",
+    "en": "I’m not sure yet",
+    "pt-BR": "Ainda não sei",
+    "es": "Todavía no lo sé"
+  },
+  "v4.frequency.jour": {
+    "fr": "Chaque jour",
+    "en": "Every day",
+    "pt-BR": "Todos os dias",
+    "es": "Cada día"
+  },
+  "v4.frequency.semaine": {
+    "fr": "Chaque semaine",
+    "en": "Every week",
+    "pt-BR": "Toda semana",
+    "es": "Cada semana"
+  },
+  "v4.frequency.parfois": {
+    "fr": "Occasionnellement",
+    "en": "Occasionally",
+    "pt-BR": "Ocasionalmente",
+    "es": "Ocasionalmente"
+  },
+  "v4.frequency.inconnu": {
+    "fr": "Je ne sais pas encore",
+    "en": "I’m not sure yet",
+    "pt-BR": "Ainda não sei",
+    "es": "Todavía no lo sé"
+  },
+  "v4.people.une": {
+    "fr": "Une personne",
+    "en": "One person",
+    "pt-BR": "Uma pessoa",
+    "es": "Una persona"
+  },
+  "v4.people.dix": {
+    "fr": "2 à 10 personnes",
+    "en": "2 to 10 people",
+    "pt-BR": "2 a 10 pessoas",
+    "es": "2 a 10 personas"
+  },
+  "v4.people.cinquante": {
+    "fr": "11 à 50 personnes",
+    "en": "11 to 50 people",
+    "pt-BR": "11 a 50 pessoas",
+    "es": "11 a 50 personas"
+  },
+  "v4.people.plus": {
+    "fr": "Plus de 50 personnes",
+    "en": "More than 50 people",
+    "pt-BR": "Mais de 50 pessoas",
+    "es": "Más de 50 personas"
+  },
+  "v4.people.inconnu": {
+    "fr": "Je ne sais pas encore",
+    "en": "I’m not sure yet",
+    "pt-BR": "Ainda não sei",
+    "es": "Todavía no lo sé"
+  },
+  "v4.impacts.temps": {
+    "fr": "Du temps perdu",
+    "en": "Time lost",
+    "pt-BR": "Tempo perdido",
+    "es": "Tiempo perdido"
+  },
+  "v4.impacts.erreurs": {
+    "fr": "Des erreurs",
+    "en": "Errors",
+    "pt-BR": "Erros",
+    "es": "Errores"
+  },
+  "v4.impacts.retards": {
+    "fr": "Des retards",
+    "en": "Delays",
+    "pt-BR": "Atrasos",
+    "es": "Retrasos"
+  },
+  "v4.impacts.decision": {
+    "fr": "Des décisions difficiles à prendre",
+    "en": "Difficulty making decisions",
+    "pt-BR": "Dificuldade para tomar decisões",
+    "es": "Dificultad para tomar decisiones"
+  },
+  "v4.impacts.insatisfaction": {
+    "fr": "De l’insatisfaction",
+    "en": "Dissatisfaction",
+    "pt-BR": "Insatisfação",
+    "es": "Insatisfacción"
+  },
+  "v4.impacts.autre": {
+    "fr": "Une autre difficulté",
+    "en": "Another difficulty",
+    "pt-BR": "Outra dificuldade",
+    "es": "Otra dificultad"
+  },
+  "v4.impacts.inconnu": {
+    "fr": "Je ne sais pas encore",
+    "en": "I’m not sure yet",
+    "pt-BR": "Ainda não sei",
+    "es": "Todavía no lo sé"
+  },
+  "v4.tools.fichiers": {
+    "fr": "Des fichiers",
+    "en": "Files",
+    "pt-BR": "Arquivos",
+    "es": "Archivos"
+  },
+  "v4.tools.emails": {
+    "fr": "Des emails",
+    "en": "Emails",
+    "pt-BR": "Emails",
+    "es": "Correos electrónicos"
+  },
+  "v4.tools.metier": {
+    "fr": "Des logiciels métier",
+    "en": "Business applications",
+    "pt-BR": "Sistemas de trabalho",
+    "es": "Programas de gestión"
+  },
+  "v4.tools.plusieurs": {
+    "fr": "Plusieurs outils combinés",
+    "en": "Several tools combined",
+    "pt-BR": "Várias ferramentas combinadas",
+    "es": "Varias herramientas combinadas"
+  },
+  "v4.tools.inconnu": {
+    "fr": "Je ne sais pas encore",
+    "en": "I’m not sure yet",
+    "pt-BR": "Ainda não sei",
+    "es": "Todavía no lo sé"
+  },
+  "v4.goal.temps": {
+    "fr": "Gagner du temps",
+    "en": "Save time",
+    "pt-BR": "Ganhar tempo",
+    "es": "Ganar tiempo"
+  },
+  "v4.goal.fiabilite": {
+    "fr": "Fiabiliser les informations",
+    "en": "Make information reliable",
+    "pt-BR": "Tornar as informações confiáveis",
+    "es": "Mejorar la fiabilidad de la información"
+  },
+  "v4.goal.suivi": {
+    "fr": "Mieux suivre les dossiers",
+    "en": "Track cases better",
+    "pt-BR": "Acompanhar melhor os processos",
+    "es": "Seguir mejor los expedientes"
+  },
+  "v4.goal.partage": {
+    "fr": "Faciliter le partage",
+    "en": "Make sharing easier",
+    "pt-BR": "Facilitar o compartilhamento",
+    "es": "Facilitar el intercambio"
+  },
+  "v4.goal.inconnu": {
+    "fr": "À préciser ensemble",
+    "en": "To clarify together",
+    "pt-BR": "A definir em conjunto",
+    "es": "Por concretar juntos"
+  },
+  "v4.horizon.vite": {
+    "fr": "Rapidement",
+    "en": "Soon",
+    "pt-BR": "Em breve",
+    "es": "Pronto"
+  },
+  "v4.horizon.mois": {
+    "fr": "Dans les prochains mois",
+    "en": "In the coming months",
+    "pt-BR": "Nos próximos meses",
+    "es": "En los próximos meses"
+  },
+  "v4.horizon.reflexion": {
+    "fr": "Je suis en réflexion",
+    "en": "I’m exploring options",
+    "pt-BR": "Estou refletindo",
+    "es": "Estoy reflexionando"
+  },
+  "v4.horizon.inconnu": {
+    "fr": "Je ne sais pas encore",
+    "en": "I’m not sure yet",
+    "pt-BR": "Ainda não sei",
+    "es": "Todavía no lo sé"
+  },
+  "v4.field.problems": {
+    "fr": "Qu’est-ce qui complique votre travail ?",
+    "en": "What makes your work difficult?",
+    "pt-BR": "O que dificulta seu trabalho?",
+    "es": "¿Qué dificulta su trabajo?"
+  },
+  "v4.field.frequency": {
+    "fr": "À quelle fréquence cela arrive-t-il ?",
+    "en": "How often does it happen?",
+    "pt-BR": "Com que frequência isso acontece?",
+    "es": "¿Con qué frecuencia ocurre?"
+  },
+  "v4.field.people": {
+    "fr": "Combien de personnes sont concernées ?",
+    "en": "How many people are affected?",
+    "pt-BR": "Quantas pessoas são afetadas?",
+    "es": "¿Cuántas personas están afectadas?"
+  },
+  "v4.field.impacts": {
+    "fr": "Quelles conséquences observez-vous ?",
+    "en": "What consequences do you observe?",
+    "pt-BR": "Quais consequências você observa?",
+    "es": "¿Qué consecuencias observa?"
+  },
+  "v4.field.tools": {
+    "fr": "Quels outils utilisez-vous actuellement ? Facultatif",
+    "en": "Which tools do you currently use? Optional",
+    "pt-BR": "Quais ferramentas você usa atualmente? Opcional",
+    "es": "¿Qué herramientas utiliza actualmente? Opcional"
+  },
+  "v4.field.goal": {
+    "fr": "Quelle amélioration serait la plus utile ?",
+    "en": "Which improvement would help most?",
+    "pt-BR": "Qual melhoria seria mais útil?",
+    "es": "¿Qué mejora sería más útil?"
+  },
+  "v4.field.horizon": {
+    "fr": "Quand souhaitez-vous avancer ?",
+    "en": "When would you like to move forward?",
+    "pt-BR": "Quando gostaria de avançar?",
+    "es": "¿Cuándo le gustaría avanzar?"
+  },
+  "v4.none": {
+    "fr": "Non précisé",
+    "en": "Not specified",
+    "pt-BR": "Não informado",
+    "es": "No indicado"
+  },
+  "v4.intro": {
+    "fr": "Voici ce que vous avez indiqué. Cette synthèse ne classe pas vos difficultés à votre place.",
+    "en": "Here is what you reported. This summary does not rank your difficulties for you.",
+    "pt-BR": "Veja o que você informou. Esta síntese não classifica suas dificuldades por você.",
+    "es": "Esto es lo que ha indicado. Esta síntesis no ordena sus dificultades por usted."
+  },
+  "v4.single": {
+    "fr": "Vous avez identifié une difficulté précise. La piste proposée correspond à votre réponse.",
+    "en": "You identified a specific difficulty. The suggested option follows your answer.",
+    "pt-BR": "Você identificou uma dificuldade específica. A pista proposta corresponde à sua resposta.",
+    "es": "Ha identificado una dificultad concreta. La vía propuesta corresponde a su respuesta."
+  },
+  "v4.multiple": {
+    "fr": "Plusieurs difficultés sont signalées. Leur priorité reste à définir ensemble, selon leurs conséquences et les possibilités d’action.",
+    "en": "You reported several difficulties. Priorities remain to be defined together, based on their consequences and possible actions.",
+    "pt-BR": "Você indicou várias dificuldades. A prioridade será definida em conjunto, conforme suas consequências e as possibilidades de ação.",
+    "es": "Ha señalado varias dificultades. Su prioridad se definirá conjuntamente según sus consecuencias y las posibilidades de actuación."
+  },
+  "v4.unclear": {
+    "fr": "Votre difficulté reste à préciser. Un premier échange peut aider à décrire une tâche concrète et ce qui la complique.",
+    "en": "Your difficulty needs clarification. A first conversation can help describe a specific task and what makes it difficult.",
+    "pt-BR": "Sua dificuldade precisa ser esclarecida. Uma primeira conversa pode ajudar a descrever uma tarefa concreta e o que a dificulta.",
+    "es": "Su dificultad debe concretarse. Una primera conversación puede ayudar a describir una tarea concreta y qué la complica."
+  },
+  "v4.rec.ressaisies": {
+    "fr": "Repérer les informations recopiées et vérifier comment les transmettre entre vos outils.",
+    "en": "Identify copied information and check how to pass it between your tools.",
+    "pt-BR": "Identificar as informações copiadas e verificar como transmiti-las entre suas ferramentas.",
+    "es": "Identificar la información copiada y comprobar cómo transmitirla entre sus herramientas."
+  },
+  "v4.rec.repetitif": {
+    "fr": "Observer une tâche répétitive, sa fréquence et ses exceptions avant d’étudier son automatisation.",
+    "en": "Observe a repetitive task, its frequency and exceptions before considering automation.",
+    "pt-BR": "Observar uma tarefa repetitiva, sua frequência e exceções antes de estudar sua automatização.",
+    "es": "Observar una tarea repetitiva, su frecuencia y excepciones antes de estudiar su automatización."
+  },
+  "v4.rec.chiffres": {
+    "fr": "Comparer les définitions et les sources d’un indicateur pour comprendre les écarts.",
+    "en": "Compare definitions and sources for an indicator to understand discrepancies.",
+    "pt-BR": "Comparar as definições e fontes de um indicador para entender as divergências.",
+    "es": "Comparar las definiciones y fuentes de un indicador para comprender las discrepancias."
+  },
+  "v4.rec.suivi": {
+    "fr": "Décrire les étapes d’un dossier et repérer où les retards deviennent difficiles à voir.",
+    "en": "Describe the stages of a case and identify where delays become hard to see.",
+    "pt-BR": "Descrever as etapas de um processo e identificar onde os atrasos ficam difíceis de perceber.",
+    "es": "Describir las etapas de un expediente e identificar dónde es difícil detectar los retrasos."
+  },
+  "v4.rec.personne": {
+    "fr": "Repérer les connaissances et tâches détenues par une seule personne pour préparer leur partage.",
+    "en": "Identify knowledge and tasks held by one person to prepare for sharing them.",
+    "pt-BR": "Identificar conhecimentos e tarefas concentrados em uma pessoa para preparar seu compartilhamento.",
+    "es": "Identificar conocimientos y tareas concentrados en una persona para preparar su intercambio."
+  },
+  "v4.next": {
+    "fr": "Prochaine étape possible",
+    "en": "Possible next step",
+    "pt-BR": "Próxima etapa possível",
+    "es": "Posible siguiente paso"
+  },
+  "v4.need_added": {
+    "fr": "Sujet à discuter : {label}",
+    "en": "Topic to discuss: {label}",
+    "pt-BR": "Assunto para conversar: {label}",
+    "es": "Tema para comentar: {label}"
+  },
+  "v4.added": {
+    "fr": "Synthèse ajoutée au message",
+    "en": "Summary added to the message",
+    "pt-BR": "Síntese adicionada à mensagem",
+    "es": "Síntesis añadida al mensaje"
+  },
+  "v4.old": {
+    "fr": "Cette synthèse provient d’une ancienne version. Refaites le point pour obtenir les nouvelles pistes.",
+    "en": "This summary comes from an older version. Review your situation again to get the new suggestions.",
+    "pt-BR": "Esta síntese vem de uma versão anterior. Avalie sua situação novamente para obter as novas pistas.",
+    "es": "Esta síntesis procede de una versión anterior. Revise su situación para obtener las nuevas propuestas."
+  },
+  "v4.title": {
+    "fr": "Votre synthèse indicative",
+    "en": "Your indicative summary",
+    "pt-BR": "Sua síntese indicativa",
+    "es": "Su síntesis orientativa"
+  },
+  "v4.refresh": {
+    "fr": "Refaire le point",
+    "en": "Review again",
+    "pt-BR": "Avaliar novamente",
+    "es": "Revisar de nuevo"
   }
 }

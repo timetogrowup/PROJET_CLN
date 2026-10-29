@@ -4,15 +4,18 @@ CLN.ready.then(async () => {
   const button=form.querySelector('[type="submit"]'),dialog=document.querySelector('#human-dialog'),check=document.querySelector('#human-check'),confirm=document.querySelector('#human-confirm'),cancel=document.querySelector('#human-cancel'),retry=document.querySelector('#human-retry'),humanStatus=document.querySelector('#human-status'),alert=document.querySelector('#form-alert');
   const preview=document.querySelector('#recommendation-preview'),content=document.querySelector('#recommendation-content'),date=document.querySelector('#recommendation-date'),message=form.elements.message;
   for(const el of [humanStatus,alert,content,date])el.dataset.dynamic='true';
-  let challenge=null,state='closed',generation=0,controller=null,statusKey='',previousPrefill='',data=CLN.readSummary();
+  let summaryBase='';
+  let challenge=null,state='closed',generation=0,controller=null,statusKey='',previousPrefill='',data=new URLSearchParams(location.search).get('summary')==='1'?CLN.readSummary():null;
   const params=new URLSearchParams(location.search),status=params.get('status');
   const storageKey='clnContactDraft';
   try{const draft=JSON.parse(sessionStorage.getItem(storageKey)||'null');if(status==='success'){sessionStorage.removeItem(storageKey);}else if(draft&&draft.expires>Date.now()){for(const key of ['name','_replyto','company','message'])if(typeof draft.fields?.[key]==='string')form.elements[key].value=draft.fields[key];}else sessionStorage.removeItem(storageKey);}catch(_){}
   function renderSummary(){
     if(!data){preview.hidden=true;return;}preview.hidden=false;
-    if(data.version!==2||!data.answers){content.textContent=CLN.t('old_summary');return;}
+    const add=document.querySelector('#recommendation-add');
+    if(data.version!==4||!data.answers){content.replaceChildren();const note=document.createElement('p');note.textContent=CLN.t('v4.old');const link=document.createElement('a');link.href='diagnostic.html?lang='+encodeURIComponent(CLN.lang);link.className='text-link';link.textContent=CLN.t('v4.refresh');content.append(note,link);add.hidden=true;return;}
+    add.hidden=false;add.disabled=Boolean(previousPrefill);if(previousPrefill)add.textContent=CLN.t('v4.added');
     const text=CLN.summaryText(data.answers);content.textContent=text;content.style.whiteSpace='pre-line';date.textContent=CLN.t('summary_date',{date:new Intl.DateTimeFormat(CLN.lang,{dateStyle:'long',timeStyle:'short'}).format(new Date(data.generatedAt))});
-    const next=text+'\n\n'+CLN.t('meeting_request');if(!message.value||message.value===previousPrefill){message.value=next;previousPrefill=next;}
+    
   }
   function showAlert(){if(!status)return;const known=['invalid','error','rate','human_required','human_invalid','human_used','forbidden','too_large'];if(!known.includes(status))return;const seconds=Math.min(3600,Math.max(1,Number(params.get('wait'))||60));alert.textContent=CLN.t(status,{minutes:new Intl.NumberFormat(CLN.lang).format(Math.ceil(seconds/60))});alert.className='form-alert form-alert--error';alert.hidden=false;}
   function renderHuman(){
@@ -78,7 +81,22 @@ CLN.ready.then(async () => {
     try{const fields={};for(const k of ['name','_replyto','company','message'])fields[k]=form.elements[k].value;sessionStorage.setItem(storageKey,JSON.stringify({fields,expires:Date.now()+30*60000}));}catch(_){}
     HTMLFormElement.prototype.submit.call(form);
   });
-  document.querySelector('#recommendation-clear').addEventListener('click',()=>{try{localStorage.removeItem('clnRecommendation');}catch(_){}if(message.value===previousPrefill)message.value='';previousPrefill='';data=null;renderSummary();});
+  document.querySelector('#recommendation-add').addEventListener('click',()=>{
+    if(!data||data.version!==4||!data.answers||previousPrefill)return;
+    const text=CLN.summaryText(data.answers);
+    summaryBase=message.value;
+    message.value=message.value?message.value+'\n\n'+text:text;
+    previousPrefill=message.value;renderSummary();message.focus();
+  });
+  const needSelect=document.querySelector('#need-context');
+  const needLabels={ressaisies:'v4.problems.ressaisies',repetitif:'v4.problems.repetitif',chiffres:'v4.problems.chiffres',suivi:'v4.problems.suivi'};
+  if(Object.hasOwn(needLabels,params.get('need')))needSelect.value=params.get('need');
+  document.querySelector('#need-add').addEventListener('click',()=>{
+    if(!Object.hasOwn(needLabels,needSelect.value))return;
+    const text=CLN.t('v4.need_added',{label:CLN.t(needLabels[needSelect.value])});
+    message.value=message.value?message.value+'\n\n'+text:text;message.focus();
+  });
+  document.querySelector('#recommendation-clear').addEventListener('click',()=>{try{localStorage.removeItem('clnRecommendation');}catch(_){}if(previousPrefill&&message.value===previousPrefill)message.value=summaryBase;previousPrefill='';summaryBase='';data=null;renderSummary();});
   window.addEventListener('cln:language',()=>{renderSummary();renderHuman();positionDialog();});
   form.addEventListener('submit',event=>{
     event.preventDefault();if(state==='sending'||dialog.open)return;

@@ -181,7 +181,7 @@
   },
   "Mentions légales": {
     "en": "Legal notice",
-    "pt-BR": "Informações legais",
+    "pt-BR": "Aviso legal",
     "es": "Aviso legal"
   },
   "Confidentialité": {
@@ -710,7 +710,7 @@
     "es": "Más de 6 meses"
   },
   "Je ne sais pas encore": {
-    "en": "I am not sure yet",
+    "en": "I’m not sure yet",
     "pt-BR": "Ainda não sei",
     "es": "Todavía no lo sé"
   },
@@ -1178,5 +1178,735 @@
     "en": "CNIL",
     "pt-BR": "CNIL",
     "es": "CNIL"
+  },
+  "CLN Performance vous aide à simplifier le travail et à fiabiliser vos informations.": {
+    "en": "CLN Performance helps simplify work and make your information reliable.",
+    "pt-BR": "A CLN Performance ajuda a simplificar o trabalho e tornar suas informações confiáveis.",
+    "es": "CLN Performance ayuda a simplificar el trabajo y mejorar la fiabilidad de su información."
+  },
+  "Notre objectif est un bénéfice durable et votre autonomie. Nous ne cherchons pas à installer une facturation récurrente. Selon votre projet, nous pouvons convenir d’une rémunération liée aux bénéfices effectivement constatés, avec des critères définis ensemble avant l’intervention.": {
+    "en": "Our aim is a lasting benefit and your autonomy. We do not seek to establish recurring billing. Depending on your project, we can agree on remuneration linked to benefits actually observed, with criteria defined together before work begins.",
+    "pt-BR": "Nosso objetivo é um benefício duradouro e sua autonomia. Não buscamos estabelecer cobranças recorrentes. Conforme o projeto, podemos acordar uma remuneração ligada aos benefícios efetivamente constatados, com critérios definidos em conjunto antes da intervenção.",
+    "es": "Nuestro objetivo es un beneficio duradero y su autonomía. No buscamos establecer una facturación recurrente. Según el proyecto, podemos acordar una remuneración vinculada a los beneficios efectivamente constatados, con criterios definidos juntos antes de intervenir."
+  },
+  "Simplifier votre quotidien": {
+    "en": "Simplify your daily work",
+    "pt-BR": "Simplificar seu dia a dia",
+    "es": "Simplificar su día a día"
+  },
+  "Moins de tâches répétitives. Des informations fiables. Du temps pour votre activité.": {
+    "en": "Fewer repetitive tasks. Reliable information. More time for your work.",
+    "pt-BR": "Menos tarefas repetitivas. Informações confiáveis. Mais tempo para sua atividade.",
+    "es": "Menos tareas repetitivas. Información fiable. Más tiempo para su actividad."
+  },
+  "CLN Performance aide votre organisation à éviter les ressaisies, automatiser les tâches répétitives et mieux suivre son activité. Nous partons du travail réel de vos équipes pour améliorer vos outils et leur utilisation.": {
+    "en": "CLN Performance helps your organisation avoid re-entry, automate repetitive tasks and monitor activity. We start with your teams’ actual work to improve your tools and how they are used.",
+    "pt-BR": "A CLN Performance ajuda sua organização a evitar redigitações, automatizar tarefas repetitivas e acompanhar melhor suas atividades. Partimos do trabalho real das equipes para melhorar suas ferramentas e sua utilização.",
+    "es": "CLN Performance ayuda a su organización a evitar la doble introducción de datos, automatizar tareas repetitivas y seguir mejor su actividad. Partimos del trabajo real de sus equipos para mejorar sus herramientas y su uso."
+  },
+  "Voir des exemples concrets": {
+    "en": "See practical examples",
+    "pt-BR": "Ver exemplos práticos",
+    "es": "Ver ejemplos prácticos"
+  },
+  "Parlons de votre situation": {
+    "en": "Let’s discuss your situation",
+    "pt-BR": "Vamos conversar sobre sua situação",
+    "es": "Hablemos de su situación"
+  },
+  "Un exemple simple": {
+    "en": "A simple example",
+    "pt-BR": "Um exemplo simples",
+    "es": "Un ejemplo sencillo"
+  },
+  "Avant : chaque semaine, une personne rassemble plusieurs fichiers pour préparer le suivi.": {
+    "en": "Before: each week, someone gathers several files to prepare a report.",
+    "pt-BR": "Antes: toda semana, uma pessoa reúne vários arquivos para preparar o acompanhamento.",
+    "es": "Antes: cada semana, una persona reúne varios archivos para preparar el seguimiento."
+  },
+  "Après : les fichiers sont regroupés et contrôlés automatiquement. L’équipe vérifie les anomalies et analyse les résultats.": {
+    "en": "After: files are combined and checked automatically. The team reviews exceptions and analyses results.",
+    "pt-BR": "Depois: os arquivos são reunidos e verificados automaticamente. A equipe examina as anomalias e analisa os resultados.",
+    "es": "Después: los archivos se agrupan y revisan automáticamente. El equipo comprueba las anomalías y analiza los resultados."
+  },
+  "Scénario illustratif, sans gain chiffré garanti.": {
+    "en": "Illustrative scenario, with no guaranteed numerical gain.",
+    "pt-BR": "Cenário ilustrativo, sem ganho numérico garantido.",
+    "es": "Escenario ilustrativo, sin ganancia numérica garantizada."
+  },
+  "Vous reconnaissez une de ces situations ?": {
+    "en": "Do any of these situations sound familiar?",
+    "pt-BR": "Você reconhece alguma destas situações?",
+    "es": "¿Reconoce alguna de estas situaciones?"
+  },
+  "Éviter les ressaisies": {
+    "en": "Avoid re-entering information",
+    "pt-BR": "Evitar a redigitação",
+    "es": "Evitar volver a introducir datos"
+  },
+  "Vous recopiez les mêmes informations dans plusieurs fichiers ou logiciels. CLN étudie leur circulation pour limiter les recopies, les oublis et les écarts.": {
+    "en": "You copy the same information into several files or applications. CLN examines how it flows to reduce copying, omissions and inconsistencies.",
+    "pt-BR": "Você copia as mesmas informações em vários arquivos ou sistemas. A CLN analisa sua circulação para reduzir redigitações, esquecimentos e divergências.",
+    "es": "Copia la misma información en varios archivos o programas. CLN estudia su circulación para reducir copias, olvidos y discrepancias."
+  },
+  "Voir ce que CLN peut changer": {
+    "en": "See what CLN can change",
+    "pt-BR": "Veja o que a CLN pode mudar",
+    "es": "Vea qué puede cambiar CLN"
+  },
+  "Réduire les tâches répétitives": {
+    "en": "Reduce repetitive tasks",
+    "pt-BR": "Reduzir tarefas repetitivas",
+    "es": "Reducir tareas repetitivas"
+  },
+  "Vous assemblez des fichiers et envoyez les mêmes relances chaque semaine. CLN automatise les opérations adaptées ; vos équipes gardent la main sur les exceptions.": {
+    "en": "You assemble files and send the same reminders every week. CLN automates suitable operations; your teams retain control of exceptions.",
+    "pt-BR": "Você reúne arquivos e envia os mesmos lembretes toda semana. A CLN automatiza as operações adequadas; suas equipes mantêm o controle das exceções.",
+    "es": "Reúne archivos y envía los mismos recordatorios cada semana. CLN automatiza las operaciones adecuadas; sus equipos mantienen el control de las excepciones."
+  },
+  "Disposer de chiffres fiables": {
+    "en": "Work with reliable figures",
+    "pt-BR": "Dispor de números confiáveis",
+    "es": "Disponer de cifras fiables"
+  },
+  "Deux services annoncent des chiffres différents pour la même activité. CLN clarifie les sources, les définitions et les contrôles pour disposer d’informations cohérentes.": {
+    "en": "Two departments report different figures for the same activity. CLN clarifies sources, definitions and checks to provide consistent information.",
+    "pt-BR": "Dois setores apresentam números diferentes para a mesma atividade. A CLN esclarece fontes, definições e controles para obter informações coerentes.",
+    "es": "Dos departamentos presentan cifras distintas para la misma actividad. CLN aclara fuentes, definiciones y controles para disponer de información coherente."
+  },
+  "Savoir où en sont les dossiers": {
+    "en": "Know the status of your cases",
+    "pt-BR": "Saber como estão os processos",
+    "es": "Conocer el estado de los expedientes"
+  },
+  "Le suivi dépend des emails ou de la mémoire d’une personne. CLN organise un suivi partagé des étapes et des échéances pour repérer les blocages plus tôt.": {
+    "en": "Tracking relies on emails or one person’s memory. CLN organises shared tracking of stages and deadlines to spot bottlenecks sooner.",
+    "pt-BR": "O acompanhamento depende de emails ou da memória de uma pessoa. A CLN organiza o acompanhamento compartilhado de etapas e prazos para identificar bloqueios mais cedo.",
+    "es": "El seguimiento depende de los correos o de la memoria de una persona. CLN organiza un seguimiento compartido de etapas y plazos para detectar bloqueos antes."
+  },
+  "Une amélioration utile que vous pouvez garder en main": {
+    "en": "A useful improvement you can keep control of",
+    "pt-BR": "Uma melhoria útil que você pode manter sob controle",
+    "es": "Una mejora útil que puede mantener bajo su control"
+  },
+  "Comprendre notre démarche": {
+    "en": "Understand our approach",
+    "pt-BR": "Entenda nossa abordagem",
+    "es": "Comprenda nuestro enfoque"
+  },
+  "Votre interlocuteur": {
+    "en": "Your contact",
+    "pt-BR": "Seu interlocutor",
+    "es": "Su interlocutor"
+  },
+  "Patrick est votre interlocuteur pour comprendre votre situation et construire une amélioration avec les personnes concernées.": {
+    "en": "Patrick is your contact to understand your situation and develop an improvement with the people involved.",
+    "pt-BR": "Patrick é seu interlocutor para entender sua situação e construir uma melhoria com as pessoas envolvidas.",
+    "es": "Patrick es su interlocutor para comprender su situación y construir una mejora con las personas implicadas."
+  },
+  "Découvrir les étapes de notre intervention": {
+    "en": "Discover the steps of our work",
+    "pt-BR": "Conheça as etapas da intervenção",
+    "es": "Conozca las etapas de nuestra intervención"
+  },
+  "Vous ne savez pas par quoi commencer ?": {
+    "en": "Not sure where to start?",
+    "pt-BR": "Não sabe por onde começar?",
+    "es": "¿No sabe por dónde empezar?"
+  },
+  "Faire le point sur ma situation": {
+    "en": "Review my situation",
+    "pt-BR": "Avaliar minha situação",
+    "es": "Revisar mi situación"
+  },
+  "Simplifier le travail et fiabiliser vos informations": {
+    "en": "Simplify work and make information reliable",
+    "pt-BR": "Simplificar o trabalho e tornar as informações confiáveis",
+    "es": "Simplificar el trabajo y mejorar la fiabilidad de la información"
+  },
+  "Gagnez en clarté sur les tâches répétitives, les ressaisies et le suivi de votre activité avec CLN Performance.": {
+    "en": "Get clarity on repetitive tasks, re-entry and activity tracking with CLN Performance.",
+    "pt-BR": "Tenha mais clareza sobre tarefas repetitivas, redigitações e acompanhamento com a CLN Performance.",
+    "es": "Obtenga claridad sobre tareas repetitivas, datos duplicados y seguimiento con CLN Performance."
+  },
+  "Navigation principale": {
+    "en": "Main navigation",
+    "pt-BR": "Navegação principal",
+    "es": "Navegación principal"
+  },
+  "Vos besoins": {
+    "en": "Your needs",
+    "pt-BR": "Suas necessidades",
+    "es": "Sus necesidades"
+  },
+  "Comment nous travaillons": {
+    "en": "How we work",
+    "pt-BR": "Como trabalhamos",
+    "es": "Cómo trabajamos"
+  },
+  "Exemples concrets": {
+    "en": "Practical examples",
+    "pt-BR": "Exemplos práticos",
+    "es": "Ejemplos prácticos"
+  },
+  "Faire le point": {
+    "en": "Review your situation",
+    "pt-BR": "Avalie sua situação",
+    "es": "Revise su situación"
+  },
+  "Aller au contenu": {
+    "en": "Skip to content",
+    "pt-BR": "Ir para o conteúdo",
+    "es": "Ir al contenido"
+  },
+  "Qu’aimeriez-vous améliorer dans votre travail ?": {
+    "en": "What would you like to improve in your work?",
+    "pt-BR": "O que gostaria de melhorar no seu trabalho?",
+    "es": "¿Qué le gustaría mejorar en su trabajo?"
+  },
+  "Partez de votre difficulté. Nous vous aidons à définir une amélioration adaptée, avec les équipes concernées.": {
+    "en": "Start with your difficulty. We help define a suitable improvement with the teams involved.",
+    "pt-BR": "Parta de sua dificuldade. Ajudamos a definir uma melhoria adequada com as equipes envolvidas.",
+    "es": "Parta de su dificultad. Le ayudamos a definir una mejora adecuada con los equipos implicados."
+  },
+  "Exemple : saisir une information une fois et la transmettre aux outils concernés.": {
+    "en": "Example: enter information once and pass it to the relevant tools.",
+    "pt-BR": "Exemplo: inserir uma informação uma vez e transmiti-la às ferramentas envolvidas.",
+    "es": "Ejemplo: introducir una información una vez y transmitirla a las herramientas pertinentes."
+  },
+  "Comment cela fonctionne": {
+    "en": "How it works",
+    "pt-BR": "Como funciona",
+    "es": "Cómo funciona"
+  },
+  "Nous examinons les outils, les règles de travail et les contraintes avant de proposer une solution. Selon le besoin : connexion entre logiciels, traitement automatisé de fichiers, contrôles de données ou tableau de suivi. Les accès et les essais sont définis avec vos interlocuteurs techniques.": {
+    "en": "We examine tools, working rules and constraints before proposing a solution. Depending on the need: connecting applications, processing files automatically, checking data or a tracking dashboard. Access and testing are defined with your technical contacts.",
+    "pt-BR": "Examinamos ferramentas, regras de trabalho e restrições antes de propor uma solução. Conforme a necessidade: conexão entre sistemas, tratamento automático de arquivos, verificações de dados ou painel de acompanhamento. Acessos e testes são definidos com seus interlocutores técnicos.",
+    "es": "Examinamos herramientas, reglas de trabajo y limitaciones antes de proponer una solución. Según la necesidad: conexión entre programas, tratamiento automático de archivos, controles de datos o cuadro de seguimiento. Los accesos y pruebas se definen con sus interlocutores técnicos."
+  },
+  "Parlons de cette difficulté": {
+    "en": "Let’s discuss this difficulty",
+    "pt-BR": "Vamos conversar sobre essa dificuldade",
+    "es": "Hablemos de esta dificultad"
+  },
+  "Bénéfice attendu : du temps pour traiter les situations qui demandent une décision.": {
+    "en": "Expected benefit: time to handle situations that need a decision.",
+    "pt-BR": "Benefício esperado: tempo para tratar situações que exigem uma decisão.",
+    "es": "Beneficio esperado: tiempo para atender las situaciones que requieren una decisión."
+  },
+  "Bénéfice attendu : comprendre les indicateurs et décider sur une base partagée.": {
+    "en": "Expected benefit: understand indicators and make decisions on a shared basis.",
+    "pt-BR": "Benefício esperado: entender os indicadores e decidir com uma base compartilhada.",
+    "es": "Beneficio esperado: comprender los indicadores y decidir sobre una base compartida."
+  },
+  "Bénéfice attendu : moins d’oublis et une continuité du travail plus facile.": {
+    "en": "Expected benefit: fewer omissions and easier continuity of work.",
+    "pt-BR": "Benefício esperado: menos esquecimentos e mais facilidade na continuidade do trabalho.",
+    "es": "Beneficio esperado: menos olvidos y mayor facilidad para dar continuidad al trabajo."
+  },
+  "Les bénéfices sont des objectifs à évaluer selon votre contexte, pas des résultats garantis.": {
+    "en": "Benefits are objectives to assess in your context, not guaranteed results.",
+    "pt-BR": "Os benefícios são objetivos a avaliar conforme seu contexto, não resultados garantidos.",
+    "es": "Los beneficios son objetivos que se evalúan según su contexto, no resultados garantizados."
+  },
+  "Mon besoin est différent": {
+    "en": "My need is different",
+    "pt-BR": "Minha necessidade é diferente",
+    "es": "Mi necesidad es diferente"
+  },
+  "Ressaisies, tâches répétitives, chiffres divergents ou manque de suivi : trouvez votre situation.": {
+    "en": "Re-entry, repetitive tasks, inconsistent figures or tracking issues: find your situation.",
+    "pt-BR": "Redigitações, tarefas repetitivas, números divergentes ou falta de acompanhamento: encontre sua situação.",
+    "es": "Datos duplicados, tareas repetitivas, cifras distintas o falta de seguimiento: encuentre su situación."
+  },
+  "Une intervention construite avec vos équipes": {
+    "en": "Work designed with your teams",
+    "pt-BR": "Uma intervenção construída com suas equipes",
+    "es": "Una intervención construida con sus equipos"
+  },
+  "Vous connaissez votre activité. Nous apportons une méthode et les compétences nécessaires pour rendre une amélioration concrète et utilisable.": {
+    "en": "You know your activity. We bring a method and the skills needed to make an improvement practical and usable.",
+    "pt-BR": "Você conhece sua atividade. Trazemos um método e as competências necessárias para tornar uma melhoria concreta e utilizável.",
+    "es": "Usted conoce su actividad. Aportamos un método y las competencias necesarias para lograr una mejora concreta y utilizable."
+  },
+  "Comprendre votre fonctionnement": {
+    "en": "Understand how you work",
+    "pt-BR": "Entender seu funcionamento",
+    "es": "Comprender su funcionamiento"
+  },
+  "Nous échangeons avec les équipes et examinons quelques exemples de travail. Vous obtenez une synthèse de la difficulté et de ses conséquences.": {
+    "en": "We talk with teams and examine examples of their work. You receive a summary of the difficulty and its consequences.",
+    "pt-BR": "Conversamos com as equipes e examinamos exemplos de trabalho. Você recebe uma síntese da dificuldade e de suas consequências.",
+    "es": "Hablamos con los equipos y examinamos ejemplos de trabajo. Obtiene una síntesis de la dificultad y de sus consecuencias."
+  },
+  "Choisir une amélioration prioritaire": {
+    "en": "Choose a priority improvement",
+    "pt-BR": "Escolher uma melhoria prioritária",
+    "es": "Elegir una mejora prioritaria"
+  },
+  "Nous comparons les pistes, les efforts et les bénéfices attendus. Vous validez le périmètre, le plan d’action et les critères de réussite avant la réalisation.": {
+    "en": "We compare options, effort and expected benefits. You approve the scope, action plan and success criteria before implementation.",
+    "pt-BR": "Comparamos opções, esforços e benefícios esperados. Você valida o escopo, o plano de ação e os critérios de sucesso antes da realização.",
+    "es": "Comparamos opciones, esfuerzos y beneficios esperados. Valida el alcance, el plan de acción y los criterios de éxito antes de la realización."
+  },
+  "Tester avec vos équipes": {
+    "en": "Test with your teams",
+    "pt-BR": "Testar com suas equipes",
+    "es": "Probar con sus equipos"
+  },
+  "Nous réalisons et testons sur un périmètre défini. Vos équipes vérifient le résultat ; les anomalies et les conditions de mise en service sont traitées ensemble.": {
+    "en": "We implement and test within an agreed scope. Your teams check the result; issues and launch conditions are addressed together.",
+    "pt-BR": "Realizamos e testamos em um escopo definido. Suas equipes verificam o resultado; as anomalias e as condições de entrada em serviço são tratadas em conjunto.",
+    "es": "Realizamos y probamos en un alcance definido. Sus equipos verifican el resultado; las anomalías y las condiciones de puesta en servicio se tratan juntos."
+  },
+  "Transmettre et mesurer les bénéfices": {
+    "en": "Hand over and measure benefits",
+    "pt-BR": "Transmitir e medir os benefícios",
+    "es": "Transmitir y medir los beneficios"
+  },
+  "Nous accompagnons la prise en main et remettons une documentation adaptée. Nous comparons les résultats à la situation de départ sur une période convenue, pour préparer votre autonomie.": {
+    "en": "We support adoption and provide suitable documentation. We compare results with the starting situation over an agreed period to prepare your autonomy.",
+    "pt-BR": "Acompanhamos a utilização e entregamos documentação adequada. Comparamos os resultados com a situação inicial em um período acordado, para preparar sua autonomia.",
+    "es": "Acompañamos la puesta en práctica y entregamos documentación adaptada. Comparamos los resultados con la situación inicial durante un período acordado, para preparar su autonomía."
+  },
+  "Une rémunération qui peut être liée à vos bénéfices": {
+    "en": "Remuneration that can be linked to your benefits",
+    "pt-BR": "Uma remuneração que pode estar ligada aos seus benefícios",
+    "es": "Una remuneración que puede vincularse a sus beneficios"
+  },
+  "Nous convenons des indicateurs, de la situation de départ, de la période de mesure et de la manière de constater les résultats. Les modalités de calcul et de paiement sont définies dans l’accord commercial, y compris si les résultats sont inférieurs aux attentes.": {
+    "en": "We agree on indicators, the starting situation, the measurement period and how results will be verified. Calculation and payment terms are defined in the commercial agreement, including if results fall short of expectations.",
+    "pt-BR": "Acordamos indicadores, situação inicial, período de medição e forma de constatar os resultados. As regras de cálculo e pagamento são definidas no acordo comercial, inclusive se os resultados ficarem abaixo do esperado.",
+    "es": "Acordamos indicadores, situación inicial, período de medición y forma de constatar los resultados. Las condiciones de cálculo y pago se definen en el acuerdo comercial, incluso si los resultados quedan por debajo de lo esperado."
+  },
+  "Du temps libéré n’est pas automatiquement une économie financière. Les coûts éventuels de logiciels ou d’hébergement sont identifiés séparément. Un besoin de suivi ultérieur fait l’objet d’un accord distinct.": {
+    "en": "Time freed up is not automatically a financial saving. Any software or hosting costs are identified separately. Any subsequent support needs are covered by a separate agreement.",
+    "pt-BR": "Tempo liberado não é automaticamente uma economia financeira. Eventuais custos de software ou hospedagem são identificados separadamente. Necessidades posteriores de acompanhamento são objeto de um acordo distinto.",
+    "es": "El tiempo liberado no es automáticamente un ahorro financiero. Los posibles costes de programas o alojamiento se identifican por separado. Cualquier necesidad posterior de seguimiento es objeto de un acuerdo distinto."
+  },
+  "Vos questions pratiques": {
+    "en": "Practical questions",
+    "pt-BR": "Perguntas práticas",
+    "es": "Preguntas prácticas"
+  },
+  "Faut-il remplacer nos outils ?": {
+    "en": "Must we replace our tools?",
+    "pt-BR": "Precisamos substituir nossas ferramentas?",
+    "es": "¿Hay que sustituir nuestras herramientas?"
+  },
+  "Nous étudions d’abord vos outils et leurs possibilités. Les changements nécessaires sont discutés avant toute réalisation.": {
+    "en": "We first examine your tools and their capabilities. Necessary changes are discussed before implementation.",
+    "pt-BR": "Primeiro examinamos suas ferramentas e possibilidades. As mudanças necessárias são discutidas antes de qualquer realização.",
+    "es": "Primero estudiamos sus herramientas y posibilidades. Los cambios necesarios se discuten antes de la realización."
+  },
+  "Qui doit participer ?": {
+    "en": "Who needs to take part?",
+    "pt-BR": "Quem deve participar?",
+    "es": "¿Quién debe participar?"
+  },
+  "Les personnes qui réalisent le travail, un responsable du périmètre et, selon les sujets, les interlocuteurs informatiques. Leur disponibilité est organisée au cadrage.": {
+    "en": "The people doing the work, a scope owner and, where relevant, technical contacts. Availability is planned when defining the scope.",
+    "pt-BR": "As pessoas que realizam o trabalho, um responsável pelo escopo e, conforme o assunto, os interlocutores de informática. A disponibilidade é organizada no planejamento.",
+    "es": "Las personas que realizan el trabajo, un responsable del alcance y, según el tema, los interlocutores informáticos. La disponibilidad se organiza al definir el alcance."
+  },
+  "Combien coûte une intervention ?": {
+    "en": "How much does an engagement cost?",
+    "pt-BR": "Quanto custa uma intervenção?",
+    "es": "¿Cuánto cuesta una intervención?"
+  },
+  "Le coût et la durée dépendent du périmètre. Nous pouvons étudier une rémunération liée aux bénéfices constatés. Il ne s’agit ni d’une gratuité annoncée, ni d’une garantie de gains.": {
+    "en": "Cost and duration depend on scope. We can discuss remuneration linked to observed benefits. This is neither an offer of free work nor a guarantee of gains.",
+    "pt-BR": "O custo e a duração dependem do escopo. Podemos estudar uma remuneração ligada aos benefícios constatados. Não é uma oferta de gratuidade nem uma garantia de ganhos.",
+    "es": "El coste y la duración dependen del alcance. Podemos estudiar una remuneración vinculada a los beneficios constatados. No se trata de una oferta gratuita ni de una garantía de ganancias."
+  },
+  "Comprendre, choisir, tester, transmettre et mesurer les bénéfices avec vos équipes.": {
+    "en": "Understand, choose, test, hand over and measure benefits with your teams.",
+    "pt-BR": "Entender, escolher, testar, transmitir e medir os benefícios com suas equipes.",
+    "es": "Comprender, elegir, probar, transmitir y medir los beneficios con sus equipos."
+  },
+  "Ce qui peut changer concrètement": {
+    "en": "What can change in practice",
+    "pt-BR": "O que pode mudar na prática",
+    "es": "Qué puede cambiar en la práctica"
+  },
+  "Ces scénarios illustrent notre démarche. Ce ne sont pas des références clients ni des résultats mesurés de missions CLN. Les bénéfices réels se vérifient dans votre contexte.": {
+    "en": "These scenarios illustrate our approach. They are not client references or measured results from CLN engagements. Actual benefits must be checked in your context.",
+    "pt-BR": "Estes cenários ilustram nossa abordagem. Não são referências de clientes nem resultados medidos de missões da CLN. Os benefícios reais são verificados no seu contexto.",
+    "es": "Estos escenarios ilustran nuestro enfoque. No son referencias de clientes ni resultados medidos de proyectos de CLN. Los beneficios reales se verifican en su contexto."
+  },
+  "Scénario illustratif": {
+    "en": "Illustrative scenario",
+    "pt-BR": "Cenário ilustrativo",
+    "es": "Escenario ilustrativo"
+  },
+  "Préparer le suivi sans assembler les fichiers à la main": {
+    "en": "Prepare reports without manually assembling files",
+    "pt-BR": "Preparar o acompanhamento sem reunir arquivos manualmente",
+    "es": "Preparar el seguimiento sin reunir archivos a mano"
+  },
+  "Intervention : regrouper les fichiers et automatiser les contrôles adaptés.": {
+    "en": "Intervention: combine files and automate suitable checks.",
+    "pt-BR": "Intervenção: reunir os arquivos e automatizar as verificações adequadas.",
+    "es": "Intervención: agrupar los archivos y automatizar los controles adecuados."
+  },
+  "Après : l’équipe examine les anomalies et analyse les résultats. Mesure possible : temps de préparation et corrections nécessaires.": {
+    "en": "After: the team reviews exceptions and analyses results. Possible measures: preparation time and corrections needed.",
+    "pt-BR": "Depois: a equipe examina anomalias e analisa resultados. Medidas possíveis: tempo de preparação e correções necessárias.",
+    "es": "Después: el equipo examina anomalías y analiza resultados. Medidas posibles: tiempo de preparación y correcciones necesarias."
+  },
+  "Nous rencontrons une situation similaire": {
+    "en": "We face a similar situation",
+    "pt-BR": "Enfrentamos uma situação semelhante",
+    "es": "Tenemos una situación similar"
+  },
+  "Avant : une information est recopiée dans plusieurs outils et devient parfois incohérente.": {
+    "en": "Before: information is copied into several tools and sometimes becomes inconsistent.",
+    "pt-BR": "Antes: uma informação é copiada em várias ferramentas e às vezes fica incoerente.",
+    "es": "Antes: una información se copia en varias herramientas y a veces resulta incoherente."
+  },
+  "Intervention : organiser la transmission des informations et signaler les échecs.": {
+    "en": "Intervention: organise information transfers and flag failures.",
+    "pt-BR": "Intervenção: organizar a transmissão das informações e sinalizar falhas.",
+    "es": "Intervención: organizar la transmisión de información y señalar los fallos."
+  },
+  "Après : les équipes limitent les recopies. Mesure possible : nombre de ressaisies et écarts entre outils.": {
+    "en": "After: teams reduce copying. Possible measures: re-entry count and discrepancies between tools.",
+    "pt-BR": "Depois: as equipes reduzem as cópias. Medidas possíveis: quantidade de redigitações e divergências entre ferramentas.",
+    "es": "Después: los equipos reducen las copias. Medidas posibles: número de entradas duplicadas y discrepancias entre herramientas."
+  },
+  "Avant : les relances dépendent des emails et de la mémoire des collaborateurs.": {
+    "en": "Before: reminders rely on emails and employees’ memory.",
+    "pt-BR": "Antes: os lembretes dependem de emails e da memória dos colaboradores.",
+    "es": "Antes: los recordatorios dependen de los correos y de la memoria de los empleados."
+  },
+  "Intervention : créer un suivi partagé des échéances avec des alertes adaptées.": {
+    "en": "Intervention: create shared deadline tracking with suitable alerts.",
+    "pt-BR": "Intervenção: criar um acompanhamento compartilhado de prazos com alertas adequados.",
+    "es": "Intervención: crear un seguimiento compartido de plazos con alertas adecuadas."
+  },
+  "Après : les responsables voient les dossiers à traiter. Mesure possible : retards, oublis et délai de traitement.": {
+    "en": "After: managers can see which cases need attention. Possible measures: delays, omissions and processing time.",
+    "pt-BR": "Depois: os responsáveis veem os processos a tratar. Medidas possíveis: atrasos, esquecimentos e prazo de tratamento.",
+    "es": "Después: los responsables ven los expedientes que atender. Medidas posibles: retrasos, olvidos y plazo de tramitación."
+  },
+  "Pour mesurer un bénéfice, nous définissons une situation de départ, une période et des indicateurs avec vous.": {
+    "en": "To measure a benefit, we define a starting situation, a period and indicators with you.",
+    "pt-BR": "Para medir um benefício, definimos uma situação inicial, um período e indicadores com você.",
+    "es": "Para medir un beneficio, definimos con usted una situación inicial, un período e indicadores."
+  },
+  "Comprendre le lien entre bénéfice et rémunération": {
+    "en": "Understand the link between benefit and remuneration",
+    "pt-BR": "Entenda a relação entre benefício e remuneração",
+    "es": "Comprenda la relación entre beneficio y remuneración"
+  },
+  "Trois scénarios avant et après pour comprendre les améliorations possibles et leur mesure.": {
+    "en": "Three before-and-after scenarios to understand potential improvements and how to measure them.",
+    "pt-BR": "Três cenários de antes e depois para entender as melhorias possíveis e sua medição.",
+    "es": "Tres escenarios de antes y después para comprender las mejoras posibles y su medición."
+  },
+  "Faites le point sur votre situation": {
+    "en": "Review your situation",
+    "pt-BR": "Avalie sua situação",
+    "es": "Revise su situación"
+  },
+  "Répondez avec vos mots du quotidien. Vous obtenez une synthèse et une piste à explorer, avant toute demande de coordonnées. Vous pouvez aussi nous contacter directement.": {
+    "en": "Answer using everyday terms. You get a summary and an option to explore before being asked for contact details. You can also contact us directly.",
+    "pt-BR": "Responda com termos do dia a dia. Você recebe uma síntese e uma pista a explorar antes de qualquer pedido de dados de contato. Também pode entrar em contato diretamente.",
+    "es": "Responda con términos cotidianos. Obtiene una síntesis y una vía que explorar antes de cualquier solicitud de datos de contacto. También puede contactarnos directamente."
+  },
+  "Qu’est-ce qui complique votre travail ?": {
+    "en": "What makes your work difficult?",
+    "pt-BR": "O que dificulta seu trabalho?",
+    "es": "¿Qué dificulta su trabajo?"
+  },
+  "Réduire la dépendance à une seule personne": {
+    "en": "Reduce reliance on one person",
+    "pt-BR": "Reduzir a dependência de uma única pessoa",
+    "es": "Reducir la dependencia de una sola persona"
+  },
+  "Une autre difficulté": {
+    "en": "Another difficulty",
+    "pt-BR": "Outra dificuldade",
+    "es": "Otra dificultad"
+  },
+  "À quelle fréquence cela arrive-t-il ?": {
+    "en": "How often does it happen?",
+    "pt-BR": "Com que frequência isso acontece?",
+    "es": "¿Con qué frecuencia ocurre?"
+  },
+  "Chaque jour": {
+    "en": "Every day",
+    "pt-BR": "Todos os dias",
+    "es": "Cada día"
+  },
+  "Chaque semaine": {
+    "en": "Every week",
+    "pt-BR": "Toda semana",
+    "es": "Cada semana"
+  },
+  "Occasionnellement": {
+    "en": "Occasionally",
+    "pt-BR": "Ocasionalmente",
+    "es": "Ocasionalmente"
+  },
+  "Combien de personnes sont concernées ?": {
+    "en": "How many people are affected?",
+    "pt-BR": "Quantas pessoas são afetadas?",
+    "es": "¿Cuántas personas están afectadas?"
+  },
+  "Une personne": {
+    "en": "One person",
+    "pt-BR": "Uma pessoa",
+    "es": "Una persona"
+  },
+  "2 à 10 personnes": {
+    "en": "2 to 10 people",
+    "pt-BR": "2 a 10 pessoas",
+    "es": "2 a 10 personas"
+  },
+  "11 à 50 personnes": {
+    "en": "11 to 50 people",
+    "pt-BR": "11 a 50 pessoas",
+    "es": "11 a 50 personas"
+  },
+  "Plus de 50 personnes": {
+    "en": "More than 50 people",
+    "pt-BR": "Mais de 50 pessoas",
+    "es": "Más de 50 personas"
+  },
+  "Quelles conséquences observez-vous ?": {
+    "en": "What consequences do you observe?",
+    "pt-BR": "Quais consequências você observa?",
+    "es": "¿Qué consecuencias observa?"
+  },
+  "Du temps perdu": {
+    "en": "Time lost",
+    "pt-BR": "Tempo perdido",
+    "es": "Tiempo perdido"
+  },
+  "Des erreurs": {
+    "en": "Errors",
+    "pt-BR": "Erros",
+    "es": "Errores"
+  },
+  "Des retards": {
+    "en": "Delays",
+    "pt-BR": "Atrasos",
+    "es": "Retrasos"
+  },
+  "Des décisions difficiles à prendre": {
+    "en": "Difficulty making decisions",
+    "pt-BR": "Dificuldade para tomar decisões",
+    "es": "Dificultad para tomar decisiones"
+  },
+  "De l’insatisfaction": {
+    "en": "Dissatisfaction",
+    "pt-BR": "Insatisfação",
+    "es": "Insatisfacción"
+  },
+  "Quels outils utilisez-vous actuellement ? Facultatif": {
+    "en": "Which tools do you currently use? Optional",
+    "pt-BR": "Quais ferramentas você usa atualmente? Opcional",
+    "es": "¿Qué herramientas utiliza actualmente? Opcional"
+  },
+  "Des fichiers": {
+    "en": "Files",
+    "pt-BR": "Arquivos",
+    "es": "Archivos"
+  },
+  "Des emails": {
+    "en": "Emails",
+    "pt-BR": "Emails",
+    "es": "Correos electrónicos"
+  },
+  "Des logiciels métier": {
+    "en": "Business applications",
+    "pt-BR": "Sistemas de trabalho",
+    "es": "Programas de gestión"
+  },
+  "Plusieurs outils combinés": {
+    "en": "Several tools combined",
+    "pt-BR": "Várias ferramentas combinadas",
+    "es": "Varias herramientas combinadas"
+  },
+  "Quelle amélioration serait la plus utile ?": {
+    "en": "Which improvement would help most?",
+    "pt-BR": "Qual melhoria seria mais útil?",
+    "es": "¿Qué mejora sería más útil?"
+  },
+  "Gagner du temps": {
+    "en": "Save time",
+    "pt-BR": "Ganhar tempo",
+    "es": "Ganar tiempo"
+  },
+  "Fiabiliser les informations": {
+    "en": "Make information reliable",
+    "pt-BR": "Tornar as informações confiáveis",
+    "es": "Mejorar la fiabilidad de la información"
+  },
+  "Mieux suivre les dossiers": {
+    "en": "Track cases better",
+    "pt-BR": "Acompanhar melhor os processos",
+    "es": "Seguir mejor los expedientes"
+  },
+  "Faciliter le partage": {
+    "en": "Make sharing easier",
+    "pt-BR": "Facilitar o compartilhamento",
+    "es": "Facilitar el intercambio"
+  },
+  "À préciser ensemble": {
+    "en": "To clarify together",
+    "pt-BR": "A definir em conjunto",
+    "es": "Por concretar juntos"
+  },
+  "Quand souhaitez-vous avancer ?": {
+    "en": "When would you like to move forward?",
+    "pt-BR": "Quando gostaria de avançar?",
+    "es": "¿Cuándo le gustaría avanzar?"
+  },
+  "Rapidement": {
+    "en": "Soon",
+    "pt-BR": "Em breve",
+    "es": "Pronto"
+  },
+  "Dans les prochains mois": {
+    "en": "In the coming months",
+    "pt-BR": "Nos próximos meses",
+    "es": "En los próximos meses"
+  },
+  "Je suis en réflexion": {
+    "en": "I’m exploring options",
+    "pt-BR": "Estou refletindo",
+    "es": "Estoy reflexionando"
+  },
+  "Obtenir ma synthèse": {
+    "en": "Get my summary",
+    "pt-BR": "Obter minha síntese",
+    "es": "Obtener mi síntesis"
+  },
+  "Votre synthèse indicative": {
+    "en": "Your indicative summary",
+    "pt-BR": "Sua síntese indicativa",
+    "es": "Su síntesis orientativa"
+  },
+  "Cette orientation ne constitue ni un diagnostic complet, ni un prix, ni une garantie de gains. Une rémunération liée aux bénéfices constatés se discute à partir de mesures convenues ensemble.": {
+    "en": "This guidance is not a full diagnosis, a price or a guarantee of gains. Remuneration linked to observed benefits is discussed using measures agreed together.",
+    "pt-BR": "Esta orientação não constitui um diagnóstico completo, um preço ou uma garantia de ganhos. Uma remuneração ligada aos benefícios constatados é discutida a partir de medidas acordadas em conjunto.",
+    "es": "Esta orientación no es un diagnóstico completo, un precio ni una garantía de ganancias. Una remuneración vinculada a beneficios constatados se discute a partir de medidas acordadas juntos."
+  },
+  "Votre synthèse reste dans cette page tant que vous ne choisissez pas de la transmettre. Le transfert l’enregistre sur ce navigateur pour trente jours au maximum ; vous choisissez ensuite de l’ajouter à votre message.": {
+    "en": "Your summary stays on this page until you choose to transfer it. Transfer saves it in this browser for up to thirty days; you then choose whether to add it to your message.",
+    "pt-BR": "Sua síntese fica nesta página até você escolher transmiti-la. A transferência a salva neste navegador por até trinta dias; depois você escolhe adicioná-la à mensagem.",
+    "es": "Su síntesis permanece en esta página hasta que decida transmitirla. La transferencia la guarda en este navegador hasta treinta días; después elige si la añade al mensaje."
+  },
+  "Transmettre ma synthèse pour en discuter": {
+    "en": "Transfer my summary to discuss it",
+    "pt-BR": "Transmitir minha síntese para conversar",
+    "es": "Transmitir mi síntesis para comentarla"
+  },
+  "Modifier mes réponses": {
+    "en": "Edit my answers",
+    "pt-BR": "Alterar minhas respostas",
+    "es": "Modificar mis respuestas"
+  },
+  "Le navigateur ne permet pas la sauvegarde. Vous pouvez copier la synthèse dans votre message ou nous contacter directement.": {
+    "en": "This browser does not allow saving. You can copy the summary into your message or contact us directly.",
+    "pt-BR": "Este navegador não permite salvar. Você pode copiar a síntese na mensagem ou entrar em contato diretamente.",
+    "es": "Este navegador no permite guardar. Puede copiar la síntesis en su mensaje o contactarnos directamente."
+  },
+  "Identifiez une difficulté de travail et une piste d’amélioration sans coordonnées obligatoires.": {
+    "en": "Identify a work difficulty and an improvement option without required contact details.",
+    "pt-BR": "Identifique uma dificuldade de trabalho e uma melhoria sem dados de contato obrigatórios.",
+    "es": "Identifique una dificultad de trabajo y una mejora sin datos de contacto obligatorios."
+  },
+  "Décrivez ce qui vous fait perdre du temps, crée des erreurs ou complique le suivi. Vous n’avez pas besoin de connaître la solution technique ni de chiffrer vos gains avant de nous contacter.": {
+    "en": "Describe what wastes time, creates errors or complicates tracking. You do not need to know the technical solution or calculate gains before contacting us.",
+    "pt-BR": "Descreva o que faz perder tempo, gera erros ou dificulta o acompanhamento. Você não precisa conhecer a solução técnica nem calcular ganhos antes de entrar em contato.",
+    "es": "Describa qué hace perder tiempo, genera errores o dificulta el seguimiento. No necesita conocer la solución técnica ni calcular ganancias antes de contactarnos."
+  },
+  "Le premier échange sert à comprendre votre difficulté et à envisager une amélioration utile. Nous pouvons aussi discuter d’une rémunération liée aux bénéfices effectivement constatés, avec des critères convenus avant intervention.": {
+    "en": "The first conversation helps understand your difficulty and consider a useful improvement. We can also discuss remuneration linked to benefits actually observed, with criteria agreed before work begins.",
+    "pt-BR": "A primeira conversa serve para entender sua dificuldade e considerar uma melhoria útil. Também podemos discutir uma remuneração ligada aos benefícios efetivamente constatados, com critérios acordados antes da intervenção.",
+    "es": "La primera conversación sirve para comprender su dificultad y plantear una mejora útil. También podemos hablar de una remuneración vinculada a beneficios efectivamente constatados, con criterios acordados antes de intervenir."
+  },
+  "La synthèse n’est pas envoyée tant que vous ne l’ajoutez pas au message et ne validez pas l’envoi. Vous pouvez la modifier.": {
+    "en": "The summary is not sent until you add it to the message and confirm sending. You can edit it.",
+    "pt-BR": "A síntese não é enviada até você adicioná-la à mensagem e confirmar o envio. Você pode alterá-la.",
+    "es": "La síntesis no se envía hasta que la añada al mensaje y confirme el envío. Puede modificarla."
+  },
+  "Ajouter la synthèse à mon message": {
+    "en": "Add the summary to my message",
+    "pt-BR": "Adicionar a síntese à minha mensagem",
+    "es": "Añadir la síntesis a mi mensaje"
+  },
+  "Sujet à discuter facultatif": {
+    "en": "Optional topic to discuss",
+    "pt-BR": "Assunto opcional para conversar",
+    "es": "Tema opcional para comentar"
+  },
+  "Ajouter ce sujet à mon message": {
+    "en": "Add this topic to my message",
+    "pt-BR": "Adicionar este assunto à mensagem",
+    "es": "Añadir este tema a mi mensaje"
+  },
+  "Que faites-vous aujourd’hui ? Qu’est-ce qui pose problème ? Qu’aimeriez-vous améliorer ?": {
+    "en": "What do you do today? What causes problems? What would you like to improve?",
+    "pt-BR": "O que você faz hoje? O que causa problemas? O que gostaria de melhorar?",
+    "es": "¿Qué hace actualmente? ¿Qué causa problemas? ¿Qué le gustaría mejorar?"
+  },
+  "Contactez CLN Performance": {
+    "en": "Contact CLN Performance",
+    "pt-BR": "Entre em contato com a CLN Performance",
+    "es": "Contacte con CLN Performance"
+  },
+  "Décrivez votre difficulté et échangeons sur une amélioration utile.": {
+    "en": "Describe your difficulty and discuss a useful improvement.",
+    "pt-BR": "Descreva sua dificuldade e conversemos sobre uma melhoria útil.",
+    "es": "Describa su dificultad y conversemos sobre una mejora útil."
+  },
+  "Le formulaire utilise votre nom, votre adresse email et votre message, nécessaires pour vous répondre. L’organisation est facultative. La synthèse est ajoutée uniquement si vous le choisissez. Vous pouvez modifier votre message avant l’envoi. Évitez de transmettre des données sensibles ou des informations confidentielles inutiles.": {
+    "en": "The form uses your name, email address and message to reply to you. Your organisation is optional. The summary is only added if you choose. You can edit your message before sending. Avoid unnecessary sensitive or confidential information.",
+    "pt-BR": "O formulário usa seu nome, email e mensagem para responder. A organização é opcional. A síntese só é adicionada se você escolher. Você pode alterar a mensagem antes do envio. Evite informações sensíveis ou confidenciais desnecessárias.",
+    "es": "El formulario utiliza su nombre, correo y mensaje para responderle. La organización es opcional. La síntesis solo se añade si lo elige. Puede modificar su mensaje antes del envío. Evite información sensible o confidencial innecesaria."
+  },
+  "Le questionnaire calcule une synthèse indicative dans cette page sans envoyer vos réponses au serveur. Un clic sur « Transmettre ma synthèse pour en discuter » l’enregistre dans votre navigateur pour la retrouver sur Contact. Vous choisissez ensuite de l’ajouter à votre message. Elle ne parvient à CLN Performance que lors de l’envoi du formulaire.": {
+    "en": "The questionnaire calculates an indicative summary on this page without sending your answers to the server. Clicking “Transfer my summary to discuss it” saves it in your browser for access on Contact. You then choose whether to add it to your message. CLN Performance only receives it when the form is sent.",
+    "pt-BR": "O questionário calcula uma síntese indicativa nesta página sem enviar suas respostas ao servidor. Clicar em “Transmitir minha síntese para conversar” a salva no navegador para acesso no Contato. Depois você escolhe adicioná-la à mensagem. A CLN Performance só a recebe quando o formulário é enviado.",
+    "es": "El cuestionario calcula una síntesis orientativa en esta página sin enviar sus respuestas al servidor. Al pulsar “Transmitir mi síntesis para comentarla”, se guarda en el navegador para acceder a ella en Contacto. Después elige si la añade al mensaje. CLN Performance solo la recibe al enviar el formulario."
+  },
+  "La synthèse sauvegardée expire après trente jours et est effacée à la prochaine lecture après ce délai. Vous pouvez l’effacer depuis le lien de transfert vers Contact ou supprimer les données du site dans votre navigateur. Un brouillon de contact peut être conservé dans l’onglet pendant trente minutes pour reprendre un envoi en échec. Le choix de langue peut être conservé un an. Ces stockages ne servent pas au suivi publicitaire.": {
+    "en": "The saved summary expires after thirty days and is deleted on the next read after that period. You can clear it through the transfer link to Contact or delete site data in your browser. A contact draft may be kept in the tab for thirty minutes to resume a failed submission. Language choice may be kept for one year. This storage is not used for advertising tracking.",
+    "pt-BR": "A síntese salva expira após trinta dias e é apagada na próxima leitura após esse prazo. Você pode apagá-la pelo link de transferência para Contato ou excluir os dados do site no navegador. Um rascunho de contato pode ficar na aba por trinta minutos para retomar um envio que falhou. O idioma pode ser conservado por um ano. Esses armazenamentos não servem para rastreamento publicitário.",
+    "es": "La síntesis guardada caduca a los treinta días y se elimina en la siguiente lectura tras ese plazo. Puede borrarla mediante el enlace de transferencia a Contacto o eliminar los datos del sitio en el navegador. Puede conservarse un borrador de contacto en la pestaña durante treinta minutos para reanudar un envío fallido. El idioma puede conservarse un año. Estos almacenamientos no se usan para seguimiento publicitario."
+  },
+  "Mise à jour : 29 octobre 2026": {
+    "en": "Updated: 29 October 2026",
+    "pt-BR": "Atualizado em 29 de outubro de 2026",
+    "es": "Actualizado el 29 de octubre de 2026"
+  },
+  "Simplifier le travail et fiabiliser vos informations — CLN Performance": {
+    "en": "Simplify work and make information reliable — CLN Performance",
+    "pt-BR": "Simplificar o trabalho e tornar as informações confiáveis — CLN Performance",
+    "es": "Simplificar el trabajo y mejorar la fiabilidad de la información — CLN Performance"
+  },
+  "Vos besoins — CLN Performance": {
+    "en": "Your needs — CLN Performance",
+    "pt-BR": "Suas necessidades — CLN Performance",
+    "es": "Sus necesidades — CLN Performance"
+  },
+  "Comment nous travaillons — CLN Performance": {
+    "en": "How we work — CLN Performance",
+    "pt-BR": "Como trabalhamos — CLN Performance",
+    "es": "Cómo trabajamos — CLN Performance"
+  },
+  "Exemples concrets — CLN Performance": {
+    "en": "Practical examples — CLN Performance",
+    "pt-BR": "Exemplos práticos — CLN Performance",
+    "es": "Ejemplos prácticos — CLN Performance"
+  },
+  "Faire le point — CLN Performance": {
+    "en": "Review your situation — CLN Performance",
+    "pt-BR": "Avalie sua situação — CLN Performance",
+    "es": "Revise su situación — CLN Performance"
   }
 }

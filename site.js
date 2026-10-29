@@ -30,7 +30,7 @@
         return data;
       } catch (_) {try {localStorage.removeItem('clnRecommendation');} catch (_) {} return null;}
     },
-    storeSummary(data) {try {localStorage.setItem('clnRecommendation',JSON.stringify(data));} catch (_) {}},
+    storeSummary(data) {try {localStorage.setItem('clnRecommendation',JSON.stringify(data));return true;} catch (_) {return false;}},
     setLanguage(next) {
       if (!valid(next)) return;
       lang = next;

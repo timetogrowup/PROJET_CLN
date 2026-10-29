@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — CLN</title>
+    <meta name="description" content="Contactez CLN Performance pour échanger sur vos projets data, automatisation et gouvernance." />
+    <link rel="canonical" href="https://cln-performance.com/contact.html" />
+    <link rel="stylesheet" href="styles.css?v=20261028-v3" />
+  <script defer src="site.js?v=20261028-v3"></script>
+<script defer src="diagnostic.js?v=20261028-v3"></script>
+<script defer src="contact.js?v=20261028-v3"></script>
+</head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a class="brand" href="index.html">
+          <img src="LOGO_CLN.png" alt="Logo CLN" />
+          <span>CLN · Solutions intelligentes</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Accueil</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="approche.html">Notre approche</a>
+          <a href="realisations.html">Réalisations</a>
+          <a href="diagnostic.html">Diagnostic</a>
+          <a class="active" href="contact.html">Contact</a>
+        </nav>
+        <a class="cta-button" href="contact.html">Être recontacté</a>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h1 class="section-title">Parlons de vos projets</h1>
+        <p class="section-lead">
+          Décrivez-nous votre contexte et nous reviendrons vers vous sous 48 heures. Nous étudierons avec vous comment intervenir de manière chirurgicale, libérer et normaliser vos systèmes d'information.
+        </p>
+      </section>
+
+      <section class="contact-grid">
+        <div>
+          <div id="recommendation-preview" class="result-card recommendation-card" hidden>
+            <div class="recommendation-header">
+              <h2>Votre recommandation CLN</h2>
+              <button type="button" class="link-button" id="recommendation-clear">Effacer</button>
+            </div>
+            <p class="recommendation-meta" id="recommendation-date"></p>
+            <div id="recommendation-content"></div>
+            <p class="recommendation-note">
+              Ajoutez ces éléments à votre message pour que notre équipe prépare un échange ciblé.
+            </p>
+          </div>
+          <h2>Nous contacter</h2>
+          <p>
+            CLN accompagne les organisations publiques et privées sur leurs enjeux data, automatisation et gouvernance.
+          </p>
+          <ul>
+            <li>Téléphone : <a href="tel:+33614365526">+33 6 14 36 55 26</a></li>
+            <li>Email : <a href="mailto:contact@cln-performance.com">contact@cln-performance.com</a></li>
+          </ul>
+          <p>
+            Vous préférez fixer un créneau ? Proposez deux disponibilités et nous vous envoyons une invitation.
+          </p>
+        </div>
+        <div>
+          <form id="contact-form" action="https://api.cln-performance.com/contact.php" method="POST">
+            <div id="form-alert" class="form-alert" role="status" hidden></div>
+            <div hidden aria-hidden="true"><label>Site web<input name="website" tabindex="-1" autocomplete="off" /></label></div>
+            <label for="name">Nom et prénom</label>
+            <input id="name" name="name" type="text" placeholder="Marie Dupont" maxlength="200" required />
+
+            <label for="email">Email professionnel</label>
+            <input id="email" name="_replyto" type="email" placeholder="marie.dupont@organisation.fr" required />
+
+            <label for="company">Organisation (facultatif)</label>
+            <input id="company" name="company" type="text" placeholder="Organisation / Collectivité" maxlength="300" />
+
+            <label for="message">Votre besoin</label>
+            <textarea id="message" name="message" rows="5" maxlength="10000" required placeholder="Décrivez votre projet ou vos problématiques."></textarea>
+
+            <label class="checkbox">
+              <input type="checkbox" name="consent" required />
+              J’ai pris connaissance de la <a href="confidentialite.html">politique de confidentialité</a> concernant ma demande.
+            </label>
+
+            <p class="helper-text">Nom, email et message sont obligatoires ; l’organisation est facultative. Vos données servent à répondre à votre demande. <a href="confidentialite.html">Utilisation, conservation et droits</a>.</p>
+            <input name="human_token" type="hidden" />
+            <input name="human_confirmed" type="hidden" />
+            <input name="lang" type="hidden" value="fr" />
+            <noscript><p>Activez JavaScript pour utiliser le formulaire, ou écrivez à contact@cln-performance.com.</p></noscript>
+            <button class="cta-button" type="submit" disabled>Envoyer la demande</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <dialog id="human-dialog" aria-labelledby="human-title" aria-describedby="human-description">
+      <h2 id="human-title" data-msg="human_title" data-dynamic>Vérification humaine</h2>
+      <p id="human-description" data-msg="human_description" data-dynamic>Veuillez confirmer que vous êtes un humain pour envoyer votre demande.</p>
+      <label class="checkbox" for="human-check"><input id="human-check" type="checkbox" autocomplete="off" /> <span data-msg="human_label" data-dynamic>Je suis un humain</span></label>
+      <p id="human-status" role="status" aria-live="polite" data-dynamic></p>
+      <div class="human-actions">
+        <button id="human-cancel" class="link-button" type="button" data-msg="human_cancel" data-dynamic autofocus>Annuler</button>
+        <button id="human-retry" class="link-button" type="button" data-msg="human_retry" data-dynamic hidden>Réessayer</button>
+        <button id="human-confirm" class="cta-button" type="button" data-msg="human_send" data-dynamic disabled>Confirmer et envoyer</button>
+      </div>
+    </dialog>
+    <footer>
+      <div class="footer-inner">
+        <span>© CLN — Solutions intelligentes pour vos SI.</span>
+        <div class="footer-links">
+          <a href="mailto:contact@cln-performance.com">contact@cln-performance.com</a>
+          <a href="contact.html">Prendre rendez-vous</a>
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

@@ -31,7 +31,15 @@ for(const [engineName,engine] of Object.entries({chromium,webkit})){
    }
    checks++;
   }
-  await page.goto('http://127.0.0.1:8000/diagnostic.html?lang=en');await page.waitForFunction(()=>document.documentElement.dataset.i18nReady==='true');await page.locator('[name=modules][value=liberer]').check();await page.locator('[name=modules][value=autre]').check();await page.locator('#autre-enjeu').fill('<img src=x onerror=alert(1)>');await page.locator('[name=taille][value=moyenne]').check();await page.locator('[name=delai][value=moyen]').check();await page.locator('[name=mode][value=flash]').check();await page.locator('#priorite-toggle').check();await page.locator('#diagnostic-form [type=submit]').click();assert(await page.locator('#diagnostic-resultat').isVisible());const summary=await page.locator('#resultat-insights').textContent();await page.locator('#site-language').selectOption('pt-BR');assert(await page.locator('[name=modules][value=liberer]').isChecked());assert.equal(await page.locator('#autre-enjeu').inputValue(),'<img src=x onerror=alert(1)>');assert(!(await page.locator('#resultat-insights').textContent()).includes('Main priorities'));assert.equal(await page.locator('#resultat-insights img').count(),0);await page.locator('#diagnostic-resultat a').click();await page.waitForFunction(()=>document.documentElement.dataset.i18nReady==='true');assert((await page.locator('#message').inputValue()).includes('Prioridade'));await page.locator('#recommendation-clear').click();assert.equal(await page.locator('#message').inputValue(),'');assert.equal(await page.evaluate(()=>localStorage.getItem('clnRecommendation')),null);
+  await page.goto('http://127.0.0.1:8000/diagnostic.html?lang=en');await page.waitForFunction(()=>document.documentElement.dataset.i18nReady==='true');
+  await page.locator('[name=problems][value=repetitif]').check();
+  for(const name of ['frequency','people','goal','horizon'])await page.locator(`[name=${name}][value=inconnu]`).check();
+  await page.locator('#diagnostic-form [type=submit]').click();assert(await page.locator('#diagnostic-resultat').isVisible());
+  await page.locator('#site-language').selectOption('pt-BR');assert(await page.locator('[name=problems][value=repetitif]').isChecked());
+  await page.locator('#summary-transfer').click();await page.waitForFunction(()=>!document.querySelector('#contact-form [type=submit]').disabled);
+  assert.equal(await page.locator('#message').inputValue(),'');await page.locator('#recommendation-add').click();
+  assert((await page.locator('#message').inputValue()).includes('Sua síntese indicativa'));await page.locator('#recommendation-clear').click();
+  assert.equal(await page.locator('#message').inputValue(),'');assert.equal(await page.evaluate(()=>localStorage.getItem('clnRecommendation')),null);
   await context.close();
  }
  await browser.close();

@@ -1,157 +1,180 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Questionnaire de pré-diagnostic — CLN</title>
-    <meta name="description" content="Identifiez vos priorités data et automatisation grâce au pré-diagnostic CLN Performance." />
-    <link rel="canonical" href="https://cln-performance.com/diagnostic.html" />
-    <link rel="stylesheet" href="styles.css?v=20261028-v2" />
-  <script defer src="site.js?v=20261028-v2"></script>
-<script defer src="diagnostic.js?v=20261028-v2"></script>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Faire le point — CLN Performance</title>
+<meta name="description" content="Identifiez une difficulté de travail et une piste d’amélioration sans coordonnées obligatoires." />
+<link rel="canonical" href="https://cln-performance.com/diagnostic.html" />
+<link rel="stylesheet" href="styles.css?v=20261029-v4" />
+<script defer src="site.js?v=20261029-v4">
+</script>
+<script defer src="diagnostic.js?v=20261029-v4">
+</script>
 </head>
-  <body>
-    <header>
-      <div class="navbar">
-        <a class="brand" href="index.html">
-          <img src="LOGO_CLN.png" alt="Logo CLN" />
-          <span>CLN · Solutions intelligentes</span>
-        </a>
-        <nav class="nav-links">
-          <a href="index.html">Accueil</a>
-          <a href="solutions.html">Solutions</a>
-          <a href="approche.html">Notre approche</a>
-          <a href="realisations.html">Réalisations</a>
-          <a class="active" href="diagnostic.html">Diagnostic</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <a class="cta-button" href="contact.html">Être recontacté</a>
-      </div>
-    </header>
-    <main>
-      <section>
-        <h1 class="section-title">Questionnaire de pré-diagnostic</h1>
-        <p class="section-lead">
-          En moins de deux minutes, précisez votre contexte et recevez une proposition d'accompagnement CLN adaptée. Nous vous suggérerons ensuite de planifier un rendez-vous pour aller plus loin.
-        </p>
-      </section>
-
-      <section class="questionnaire">
-        <form id="diagnostic-form">
-          <fieldset>
-            <legend>Quels sont vos enjeux principaux ?</legend>
-            <p class="helper-text">
-              Cochez toutes les thématiques les plus pertinentes pour vous
-              <span id="modules-count" class="selection-count">(0 sélectionnée)</span>
-            </p>
-            <div class="pill-group">
-              <label class="pill">
-                <input type="checkbox" name="modules" value="chirurgical" />
-                Ciblé · Interventions ciblées
-              </label>
-              <label class="pill">
-                <input type="checkbox" name="modules" value="liberer" />
-                Libéré · Automatisation
-              </label>
-              <label class="pill">
-                <input type="checkbox" name="modules" value="normaliser" />
-                Normé · Gouvernance des données
-              </label>
-              <label class="pill">
-                <input type="checkbox" name="modules" value="securiser" />
-                Sécuriser · Conformité
-              </label>
-              <label class="pill">
-                <input type="checkbox" name="modules" value="valoriser" />
-                Valoriser · Analytics
-              </label>
-              <label class="pill">
-                <input type="checkbox" name="modules" value="collaborer" />
-                Collaborer · Partage
-              </label>
-              <label class="pill">
-                <input type="checkbox" name="modules" value="anticiper" />
-                Anticiper · Innovation
-              </label>
-              <label class="pill pill--custom">
-                <input type="checkbox" name="modules" value="autre" />
-                <span>Autre enjeu</span>
-                <input
-                  type="text"
-                  id="autre-enjeu"
-                  name="autreEnjeu"
-                  class="pill-text-input"
-                  placeholder="Décrivez votre enjeu"
-                  autocomplete="off"
-                />
-              </label>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Taille de votre organisation</legend>
-            <div class="radio-list">
-              <label><input type="radio" name="taille" value="petite" required /> Moins de 50 collaborateurs</label>
-              <label><input type="radio" name="taille" value="moyenne" /> 50 à 250 collaborateurs</label>
-              <label><input type="radio" name="taille" value="grande" /> Plus de 250 collaborateurs</label>
-              <label><input type="radio" name="taille" value="tresgrande" /> Plus de 2&nbsp;500 collaborateurs</label>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Priorité des 6 prochains mois</legend>
-            <p class="helper-text">
-              Vous pouvez classer les axes ci-dessous par ordre d'importance (1 = priorité la plus forte).
-              Activez l'option si vous souhaitez préciser vos priorités.
-            </p>
-            <label class="priority-toggle">
-              <input type="checkbox" id="priorite-toggle" />
-              <span>Je souhaite indiquer l'ordre de priorité</span>
-            </label>
-            <div class="priority-list is-disabled" role="list" hidden></div>
-            <input type="hidden" name="priorite" id="priorite-input" />
-          </fieldset>
-
-          <fieldset>
-            <legend>Horizon de mise en œuvre souhaité</legend>
-            <div class="radio-list">
-              <label><input type="radio" name="delai" value="court" required /> Moins de 3 mois</label>
-              <label><input type="radio" name="delai" value="moyen" /> 3 à 6 mois</label>
-              <label><input type="radio" name="delai" value="long" /> Plus de 6 mois</label>
-              <label><input type="radio" name="delai" value="incertain" /> Je ne sais pas encore</label>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Quel mode d'accompagnement imaginez-vous ?</legend>
-            <div class="radio-list">
-              <label><input type="radio" name="mode" value="flash" required /> Diagnostic flash pour prioriser</label>
-              <label><input type="radio" name="mode" value="projet" /> Pilotage complet du projet</label>
-              <label><input type="radio" name="mode" value="hybride" /> Coaching interne + expertise ciblée</label>
-            </div>
-          </fieldset>
-
-          <button class="cta-button" type="submit">Obtenir ma recommandation</button>
-        </form>
-
-        <div id="diagnostic-resultat" class="result-card" hidden>
-          <h2>Votre synthèse personnalisée</h2>
-          <div id="resultat-insights"></div>
-          <a class="cta-button" href="contact.html">Planifier un rendez-vous</a>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer-inner">
-        <span>© CLN — Solutions intelligentes pour vos SI.</span>
-        <div class="footer-links">
-          <a href="mailto:contact@cln-performance.com">contact@cln-performance.com</a>
-          <a href="contact.html">Prendre rendez-vous</a>
-          <a href="mentions-legales.html">Mentions légales</a>
-          <a href="confidentialite.html">Confidentialité</a>
-        </div>
-      </div>
-    </footer>
-  </body>
+<body>
+<a class="skip-link" href="#main-content">Aller au contenu</a>
+<header>
+<div class="navbar">
+<a class="brand" href="index.html">
+<img src="LOGO_CLN.png" alt="Logo CLN" width="42" height="42"/>
+<span>CLN Performance</span>
+</a>
+<nav class="nav-links" aria-label="Navigation principale">
+<a class="" href="index.html">Accueil</a>
+<a class="" href="solutions.html">Vos besoins</a>
+<a class="" href="approche.html">Comment nous travaillons</a>
+<a class="" href="realisations.html">Exemples concrets</a>
+<a class="active" href="diagnostic.html">Faire le point</a>
+<a class="" href="contact.html">Contact</a>
+</nav>
+<a class="cta-button" href="contact.html">Parlons de votre situation</a>
+</div>
+</header>
+<main id="main-content">
+<section>
+<h1>Faites le point sur votre situation</h1>
+<p>Répondez avec vos mots du quotidien. Vous obtenez une synthèse et une piste à explorer, avant toute demande de coordonnées. Vous pouvez aussi nous contacter directement.</p>
+<a class="text-link" href="contact.html">Parlons de votre situation</a>
+</section>
+<section class="questionnaire">
+<form id="diagnostic-form">
+<fieldset>
+<legend>Qu’est-ce qui complique votre travail ?</legend>
+<div class="radio-list">
+<label>
+<input type="checkbox" name="problems" value="ressaisies"/> Éviter les ressaisies</label>
+<label>
+<input type="checkbox" name="problems" value="repetitif"/> Réduire les tâches répétitives</label>
+<label>
+<input type="checkbox" name="problems" value="chiffres"/> Disposer de chiffres fiables</label>
+<label>
+<input type="checkbox" name="problems" value="suivi"/> Savoir où en sont les dossiers</label>
+<label>
+<input type="checkbox" name="problems" value="personne"/> Réduire la dépendance à une seule personne</label>
+<label>
+<input type="checkbox" name="problems" value="autre"/> Une autre difficulté</label>
+<label>
+<input type="checkbox" name="problems" value="inconnu"/> Je ne sais pas encore</label>
+</div>
+</fieldset>
+<fieldset>
+<legend>À quelle fréquence cela arrive-t-il ?</legend>
+<div class="radio-list">
+<label>
+<input type="radio" name="frequency" value="jour" required/> Chaque jour</label>
+<label>
+<input type="radio" name="frequency" value="semaine"/> Chaque semaine</label>
+<label>
+<input type="radio" name="frequency" value="parfois"/> Occasionnellement</label>
+<label>
+<input type="radio" name="frequency" value="inconnu"/> Je ne sais pas encore</label>
+</div>
+</fieldset>
+<fieldset>
+<legend>Combien de personnes sont concernées ?</legend>
+<div class="radio-list">
+<label>
+<input type="radio" name="people" value="une" required/> Une personne</label>
+<label>
+<input type="radio" name="people" value="dix"/> 2 à 10 personnes</label>
+<label>
+<input type="radio" name="people" value="cinquante"/> 11 à 50 personnes</label>
+<label>
+<input type="radio" name="people" value="plus"/> Plus de 50 personnes</label>
+<label>
+<input type="radio" name="people" value="inconnu"/> Je ne sais pas encore</label>
+</div>
+</fieldset>
+<fieldset>
+<legend>Quelles conséquences observez-vous ?</legend>
+<div class="radio-list">
+<label>
+<input type="checkbox" name="impacts" value="temps"/> Du temps perdu</label>
+<label>
+<input type="checkbox" name="impacts" value="erreurs"/> Des erreurs</label>
+<label>
+<input type="checkbox" name="impacts" value="retards"/> Des retards</label>
+<label>
+<input type="checkbox" name="impacts" value="decision"/> Des décisions difficiles à prendre</label>
+<label>
+<input type="checkbox" name="impacts" value="insatisfaction"/> De l’insatisfaction</label>
+<label>
+<input type="checkbox" name="impacts" value="autre"/> Une autre difficulté</label>
+<label>
+<input type="checkbox" name="impacts" value="inconnu"/> Je ne sais pas encore</label>
+</div>
+</fieldset>
+<fieldset>
+<legend>Quels outils utilisez-vous actuellement ? Facultatif</legend>
+<div class="radio-list">
+<label>
+<input type="checkbox" name="tools" value="fichiers"/> Des fichiers</label>
+<label>
+<input type="checkbox" name="tools" value="emails"/> Des emails</label>
+<label>
+<input type="checkbox" name="tools" value="metier"/> Des logiciels métier</label>
+<label>
+<input type="checkbox" name="tools" value="plusieurs"/> Plusieurs outils combinés</label>
+<label>
+<input type="checkbox" name="tools" value="inconnu"/> Je ne sais pas encore</label>
+</div>
+</fieldset>
+<fieldset>
+<legend>Quelle amélioration serait la plus utile ?</legend>
+<div class="radio-list">
+<label>
+<input type="radio" name="goal" value="temps" required/> Gagner du temps</label>
+<label>
+<input type="radio" name="goal" value="fiabilite"/> Fiabiliser les informations</label>
+<label>
+<input type="radio" name="goal" value="suivi"/> Mieux suivre les dossiers</label>
+<label>
+<input type="radio" name="goal" value="partage"/> Faciliter le partage</label>
+<label>
+<input type="radio" name="goal" value="inconnu"/> À préciser ensemble</label>
+</div>
+</fieldset>
+<fieldset>
+<legend>Quand souhaitez-vous avancer ?</legend>
+<div class="radio-list">
+<label>
+<input type="radio" name="horizon" value="vite" required/> Rapidement</label>
+<label>
+<input type="radio" name="horizon" value="mois"/> Dans les prochains mois</label>
+<label>
+<input type="radio" name="horizon" value="reflexion"/> Je suis en réflexion</label>
+<label>
+<input type="radio" name="horizon" value="inconnu"/> Je ne sais pas encore</label>
+</div>
+</fieldset>
+<button class="cta-button" type="submit">Obtenir ma synthèse</button>
+</form>
+<div id="diagnostic-resultat" class="result-card" tabindex="-1" hidden>
+<h2>Votre synthèse indicative</h2>
+<div id="resultat-insights" data-dynamic>
+</div>
+<p>Cette orientation ne constitue ni un diagnostic complet, ni un prix, ni une garantie de gains. Une rémunération liée aux bénéfices constatés se discute à partir de mesures convenues ensemble.</p>
+<p>Votre synthèse reste dans cette page tant que vous ne choisissez pas de la transmettre. Le transfert l’enregistre sur ce navigateur pour trente jours au maximum ; vous choisissez ensuite de l’ajouter à votre message.</p>
+<div class="actions">
+<a class="cta-button" id="summary-transfer" href="contact.html?summary=1">Transmettre ma synthèse pour en discuter</a>
+<button class="link-button" id="summary-edit" type="button">Modifier mes réponses</button>
+</div>
+<p id="summary-storage-error" role="status" hidden>Le navigateur ne permet pas la sauvegarde. Vous pouvez copier la synthèse dans votre message ou nous contacter directement.</p>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-inner">
+<p>CLN Performance vous aide à simplifier le travail et à fiabiliser vos informations.</p>
+<div class="footer-links">
+<a href="mailto:contact@cln-performance.com">contact@cln-performance.com</a>
+<a class="" href="contact.html">Parlons de votre situation</a>
+<a class="" href="mentions-legales.html">Mentions légales</a>
+<a class="" href="confidentialite.html">Confidentialité</a>
+</div>
+</div>
+</footer>
+</body>
 </html>
 
