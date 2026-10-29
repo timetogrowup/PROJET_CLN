@@ -1,3 +1,5 @@
+> Actualisation V6 — 29 octobre 2026 : le positionnement commercial courant valorise le SI existant par les pipelines et l’enrichissement des données dans les applications destinataires. Voir [MINUTE](MINUTE.md) et la [recette V6](docs/RECETTE_ECOSYSTEME_PIPELINES_V6.md). Les descriptions antérieures ci-dessous restent historiques lorsqu’elles divergent.
+
 # Référence de code V5 du 29 octobre 2026
 
 - `scripts/pipeline_content.py` : textes des cinq étapes, quatre capacités, exceptions, rôles, bénéfices et blocs d’intégration, en quatre langues.

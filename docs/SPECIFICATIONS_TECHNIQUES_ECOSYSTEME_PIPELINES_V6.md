@@ -18,3 +18,6 @@ Le schéma des cinq étapes reste une liste HTML accessible sans animation, util
 5. Vérifier le workflow Pages et les ressources effectivement servies ; contrôler au minimum accueil, pipelines, contact et catalogues. Ne pas soumettre le formulaire réel.
 
 Retour arrière : rétablir par un nouveau commit les sources éditoriales et fichiers générés de la version précédente ; aucun changement de schéma ni migration de données. Journaliser résultats réellement obtenus et limites dans RECETTE_ECOSYSTEME_PIPELINES_V6.md et MINUTE.md.
+
+## État livré
+Implémentation et vérifications conformes au présent périmètre ; SHA ed622eede0de77be0b59a918912c924f546f3dfe, CI 40873607848 et Pages 40874180979 réussies. La recette détaille les 17 ressources conformes et les limites. Pas de modification de l’API ni des données personnelles collectées.

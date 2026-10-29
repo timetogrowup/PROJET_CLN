@@ -1,3 +1,5 @@
+> Actualisation V6 — 29 octobre 2026 : le positionnement commercial courant valorise le SI existant par les pipelines et l’enrichissement des données dans les applications destinataires. Voir [MINUTE](MINUTE.md) et la [recette V6](docs/RECETTE_ECOSYSTEME_PIPELINES_V6.md). Les descriptions antérieures ci-dessous restent historiques lorsqu’elles divergent.
+
 # Mise à jour V5 du 29 octobre 2026
 
 Les pipelines deviennent un savoir-faire visible de CLN Performance : bloc sur l’accueil, page [Nos pipelines en action](https://cln-performance.com/pipelines.html), cinq étapes, gestion des exceptions, rôle humain et lien avec les bénéfices constatés. Menu de sept liens et quatre langues. Les éléments V4 restent applicables.

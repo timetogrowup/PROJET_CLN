@@ -1,3 +1,5 @@
+> Actualisation V6 — 29 octobre 2026 : le positionnement commercial courant valorise le SI existant par les pipelines et l’enrichissement des données dans les applications destinataires. Voir [MINUTE](MINUTE.md) et la [recette V6](docs/RECETTE_ECOSYSTEME_PIPELINES_V6.md). Les descriptions antérieures ci-dessous restent historiques lorsqu’elles divergent.
+
 # Mise à jour technique V5 du 29 octobre 2026
 
 Nouvelle page statique pipelines.html et module éditorial scripts/pipeline_content.py appelé par le générateur commun. Dix pages, sept liens de navigation, quatre langues, sitemap et cache V5. Pas de nouveau script de production, de stockage visiteur, d’API ni de moteur d’exécution de pipelines. Questionnaire V4 et backend V3 préservés.

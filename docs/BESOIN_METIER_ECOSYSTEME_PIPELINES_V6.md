@@ -1,6 +1,6 @@
 # Besoin métier V6 — Valoriser le SI existant par les pipelines
 
-Date : 29 octobre 2026. Statut : cadré, réalisation en cours. Cette version remplace la hiérarchie éditoriale V4/V5 ; leurs protections et fonctionnalités restent applicables.
+Date : 29 octobre 2026. Statut : livré et vérifié. Cette version remplace la hiérarchie éditoriale V4/V5 ; leurs protections et fonctionnalités restent applicables.
 
 ## Objectif et bénéfices
 Faire comprendre dès le premier écran que CLN Performance valorise l’écosystème informatique du client : relier ses applications existantes et enrichir progressivement les données transportées pour créer de la valeur dans une ou plusieurs applications destinataires. Les gains de temps et la réduction des ressaisies ne constituent plus la promesse commerciale principale.
@@ -36,3 +36,6 @@ A07 : questionnaire, transfert explicite, langues et protections du formulaire s
 A08 : version source enregistrée, publication Pages réussie, ressources et message public vérifiés.
 
 Hors périmètre : moteur de pipelines, intégration client réelle, changement de marque, d’hébergement, de contrat ou de traitement de données personnelles.
+
+## Livraison
+A01 à A08 réalisés et vérifiés : voir [recette V6](RECETTE_ECOSYSTEME_PIPELINES_V6.md). Les synthèses utilisent la version 6 pour isoler les anciennes réponses V4 ; aucun envoi de mail réel. La validation de compréhension par des prospects reste à mener.

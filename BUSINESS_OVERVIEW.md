@@ -1,3 +1,5 @@
+> Actualisation V6 — 29 octobre 2026 : le positionnement commercial courant valorise le SI existant par les pipelines et l’enrichissement des données dans les applications destinataires. Voir [MINUTE](MINUTE.md) et la [recette V6](docs/RECETTE_ECOSYSTEME_PIPELINES_V6.md). Les descriptions antérieures ci-dessous restent historiques lorsqu’elles divergent.
+
 # Mise à jour métier V5 du 29 octobre 2026
 
 Les pipelines rendent explicite le savoir-faire de CLN : relier plusieurs outils et enchaîner réception, contrôle, traitement, transmission et suivi, selon des règles définies avec les équipes. Le nouveau parcours présente les exceptions, les validations humaines et les conditions de reprise. Les exemples restent illustratifs ; le positionnement d’autonomie et de rémunération liée aux bénéfices constatés est conservé.

@@ -1,3 +1,20 @@
+# État courant au 29 octobre 2026 après livraison V6
+
+**Positionnement recentré sur les pipelines de données et la valorisation du SI existant. Version publiée et vérifiée.** Dès l’accueil : applications existantes, données progressivement rapprochées et enrichies, valeur dans une ou plusieurs applications destinataires. Les six pages commerciales, le questionnaire, ses recommandations, le contact et la confirmation sont alignés en quatre langues. Les dix pages partagent le nouveau message commun. Les tâches répétitives, les ressaisies et le temps gagné ne portent plus la promesse principale.
+
+- [Besoin métier V6](docs/BESOIN_METIER_ECOSYSTEME_PIPELINES_V6.md), [spécifications V6](docs/SPECIFICATIONS_TECHNIQUES_ECOSYSTEME_PIPELINES_V6.md), [stratégie V6](docs/STRATEGIE_DEVELOPPEMENT_ECOSYSTEME_PIPELINES_V6.md), [recette et limites](docs/RECETTE_ECOSYSTEME_PIPELINES_V6.md).
+- Documents initiaux : [978648b](https://github.com/timetogrowup/PROJET_CLN/commit/978648be88378a70e4825122ae20979ee8707ef7). Code livré : [ed622ee](https://github.com/timetogrowup/PROJET_CLN/commit/ed622eede0de77be0b59a918912c924f546f3dfe).
+- [CI 40873607848](https://github.com/timetogrowup/PROJET_CLN/actions/runs/40873607848) réussie : 400 affichages, 42 assertions questionnaire/transfert, 84 assertions pipelines, 26 contrôles sécurité, HTTP et fenêtre humaine sur deux moteurs ; 522 textes statiques et 133 messages.
+- [Pages 40874180979](https://github.com/timetogrowup/PROJET_CLN/actions/runs/40874180979) réussi. Dix-sept ressources publiques HTTP 200 identiques aux sources testées. Accueil et parcours vers l’exemple observés sur [cln-performance.com](https://cln-performance.com/).
+- Méthode : priorité aux interfaces et fonctions existantes, recherche d’une solution sans modification des outils ; toute évolution indispensable est limitée et justifiée après étude de faisabilité.
+- Prévention d’une régression : les nouveaux libellés du questionnaire exigent une synthèse version 6 ; une ancienne synthèse V4 propose de refaire le point et reste effaçable. Aucun ajout automatique au message, aucune traduction des textes saisis.
+- Architecture et conditions commerciales conservées ; pas de nouvel outil client, de pipeline réel, de nouvelle collecte ni de déploiement OVH. Aucun mail réel envoyé.
+- Limites : pas de téléphone physique, lecteur d’écran ni retour de compréhension de prospects ; scénarios illustratifs et faisabilité à examiner par mission.
+
+Les états V5 et antérieurs ci-dessous sont historiques ; cette synthèse V6 prévaut sur leurs messages commerciaux.
+
+---
+
 # État courant au 29 octobre 2026 après livraison V5
 
 **Les pipelines sont mis en avant et la V5 est publiée.** L’accueil comporte un bloc après la présentation ; une nouvelle page « Nos pipelines en action » explique cinq étapes, quatre capacités, les chemins d’exception et le rôle des équipes. Vos besoins, Méthode et Exemples renvoient vers ce parcours. Le menu comporte sept liens sur dix pages, en quatre langues. Le positionnement commercial V4 reste inchangé : autonomie, absence de recherche de revenu récurrent et possibilité de rémunération liée aux bénéfices effectivement constatés selon accord préalable.
