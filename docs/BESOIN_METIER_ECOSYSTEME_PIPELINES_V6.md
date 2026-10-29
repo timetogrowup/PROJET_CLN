@@ -13,7 +13,7 @@ Publics : dirigeants, responsables métier, responsables du SI et équipes utili
 - Pipelines : expliquer les enrichissements successifs et la valeur à destination ; conserver contrôles, exceptions et validation humaine.
 - Méthode : partir de la valeur attendue à destination, cartographier les applications et interfaces disponibles, privilégier les possibilités natives et limiter les évolutions, tester puis mesurer l’usage réel.
 - Exemples : identifier explicitement sources existantes, enrichissement et applications destinataires ; scénarios illustratifs sans références inventées.
-- Questionnaire et synthèse : orienter vers les possibilités du SI et les données utiles, sans changer les codes ni perdre les synthèses existantes.
+- Questionnaire et synthèse : orienter vers les possibilités du SI et les données utiles, en conservant les codes et en identifiant les anciennes synthèses pour inviter à les refaire.
 - Contact et confirmation : inviter à décrire applications, données et résultat recherché. Pages légales : cohérence du message commun, maintien des informations réglementaires et de confidentialité.
 - Quatre langues : français, anglais, portugais du Brésil, espagnol ; titres, descriptions, navigation, pieds de page et messages dynamiques inclus.
 

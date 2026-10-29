@@ -10,12 +10,12 @@ for(const engine of [chromium,webkit]){
  await p.goto(base+'/diagnostic.html?lang=fr');await p.waitForFunction(()=>document.documentElement.dataset.i18nReady==='true');
  const fill=async()=>{for(const name of ['frequency','people','goal','horizon'])await p.locator(`[name=${name}][value=inconnu]`).check();};
  await fill();await p.locator('#diagnostic-form [type=submit]').click();
- assert((await p.locator('#resultat-insights').textContent()).includes('reste à préciser'));checks++;
+ assert((await p.locator('#resultat-insights').textContent()).includes('Un premier échange'));checks++;
  assert.equal(await p.evaluate(()=>localStorage.getItem('clnRecommendation')),null);checks++;
  await p.locator('#summary-edit').click();await p.locator('[name=problems][value=ressaisies]').check();await p.locator('#diagnostic-form [type=submit]').click();
- assert((await p.locator('#resultat-insights').textContent()).includes('difficulté précise'));checks++;
+ assert((await p.locator('#resultat-insights').textContent()).includes('objectif précis'));checks++;
  await p.locator('#summary-edit').click();await p.locator('[name=problems][value=repetitif]').check();await p.locator('#diagnostic-form [type=submit]').click();
- assert((await p.locator('#resultat-insights').textContent()).includes('Plusieurs difficultés'));checks++;
+ assert((await p.locator('#resultat-insights').textContent()).includes('Plusieurs possibilités'));checks++;
  await p.locator('#summary-edit').click();await p.locator('[name=problems][value=inconnu]').check();assert.equal(await p.locator('[name=problems]:checked').count(),1);checks++;
  await p.locator('[name=problems][value=chiffres]').check();assert.equal(await p.locator('[name=problems][value=inconnu]').isChecked(),false);checks++;
  await p.locator('#diagnostic-form [type=submit]').click();
@@ -32,16 +32,16 @@ for(const engine of [chromium,webkit]){
  await p.locator('#recommendation-clear').click();assert.equal(await p.locator('#message').inputValue(),'My own words <b>not HTML</b>');checks++;
  assert.equal(await p.evaluate(()=>localStorage.getItem('clnRecommendation')),null);checks++;
  // Unrequested visit to contact never imports an earlier saved result.
- await p.evaluate(()=>localStorage.setItem('clnRecommendation',JSON.stringify({version:4,generatedAt:new Date().toISOString(),answers:{problems:['suivi']}})));
+ await p.evaluate(()=>localStorage.setItem('clnRecommendation',JSON.stringify({version:6,generatedAt:new Date().toISOString(),answers:{problems:['suivi']}})));
  await p.goto(base+'/contact.html?lang=fr&need=suivi');await p.waitForFunction(()=>!document.querySelector('#contact-form [type=submit]').disabled);
  assert.equal(await p.locator('#recommendation-preview').isVisible(),false);assert.equal(await p.locator('#message').inputValue(),'');checks++;
- assert.equal(await p.locator('#need-context').inputValue(),'suivi');await p.locator('#need-context').selectOption('chiffres');await p.locator('#need-add').click();assert((await p.locator('#message').inputValue()).includes('chiffres fiables'));checks++;
+ assert.equal(await p.locator('#need-context').inputValue(),'suivi');await p.locator('#need-context').selectOption('chiffres');await p.locator('#need-add').click();assert((await p.locator('#message').inputValue()).includes('information cohérente'));checks++;
  await p.goto(base+'/contact.html?need=%3Cscript%3E');await p.waitForFunction(()=>!document.querySelector('#contact-form [type=submit]').disabled);assert.equal(await p.locator('#need-context').inputValue(),'');checks++;
  // Legacy summary gets an actionable explanation, not a fabricated new summary.
- await p.evaluate(()=>localStorage.setItem('clnRecommendation',JSON.stringify({version:2,generatedAt:new Date().toISOString(),answers:{modules:['liberer']}})));
+ await p.evaluate(()=>localStorage.setItem('clnRecommendation',JSON.stringify({version:4,generatedAt:new Date().toISOString(),answers:{modules:['liberer']}})));
  await p.goto(base+'/contact.html?summary=1&lang=fr');await p.waitForFunction(()=>!document.querySelector('#contact-form [type=submit]').disabled);
  assert((await p.locator('#recommendation-content').textContent()).includes('ancienne version'));assert.equal(await p.locator('#recommendation-add').isVisible(),false);checks++;
- await p.evaluate(()=>localStorage.setItem('clnRecommendation',JSON.stringify({version:4,generatedAt:new Date(Date.now()-31*86400000).toISOString(),answers:{}})));
+ await p.evaluate(()=>localStorage.setItem('clnRecommendation',JSON.stringify({version:6,generatedAt:new Date(Date.now()-31*86400000).toISOString(),answers:{}})));
  await p.reload();await p.waitForFunction(()=>!document.querySelector('#contact-form [type=submit]').disabled);assert.equal(await p.locator('#recommendation-preview').isVisible(),false);assert.equal(await p.evaluate(()=>localStorage.getItem('clnRecommendation')),null);checks++;
  // Structured codes are filtered, including potential script fragments.
  const safe=await p.evaluate(()=>CLN.summaryText({problems:['<img src=x onerror=alert(1)>','ressaisies','ressaisies'],tools:'bad'}));assert(!safe.includes('<img'));checks++;

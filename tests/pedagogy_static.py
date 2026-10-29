@@ -68,3 +68,17 @@ import xml.etree.ElementTree as ET
 urls={node.text for node in ET.parse(root/'sitemap.xml').iter() if node.tag.endswith('}loc')}
 assert 'https://cln-performance.com/pipelines.html' in urls
 print('PASS V5 pipeline structure, seven-link shared navigation and sitemap.')
+
+# V6 editorial acceptance: first-screen promise and enrichment visible at destination.
+from html import unescape
+home=unescape((root/'index.html').read_text())
+hero=re.search(r'<section class="hero">(.*?)</section>',home,re.S).group(1)
+for term in ['pipelines de données','applications existantes','enrichies','applications qui reçoivent','sans les modifier']:
+ assert term in hero,term
+for obsolete in ['Moins de tâches répétitives','Du temps pour votre activité','éviter les ressaisies']:
+ assert obsolete not in home,obsolete
+for term in ['contexte contractuel','priorité','outil de planification','applications déjà utilisées']:
+ assert term in unescape(pipeline),term
+assert 'version:6,generatedAt' in (root/'diagnostic.js').read_text()
+assert 'data.version!==6' in (root/'contact.js').read_text()
+print('PASS V6 first-screen ecosystem promise, progressive enrichment, destination value and legacy summary version isolation.')

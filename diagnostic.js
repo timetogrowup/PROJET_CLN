@@ -54,7 +54,7 @@ CLN.ready.then(() => {
   });
   transfer.addEventListener('click',event=>{
     if(!last){event.preventDefault();return;}
-    if(!CLN.storeSummary({version:4,generatedAt,answers:last})){event.preventDefault();error.hidden=false;}
+    if(!CLN.storeSummary({version:6,generatedAt,answers:last})){event.preventDefault();error.hidden=false;}
   });
   document.querySelector('#summary-edit').addEventListener('click',()=>{result.hidden=true;last=null;form.querySelector('input').focus();});
   window.addEventListener('cln:language',show);

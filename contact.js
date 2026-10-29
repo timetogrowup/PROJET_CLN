@@ -12,7 +12,7 @@ CLN.ready.then(async () => {
   function renderSummary(){
     if(!data){preview.hidden=true;return;}preview.hidden=false;
     const add=document.querySelector('#recommendation-add');
-    if(data.version!==4||!data.answers){content.replaceChildren();const note=document.createElement('p');note.textContent=CLN.t('v4.old');const link=document.createElement('a');link.href='diagnostic.html?lang='+encodeURIComponent(CLN.lang);link.className='text-link';link.textContent=CLN.t('v4.refresh');content.append(note,link);add.hidden=true;return;}
+    if(data.version!==6||!data.answers){content.replaceChildren();const note=document.createElement('p');note.textContent=CLN.t('v4.old');const link=document.createElement('a');link.href='diagnostic.html?lang='+encodeURIComponent(CLN.lang);link.className='text-link';link.textContent=CLN.t('v4.refresh');content.append(note,link);add.hidden=true;return;}
     add.hidden=false;add.disabled=Boolean(previousPrefill);if(previousPrefill)add.textContent=CLN.t('v4.added');
     const text=CLN.summaryText(data.answers);content.textContent=text;content.style.whiteSpace='pre-line';date.textContent=CLN.t('summary_date',{date:new Intl.DateTimeFormat(CLN.lang,{dateStyle:'long',timeStyle:'short'}).format(new Date(data.generatedAt))});
     
@@ -82,7 +82,7 @@ CLN.ready.then(async () => {
     HTMLFormElement.prototype.submit.call(form);
   });
   document.querySelector('#recommendation-add').addEventListener('click',()=>{
-    if(!data||data.version!==4||!data.answers||previousPrefill)return;
+    if(!data||data.version!==6||!data.answers||previousPrefill)return;
     const text=CLN.summaryText(data.answers);
     summaryBase=message.value;
     message.value=message.value?message.value+'\n\n'+text:text;

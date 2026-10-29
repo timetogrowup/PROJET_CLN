@@ -2213,5 +2213,400 @@
     "en": "This scenario illustrates a possible workflow. The stages need to be adapted to your tools and your organisation’s rules.",
     "pt-BR": "Este cenário ilustra um funcionamento possível. As etapas devem ser adaptadas às suas ferramentas e às regras da sua organização.",
     "es": "Este escenario ilustra un funcionamiento posible. Las etapas deben adaptarse a sus herramientas y a las reglas de su organización."
+  },
+  "CLN Performance relie vos applications et enrichit vos données pour valoriser votre SI existant.": {
+    "en": "CLN Performance connects your applications and enriches your data to unlock the value of your existing IT ecosystem.",
+    "pt-BR": "A CLN Performance conecta suas aplicações e enriquece seus dados para valorizar seu ecossistema de TI existente.",
+    "es": "CLN Performance conecta sus aplicaciones y enriquece sus datos para aprovechar su ecosistema informático existente."
+  },
+  "Un pipeline de données relie vos applications existantes. Il transporte les données, les rapproche d’autres sources et les enrichit au fil des étapes pour fournir un résultat exploitable à une ou plusieurs applications destinataires. La valeur se construit dans le parcours et se concrétise dans vos outils métier.": {
+    "en": "A data pipeline connects your existing applications. It moves data, combines it with other sources and enriches it at successive stages to supply a usable result to one or more destination applications. Value builds along the journey and becomes tangible in your business tools.",
+    "pt-BR": "Um pipeline de dados conecta suas aplicações existentes. Ele transporta os dados, cruza outras fontes e os enriquece ao longo das etapas para fornecer um resultado utilizável a uma ou mais aplicações de destino. O valor se constrói no percurso e se concretiza nas suas ferramentas.",
+    "es": "Un pipeline de datos conecta sus aplicaciones existentes. Transporta datos, los cruza con otras fuentes y los enriquece en cada etapa para proporcionar un resultado utilizable a una o varias aplicaciones de destino. El valor se construye en el recorrido y se concreta en sus herramientas."
+  },
+  "Sources existantes": {
+    "en": "Existing sources",
+    "pt-BR": "Fontes existentes",
+    "es": "Fuentes existentes"
+  },
+  "Rapprochement": {
+    "en": "Matching",
+    "pt-BR": "Cruzamento",
+    "es": "Cruce"
+  },
+  "Enrichissement": {
+    "en": "Enrichment",
+    "pt-BR": "Enriquecimento",
+    "es": "Enriquecimiento"
+  },
+  "Applications destinataires": {
+    "en": "Destination applications",
+    "pt-BR": "Aplicações de destino",
+    "es": "Aplicaciones de destino"
+  },
+  "Valeur et suivi": {
+    "en": "Value and tracking",
+    "pt-BR": "Valor e acompanhamento",
+    "es": "Valor y seguimiento"
+  },
+  "Des données qui s’enrichissent entre vos applications": {
+    "en": "Data enriched as it flows between your applications",
+    "pt-BR": "Dados que se enriquecem entre suas aplicações",
+    "es": "Datos que se enriquecen entre sus aplicaciones"
+  },
+  "Notre point de départ est votre écosystème informatique. Nous recherchons les connexions possibles avec les interfaces existantes, sans ajouter une application par principe et en évitant les modifications des outils lorsque c’est possible. Vos équipes définissent les règles et les validations.": {
+    "en": "We start with your IT ecosystem. We explore connections through existing interfaces, without adding an application by default and avoiding tool changes where possible. Your teams define rules and approvals.",
+    "pt-BR": "Partimos do seu ecossistema de TI. Exploramos conexões pelas interfaces existentes, sem acrescentar uma aplicação por princípio e evitando alterações quando possível. Suas equipes definem as regras e validações.",
+    "es": "Partimos de su ecosistema informático. Exploramos conexiones mediante interfaces existentes, sin añadir una aplicación por defecto y evitando modificaciones cuando sea posible. Sus equipos definen reglas y validaciones."
+  },
+  "Exemple : enrichir une demande pour mieux la planifier": {
+    "en": "Example: enrich a request for better planning",
+    "pt-BR": "Exemplo: enriquecer uma solicitação para planejar melhor",
+    "es": "Ejemplo: enriquecer una solicitud para planificar mejor"
+  },
+  "Votre application de gestion fournit une demande. Votre référentiel client contient le contrat et les engagements de service. Le pipeline lit les données autorisées via les interfaces disponibles.": {
+    "en": "Your management application provides a request. Customer reference data contains the contract and service commitments. The pipeline reads authorised data through available interfaces.",
+    "pt-BR": "Sua aplicação de gestão fornece uma solicitação. O cadastro de clientes contém o contrato e os compromissos de serviço. O pipeline lê os dados autorizados pelas interfaces disponíveis.",
+    "es": "Su aplicación de gestión aporta una solicitud. Los datos de referencia del cliente contienen el contrato y los compromisos de servicio. El pipeline lee los datos autorizados mediante las interfaces disponibles."
+  },
+  "Les identifiants sont rapprochés pour associer la demande au bon client et au bon contrat. Les formats et la qualité sont contrôlés ; une correspondance incertaine est signalée.": {
+    "en": "Identifiers are matched to link the request to the right customer and contract. Formats and quality are checked; uncertain matches are flagged.",
+    "pt-BR": "Os identificadores são cruzados para associar a solicitação ao cliente e contrato corretos. Formatos e qualidade são verificados; correspondências incertas são sinalizadas.",
+    "es": "Se cruzan identificadores para asociar la solicitud al cliente y contrato correctos. Se comprueban formatos y calidad; las coincidencias inciertas se señalan."
+  },
+  "Le contexte contractuel complète la demande. Les règles métier ajoutent une échéance et une priorité ; d’autres sources autorisées peuvent préciser la localisation ou les compétences nécessaires. Chaque étape apporte une information utile supplémentaire.": {
+    "en": "Contract context completes the request. Business rules add a deadline and priority; other authorised sources may specify location or required skills. Each stage contributes further useful information.",
+    "pt-BR": "O contexto contratual complementa a solicitação. As regras de negócio acrescentam prazo e prioridade; outras fontes autorizadas podem indicar localização ou competências necessárias. Cada etapa traz informações úteis adicionais.",
+    "es": "El contexto contractual completa la solicitud. Las reglas de negocio añaden plazo y prioridad; otras fuentes autorizadas pueden precisar ubicación o competencias necesarias. Cada etapa aporta información útil adicional."
+  },
+  "L’outil de planification reçoit une demande contextualisée et priorisée. Le logiciel de gestion et le tableau de pilotage peuvent recevoir le même résultat selon leurs besoins et formats. La valeur rejoint les applications déjà utilisées.": {
+    "en": "The planning tool receives a contextualised, prioritised request. The management application and dashboard can receive the same result in the formats they need. Value reaches the applications already in use.",
+    "pt-BR": "A ferramenta de planejamento recebe uma solicitação contextualizada e priorizada. O sistema de gestão e o painel podem receber o mesmo resultado nos formatos necessários. O valor chega às aplicações já utilizadas.",
+    "es": "La herramienta de planificación recibe una solicitud contextualizada y priorizada. El sistema de gestión y el cuadro de mando pueden recibir el mismo resultado en los formatos necesarios. El valor llega a las aplicaciones ya utilizadas."
+  },
+  "Nous vérifions la réception et l’utilité du résultat dans chaque application destinataire : données complètes, priorité comprise et décision possible. Les étapes et anomalies sont suivies pour maîtriser le parcours.": {
+    "en": "We verify receipt and usefulness in each destination application: complete data, understood priority and an enabled decision. Stages and anomalies are tracked to keep the journey under control.",
+    "pt-BR": "Verificamos o recebimento e a utilidade em cada aplicação de destino: dados completos, prioridade compreendida e decisão possível. Etapas e anomalias são acompanhadas para controlar o percurso.",
+    "es": "Verificamos la recepción y utilidad en cada aplicación de destino: datos completos, prioridad comprendida y decisión posible. Se siguen las etapas y anomalías para controlar el recorrido."
+  },
+  "Nous définissons la valeur attendue dans les applications destinataires : complétude, cohérence, couverture des données et décisions rendues possibles. Nous comparons le résultat à une situation de départ sur une période convenue.": {
+    "en": "We define expected value in destination applications: completeness, consistency, data coverage and decisions enabled. We compare results with a baseline over an agreed period.",
+    "pt-BR": "Definimos o valor esperado nas aplicações de destino: completude, coerência, cobertura dos dados e decisões viabilizadas. Comparamos o resultado com uma situação inicial em um período acordado.",
+    "es": "Definimos el valor esperado en las aplicaciones de destino: integridad, coherencia, cobertura de datos y decisiones posibles. Comparamos el resultado con una situación inicial durante un período acordado."
+  },
+  "Quelle valeur vos données pourraient-elles apporter à vos applications ?": {
+    "en": "What value could your data bring to your applications?",
+    "pt-BR": "Que valor seus dados poderiam trazer às suas aplicações?",
+    "es": "¿Qué valor podrían aportar sus datos a sus aplicaciones?"
+  },
+  "Valoriser les liens entre vos applications": {
+    "en": "Unlock value between your applications",
+    "pt-BR": "Valorizar os vínculos entre suas aplicações",
+    "es": "Aprovechar las conexiones entre sus aplicaciones"
+  },
+  "Votre SI constitue un ensemble de ressources complémentaires. Un pipeline relie les sources disponibles, enrichit les données et restitue le résultat dans vos applications métier, avec les contrôles et validations convenus.": {
+    "en": "Your IT ecosystem brings complementary resources together. A pipeline connects available sources, enriches data and delivers the result to your business applications with agreed checks and approvals.",
+    "pt-BR": "Seu ambiente de TI reúne recursos complementares. Um pipeline conecta fontes disponíveis, enriquece os dados e entrega o resultado às suas aplicações com as verificações e validações acordadas.",
+    "es": "Su SI reúne recursos complementarios. Un pipeline conecta fuentes disponibles, enriquece los datos y entrega el resultado a sus aplicaciones con los controles y validaciones acordados."
+  },
+  "Nous définissons d’abord le résultat utile dans les applications destinataires, puis les sources et enrichissements nécessaires. Nous privilégions les interfaces et fonctions existantes, testons la qualité et la restitution des données ainsi que les exceptions, puis documentons l’exploitation.": {
+    "en": "We first define the useful outcome in destination applications, then the required sources and enrichments. We prioritise existing interfaces and functions, test data quality and delivery as well as exceptions, then document operation.",
+    "pt-BR": "Definimos primeiro o resultado útil nas aplicações de destino, depois as fontes e enriquecimentos necessários. Priorizamos interfaces e funções existentes, testamos qualidade e entrega dos dados e as exceções, depois documentamos a operação.",
+    "es": "Definimos primero el resultado útil en las aplicaciones de destino y después las fuentes y enriquecimientos necesarios. Priorizamos interfaces y funciones existentes, probamos calidad y entrega de datos y excepciones, y documentamos la operación."
+  },
+  "La mesure porte d’abord sur la valeur dans les applications destinataires : complétude, pertinence des enrichissements et usage du résultat. Si la rémunération dépend des bénéfices, les critères et modalités de calcul sont convenus avant l’intervention.": {
+    "en": "Measurement focuses first on value in destination applications: completeness, relevance of enrichments and use of the result. If remuneration depends on benefits, criteria and calculations are agreed before work begins.",
+    "pt-BR": "A medição prioriza o valor nas aplicações de destino: completude, pertinência dos enriquecimentos e uso do resultado. Se a remuneração depender dos benefícios, os critérios e cálculos são acordados antes da intervenção.",
+    "es": "La medición prioriza el valor en las aplicaciones de destino: integridad, pertinencia de los enriquecimientos y uso del resultado. Si la remuneración depende de los beneficios, los criterios y cálculos se acuerdan antes de intervenir."
+  },
+  "Découvrez comment les pipelines relient vos applications existantes et enrichissent les données pour créer de la valeur à destination.": {
+    "en": "See how pipelines connect existing applications and enrich data to create value at its destination.",
+    "pt-BR": "Veja como os pipelines conectam aplicações existentes e enriquecem os dados para criar valor no destino.",
+    "es": "Descubra cómo los pipelines conectan aplicaciones existentes y enriquecen datos para crear valor en destino."
+  },
+  "Valoriser votre écosystème informatique": {
+    "en": "Unlock your IT ecosystem’s value",
+    "pt-BR": "Valorizar seu ecossistema de TI",
+    "es": "Aprovechar su ecosistema informático"
+  },
+  "Vos applications existantes. Des données enrichies. De nouvelles possibilités.": {
+    "en": "Your existing applications. Enriched data. New possibilities.",
+    "pt-BR": "Suas aplicações existentes. Dados enriquecidos. Novas possibilidades.",
+    "es": "Sus aplicaciones existentes. Datos enriquecidos. Nuevas posibilidades."
+  },
+  "CLN Performance conçoit des pipelines de données qui relient vos applications existantes. À chaque étape, les données sont rapprochées, contextualisées et enrichies pour créer de la valeur dans la ou les applications qui reçoivent le résultat. Nous privilégions les possibilités de votre SI, en limitant les évolutions des outils et, lorsque c’est possible, sans les modifier.": {
+    "en": "CLN Performance designs data pipelines connecting your existing applications. At each stage, data is combined, contextualised and enriched to create value in one or more destination applications. We prioritise your existing IT capabilities, minimising changes and, where possible, leaving your tools unchanged.",
+    "pt-BR": "A CLN Performance projeta pipelines de dados que conectam suas aplicações existentes. A cada etapa, os dados são cruzados, contextualizados e enriquecidos para criar valor em uma ou mais aplicações de destino. Priorizamos as possibilidades do seu ambiente de TI, limitando as alterações e, quando possível, sem modificar suas ferramentas.",
+    "es": "CLN Performance diseña pipelines de datos que conectan sus aplicaciones existentes. En cada etapa, los datos se cruzan, contextualizan y enriquecen para crear valor en una o varias aplicaciones de destino. Priorizamos las posibilidades de su SI, limitando los cambios y, cuando es posible, sin modificar sus herramientas."
+  },
+  "Sources : votre application métier fournit une demande et votre référentiel apporte le contexte client.": {
+    "en": "Sources: your business application provides a request and your reference system supplies customer context.",
+    "pt-BR": "Fontes: sua aplicação de trabalho fornece uma solicitação e seu cadastro traz o contexto do cliente.",
+    "es": "Fuentes: su aplicación de gestión aporta una solicitud y su sistema de referencia proporciona el contexto del cliente."
+  },
+  "Enrichissement : le pipeline rapproche ces données, ajoute une priorité selon vos règles et transmet une demande contextualisée à votre outil de planification et à votre tableau de pilotage existants.": {
+    "en": "Enrichment: the pipeline combines this data, adds a priority using your rules and delivers a contextualised request to your existing planning tool and dashboard.",
+    "pt-BR": "Enriquecimento: o pipeline cruza esses dados, acrescenta uma prioridade conforme suas regras e transmite uma solicitação contextualizada à ferramenta de planejamento e ao painel existentes.",
+    "es": "Enriquecimiento: el pipeline cruza estos datos, añade una prioridad según sus reglas y transmite una solicitud contextualizada a su herramienta de planificación y a su cuadro de mando existentes."
+  },
+  "Relier vos applications existantes": {
+    "en": "Connect your existing applications",
+    "pt-BR": "Conectar suas aplicações existentes",
+    "es": "Conectar sus aplicaciones existentes"
+  },
+  "Vos applications détiennent des informations complémentaires. CLN organise leur circulation pour que chaque outil bénéficie des données utiles déjà présentes dans votre SI.": {
+    "en": "Your applications hold complementary information. CLN organises its flow so each tool benefits from useful data already in your IT ecosystem.",
+    "pt-BR": "Suas aplicações contêm informações complementares. A CLN organiza sua circulação para que cada ferramenta aproveite os dados úteis já presentes no seu ambiente de TI.",
+    "es": "Sus aplicaciones contienen información complementaria. CLN organiza su circulación para que cada herramienta aproveche los datos útiles ya presentes en su SI."
+  },
+  "Enrichir les données au fil du parcours": {
+    "en": "Enrich data throughout its journey",
+    "pt-BR": "Enriquecer os dados ao longo do percurso",
+    "es": "Enriquecer los datos a lo largo del recorrido"
+  },
+  "Une donnée prend de la valeur lorsqu’elle est complétée par un contexte, une règle métier ou un calcul. Le pipeline construit cet enrichissement progressivement entre vos applications.": {
+    "en": "Data gains value when supplemented by context, a business rule or a calculation. The pipeline builds this enrichment progressively between your applications.",
+    "pt-BR": "Um dado ganha valor quando é complementado por contexto, uma regra de negócio ou um cálculo. O pipeline constrói esse enriquecimento progressivamente entre suas aplicações.",
+    "es": "Un dato gana valor cuando se completa con contexto, una regla de negocio o un cálculo. El pipeline construye este enriquecimiento progresivamente entre sus aplicaciones."
+  },
+  "Construire une information cohérente": {
+    "en": "Build consistent information",
+    "pt-BR": "Construir informações coerentes",
+    "es": "Construir información coherente"
+  },
+  "Créer de la valeur dans vos outils métier": {
+    "en": "Create value in your business tools",
+    "pt-BR": "Criar valor nas suas ferramentas de trabalho",
+    "es": "Crear valor en sus herramientas de gestión"
+  },
+  "Les données enrichies rejoignent la ou les applications qui en ont besoin : une priorité dans la planification, un dossier complété dans la gestion ou un indicateur dans le pilotage.": {
+    "en": "Enriched data reaches the applications that need it: a priority in planning, a completed case in case management or an indicator in reporting.",
+    "pt-BR": "Os dados enriquecidos chegam às aplicações que precisam deles: uma prioridade no planejamento, um processo complementado na gestão ou um indicador no acompanhamento.",
+    "es": "Los datos enriquecidos llegan a las aplicaciones que los necesitan: una prioridad en planificación, un expediente completado en gestión o un indicador en seguimiento."
+  },
+  "Pipelines de données et valorisation de votre SI existant": {
+    "en": "Data pipelines and value from your existing IT ecosystem",
+    "pt-BR": "Pipelines de dados e valorização do seu ambiente de TI existente",
+    "es": "Pipelines de datos y valor de su SI existente"
+  },
+  "Reliez vos applications existantes et enrichissez vos données pour créer de la valeur dans vos outils métier, avec un minimum d’évolutions.": {
+    "en": "Connect existing applications and enrich data to create value in your business tools with minimal changes.",
+    "pt-BR": "Conecte aplicações existentes e enriqueça dados para criar valor nas ferramentas de trabalho com o mínimo de alterações.",
+    "es": "Conecte aplicaciones existentes y enriquezca datos para crear valor en sus herramientas de gestión con cambios mínimos."
+  },
+  "Pipelines de données et valorisation de votre SI existant — CLN Performance": {
+    "en": "Data pipelines and value from your existing IT ecosystem — CLN Performance",
+    "pt-BR": "Pipelines de dados e valorização do seu ambiente de TI existente — CLN Performance",
+    "es": "Pipelines de datos y valor de su SI existente — CLN Performance"
+  },
+  "Quelle valeur souhaitez-vous apporter à vos applications ?": {
+    "en": "What value would you like to bring to your applications?",
+    "pt-BR": "Que valor deseja trazer às suas aplicações?",
+    "es": "¿Qué valor desea aportar a sus aplicaciones?"
+  },
+  "Partez du résultat attendu dans vos outils métier. Nous explorons les données et les applications déjà disponibles pour construire le parcours utile.": {
+    "en": "Start with the outcome needed in your business tools. We explore existing data and applications to design a useful data journey.",
+    "pt-BR": "Parta do resultado esperado nas suas ferramentas. Exploramos os dados e as aplicações já disponíveis para construir o percurso útil.",
+    "es": "Parta del resultado esperado en sus herramientas. Exploramos los datos y las aplicaciones ya disponibles para construir el recorrido útil."
+  },
+  "Résultat recherché : alimenter vos applications à partir des sources disponibles, via leurs interfaces existantes lorsque cela est possible.": {
+    "en": "Expected outcome: feed your applications from available sources through existing interfaces where feasible.",
+    "pt-BR": "Resultado esperado: alimentar suas aplicações com as fontes disponíveis por meio das interfaces existentes quando possível.",
+    "es": "Resultado esperado: alimentar sus aplicaciones con las fuentes disponibles mediante interfaces existentes cuando sea posible."
+  },
+  "Résultat recherché : une information contextualisée et directement exploitable à destination.": {
+    "en": "Expected outcome: contextualised information ready for use at its destination.",
+    "pt-BR": "Resultado esperado: informação contextualizada e pronta para uso no destino.",
+    "es": "Resultado esperado: información contextualizada y lista para utilizar en destino."
+  },
+  "Résultat recherché : rendre une décision ou une action possible dans les outils que vos équipes utilisent déjà.": {
+    "en": "Expected outcome: enable a decision or action in the tools your teams already use.",
+    "pt-BR": "Resultado esperado: viabilizar uma decisão ou ação nas ferramentas que suas equipes já utilizam.",
+    "es": "Resultado esperado: hacer posible una decisión o acción en las herramientas que sus equipos ya utilizan."
+  },
+  "Connexion, enrichissement et exploitation des données : découvrez les possibilités de votre écosystème existant.": {
+    "en": "Connection, enrichment and use of data: explore the possibilities of your existing ecosystem.",
+    "pt-BR": "Conexão, enriquecimento e uso dos dados: descubra as possibilidades do seu ecossistema existente.",
+    "es": "Conexión, enriquecimiento y uso de datos: descubra las posibilidades de su ecosistema existente."
+  },
+  "Nous partons de la valeur attendue dans vos applications, puis explorons votre écosystème : sources disponibles, interfaces, règles métier et possibilités d’enrichissement. L’objectif est de tirer davantage de votre SI en limitant les évolutions de vos outils.": {
+    "en": "We start with the value expected in your applications, then explore your ecosystem: available sources, interfaces, business rules and enrichment opportunities. The aim is to get more from your IT ecosystem with minimal tool changes.",
+    "pt-BR": "Partimos do valor esperado nas suas aplicações e exploramos seu ecossistema: fontes disponíveis, interfaces, regras de negócio e possibilidades de enriquecimento. O objetivo é extrair mais do seu ambiente de TI limitando alterações nas ferramentas.",
+    "es": "Partimos del valor esperado en sus aplicaciones y exploramos su ecosistema: fuentes disponibles, interfaces, reglas de negocio y posibilidades de enriquecimiento. El objetivo es obtener más de su SI limitando cambios en las herramientas."
+  },
+  "Cartographier votre écosystème": {
+    "en": "Map your ecosystem",
+    "pt-BR": "Mapear seu ecossistema",
+    "es": "Cartografiar su ecosistema"
+  },
+  "Nous identifions vos applications, leurs données, leurs interfaces et les usages attendus à destination avec les équipes métier et le SI.": {
+    "en": "We identify applications, data, interfaces and expected uses at the destination with business and IT teams.",
+    "pt-BR": "Identificamos aplicações, dados, interfaces e usos esperados no destino com as equipes de negócio e TI.",
+    "es": "Identificamos aplicaciones, datos, interfaces y usos esperados en destino con los equipos de negocio y TI."
+  },
+  "Définir les enrichissements utiles": {
+    "en": "Define useful enrichments",
+    "pt-BR": "Definir enriquecimentos úteis",
+    "es": "Definir enriquecimientos útiles"
+  },
+  "Nous choisissons les sources, rapprochements et règles qui apportent une information nouvelle à vos outils. Nous vérifions les accès et recherchons une réalisation sans modification des applications.": {
+    "en": "We select sources, matching rules and business logic that add useful information to your tools. We verify access and seek implementation without changing applications.",
+    "pt-BR": "Selecionamos fontes, cruzamentos e regras que trazem novas informações às ferramentas. Verificamos acessos e buscamos implementar sem modificar aplicações.",
+    "es": "Seleccionamos fuentes, cruces y reglas que aporten información nueva a las herramientas. Verificamos accesos y buscamos implementar sin modificar aplicaciones."
+  },
+  "Tester le parcours et la restitution": {
+    "en": "Test the journey and delivery",
+    "pt-BR": "Testar o percurso e a entrega",
+    "es": "Probar el recorrido y la entrega"
+  },
+  "Nous vérifions les enrichissements à chaque étape, les exceptions et le résultat dans chaque application destinataire. Toute évolution indispensable est limitée et convenue avant réalisation.": {
+    "en": "We check enrichment at each stage, exceptions and the result in every destination application. Any essential change is minimised and agreed before implementation.",
+    "pt-BR": "Verificamos os enriquecimentos a cada etapa, as exceções e o resultado em cada aplicação de destino. Qualquer alteração indispensável é limitada e acordada antes da realização.",
+    "es": "Comprobamos los enriquecimientos en cada etapa, las excepciones y el resultado en cada aplicación de destino. Cualquier cambio indispensable se limita y acuerda antes de la realización."
+  },
+  "Transmettre et mesurer la valeur": {
+    "en": "Hand over and measure value",
+    "pt-BR": "Transmitir e medir o valor",
+    "es": "Transmitir y medir el valor"
+  },
+  "Nous documentons les flux et les règles pour votre autonomie. Nous mesurons la complétude et l’utilité des données reçues dans vos applications sur une période convenue.": {
+    "en": "We document flows and rules to support your autonomy. We measure completeness and usefulness of data received in your applications over an agreed period.",
+    "pt-BR": "Documentamos fluxos e regras para sua autonomia. Medimos a completude e utilidade dos dados recebidos nas aplicações em um período acordado.",
+    "es": "Documentamos flujos y reglas para su autonomía. Medimos la integridad y utilidad de los datos recibidos en las aplicaciones durante un período acordado."
+  },
+  "Notre priorité est de valoriser vos applications existantes et leurs interfaces. Nous recherchons une solution sans modification des outils ; si une évolution est indispensable, elle est limitée et justifiée avec vous. La faisabilité dépend des accès et des possibilités réelles de votre SI.": {
+    "en": "Our priority is to use your existing applications and interfaces. We seek a solution without changing the tools; if a change is essential, it is minimised and justified with you. Feasibility depends on access and the actual capabilities of your IT ecosystem.",
+    "pt-BR": "Nossa prioridade é valorizar suas aplicações e interfaces existentes. Buscamos uma solução sem modificar as ferramentas; se uma alteração for indispensável, ela será limitada e justificada com você. A viabilidade depende dos acessos e das possibilidades reais do seu ambiente de TI.",
+    "es": "Nuestra prioridad es aprovechar sus aplicaciones e interfaces existentes. Buscamos una solución sin modificar las herramientas; si un cambio es indispensable, se limita y justifica con usted. La viabilidad depende de los accesos y las posibilidades reales de su SI."
+  },
+  "La valeur créée dans vos applications existantes": {
+    "en": "Value created in your existing applications",
+    "pt-BR": "O valor criado nas suas aplicações existentes",
+    "es": "El valor creado en sus aplicaciones existentes"
+  },
+  "Enrichir le pilotage avec les données métier": {
+    "en": "Enrich reporting with business data",
+    "pt-BR": "Enriquecer o acompanhamento com dados de negócio",
+    "es": "Enriquecer el seguimiento con datos de gestión"
+  },
+  "Pipeline : rapprocher les données d’activité, le référentiel des équipes et les objectifs, puis calculer les indicateurs selon les règles convenues.": {
+    "en": "Pipeline: combine activity data, team reference data and targets, then calculate indicators using agreed rules.",
+    "pt-BR": "Pipeline: cruzar dados de atividade, cadastro das equipes e metas, depois calcular indicadores conforme as regras acordadas.",
+    "es": "Pipeline: cruzar datos de actividad, referencias de equipos y objetivos, y calcular indicadores según las reglas acordadas."
+  },
+  "Destination : le tableau de pilotage existant reçoit des indicateurs contextualisés. Valeur à vérifier : couverture de l’activité et pertinence des décisions possibles.": {
+    "en": "Destination: the existing dashboard receives contextualised indicators. Value to assess: activity coverage and relevance to decision-making.",
+    "pt-BR": "Destino: o painel existente recebe indicadores contextualizados. Valor a verificar: cobertura da atividade e pertinência para as decisões.",
+    "es": "Destino: el cuadro de mando existente recibe indicadores contextualizados. Valor a comprobar: cobertura de la actividad y pertinencia para las decisiones."
+  },
+  "Sources : le logiciel de gestion détient les demandes ; le référentiel client fournit les engagements de service.": {
+    "en": "Sources: the management application holds requests; customer reference data supplies service commitments.",
+    "pt-BR": "Fontes: o sistema de gestão contém as solicitações; o cadastro de clientes fornece os compromissos de serviço.",
+    "es": "Fuentes: el sistema de gestión contiene las solicitudes; los datos de referencia del cliente aportan los compromisos de servicio."
+  },
+  "Pipeline : rapprocher chaque demande de son contexte, calculer son échéance et sa priorité, contrôler les données puis transmettre le résultat.": {
+    "en": "Pipeline: match each request to its context, calculate its deadline and priority, check the data and deliver the result.",
+    "pt-BR": "Pipeline: relacionar cada solicitação ao seu contexto, calcular o prazo e a prioridade, verificar os dados e transmitir o resultado.",
+    "es": "Pipeline: relacionar cada solicitud con su contexto, calcular su plazo y prioridad, comprobar los datos y transmitir el resultado."
+  },
+  "Destinations : l’outil de planification reçoit une priorité exploitable ; le logiciel de gestion retrouve une demande enrichie. Valeur à vérifier : complétude et pertinence des priorités.": {
+    "en": "Destinations: the planning tool receives an actionable priority; the management application receives an enriched request. Value to assess: completeness and relevance of priorities.",
+    "pt-BR": "Destinos: a ferramenta de planejamento recebe uma prioridade utilizável; o sistema de gestão recebe a solicitação enriquecida. Valor a verificar: completude e pertinência das prioridades.",
+    "es": "Destinos: la herramienta de planificación recibe una prioridad utilizable; el sistema de gestión recibe la solicitud enriquecida. Valor a comprobar: integridad y pertinencia de las prioridades."
+  },
+  "Sources : votre outil de gestion détient les dossiers ; les applications d’intervention et de facturation détiennent leurs événements.": {
+    "en": "Sources: your management tool holds cases; intervention and billing applications hold related events.",
+    "pt-BR": "Fontes: sua ferramenta de gestão contém os processos; as aplicações de intervenção e faturamento contêm seus eventos.",
+    "es": "Fuentes: su herramienta de gestión contiene los expedientes; las aplicaciones de intervención y facturación contienen sus eventos."
+  },
+  "Pipeline : relier ces événements au dossier et enrichir son état avec les étapes réalisées et les conditions de clôture.": {
+    "en": "Pipeline: link these events to the case and enrich its status with completed stages and closure conditions.",
+    "pt-BR": "Pipeline: relacionar os eventos ao processo e enriquecer seu estado com as etapas concluídas e as condições de encerramento.",
+    "es": "Pipeline: relacionar los eventos con el expediente y enriquecer su estado con las etapas realizadas y las condiciones de cierre."
+  },
+  "Destination : le logiciel de gestion existant dispose d’un état consolidé pour décider de la suite. Valeur à vérifier : couverture des événements et décisions rendues possibles.": {
+    "en": "Destination: the existing management application has a consolidated status to support the next decision. Value to assess: event coverage and decisions enabled.",
+    "pt-BR": "Destino: o sistema de gestão existente dispõe de um estado consolidado para decidir a continuação. Valor a verificar: cobertura dos eventos e decisões viabilizadas.",
+    "es": "Destino: el sistema de gestión existente dispone de un estado consolidado para decidir la continuación. Valor a comprobar: cobertura de eventos y decisiones posibles."
+  },
+  "Identifiez les applications et les informations à valoriser. Cette première synthèse aide à explorer un pipeline utile dans votre SI existant, avant toute demande de coordonnées. Vous pouvez aussi nous contacter directement.": {
+    "en": "Identify the applications and information to build on. This initial summary helps explore a useful pipeline within your existing IT ecosystem before any contact details are requested. You can also contact us directly.",
+    "pt-BR": "Identifique as aplicações e informações a valorizar. Esta primeira síntese ajuda a explorar um pipeline útil no seu ambiente de TI existente, antes de qualquer pedido de contato. Também pode entrar em contato diretamente.",
+    "es": "Identifique las aplicaciones e información que desea aprovechar. Esta primera síntesis ayuda a explorar un pipeline útil en su SI existente, antes de solicitar datos de contacto. También puede contactarnos directamente."
+  },
+  "Qu’aimeriez-vous rendre possible avec votre SI actuel ?": {
+    "en": "What would you like to enable with your current IT ecosystem?",
+    "pt-BR": "O que deseja viabilizar com seu ambiente de TI atual?",
+    "es": "¿Qué desea hacer posible con su SI actual?"
+  },
+  "Rendre les règles métier explicites": {
+    "en": "Make business rules explicit",
+    "pt-BR": "Explicitar as regras de negócio",
+    "es": "Explicitar las reglas de negocio"
+  },
+  "Quelle valeur recherchez-vous dans vos applications ?": {
+    "en": "What value are you seeking in your applications?",
+    "pt-BR": "Que valor procura nas suas aplicações?",
+    "es": "¿Qué valor busca en sus aplicaciones?"
+  },
+  "Des données plus complètes": {
+    "en": "More complete data",
+    "pt-BR": "Dados mais completos",
+    "es": "Datos más completos"
+  },
+  "Une information cohérente": {
+    "en": "Consistent information",
+    "pt-BR": "Informações coerentes",
+    "es": "Información coherente"
+  },
+  "Des priorités exploitables": {
+    "en": "Actionable priorities",
+    "pt-BR": "Prioridades utilizáveis",
+    "es": "Prioridades utilizables"
+  },
+  "Des décisions mieux éclairées": {
+    "en": "Better-informed decisions",
+    "pt-BR": "Decisões mais bem informadas",
+    "es": "Decisiones mejor fundamentadas"
+  },
+  "Un contexte partagé entre applications": {
+    "en": "Shared context across applications",
+    "pt-BR": "Contexto compartilhado entre aplicações",
+    "es": "Contexto compartido entre aplicaciones"
+  },
+  "Enrichir les données disponibles": {
+    "en": "Enrich available data",
+    "pt-BR": "Enriquecer os dados disponíveis",
+    "es": "Enriquecer los datos disponibles"
+  },
+  "Explorez les possibilités de votre SI et l’usage des données enrichies sans coordonnées obligatoires.": {
+    "en": "Explore your IT ecosystem and uses for enriched data without required contact details.",
+    "pt-BR": "Explore seu ambiente de TI e o uso de dados enriquecidos sem dados de contato obrigatórios.",
+    "es": "Explore su SI y el uso de datos enriquecidos sin datos de contacto obligatorios."
+  },
+  "Décrivez vos applications actuelles, les données disponibles et le résultat que vous aimeriez retrouver dans vos outils métier. Nous explorerons ensemble les possibilités de votre SI ; aucune solution technique préalable n’est nécessaire.": {
+    "en": "Describe your current applications, available data and the outcome you would like to see in your business tools. Together we will explore your IT ecosystem’s possibilities; no prior technical solution is needed.",
+    "pt-BR": "Descreva suas aplicações atuais, os dados disponíveis e o resultado que gostaria de obter nas suas ferramentas. Exploraremos juntos as possibilidades do seu ambiente de TI; não é necessário definir uma solução técnica antes.",
+    "es": "Describa sus aplicaciones actuales, los datos disponibles y el resultado que desea obtener en sus herramientas. Exploraremos juntos las posibilidades de su SI; no necesita definir previamente una solución técnica."
+  },
+  "Le premier échange explore votre écosystème, les informations à enrichir et les applications destinataires. Nous pouvons aussi discuter d’une rémunération liée à la valeur effectivement constatée, avec des critères convenus avant intervention.": {
+    "en": "The first conversation explores your ecosystem, information to enrich and destination applications. We can also discuss remuneration linked to value actually observed, with criteria agreed before work begins.",
+    "pt-BR": "A primeira conversa explora seu ecossistema, as informações a enriquecer e as aplicações de destino. Também podemos discutir remuneração ligada ao valor efetivamente constatado, com critérios acordados antes da intervenção.",
+    "es": "La primera conversación explora su ecosistema, la información que enriquecer y las aplicaciones de destino. También podemos hablar de remuneración vinculada al valor constatado, con criterios acordados antes de intervenir."
+  },
+  "Quelles applications utilisez-vous ? Quelles données pourraient être enrichies ? Dans quels outils souhaitez-vous exploiter le résultat ?": {
+    "en": "Which applications do you use? Which data could be enriched? In which tools would you like to use the result?",
+    "pt-BR": "Quais aplicações utiliza? Quais dados poderiam ser enriquecidos? Em quais ferramentas deseja utilizar o resultado?",
+    "es": "¿Qué aplicaciones utiliza? ¿Qué datos podrían enriquecerse? ¿En qué herramientas desea utilizar el resultado?"
+  },
+  "Échangeons sur vos applications existantes, vos données et la valeur attendue à destination.": {
+    "en": "Let’s discuss your existing applications, data and expected value at the destination.",
+    "pt-BR": "Vamos conversar sobre suas aplicações existentes, dados e valor esperado no destino.",
+    "es": "Hablemos de sus aplicaciones existentes, datos y valor esperado en destino."
+  },
+  "Nous reviendrons vers vous pour explorer vos applications existantes, les données à enrichir et la valeur attendue dans vos outils métier.": {
+    "en": "We will get back to you to explore existing applications, data to enrich and expected value in your business tools.",
+    "pt-BR": "Entraremos em contato para explorar suas aplicações existentes, os dados a enriquecer e o valor esperado nas ferramentas de trabalho.",
+    "es": "Le contactaremos para explorar sus aplicaciones existentes, los datos que enriquecer y el valor esperado en sus herramientas de gestión."
   }
 }

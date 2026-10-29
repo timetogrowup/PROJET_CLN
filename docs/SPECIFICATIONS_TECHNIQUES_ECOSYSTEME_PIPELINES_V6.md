@@ -4,7 +4,7 @@ Date : 29 octobre 2026. Architecture conservée : HTML/CSS/JavaScript statiques 
 
 ## Composants et données
 Les sources éditoriales sont scripts/build_pedagogy.py et scripts/pipeline_content.py. Elles génèrent les pages HTML et les catalogues i18n/static.json et i18n/messages.json. Modifier les sources avant génération ; conserver le template contact V3, les identifiants DOM, ancres et paramètres d’URL.
-Les messages dynamiques de synthèse v4.rec.* et les libellés des réponses évoluent ensemble. Les identifiants internes et le format de stockage version 4 restent compatibles ; les codes historiques ne servent pas de texte commercial. Aucun nouveau champ personnel ni interface réseau.
+Les messages dynamiques de synthèse v4.rec.* et les libellés des réponses évoluent ensemble. Les identifiants internes et le format structuré restent conservés ; la version de synthèse passe à 6 pour empêcher de réinterpréter les réponses V4 avec les nouveaux libellés ; les codes historiques ne servent pas de texte commercial. Une ancienne synthèse reste effaçable et un lien propose de la refaire ; aucun ajout automatique au message. Aucun nouveau champ personnel ni interface réseau.
 
 ## Interfaces et contraintes
 Conserver site.js, diagnostic.js, contact.js et le contrat de l’API ; les accès et protections OVH ne sont pas modifiés. Actualiser la version de cache des ressources et des catalogues. Une seule traduction pour chaque texte visible dans chacune des trois langues supplémentaires. Les mentions et la politique de confidentialité gardent leurs obligations ; seul le pied de page commun change.

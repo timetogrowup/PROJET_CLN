@@ -7,6 +7,7 @@ on:
       - feature/cln-v3-human-dialog
       - feature/cln-v4-benefits
       - feature/cln-v5-pipelines
+      - feature/cln-v6-ecosysteme
 permissions:
   contents: read
 jobs:
