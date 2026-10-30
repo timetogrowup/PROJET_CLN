@@ -1,6 +1,6 @@
 # Spécifications techniques — Accueil capital et ROI — V10
 
-Date : 30 octobre 2026. Statut : spécification avant développement.
+Date : 30 octobre 2026. Statut : réalisé, publié et vérifié.
 
 ## Architecture
 Site statique HTML/CSS/JavaScript conservé, hébergement et domaine existants (GitHub Pages / cln-performance.com). Aucun service, API métier, compte utilisateur ou dépendance frontend supplémentaire. site.js assure les langues et la flèche ; pipeline-animation.js pilote le comparatif comme les lecteurs V8/V9.
@@ -30,3 +30,12 @@ Une H1, titres hiérarchiques, navigation à sept liens, formulaire inchangé. P
 5. Chrome : accueil quatre langues ; grand et petit écran si capacité disponible ; pause, zoom, Échap, liens ; absence de débordement. Sans JS/réduction : tests statiques/unitaires, compléter par navigateur si disponible.
 6. Régénération idempotente puis diff sans erreurs ; publication GitHub Pages ; contrôle HTTP et empreintes des fichiers publics et visite de l'accueil.
 7. Documenter explicitement toute matrice mobile/moteurs non exécutée ; ne pas déclarer de tests Safari ou téléphone réel sans les avoir réalisés.
+
+## Livraison effective — 30 octobre 2026
+Accueil livré en quatre langues, flèche conservée, cinq blocs éditoriaux, comparatif 36 secondes avec 3/9 étapes et deux graphiques indépendants. Médias optimisés (huit vidéos et quatre posters), transcription, pause/reprise et synthèse statique agrandissable. Aucun changement du traitement du contact.
+
+Version applicative initiale : `c6445f1b97eb152c4c0013920ff164162dcb7239`. Correction du mouvement de la flèche : `26e939b35f4276d98e38d1add82b03e5cf29cd5c`. Cette correction empêche un événement de lecture tardif de relancer la flèche hors écran ; elle est couverte par un test supplémentaire.
+
+GitHub Pages : publication de la correction réussie, exécution [41068286785](https://github.com/timetogrowup/PROJET_CLN/actions/runs/41068286785), tentative 2 après un échec temporaire du service de déploiement. Accueil : https://cln-performance.com/ . Dix-sept fichiers publics HTTP 200 et SHA-256 identiques ; quatre langues et contrôles validés sur le domaine. Tests détaillés et limites dans [le rapport de recette](RECETTE_ACCUEIL_CAPITAL_ROI_V10.md). Safari et appareils physiques non testés ; les seize fenêtres de recette sont des vérifications CSS dans Chrome.
+
+Le contrôleur partagé site.js a été corrigé pour différer la lecture initiale de la flèche hors écran et revérifier son autorisation après play() et lors des événements playing. Le cache du script de l’accueil porte 20261030-v10r1.

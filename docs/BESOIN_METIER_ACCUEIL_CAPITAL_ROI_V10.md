@@ -1,6 +1,6 @@
 # Besoin métier — Accueil, capital existant et retour sur investissement — V10
 
-Date : 30 octobre 2026. Statut : cadrage approuvé, réalisation en cours.
+Date : 30 octobre 2026. Statut : livré et vérifié en ligne.
 
 ## Objectifs
 Présenter CLN Performance comme une petite structure spécialisée qui intervient de façon ciblée et chirurgicale dans l'écosystème applicatif du client. Valoriser les applications, les données et les compétences existantes ; montrer comment des automatisations ciblées permettent de rechercher des premiers gains plus tôt avec un investissement initial limité.
@@ -39,3 +39,10 @@ CA04. Légende illustrative, portée de la comparaison et distinction temps/éco
 CA05. Contrôles au clavier, fermeture par Échap, retour de focus, alternative textuelle et statique ; absence de débordement de page.
 CA06. Liens valides vers diagnostic, contact, méthode et pipelines ; aucun changement d'envoi de message.
 CA07. Tests de non-régression, génération reproductible, publication et contrôle de la version publique ; rapport et journal à jour.
+
+## Livraison effective — 30 octobre 2026
+Accueil livré en quatre langues, flèche conservée, cinq blocs éditoriaux, comparatif 36 secondes avec 3/9 étapes et deux graphiques indépendants. Médias optimisés (huit vidéos et quatre posters), transcription, pause/reprise et synthèse statique agrandissable. Aucun changement du traitement du contact.
+
+Version applicative initiale : `c6445f1b97eb152c4c0013920ff164162dcb7239`. Correction du mouvement de la flèche : `26e939b35f4276d98e38d1add82b03e5cf29cd5c`. Cette correction empêche un événement de lecture tardif de relancer la flèche hors écran ; elle est couverte par un test supplémentaire.
+
+GitHub Pages : publication de la correction réussie, exécution [41068286785](https://github.com/timetogrowup/PROJET_CLN/actions/runs/41068286785), tentative 2 après un échec temporaire du service de déploiement. Accueil : https://cln-performance.com/ . Dix-sept fichiers publics HTTP 200 et SHA-256 identiques ; quatre langues et contrôles validés sur le domaine. Tests détaillés et limites dans [le rapport de recette](RECETTE_ACCUEIL_CAPITAL_ROI_V10.md). Safari et appareils physiques non testés ; les seize fenêtres de recette sont des vérifications CSS dans Chrome.

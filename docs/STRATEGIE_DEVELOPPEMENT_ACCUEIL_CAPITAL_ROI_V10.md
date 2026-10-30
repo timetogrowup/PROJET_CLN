@@ -1,6 +1,6 @@
 # Stratégie de développement — Accueil capital et ROI — V10
 
-Date : 30 octobre 2026. Statut : préparation.
+Date : 30 octobre 2026. Statut : stratégie exécutée et livraison vérifiée.
 
 ## Séquence
 1. Lire le dépôt courant, les générations V6–V9, contrôleurs, styles et tests. Vérifier le HEAD distant et préserver les changements étrangers à la livraison.
@@ -21,3 +21,10 @@ Tests significatifs : parcours éditorial, absence de contenu non traduit, fidé
 
 ## Retour arrière
 La livraison est isolée dans un commit applicatif. En cas de régression publique, revenir par un commit de revert normal sur ce commit, sans réécriture d'historique, puis redéployer et contrôler. Conserver les documents pour tracer l'incident.
+
+## Livraison effective — 30 octobre 2026
+Accueil livré en quatre langues, flèche conservée, cinq blocs éditoriaux, comparatif 36 secondes avec 3/9 étapes et deux graphiques indépendants. Médias optimisés (huit vidéos et quatre posters), transcription, pause/reprise et synthèse statique agrandissable. Aucun changement du traitement du contact.
+
+Version applicative initiale : `c6445f1b97eb152c4c0013920ff164162dcb7239`. Correction du mouvement de la flèche : `26e939b35f4276d98e38d1add82b03e5cf29cd5c`. Cette correction empêche un événement de lecture tardif de relancer la flèche hors écran ; elle est couverte par un test supplémentaire.
+
+GitHub Pages : publication de la correction réussie, exécution [41068286785](https://github.com/timetogrowup/PROJET_CLN/actions/runs/41068286785), tentative 2 après un échec temporaire du service de déploiement. Accueil : https://cln-performance.com/ . Dix-sept fichiers publics HTTP 200 et SHA-256 identiques ; quatre langues et contrôles validés sur le domaine. Tests détaillés et limites dans [le rapport de recette](RECETTE_ACCUEIL_CAPITAL_ROI_V10.md). Safari et appareils physiques non testés ; les seize fenêtres de recette sont des vérifications CSS dans Chrome.

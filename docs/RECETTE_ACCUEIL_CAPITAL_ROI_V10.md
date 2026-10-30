@@ -1,6 +1,6 @@
 # Recette — Accueil capital existant et ROI — V10
 
-Date : 30 octobre 2026. Statut : recette locale réussie, publication en préparation.
+Date : 30 octobre 2026. Statut : livré, déployé et vérifié en ligne.
 
 ## Livré dans le code
 Accueil réécrit selon les cinq blocs validés : petite structure et flèche ; capital existant ; productivité par automatisation ; investissement et comparatif ; Ciblé/Libéré/Normé et parcours de suite. Métadonnées et totalité des textes/commandes disponibles en FR/EN/PT-BR/ES. Pas de modification du contact ni de son backend. La flèche existante est conservée. Le comparatif approuvé de 36 secondes est utilisé en vidéo optimisée, avec synthèse statique agrandissable et transcription.
@@ -39,4 +39,8 @@ Pas de test sur téléphone physique, ni Safari/WebKit dans cette recette. Les f
 Le contrôle public a révélé une course entre l’autoplay de la flèche et sa sortie de l’écran, notamment lors des accès directs au comparatif. Le contrôleur diffère désormais le chargement tant que la visibilité n’est pas établie, et revérifie les conditions lors de la résolution de play() et des événements playing tardifs. Test unitaire ajouté et navigation directe vérifiée dans les quatre langues sur l’aperçu : flèche arrêtée, comparatif en lecture. Référence de cache du script de l’accueil renouvelée.
 
 ## Publication
-Première publication applicative `c6445f1b97eb152c4c0013920ff164162dcb7239` réussie (GitHub Pages, exécution 41067622889). Seize fichiers publics contrôlés HTTP 200 et SHA-256 identiques au code livré. Quatre langues, lecture et contrôles de la synthèse vérifiés sur le domaine. Correction du mouvement en cours de republication ; contrôle final à compléter.
+Première publication applicative `c6445f1b97eb152c4c0013920ff164162dcb7239` réussie (GitHub Pages, exécution 41067622889). Seize fichiers publics contrôlés HTTP 200 et SHA-256 identiques au code livré. Quatre langues, lecture et contrôles de la synthèse vérifiés sur le domaine. Correction finale `26e939b35f4276d98e38d1add82b03e5cf29cd5c` publiée avec succès, exécution [41068286785](https://github.com/timetogrowup/PROJET_CLN/actions/runs/41068286785), tentative 2. La première tentative de cette correction a rencontré une erreur temporaire de GitHub Pages après compilation réussie ; seule l’étape de déploiement en échec a été relancée.
+
+Contrôle final : **17 fichiers HTTP 200, toutes les empreintes SHA-256 identiques** : accueil, site.js, styles.css, deux catalogues et douze médias ROI. Dans Chrome, après revalidation du cache, script `site.js?v=20261030-v10r1`, quatre langues en lecture sur la source WebM correcte, flèche hors écran arrêtée, aucun débordement. Pause, dialog, Échap, retour de focus et pause conservée revérifiés sur la version corrigée. Premier écran public en français : flèche en lecture, comparatif sans chargement tant qu’il est hors écran.
+
+Version publique : https://cln-performance.com/ .

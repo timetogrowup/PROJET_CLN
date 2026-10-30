@@ -433,5 +433,12 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - Demande approuvée : présenter CLN comme une petite structure intervenant de manière ciblée et chirurgicale ; conserver la flèche, valoriser les outils et les compétences, expliquer l'automatisation et le bon usage de l'investissement.
 - Besoin, spécifications et stratégie enregistrés avant développement (commit de cadrage `3cd316321b123abdba8a9bc4a327ec1f577df807`).
 - Accueil réécrit en quatre langues, comparatif approuvé CLN à gauche (3 étapes/9 mois) et remplacement à droite (9 étapes/36 mois), deux courbes indépendantes aux mêmes échelles. Vidéos optimisées et images statiques ; transcription, pause et agrandissement.
-- Tests statiques/unitaires et recette Chrome locale réussis. Pas de changement des formulaires, traitements serveur ou autres pages éditoriales. Publication et recette publique à compléter après déploiement.
+- Tests statiques/unitaires et recette Chrome locale réussis. Pas de changement des formulaires, traitements serveur ou autres pages éditoriales. Publication et recette publique réalisées ; voir clôture ci-dessous.
 - Détails : `docs/RECETTE_ACCUEIL_CAPITAL_ROI_V10.md`.
+
+### Clôture V10 — 30 octobre 2026
+- Version initiale `c6445f1b97eb152c4c0013920ff164162dcb7239`, correction finale `26e939b35f4276d98e38d1add82b03e5cf29cd5c` : course d’autoplay de la flèche supprimée, test de non-régression et cache renouvelé.
+- Déploiement GitHub Pages réussi (41068286785, tentative 2 après une erreur temporaire de la plateforme ; seule l’étape en échec relancée).
+- Accueil public https://cln-performance.com/ vérifié dans les quatre langues. Dix-sept fichiers HTTP 200 avec SHA-256 identiques. Pause, agrandissement, Échap et focus vérifiés après correction.
+- Contrôles locaux : catalogues 595/142, dix pages et 203 références, tests ROI et lecteurs V7/V8/V9/V10, génération idempotente. Seize dispositions Chrome de 320 à 1280 px, sans débordement ; contenu sans JavaScript contrôlé. Safari et téléphones physiques non testés. Pas d’envoi de formulaire.
+- Besoin, spécifications, stratégie et rapport de recette mis à jour selon la livraison effective. Courbes et calendriers explicitement illustratifs.
