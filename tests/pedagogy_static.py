@@ -47,7 +47,7 @@ for name,page in pages.items():
 assert not missing,'Missing translations: '+repr(sorted(missing))
 for key in ['ressaisies','repetitif','chiffres','suivi']:assert key in pages['solutions.html'].ids
 for name in ['index','solutions','pipelines','approche','realisations','contact']:
- text=(root/(name+'.html')).read_text();assert (name=='index' or 'chirurgicale' not in text) and '40 %' not in text and '60 %' not in text
+ text=(root/(name+'.html')).read_text();assert (name in ['index','approche'] or 'chirurgicale' not in text) and '40 %' not in text and '60 %' not in text
 print('PASS',len(pages),'pages,',links,'local references/anchors, metadata, skip links and complete visible translation coverage.')
 
 # V5 structural invariants for the explanatory page and shared menu.

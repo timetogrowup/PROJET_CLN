@@ -147,6 +147,8 @@ import runpy
 runpy.run_path(str(root/'scripts/update_privacy_v4.py'))
 from case_journey import apply as apply_case_journey
 apply_case_journey(root, catalog, messages)
+from approach_diagnostic import apply as apply_approach_diagnostic
+apply_approach_diagnostic(root, catalog)
 (root/'i18n/static.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
 (root/'i18n/messages.json').write_text(json.dumps(messages,ensure_ascii=False,indent=2)+'\n')
-print('V11 pages generated; navigation and case journey translated in four languages.')
+print('V12 pages generated; diagnostic-first approach translated in four languages.')

@@ -456,3 +456,10 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - Dix-sept fichiers publics HTTP 200 et empreintes identiques. Pages conservées accessibles. Quatre parcours publics vérifiés : préremplissage, édition/rechargement, langues et cinq liens de menu.
 - Inclusion intégrale des quatre situations finales dans les corps d’emails vérifiée en PHP local avec mailer simulé ; aucun email réel. API de production inchangée, contrat POST disponible.
 - Besoin, spécifications, stratégie et recette actualisés. Limites : Safari/WebKit et téléphones physiques non exécutés, réception SMTP réelle non testée. Alternative de copie si stockage de session indisponible.
+
+## 30 octobre 2026 — V12 : diagnostic et intervention peu invasive
+- Cadrage enregistré avant réalisation : `5d8efbddd6a8aebe2071535327470bb06f87ab54`.
+- Refonte de « Comment nous travaillons » : diagnostic en quelques jours sur périmètre défini avec conditions visibles, livrables, intervention chirurgicale et perturbations minimisées, quatre étapes statiques, usage intensif de l'IA en développement et intégration éventuelle dans les pipelines.
+- Investissement initial limité et rémunération progressive dans une lecture plus courte, détails natifs ; autonomie et modalités commerciales conservées. Deux CTA vers le questionnaire V11. Quatre langues et ancres existantes préservées.
+- Contrôles de contenu, catalogues, liens, génération, régressions V7–V11 et recette Chrome réussis. Seize dispositions sans débordement, détails au clavier et sans JavaScript. Aucun changement du contact ou de l'API.
+- Publication et recette publique en préparation ; détails dans `docs/RECETTE_DIAGNOSTIC_INTERVENTION_V12.md`.

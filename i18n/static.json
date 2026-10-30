@@ -1475,23 +1475,23 @@
     "es": "Una remuneración que puede vincularse a sus beneficios"
   },
   "Nous convenons des indicateurs, de la situation de départ, de la période de mesure et de la manière de constater les résultats. Les modalités de calcul et de paiement sont définies dans l’accord commercial, y compris si les résultats sont inférieurs aux attentes.": {
-    "en": "We agree on indicators, the starting situation, the measurement period and how results will be verified. Calculation and payment terms are defined in the commercial agreement, including if results fall short of expectations.",
-    "pt-BR": "Acordamos indicadores, situação inicial, período de medição e forma de constatar os resultados. As regras de cálculo e pagamento são definidas no acordo comercial, inclusive se os resultados ficarem abaixo do esperado.",
-    "es": "Acordamos indicadores, situación inicial, período de medición y forma de constatar los resultados. Las condiciones de cálculo y pago se definen en el acuerdo comercial, incluso si los resultados quedan por debajo de lo esperado."
+    "en": "We agree on indicators, the baseline, the measurement period and how results will be established. Calculation and payment terms are defined in the commercial agreement, including if results fall below expectations.",
+    "pt-BR": "Acordamos os indicadores, a situação inicial, o período de medição e a forma de verificar os resultados. As condições de cálculo e pagamento são definidas no acordo comercial, inclusive se os resultados ficarem abaixo do esperado.",
+    "es": "Acordamos los indicadores, la situación inicial, el período de medición y la forma de constatar los resultados. Las condiciones de cálculo y pago se definen en el acuerdo comercial, también si los resultados son inferiores a lo esperado."
   },
   "Du temps libéré n’est pas automatiquement une économie financière. Les coûts éventuels de logiciels ou d’hébergement sont identifiés séparément. Un besoin de suivi ultérieur fait l’objet d’un accord distinct.": {
-    "en": "Time freed up is not automatically a financial saving. Any software or hosting costs are identified separately. Any subsequent support needs are covered by a separate agreement.",
-    "pt-BR": "Tempo liberado não é automaticamente uma economia financeira. Eventuais custos de software ou hospedagem são identificados separadamente. Necessidades posteriores de acompanhamento são objeto de um acordo distinto.",
-    "es": "El tiempo liberado no es automáticamente un ahorro financiero. Los posibles costes de programas o alojamiento se identifican por separado. Cualquier necesidad posterior de seguimiento es objeto de un acuerdo distinto."
+    "en": "Time freed up is not automatically a financial saving. Any software or hosting costs are identified separately. Subsequent support is covered by a separate agreement.",
+    "pt-BR": "O tempo liberado não é automaticamente uma economia financeira. Eventuais custos de software ou hospedagem são identificados separadamente. Acompanhamento posterior é objeto de um acordo específico.",
+    "es": "El tiempo liberado no supone automáticamente un ahorro financiero. Los posibles costes de software o alojamiento se identifican por separado. Un seguimiento posterior se acuerda de forma específica."
   },
   "Vos questions pratiques": {
     "en": "Practical questions",
-    "pt-BR": "Perguntas práticas",
-    "es": "Preguntas prácticas"
+    "pt-BR": "Suas perguntas práticas",
+    "es": "Sus preguntas prácticas"
   },
   "Faut-il remplacer nos outils ?": {
-    "en": "Must we replace our tools?",
-    "pt-BR": "Precisamos substituir nossas ferramentas?",
+    "en": "Do we need to replace our tools?",
+    "pt-BR": "É preciso substituir nossas ferramentas?",
     "es": "¿Hay que sustituir nuestras herramientas?"
   },
   "Nous étudions d’abord vos outils et leurs possibilités. Les changements nécessaires sont discutés avant toute réalisation.": {
@@ -3323,5 +3323,250 @@
     "en": "Updated: 30 October 2026",
     "pt-BR": "Atualizado em 30 de outubro de 2026",
     "es": "Actualizado el 30 de octubre de 2026"
+  },
+  "Comprendre d’abord. Intervenir avec précision.": {
+    "en": "Understand first. Intervene precisely.",
+    "pt-BR": "Entender primeiro. Intervir com precisão.",
+    "es": "Comprender primero. Intervenir con precisión."
+  },
+  "Un diagnostic rapide. Une intervention ciblée. Un existant valorisé.": {
+    "en": "A rapid diagnosis. A targeted intervention. Existing assets enhanced.",
+    "pt-BR": "Um diagnóstico rápido. Uma intervenção focada. O existente valorizado.",
+    "es": "Un diagnóstico rápido. Una intervención precisa. Lo existente potenciado."
+  },
+  "Nous commençons par comprendre vos applications, vos usages et les difficultés de vos équipes. Nous identifions ensuite une amélioration utile et réalisable, avant de vous proposer une intervention précise dans votre écosystème.": {
+    "en": "We start by understanding your applications, how they are used and your teams’ difficulties. We then identify a useful, achievable improvement before proposing a precise intervention within your ecosystem.",
+    "pt-BR": "Começamos entendendo seus aplicativos, seus usos e as dificuldades das equipes. Depois identificamos uma melhoria útil e viável, antes de propor uma intervenção precisa no seu ecossistema.",
+    "es": "Empezamos por comprender sus aplicaciones, sus usos y las dificultades de sus equipos. Después identificamos una mejora útil y viable antes de proponer una intervención precisa en su ecosistema."
+  },
+  "Un premier diagnostic en quelques jours": {
+    "en": "An initial diagnosis in a few days",
+    "pt-BR": "Um primeiro diagnóstico em poucos dias",
+    "es": "Un primer diagnóstico en pocos días"
+  },
+  "Sur un périmètre défini, avec les interlocuteurs et les informations nécessaires disponibles. Ce premier regard ciblé permet de préparer des propositions concrètes ; le calendrier de réalisation est ensuite convenu ensemble.": {
+    "en": "Within a defined scope, with the necessary people and information available. This focused initial assessment prepares concrete proposals; the implementation timeline is then agreed together.",
+    "pt-BR": "Em um escopo definido, com os interlocutores e as informações necessárias disponíveis. Essa primeira análise focada prepara propostas concretas; o prazo de realização é depois acordado em conjunto.",
+    "es": "Sobre un alcance definido, con los interlocutores y la información necesarios disponibles. Esta primera evaluación concreta prepara propuestas; el calendario de realización se acuerda después conjuntamente."
+  },
+  "Ce que vous obtenez": {
+    "en": "What you receive",
+    "pt-BR": "O que você recebe",
+    "es": "Qué obtiene"
+  },
+  "Une lecture des points de friction et des possibilités de connexion.": {
+    "en": "An assessment of friction points and connection opportunities.",
+    "pt-BR": "Uma análise dos pontos de dificuldade e das possibilidades de conexão.",
+    "es": "Una evaluación de los puntos de fricción y las posibilidades de conexión."
+  },
+  "Des propositions d’amélioration classées par priorité.": {
+    "en": "Improvement proposals ranked by priority.",
+    "pt-BR": "Propostas de melhoria organizadas por prioridade.",
+    "es": "Propuestas de mejora ordenadas por prioridad."
+  },
+  "Un premier périmètre, un budget et un calendrier proposés.": {
+    "en": "A proposed initial scope, budget and timeline.",
+    "pt-BR": "Uma proposta de escopo inicial, orçamento e prazo.",
+    "es": "Una propuesta de alcance inicial, presupuesto y calendario."
+  },
+  "Les gains recherchés et la manière de les mesurer.": {
+    "en": "The intended benefits and how to measure them.",
+    "pt-BR": "Os benefícios buscados e como medi-los.",
+    "es": "Los beneficios buscados y cómo medirlos."
+  },
+  "Une intervention précise, aussi peu invasive que possible.": {
+    "en": "A precise intervention, as minimally invasive as possible.",
+    "pt-BR": "Uma intervenção precisa, o menos invasiva possível.",
+    "es": "Una intervención precisa, lo menos invasiva posible."
+  },
+  "Comme en chirurgie moderne, le diagnostic précède le geste. Notre approche chirurgicale vise un périmètre précis, une intervention rapide et des perturbations minimisées. Nous préservons ce qui fonctionne et limitons les modifications de vos applications à ce qui est nécessaire.": {
+    "en": "As in modern surgery, diagnosis comes before intervention. Our surgical approach targets a precise scope, rapid action and minimal disruption. We preserve what works and limit changes to your applications to what is necessary.",
+    "pt-BR": "Como na cirurgia moderna, o diagnóstico vem antes da intervenção. Nossa abordagem cirúrgica busca um escopo preciso, uma intervenção rápida e o mínimo de perturbações. Preservamos o que funciona e limitamos as alterações nos aplicativos ao necessário.",
+    "es": "Como en la cirugía moderna, el diagnóstico precede a la intervención. Nuestro enfoque quirúrgico busca un alcance preciso, una actuación rápida y las menores perturbaciones posibles. Preservamos lo que funciona y limitamos los cambios en sus aplicaciones a lo necesario."
+  },
+  "Préserver": {
+    "en": "Preserve",
+    "pt-BR": "Preservar",
+    "es": "Preservar"
+  },
+  "S’appuyer sur vos applications, vos données et les compétences déjà présentes dans vos équipes.": {
+    "en": "Build on your applications, data and the expertise already present in your teams.",
+    "pt-BR": "Apoiar-se nos aplicativos, dados e competências já presentes nas equipes.",
+    "es": "Apoyarse en sus aplicaciones, datos y competencias ya presentes en sus equipos."
+  },
+  "Cibler": {
+    "en": "Target",
+    "pt-BR": "Focar",
+    "es": "Enfocar"
+  },
+  "Traiter un point de friction identifié en utilisant les connexions et fonctions existantes, avec le minimum d’évolutions nécessaires.": {
+    "en": "Address an identified friction point using existing connections and features, with the minimum changes required.",
+    "pt-BR": "Tratar um ponto de dificuldade identificado usando conexões e funções existentes, com o mínimo de mudanças necessárias.",
+    "es": "Resolver un punto de fricción identificado utilizando conexiones y funciones existentes, con los mínimos cambios necesarios."
+  },
+  "Sécuriser la mise en service": {
+    "en": "Safeguard go-live",
+    "pt-BR": "Preparar uma entrada em operação segura",
+    "es": "Preparar una puesta en servicio segura"
+  },
+  "Tester le résultat, les exceptions et les conditions d’exploitation ; organiser le déploiement et le retour arrière avant la mise en service.": {
+    "en": "Test outcomes, exceptions and operating conditions; plan deployment and rollback before go-live.",
+    "pt-BR": "Testar resultados, exceções e condições de operação; organizar a implantação e o retorno à situação anterior antes da entrada em operação.",
+    "es": "Probar resultados, excepciones y condiciones de funcionamiento; organizar el despliegue y la reversión antes de la puesta en servicio."
+  },
+  "Une démarche courte, des résultats à chaque étape": {
+    "en": "A focused process, an outcome at each stage",
+    "pt-BR": "Uma abordagem objetiva, um resultado em cada etapa",
+    "es": "Un proceso concreto, un resultado en cada etapa"
+  },
+  "Du diagnostic à la mise en service, quatre étapes.": {
+    "en": "From diagnosis to go-live in four stages.",
+    "pt-BR": "Do diagnóstico à entrada em operação, quatro etapas.",
+    "es": "Del diagnóstico a la puesta en servicio, cuatro etapas."
+  },
+  "Diagnostiquer": {
+    "en": "Diagnose",
+    "pt-BR": "Diagnosticar",
+    "es": "Diagnosticar"
+  },
+  "Comprendre votre situation et identifier les leviers d’amélioration avec les personnes concernées.": {
+    "en": "Understand your situation and identify improvement opportunities with the people involved.",
+    "pt-BR": "Entender sua situação e identificar oportunidades de melhoria com as pessoas envolvidas.",
+    "es": "Comprender su situación e identificar oportunidades de mejora con las personas implicadas."
+  },
+  "Proposer": {
+    "en": "Propose",
+    "pt-BR": "Propor",
+    "es": "Proponer"
+  },
+  "Choisir ensemble un premier périmètre utile, réalisable et budgété, avec les gains recherchés et leur mesure.": {
+    "en": "Agree on a useful, achievable and budgeted initial scope, with intended benefits and how to measure them.",
+    "pt-BR": "Escolher juntos um primeiro escopo útil, viável e orçado, com os benefícios buscados e sua medição.",
+    "es": "Elegir juntos un primer alcance útil, viable y presupuestado, con los beneficios buscados y su medición."
+  },
+  "Réaliser et tester": {
+    "en": "Build and test",
+    "pt-BR": "Desenvolver e testar",
+    "es": "Desarrollar y probar"
+  },
+  "Développer rapidement sur le périmètre convenu, puis valider les traitements, les résultats et les exceptions.": {
+    "en": "Develop rapidly within the agreed scope, then validate processing, results and exceptions.",
+    "pt-BR": "Desenvolver rapidamente no escopo acordado e validar os processos, os resultados e as exceções.",
+    "es": "Desarrollar rápidamente sobre el alcance acordado y validar los tratamientos, resultados y excepciones."
+  },
+  "Mettre en service et transmettre": {
+    "en": "Go live and hand over",
+    "pt-BR": "Colocar em operação e transmitir",
+    "es": "Poner en servicio y transmitir"
+  },
+  "Déployer progressivement, mesurer les résultats et transmettre la documentation pour vous donner les moyens de garder la main.": {
+    "en": "Deploy progressively, measure results and hand over documentation so you can stay in control.",
+    "pt-BR": "Implantar gradualmente, medir os resultados e transmitir a documentação para manter o controle nas suas mãos.",
+    "es": "Desplegar progresivamente, medir los resultados y transmitir la documentación para que mantenga el control."
+  },
+  "Ce que nous vérifions avant la mise en service": {
+    "en": "What we check before go-live",
+    "pt-BR": "O que verificamos antes da entrada em operação",
+    "es": "Qué verificamos antes de la puesta en servicio"
+  },
+  "Les sources, les interfaces disponibles et les droits d’accès, avec vos interlocuteurs SI.": {
+    "en": "Sources, available interfaces and access rights, with your IT contacts.",
+    "pt-BR": "As fontes, as interfaces disponíveis e os direitos de acesso, com seus interlocutores de TI.",
+    "es": "Las fuentes, interfaces disponibles y permisos de acceso, con sus interlocutores de TI."
+  },
+  "Les rapprochements et enrichissements, les règles métier et le résultat dans chaque application destinataire.": {
+    "en": "Matching and enrichment, business rules and the outcome in each destination application.",
+    "pt-BR": "Os cruzamentos e enriquecimentos, as regras de negócio e o resultado em cada aplicativo de destino.",
+    "es": "Los cruces y enriquecimientos, las reglas de negocio y el resultado en cada aplicación destinataria."
+  },
+  "Les exceptions, les contrôles, les traces d’exécution, la reprise en cas d’échec et les conditions de retour arrière.": {
+    "en": "Exceptions, controls, execution logs, recovery after failure and rollback conditions.",
+    "pt-BR": "As exceções, os controles, os registros de execução, a retomada em caso de falha e as condições de retorno.",
+    "es": "Las excepciones, controles, registros de ejecución, recuperación tras un fallo y condiciones de reversión."
+  },
+  "L’IA accélère nos développements. Elle enrichit vos pipelines lorsque c’est utile.": {
+    "en": "AI accelerates our development. It enriches your pipelines where useful.",
+    "pt-BR": "A IA acelera nossos desenvolvimentos. Ela enriquece seus pipelines quando é útil.",
+    "es": "La IA acelera nuestros desarrollos. Enriquece sus pipelines cuando resulta útil."
+  },
+  "Pour construire plus rapidement": {
+    "en": "To build faster",
+    "pt-BR": "Para desenvolver mais rapidamente",
+    "es": "Para desarrollar más rápido"
+  },
+  "Dans vos pipelines, si elle apporte une valeur utile": {
+    "en": "Inside your pipelines, when it adds useful value",
+    "pt-BR": "Nos seus pipelines, quando agrega valor útil",
+    "es": "En sus pipelines, si aporta valor útil"
+  },
+  "Selon le besoin, un pipeline peut intégrer de l’IA pour analyser des documents, extraire des informations, classer des contenus ou préparer une synthèse. Son usage est choisi avec vous et accompagné de contrôles adaptés, notamment sur la qualité des résultats et la validation humaine nécessaire.": {
+    "en": "Depending on the need, a pipeline can incorporate AI to analyse documents, extract information, classify content or prepare a summary. Its use is agreed with you and supported by appropriate controls, especially on result quality and any human validation required.",
+    "pt-BR": "Conforme a necessidade, um pipeline pode integrar IA para analisar documentos, extrair informações, classificar conteúdos ou preparar uma síntese. Seu uso é escolhido com você e acompanhado de controles adequados, sobretudo quanto à qualidade dos resultados e à validação humana necessária.",
+    "es": "Según la necesidad, un pipeline puede integrar IA para analizar documentos, extraer información, clasificar contenidos o preparar una síntesis. Su uso se decide con usted y se acompaña de controles adecuados, especialmente sobre la calidad de los resultados y la validación humana necesaria."
+  },
+  "Les conditions de confidentialité, les droits d’accès et les contraintes de votre SI sont vérifiés avec vos interlocuteurs avant de retenir les outils et les usages de l’IA.": {
+    "en": "Confidentiality requirements, access rights and your IT constraints are reviewed with your contacts before selecting AI tools and uses.",
+    "pt-BR": "As condições de confidencialidade, os direitos de acesso e as restrições do seu ambiente de TI são verificados com seus interlocutores antes de escolher as ferramentas e os usos da IA.",
+    "es": "Las condiciones de confidencialidad, los permisos de acceso y las restricciones de su SI se revisan con sus interlocutores antes de elegir las herramientas y los usos de la IA."
+  },
+  "Un premier investissement limité pour engager les premiers gains rapidement.": {
+    "en": "A limited initial investment to start generating benefits sooner.",
+    "pt-BR": "Um investimento inicial limitado para começar a gerar benefícios rapidamente.",
+    "es": "Una inversión inicial limitada para empezar a generar beneficios pronto."
+  },
+  "Le réemploi de vos outils, un périmètre initial réduit, des développements accélérés par l’IA et une mise en service progressive concentrent l’investissement sur l’amélioration utile. Le budget, la durée et les gains attendus sont évalués pour votre périmètre avant réalisation.": {
+    "en": "Reusing your tools, limiting the initial scope, accelerating development with AI and going live progressively focus investment on useful improvements. Budget, duration and expected benefits are assessed for your scope before implementation.",
+    "pt-BR": "O reaproveitamento das ferramentas, um escopo inicial reduzido, desenvolvimentos acelerados pela IA e uma entrada em operação gradual concentram o investimento na melhoria útil. Orçamento, prazo e benefícios esperados são avaliados para seu escopo antes da realização.",
+    "es": "Reutilizar sus herramientas, reducir el alcance inicial, acelerar el desarrollo con IA y poner en servicio progresivamente concentran la inversión en la mejora útil. Presupuesto, duración y beneficios esperados se evalúan para su alcance antes de la realización."
+  },
+  "Notre objectif est un bénéfice durable et votre autonomie. Nous ne cherchons pas à installer une facturation récurrente. Selon le projet, une rémunération liée aux bénéfices effectivement constatés peut être convenue avant l’intervention.": {
+    "en": "Our aim is lasting benefits and your autonomy. We do not seek to establish recurring billing. Depending on the project, remuneration linked to benefits actually observed may be agreed before work begins.",
+    "pt-BR": "Nosso objetivo é um benefício duradouro e sua autonomia. Não buscamos estabelecer cobranças recorrentes. Conforme o projeto, pode ser acordada antes da intervenção uma remuneração ligada aos benefícios efetivamente constatados.",
+    "es": "Nuestro objetivo es un beneficio duradero y su autonomía. No buscamos establecer una facturación recurrente. Según el proyecto, puede acordarse antes de la intervención una remuneración vinculada a los beneficios efectivamente constatados."
+  },
+  "Comment nous cadrons les coûts et la mesure des bénéfices": {
+    "en": "How we define costs and measure benefits",
+    "pt-BR": "Como definimos os custos e medimos os benefícios",
+    "es": "Cómo definimos los costes y medimos los beneficios"
+  },
+  "Notre priorité est de valoriser vos applications existantes et leurs interfaces. Une évolution ou un remplacement peut rester nécessaire : sa pertinence et son impact sont examinés pendant le diagnostic et convenus avec vous.": {
+    "en": "Our priority is to build on your existing applications and interfaces. A change or replacement may still be necessary: its relevance and impact are assessed during diagnosis and agreed with you.",
+    "pt-BR": "Nossa prioridade é valorizar os aplicativos e interfaces existentes. Uma evolução ou substituição pode continuar necessária: sua pertinência e impacto são analisados no diagnóstico e acordados com você.",
+    "es": "Nuestra prioridad es aprovechar sus aplicaciones e interfaces existentes. Puede seguir siendo necesario un cambio o una sustitución: su pertinencia e impacto se analizan durante el diagnóstico y se acuerdan con usted."
+  },
+  "Qui doit participer au diagnostic ?": {
+    "en": "Who should take part in the diagnosis?",
+    "pt-BR": "Quem deve participar do diagnóstico?",
+    "es": "¿Quién debe participar en el diagnóstico?"
+  },
+  "Les personnes qui réalisent le travail, un responsable du périmètre et, selon les sujets, les interlocuteurs informatiques. Nous organisons ensemble leur disponibilité et l’accès aux informations nécessaires.": {
+    "en": "The people doing the work, someone responsible for the scope and, depending on the topic, IT contacts. Together we organise their availability and access to the necessary information.",
+    "pt-BR": "As pessoas que realizam o trabalho, um responsável pelo escopo e, conforme o assunto, interlocutores de TI. Organizamos juntos sua disponibilidade e o acesso às informações necessárias.",
+    "es": "Las personas que realizan el trabajo, un responsable del alcance y, según el tema, los interlocutores informáticos. Organizamos juntos su disponibilidad y el acceso a la información necesaria."
+  },
+  "Commençons par comprendre votre situation.": {
+    "en": "Let’s start by understanding your situation.",
+    "pt-BR": "Vamos começar entendendo sua situação.",
+    "es": "Empecemos por comprender su situación."
+  },
+  "Diagnostic rapide et intervention ciblée — CLN Performance": {
+    "en": "Rapid diagnosis and targeted intervention — CLN Performance",
+    "pt-BR": "Diagnóstico rápido e intervenção focada — CLN Performance",
+    "es": "Diagnóstico rápido e intervención precisa — CLN Performance"
+  },
+  "Un premier diagnostic ciblé en quelques jours, des propositions concrètes et une intervention peu invasive pour valoriser vos applications. IA, coûts maîtrisés et autonomie.": {
+    "en": "A focused initial diagnosis in a few days, concrete proposals and a minimally invasive intervention to enhance your applications. AI, controlled costs and autonomy.",
+    "pt-BR": "Um diagnóstico inicial focado em poucos dias, propostas concretas e uma intervenção pouco invasiva para valorizar seus aplicativos. IA, custos controlados e autonomia.",
+    "es": "Un primer diagnóstico concreto en pocos días, propuestas y una intervención poco invasiva para potenciar sus aplicaciones. IA, costes controlados y autonomía."
+  },
+  "Une intervention à périmètre maîtrisé": {
+    "en": "An intervention within a controlled scope",
+    "pt-BR": "Uma intervenção com escopo controlado",
+    "es": "Una intervención de alcance controlado"
+  },
+  "Nous utilisons intensivement l’IA pour assister l’analyse, l’écriture du code, les tests et la documentation. Cet appui accélère les développements et nous permet de nous adapter à votre environnement technologique. Les choix techniques et les réalisations restent revus, testés et validés.": {
+    "en": "We make extensive use of AI to assist analysis, coding, testing and documentation. It accelerates development while adapting to your technology environment. Technical choices and deliverables remain subject to review, testing and validation.",
+    "pt-BR": "Usamos intensivamente a IA para apoiar a análise, a escrita do código, os testes e a documentação. Ela acelera os desenvolvimentos, adaptando-nos ao seu ambiente tecnológico. As escolhas técnicas e as entregas continuam sendo revisadas, testadas e validadas.",
+    "es": "Utilizamos intensivamente la IA para apoyar el análisis, la escritura del código, las pruebas y la documentación. Acelera los desarrollos adaptándonos a su entorno tecnológico. Las decisiones técnicas y los desarrollos siguen siendo revisados, probados y validados."
   }
 }
