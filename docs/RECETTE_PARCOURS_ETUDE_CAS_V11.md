@@ -1,6 +1,6 @@
 # Recette — Navigation et étude de cas — V11
 
-Date : 30 octobre 2026. Statut : recette locale réussie, publication en préparation.
+Date : 30 octobre 2026. Statut : livré, publié et vérifié en ligne.
 
 ## Réalisation
 Dix menus ramenés à cinq liens. « Vos besoins » et « Exemples concrets » conservés comme pages avec leurs adresses/ancres ; tous les liens hors menu vers ces pages ont été comparés à la version précédente et conservés. « Et si on étudiait votre cas ? » remplace les liens de questionnaire. Sept questions fermées cohérentes et une situation libre facultative. Transfert version 11 en session d'onglet, trente minutes ; pas de réponses dans l'URL. Contact prérempli automatiquement dans le véritable champ message intitulé « Votre situation », éditable, repris dans l'email. Brouillon à chaque modification, reprise sur reload/erreur, nouvelles validations et langues traitées. Confidentialité actualisée. API PHP et SMTP de production inchangés.
@@ -29,4 +29,10 @@ L'aperçu HTTP ne fournit pas crypto.randomUUID(). Un identifiant de transfert d
 Chrome disponible ; pas de Safari/WebKit ni appareil physique exécuté dans cette recette. Les anciens tests de parcours navigateur ont été actualisés pour une exécution CI ultérieure, sans prétendre les avoir lancés ici sur deux moteurs. Les cas stockage bloqué/expiration/ancien format sont couverts par les tests JS isolés. Pas d'envoi SMTP réel ni vérification de réception en boîte : contenu du mail et protections contrôlés en simulation, API de production conservée. Si le stockage d'onglet est bloqué, une synthèse copiable et un accès au contact remplacent le transfert automatique.
 
 ## Publication et contrôle public
-En préparation ; références et résultats publics à compléter après déploiement.
+Version applicative `24279fb679521ad72f193608e5245b4aa5a17cb5`. GitHub Pages : succès dès la première tentative, [exécution 41083532813](https://github.com/timetogrowup/PROJET_CLN/actions/runs/41083532813).
+
+Dix-sept fichiers HTTP 200 et SHA-256 identiques : dix pages HTML, site.js/case-data.js/diagnostic.js/contact.js, styles.css et les deux catalogues. solutions.html et realisations.html restent accessibles. L’API contact répond 405 avec Allow: POST à une lecture GET, conformément à son contrat ; aucune requête d’envoi publique effectuée.
+
+Recette du domaine, quatre langues : questionnaire → contact, situation localisée automatiquement remplie, texte libre conservé, modification puis rechargement avec contenu préservé, cinq liens de menu et absence de débordement. Les URL de transfert contiennent uniquement summary=1 et lang, aucune réponse.
+
+Questionnaire : https://cln-performance.com/diagnostic.html?lang=fr .

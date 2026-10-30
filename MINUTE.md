@@ -449,4 +449,10 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - Questions sur applications, collaborateurs, interconnexions, difficultés, objectifs, réflexion et délai ; texte libre. Validation vers le contact avec « Votre situation » automatiquement prérempli, modifiable et effectivement soumis dans le mail.
 - Transfert/brouillon d'onglet de trente minutes, conservation des modifications et gestion des anciennes versions. Quatre langues et confidentialité actualisée.
 - Tests locaux/Chrome réussis : 32 dispositions, parcours quatre langues, tests JS, PHP sécurité et capture de quatre corps d'emails simulés. Aucun email réel ; API/SMTP de production inchangés.
-- Publication et recette publique en préparation ; détails dans `docs/RECETTE_PARCOURS_ETUDE_CAS_V11.md`.
+- Publication et recette publique réussies ; détails dans `docs/RECETTE_PARCOURS_ETUDE_CAS_V11.md`.
+
+### Clôture V11 — 30 octobre 2026
+- Version applicative `24279fb679521ad72f193608e5245b4aa5a17cb5` publiée sur GitHub Pages, exécution 41083532813 réussie à la première tentative.
+- Dix-sept fichiers publics HTTP 200 et empreintes identiques. Pages conservées accessibles. Quatre parcours publics vérifiés : préremplissage, édition/rechargement, langues et cinq liens de menu.
+- Inclusion intégrale des quatre situations finales dans les corps d’emails vérifiée en PHP local avec mailer simulé ; aucun email réel. API de production inchangée, contrat POST disponible.
+- Besoin, spécifications, stratégie et recette actualisés. Limites : Safari/WebKit et téléphones physiques non exécutés, réception SMTP réelle non testée. Alternative de copie si stockage de session indisponible.

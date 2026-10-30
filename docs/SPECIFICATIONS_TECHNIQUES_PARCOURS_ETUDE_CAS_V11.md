@@ -1,6 +1,6 @@
 # Spécifications techniques — Étude de cas — V11
 
-Date : 30 octobre 2026. Statut : avant développement.
+Date : 30 octobre 2026. Statut : réalisé, publié et vérifié.
 
 ## Architecture
 HTML/CSS/JS statiques et API PHP/SMTP OVH existants conservés. contact.php incorpore déjà le champ POST message dans le corps texte du mail : réutiliser ce contrat, sans changer l'API ni les secrets. Déploiement frontend GitHub Pages. Aucun nouveau service.
@@ -29,3 +29,14 @@ Le questionnaire ne fait aucune requête de soumission. Contact remplit message 
 - PHP : tests de sécurité existants et capture SMTP locale simulée du corps produit par le véritable contact.php, quatre langues, modifications et caractères spéciaux. Aucun email réel ni vérification humaine publique nécessaire.
 - Chrome : parcours complet questionnaire-contact, modification et reload, accès direct, navigation et tailles disponibles ; ne pas soumettre le formulaire public.
 - Idempotence générateur, non-régression accueil/médias/mouvement ; HTTP et SHA-256 publics après publication. Documenter les limites moteurs/appareils et l'absence d'envoi SMTP réel.
+
+## Livraison effective — 30 octobre 2026
+Version `24279fb679521ad72f193608e5245b4aa5a17cb5`, déployée avec succès sur GitHub Pages ([exécution 41083532813](https://github.com/timetogrowup/PROJET_CLN/actions/runs/41083532813), première tentative). Nouveau parcours : https://cln-performance.com/diagnostic.html?lang=fr .
+
+Dix menus à cinq liens, pages retirées du menu conservées avec les liens hors menu. Sept questions fermées et une situation facultative, quatre langues. Contact automatiquement prérempli dans le champ message, texte éditable conservé sur reload/erreur. Validation finale du contact seule responsable de l'envoi ; traitement PHP/SMTP conservé. Transfert et brouillon de session d'onglet à trente minutes, sans réponses dans l'URL.
+
+Tests JS, structure/catalogues (665/200), dix pages/185 références, régressions V7 à V10 et PHP réussis. Les quatre corps d'emails ont été contrôlés avec le véritable contact.php et un mailer simulé, sans SMTP réel. Recette Chrome : quatre parcours complets, 32 dispositions, limite des objectifs et inconnus exclusifs. Dix-sept fichiers publics HTTP 200 et SHA-256 identiques ; transfert et conservation des modifications revérifiés en ligne dans les quatre langues.
+
+Détails et limites : [rapport de recette](RECETTE_PARCOURS_ETUDE_CAS_V11.md). Pas de test Safari/WebKit, d'appareil physique ni de réception SMTP réelle. Un stockage bloqué donne une synthèse copiable au lieu d'un transfert automatique.
+
+Un identifiant de repli est utilisé lorsque crypto.randomUUID() est indisponible, notamment sur l’aperçu HTTP ; cet identifiant n’a aucun rôle de sécurité. Le gestionnaire partagé conserve les messages de validation spécifiques des groupes. Les tests PHP nécessitent PHP CLI et mbstring.
