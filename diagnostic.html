@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Faire le point — CLN Performance</title>
-<meta name="description" content="Explorez les possibilités de votre SI et l’usage des données enrichies sans coordonnées obligatoires." />
+<title>Et si on étudiait votre cas ? — CLN Performance</title>
+<meta name="description" content="Décrivez vos applications, leurs échanges, vos équipes et vos priorités pour préparer une étude de votre cas avec CLN Performance." />
 <link rel="canonical" href="https://cln-performance.com/diagnostic.html" />
-<link rel="stylesheet" href="styles.css?v=20261029-v9" />
-<script defer src="site.js?v=20261029-v9">
+<link rel="stylesheet" href="styles.css?v=20261030-v11" />
+<script defer src="site.js?v=20261030-v11">
 </script>
-<script defer src="diagnostic.js?v=20261029-v9">
+<script defer src="case-data.js?v=20261030-v11">
+</script>
+<script defer src="diagnostic.js?v=20261030-v11">
 </script>
 </head>
 <body>
@@ -22,147 +24,163 @@
 </a>
 <nav class="nav-links" aria-label="Navigation principale">
 <a class="" href="index.html">Accueil</a>
-<a class="" href="solutions.html">Vos besoins</a>
 <a class="" href="pipelines.html">Nos pipelines en action</a>
 <a class="" href="approche.html">Comment nous travaillons</a>
-<a class="" href="realisations.html">Exemples concrets</a>
-<a class="active" href="diagnostic.html">Faire le point</a>
+<a class="active" href="diagnostic.html">Et si on étudiait votre cas ?</a>
 <a class="" href="contact.html">Contact</a>
 </nav>
 <a class="cta-button" href="contact.html">Parlons de votre situation</a>
 </div>
 </header>
 <main id="main-content">
-<section>
-<h1>Faites le point sur votre situation</h1>
-<p>Identifiez les applications et les informations à valoriser. Cette première synthèse aide à explorer un pipeline utile dans votre SI existant, avant toute demande de coordonnées. Vous pouvez aussi nous contacter directement.</p>
-<a class="text-link" href="contact.html">Parlons de votre situation</a>
+<section class="case-intro">
+<p class="eyebrow">Préparons un premier échange</p>
+<h1>Et si on étudiait votre cas ?</h1>
+<p>Vos applications et le savoir-faire de vos équipes constituent un capital. Quelques questions nous aideront à comprendre votre environnement et à identifier les améliorations à explorer ensemble. Une estimation suffit ; aucune expertise technique n’est nécessaire.</p>
+<p>Répondez pour le service ou le processus que vous souhaitez étudier, pas nécessairement pour toute votre entreprise. Toutes les questions fermées sont requises ; vous pouvez indiquer que vous ne savez pas encore.</p>
+<a class="text-link" href="contact.html">Vous préférez nous contacter directement ?</a>
 </section>
-<section class="questionnaire">
+<section class="case-questionnaire">
 <form id="diagnostic-form">
+<h2>Votre environnement</h2>
 <fieldset>
-<legend>Qu’aimeriez-vous rendre possible avec votre SI actuel ?</legend>
-<div class="radio-list">
-<label>
-<input type="checkbox" name="problems" value="ressaisies"/> Relier vos applications existantes</label>
-<label>
-<input type="checkbox" name="problems" value="repetitif"/> Enrichir les données au fil du parcours</label>
-<label>
-<input type="checkbox" name="problems" value="chiffres"/> Construire une information cohérente</label>
-<label>
-<input type="checkbox" name="problems" value="suivi"/> Créer de la valeur dans vos outils métier</label>
-<label>
-<input type="checkbox" name="problems" value="personne"/> Rendre les règles métier explicites</label>
-<label>
-<input type="checkbox" name="problems" value="autre"/> Une autre difficulté</label>
-<label>
-<input type="checkbox" name="problems" value="inconnu"/> Je ne sais pas encore</label>
+<legend>Combien d’applications sont utilisées dans le périmètre que vous souhaitez améliorer ?</legend>
+<div class="case-options">
+<label for="case-applications-a1_3">
+<input id="case-applications-a1_3" type="radio" name="applications" value="a1_3" required/>1 à 3</label>
+<label for="case-applications-a4_10">
+<input id="case-applications-a4_10" type="radio" name="applications" value="a4_10" required/>4 à 10</label>
+<label for="case-applications-a11_20">
+<input id="case-applications-a11_20" type="radio" name="applications" value="a11_20" required/>11 à 20</label>
+<label for="case-applications-a20_plus">
+<input id="case-applications-a20_plus" type="radio" name="applications" value="a20_plus" required/>Plus de 20</label>
+<label for="case-applications-inconnu">
+<input id="case-applications-inconnu" type="radio" name="applications" value="inconnu" required/>Je ne sais pas encore</label>
 </div>
 </fieldset>
 <fieldset>
-<legend>À quelle fréquence cela arrive-t-il ?</legend>
-<div class="radio-list">
-<label>
-<input type="radio" name="frequency" value="jour" required/> Chaque jour</label>
-<label>
-<input type="radio" name="frequency" value="semaine"/> Chaque semaine</label>
-<label>
-<input type="radio" name="frequency" value="parfois"/> Occasionnellement</label>
-<label>
-<input type="radio" name="frequency" value="inconnu"/> Je ne sais pas encore</label>
+<legend>Combien de collaborateurs utilisent ces applications ?</legend>
+<div class="case-options">
+<label for="case-people-p1_10">
+<input id="case-people-p1_10" type="radio" name="people" value="p1_10" required/>1 à 10</label>
+<label for="case-people-p11_50">
+<input id="case-people-p11_50" type="radio" name="people" value="p11_50" required/>11 à 50</label>
+<label for="case-people-p51_200">
+<input id="case-people-p51_200" type="radio" name="people" value="p51_200" required/>51 à 200</label>
+<label for="case-people-p200_plus">
+<input id="case-people-p200_plus" type="radio" name="people" value="p200_plus" required/>Plus de 200</label>
+<label for="case-people-inconnu">
+<input id="case-people-inconnu" type="radio" name="people" value="inconnu" required/>Je ne sais pas encore</label>
+</div>
+</fieldset>
+<h2>Votre fonctionnement</h2>
+<fieldset>
+<legend>Comment ces applications échangent-elles leurs informations ?</legend>
+<div class="case-options">
+<label for="case-connections-integrated">
+<input id="case-connections-integrated" type="radio" name="connections" value="integrated" required/>Elles sont largement interconnectées</label>
+<label for="case-connections-partial">
+<input id="case-connections-partial" type="radio" name="connections" value="partial" required/>Certaines échangent automatiquement</label>
+<label for="case-connections-files">
+<input id="case-connections-files" type="radio" name="connections" value="files" required/>Surtout par des fichiers ou des ressaisies</label>
+<label for="case-connections-separate">
+<input id="case-connections-separate" type="radio" name="connections" value="separate" required/>Elles fonctionnent principalement séparément</label>
+<label for="case-connections-inconnu">
+<input id="case-connections-inconnu" type="radio" name="connections" value="inconnu" required/>Je ne sais pas</label>
 </div>
 </fieldset>
 <fieldset>
-<legend>Combien de personnes sont concernées ?</legend>
-<div class="radio-list">
-<label>
-<input type="radio" name="people" value="une" required/> Une personne</label>
-<label>
-<input type="radio" name="people" value="dix"/> 2 à 10 personnes</label>
-<label>
-<input type="radio" name="people" value="cinquante"/> 11 à 50 personnes</label>
-<label>
-<input type="radio" name="people" value="plus"/> Plus de 50 personnes</label>
-<label>
-<input type="radio" name="people" value="inconnu"/> Je ne sais pas encore</label>
+<legend>Quelles difficultés rencontrez-vous aujourd’hui ?</legend>
+<p class="helper-text" id="difficulties-help">Plusieurs choix possibles.</p>
+<div class="case-options">
+<label for="case-difficulties-reentry">
+<input id="case-difficulties-reentry" type="checkbox" name="difficulties" value="reentry" aria-describedby="difficulties-help"/>Ressaisies</label>
+<label for="case-difficulties-repetitive">
+<input id="case-difficulties-repetitive" type="checkbox" name="difficulties" value="repetitive" aria-describedby="difficulties-help"/>Tâches répétitives</label>
+<label for="case-difficulties-quality">
+<input id="case-difficulties-quality" type="checkbox" name="difficulties" value="quality" aria-describedby="difficulties-help"/>Données dispersées ou incohérentes</label>
+<label for="case-difficulties-consolidation">
+<input id="case-difficulties-consolidation" type="checkbox" name="difficulties" value="consolidation" aria-describedby="difficulties-help"/>Informations difficiles à réunir</label>
+<label for="case-difficulties-handoffs">
+<input id="case-difficulties-handoffs" type="checkbox" name="difficulties" value="handoffs" aria-describedby="difficulties-help"/>Nombreux passages de relais</label>
+<label for="case-difficulties-visibility">
+<input id="case-difficulties-visibility" type="checkbox" name="difficulties" value="visibility" aria-describedby="difficulties-help"/>Difficulté à suivre l’activité</label>
+<label for="case-difficulties-other">
+<input id="case-difficulties-other" type="checkbox" name="difficulties" value="other" aria-describedby="difficulties-help"/>Autre difficulté</label>
+<label for="case-difficulties-inconnu">
+<input id="case-difficulties-inconnu" type="checkbox" name="difficulties" value="inconnu" aria-describedby="difficulties-help"/>Situation à préciser ensemble</label>
+</div>
+</fieldset>
+<h2>Vos objectifs</h2>
+<fieldset>
+<legend>Que souhaitez-vous améliorer en priorité ?</legend>
+<p class="helper-text" id="goals-help">Deux choix maximum.</p>
+<div class="case-options">
+<label for="case-goals-productivity">
+<input id="case-goals-productivity" type="checkbox" name="goals" value="productivity" aria-describedby="goals-help"/>Gagner en productivité</label>
+<label for="case-goals-modernise">
+<input id="case-goals-modernise" type="checkbox" name="goals" value="modernise" aria-describedby="goals-help"/>Moderniser le système d’information</label>
+<label for="case-goals-connect">
+<input id="case-goals-connect" type="checkbox" name="goals" value="connect" aria-describedby="goals-help"/>Mieux connecter les applications</label>
+<label for="case-goals-quality">
+<input id="case-goals-quality" type="checkbox" name="goals" value="quality" aria-describedby="goals-help"/>Fiabiliser les données</label>
+<label for="case-goals-steer">
+<input id="case-goals-steer" type="checkbox" name="goals" value="steer" aria-describedby="goals-help"/>Améliorer le pilotage</label>
+<label for="case-goals-teams">
+<input id="case-goals-teams" type="checkbox" name="goals" value="teams" aria-describedby="goals-help"/>Faciliter le travail des équipes</label>
+<label for="case-goals-inconnu">
+<input id="case-goals-inconnu" type="checkbox" name="goals" value="inconnu" aria-describedby="goals-help"/>Objectif à préciser ensemble</label>
 </div>
 </fieldset>
 <fieldset>
-<legend>Quelle valeur recherchez-vous dans vos applications ?</legend>
-<div class="radio-list">
-<label>
-<input type="checkbox" name="impacts" value="temps"/> Des données plus complètes</label>
-<label>
-<input type="checkbox" name="impacts" value="erreurs"/> Une information cohérente</label>
-<label>
-<input type="checkbox" name="impacts" value="retards"/> Des priorités exploitables</label>
-<label>
-<input type="checkbox" name="impacts" value="decision"/> Des décisions mieux éclairées</label>
-<label>
-<input type="checkbox" name="impacts" value="insatisfaction"/> Un contexte partagé entre applications</label>
-<label>
-<input type="checkbox" name="impacts" value="autre"/> Une autre difficulté</label>
-<label>
-<input type="checkbox" name="impacts" value="inconnu"/> Je ne sais pas encore</label>
+<legend>Où en êtes-vous dans votre réflexion sur les applications ?</legend>
+<div class="case-options">
+<label for="case-approach-existing">
+<input id="case-approach-existing" type="radio" name="approach" value="existing" required/>Améliorer les outils existants</label>
+<label for="case-approach-replacement">
+<input id="case-approach-replacement" type="radio" name="approach" value="replacement" required/>Envisager certains remplacements</label>
+<label for="case-approach-ongoing">
+<input id="case-approach-ongoing" type="radio" name="approach" value="ongoing" required/>Un projet de modernisation est déjà engagé</label>
+<label for="case-approach-compare">
+<input id="case-approach-compare" type="radio" name="approach" value="compare" required/>Comparer les possibilités</label>
+<label for="case-approach-inconnu">
+<input id="case-approach-inconnu" type="radio" name="approach" value="inconnu" required/>Nous ne savons pas encore</label>
 </div>
 </fieldset>
+<h2>Votre calendrier</h2>
 <fieldset>
-<legend>Quels outils utilisez-vous actuellement ? Facultatif</legend>
-<div class="radio-list">
-<label>
-<input type="checkbox" name="tools" value="fichiers"/> Des fichiers</label>
-<label>
-<input type="checkbox" name="tools" value="emails"/> Des emails</label>
-<label>
-<input type="checkbox" name="tools" value="metier"/> Des logiciels métier</label>
-<label>
-<input type="checkbox" name="tools" value="plusieurs"/> Plusieurs outils combinés</label>
-<label>
-<input type="checkbox" name="tools" value="inconnu"/> Je ne sais pas encore</label>
+<legend>Dans quel délai aimeriez-vous obtenir les premiers résultats ?</legend>
+<div class="case-options">
+<label for="case-horizon-under3">
+<input id="case-horizon-under3" type="radio" name="horizon" value="under3" required/>Moins de 3 mois</label>
+<label for="case-horizon-m3_6">
+<input id="case-horizon-m3_6" type="radio" name="horizon" value="m3_6" required/>3 à 6 mois</label>
+<label for="case-horizon-m6_12">
+<input id="case-horizon-m6_12" type="radio" name="horizon" value="m6_12" required/>6 à 12 mois</label>
+<label for="case-horizon-over12">
+<input id="case-horizon-over12" type="radio" name="horizon" value="over12" required/>Au-delà de 12 mois</label>
+<label for="case-horizon-inconnu">
+<input id="case-horizon-inconnu" type="radio" name="horizon" value="inconnu" required/>Calendrier à définir ensemble</label>
 </div>
 </fieldset>
-<fieldset>
-<legend>Quelle amélioration serait la plus utile ?</legend>
-<div class="radio-list">
-<label>
-<input type="radio" name="goal" value="temps" required/> Enrichir les données disponibles</label>
-<label>
-<input type="radio" name="goal" value="fiabilite"/> Fiabiliser les informations</label>
-<label>
-<input type="radio" name="goal" value="suivi"/> Mieux suivre les dossiers</label>
-<label>
-<input type="radio" name="goal" value="partage"/> Faciliter le partage</label>
-<label>
-<input type="radio" name="goal" value="inconnu"/> À préciser ensemble</label>
+<label class="case-free-label" for="case-situation">Quelle tâche ou situation aimeriez-vous améliorer en premier ? (Facultatif)</label>
+<p class="helper-text" id="case-situation-help">Exemple : des informations sont ressaisies entre trois outils avant de préparer notre planning. Maximum 2 000 caractères.</p>
+<textarea id="case-situation" name="situation" rows="4" maxlength="2000" aria-describedby="case-situation-help">
+</textarea>
+<p>Vos réponses seront reprises sur la page contact. Vous pourrez les modifier avant d’envoyer votre demande. La validation de ce questionnaire n’envoie aucun email.</p>
+<button class="cta-button" type="submit" disabled>Continuer pour étudier mon cas</button>
+<p id="case-transfer-error" role="status" data-dynamic hidden>
+</p>
+<div id="case-transfer-fallback" hidden>
+<label for="case-copy">Synthèse à copier</label>
+<textarea id="case-copy" rows="12" readonly>
+</textarea>
+<a class="text-link" href="contact.html">Ouvrir le contact</a>
 </div>
-</fieldset>
-<fieldset>
-<legend>Quand souhaitez-vous avancer ?</legend>
-<div class="radio-list">
-<label>
-<input type="radio" name="horizon" value="vite" required/> Rapidement</label>
-<label>
-<input type="radio" name="horizon" value="mois"/> Dans les prochains mois</label>
-<label>
-<input type="radio" name="horizon" value="reflexion"/> Je suis en réflexion</label>
-<label>
-<input type="radio" name="horizon" value="inconnu"/> Je ne sais pas encore</label>
-</div>
-</fieldset>
-<button class="cta-button" type="submit">Obtenir ma synthèse</button>
+<noscript>
+<p>Activez JavaScript pour transférer vos réponses, ou contactez-nous directement.</p>
+</noscript>
 </form>
-<div id="diagnostic-resultat" class="result-card" tabindex="-1" hidden>
-<h2>Votre synthèse indicative</h2>
-<div id="resultat-insights" data-dynamic>
-</div>
-<p>Cette orientation ne constitue ni un diagnostic complet, ni un prix, ni une garantie de gains. Une rémunération liée aux bénéfices constatés se discute à partir de mesures convenues ensemble.</p>
-<p>Votre synthèse reste dans cette page tant que vous ne choisissez pas de la transmettre. Le transfert l’enregistre sur ce navigateur pour trente jours au maximum ; vous choisissez ensuite de l’ajouter à votre message.</p>
-<div class="actions">
-<a class="cta-button" id="summary-transfer" href="contact.html?summary=1">Transmettre ma synthèse pour en discuter</a>
-<button class="link-button" id="summary-edit" type="button">Modifier mes réponses</button>
-</div>
-<p id="summary-storage-error" role="status" hidden>Le navigateur ne permet pas la sauvegarde. Vous pouvez copier la synthèse dans votre message ou nous contacter directement.</p>
-</div>
 </section>
 </main>
 <footer>

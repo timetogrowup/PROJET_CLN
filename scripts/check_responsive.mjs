@@ -23,11 +23,11 @@ for (const [engineName, engine] of Object.entries({chromium, webkit})) {
       const overflow = check.scroll > check.viewport + 1;
       if (overflow) {failures++;console.log('OVERFLOW',engineName,width,name,JSON.stringify(check));}
       const links = page.locator('nav a');
-      assert.equal(await links.count(),6);
+      assert.equal(await links.count(),5);
       for (const link of await links.all()) assert(await link.isVisible());
       if (name === 'contact.html') {
         assert(await page.locator('#contact-form').isVisible());
-        assert.equal(await page.locator('#recommendation-preview').isVisible(),false);
+        assert.equal(await page.locator('#recommendation-preview').count(),0);
         assert.equal(await page.locator('input[name="website"]').isVisible(),false);
       }
       console.log('LAYOUT',engineName,width,name,overflow?'FAIL':'PASS');

@@ -700,9 +700,9 @@
     "es": "Menos de 3 meses"
   },
   "3 à 6 mois": {
-    "en": "3 to 6 months",
-    "pt-BR": "De 3 a 6 meses",
-    "es": "De 3 a 6 meses"
+    "en": "3–6 months",
+    "pt-BR": "3 a 6 meses",
+    "es": "3 a 6 meses"
   },
   "Plus de 6 mois": {
     "en": "More than 6 months",
@@ -710,9 +710,9 @@
     "es": "Más de 6 meses"
   },
   "Je ne sais pas encore": {
-    "en": "I’m not sure yet",
+    "en": "I don’t know yet",
     "pt-BR": "Ainda não sei",
-    "es": "Todavía no lo sé"
+    "es": "Aún no lo sé"
   },
   "Quel mode d'accompagnement imaginez-vous ?": {
     "en": "What type of support do you have in mind?",
@@ -2973,5 +2973,355 @@
     "en": "A small specialist business, CLN Performance builds on your applications and your teams’ expertise through targeted interventions, pipelines and automation.",
     "pt-BR": "Pequena estrutura especializada, a CLN Performance valoriza seus aplicativos e o conhecimento das equipes com intervenções focadas, pipelines e automações.",
     "es": "Pequeña estructura especializada, CLN Performance potencia sus aplicaciones y el conocimiento de sus equipos mediante intervenciones precisas, pipelines y automatización."
+  },
+  "Et si on étudiait votre cas ?": {
+    "en": "What if we explored your case?",
+    "pt-BR": "Que tal estudarmos o seu caso?",
+    "es": "¿Y si estudiáramos su caso?"
+  },
+  "Vos applications et le savoir-faire de vos équipes constituent un capital. Quelques questions nous aideront à comprendre votre environnement et à identifier les améliorations à explorer ensemble. Une estimation suffit ; aucune expertise technique n’est nécessaire.": {
+    "en": "Your applications and your teams’ expertise are valuable assets. A few questions will help us understand your environment and identify improvements to explore together. Estimates are enough; no technical expertise is required.",
+    "pt-BR": "Seus aplicativos e o conhecimento das equipes são um capital. Algumas perguntas nos ajudarão a entender seu ambiente e identificar melhorias a explorar juntos. Uma estimativa basta; não é necessário conhecimento técnico.",
+    "es": "Sus aplicaciones y el conocimiento de sus equipos son un capital. Unas preguntas nos ayudarán a comprender su entorno e identificar mejoras que explorar juntos. Basta con una estimación; no se requieren conocimientos técnicos."
+  },
+  "Répondez pour le service ou le processus que vous souhaitez étudier, pas nécessairement pour toute votre entreprise. Toutes les questions fermées sont requises ; vous pouvez indiquer que vous ne savez pas encore.": {
+    "en": "Answer for the department or process you want to explore, not necessarily your whole organisation. All closed questions are required; you can indicate that you do not know yet.",
+    "pt-BR": "Responda para a área ou o processo que deseja estudar, não necessariamente para toda a empresa. Todas as perguntas fechadas são obrigatórias; você pode indicar que ainda não sabe.",
+    "es": "Responda para el servicio o proceso que desea estudiar, no necesariamente para toda su empresa. Todas las preguntas cerradas son obligatorias; puede indicar que aún no lo sabe."
+  },
+  "Préparons un premier échange": {
+    "en": "Let’s prepare an initial conversation",
+    "pt-BR": "Vamos preparar uma primeira conversa",
+    "es": "Preparemos una primera conversación"
+  },
+  "Vous préférez nous contacter directement ?": {
+    "en": "Prefer to contact us directly?",
+    "pt-BR": "Prefere entrar em contato diretamente?",
+    "es": "¿Prefiere contactarnos directamente?"
+  },
+  "Votre environnement": {
+    "en": "Your environment",
+    "pt-BR": "Seu ambiente",
+    "es": "Su entorno"
+  },
+  "Combien d’applications sont utilisées dans le périmètre que vous souhaitez améliorer ?": {
+    "en": "How many applications are used in the area you want to improve?",
+    "pt-BR": "Quantos aplicativos são usados no escopo que você deseja melhorar?",
+    "es": "¿Cuántas aplicaciones se utilizan en el ámbito que desea mejorar?"
+  },
+  "1 à 3": {
+    "en": "1–3",
+    "pt-BR": "1 a 3",
+    "es": "1 a 3"
+  },
+  "4 à 10": {
+    "en": "4–10",
+    "pt-BR": "4 a 10",
+    "es": "4 a 10"
+  },
+  "11 à 20": {
+    "en": "11–20",
+    "pt-BR": "11 a 20",
+    "es": "11 a 20"
+  },
+  "Plus de 20": {
+    "en": "More than 20",
+    "pt-BR": "Mais de 20",
+    "es": "Más de 20"
+  },
+  "Combien de collaborateurs utilisent ces applications ?": {
+    "en": "How many people use these applications?",
+    "pt-BR": "Quantos colaboradores usam esses aplicativos?",
+    "es": "¿Cuántos colaboradores utilizan estas aplicaciones?"
+  },
+  "1 à 10": {
+    "en": "1–10",
+    "pt-BR": "1 a 10",
+    "es": "1 a 10"
+  },
+  "11 à 50": {
+    "en": "11–50",
+    "pt-BR": "11 a 50",
+    "es": "11 a 50"
+  },
+  "51 à 200": {
+    "en": "51–200",
+    "pt-BR": "51 a 200",
+    "es": "51 a 200"
+  },
+  "Plus de 200": {
+    "en": "More than 200",
+    "pt-BR": "Mais de 200",
+    "es": "Más de 200"
+  },
+  "Votre fonctionnement": {
+    "en": "How your tools work",
+    "pt-BR": "Seu funcionamento",
+    "es": "Su funcionamiento"
+  },
+  "Comment ces applications échangent-elles leurs informations ?": {
+    "en": "How do these applications exchange information?",
+    "pt-BR": "Como esses aplicativos trocam informações?",
+    "es": "¿Cómo intercambian información estas aplicaciones?"
+  },
+  "Elles sont largement interconnectées": {
+    "en": "They are largely interconnected",
+    "pt-BR": "Estão amplamente interconectados",
+    "es": "Están ampliamente interconectadas"
+  },
+  "Certaines échangent automatiquement": {
+    "en": "Some exchange data automatically",
+    "pt-BR": "Alguns trocam dados automaticamente",
+    "es": "Algunas intercambian datos automáticamente"
+  },
+  "Surtout par des fichiers ou des ressaisies": {
+    "en": "Mainly through files or duplicate entry",
+    "pt-BR": "Principalmente por arquivos ou redigitação",
+    "es": "Sobre todo mediante archivos o doble introducción de datos"
+  },
+  "Elles fonctionnent principalement séparément": {
+    "en": "They mainly work separately",
+    "pt-BR": "Funcionam principalmente separados",
+    "es": "Funcionan principalmente por separado"
+  },
+  "Je ne sais pas": {
+    "en": "I don’t know",
+    "pt-BR": "Não sei",
+    "es": "No lo sé"
+  },
+  "Quelles difficultés rencontrez-vous aujourd’hui ?": {
+    "en": "What difficulties do you face today?",
+    "pt-BR": "Quais dificuldades você enfrenta hoje?",
+    "es": "¿Qué dificultades encuentra actualmente?"
+  },
+  "Plusieurs choix possibles.": {
+    "en": "Select all that apply.",
+    "pt-BR": "Várias opções possíveis.",
+    "es": "Puede elegir varias opciones."
+  },
+  "Ressaisies": {
+    "en": "Duplicate data entry",
+    "pt-BR": "Redigitação",
+    "es": "Doble introducción de datos"
+  },
+  "Tâches répétitives": {
+    "en": "Repetitive tasks",
+    "pt-BR": "Tarefas repetitivas",
+    "es": "Tareas repetitivas"
+  },
+  "Données dispersées ou incohérentes": {
+    "en": "Scattered or inconsistent data",
+    "pt-BR": "Dados dispersos ou incoerentes",
+    "es": "Datos dispersos o incoherentes"
+  },
+  "Informations difficiles à réunir": {
+    "en": "Information is difficult to bring together",
+    "pt-BR": "Informações difíceis de reunir",
+    "es": "Información difícil de reunir"
+  },
+  "Nombreux passages de relais": {
+    "en": "Too many handovers",
+    "pt-BR": "Muitas transferências entre pessoas",
+    "es": "Numerosos traspasos entre personas"
+  },
+  "Difficulté à suivre l’activité": {
+    "en": "Difficulty tracking activity",
+    "pt-BR": "Dificuldade para acompanhar a atividade",
+    "es": "Dificultad para seguir la actividad"
+  },
+  "Autre difficulté": {
+    "en": "Another difficulty",
+    "pt-BR": "Outra dificuldade",
+    "es": "Otra dificultad"
+  },
+  "Situation à préciser ensemble": {
+    "en": "To clarify together",
+    "pt-BR": "A definir em conjunto",
+    "es": "Por concretar juntos"
+  },
+  "Vos objectifs": {
+    "en": "Your objectives",
+    "pt-BR": "Seus objetivos",
+    "es": "Sus objetivos"
+  },
+  "Que souhaitez-vous améliorer en priorité ?": {
+    "en": "What would you like to improve first?",
+    "pt-BR": "O que você deseja melhorar primeiro?",
+    "es": "¿Qué desea mejorar primero?"
+  },
+  "Deux choix maximum.": {
+    "en": "Choose up to two.",
+    "pt-BR": "No máximo duas opções.",
+    "es": "Dos opciones como máximo."
+  },
+  "Gagner en productivité": {
+    "en": "Improve productivity",
+    "pt-BR": "Ganhar produtividade",
+    "es": "Mejorar la productividad"
+  },
+  "Moderniser le système d’information": {
+    "en": "Modernise the IT system",
+    "pt-BR": "Modernizar o sistema de informação",
+    "es": "Modernizar el sistema de información"
+  },
+  "Mieux connecter les applications": {
+    "en": "Connect applications more effectively",
+    "pt-BR": "Conectar melhor os aplicativos",
+    "es": "Conectar mejor las aplicaciones"
+  },
+  "Fiabiliser les données": {
+    "en": "Make data more reliable",
+    "pt-BR": "Tornar os dados mais confiáveis",
+    "es": "Hacer más fiables los datos"
+  },
+  "Améliorer le pilotage": {
+    "en": "Improve management visibility",
+    "pt-BR": "Melhorar a gestão e o acompanhamento",
+    "es": "Mejorar la gestión y el seguimiento"
+  },
+  "Faciliter le travail des équipes": {
+    "en": "Make work easier for teams",
+    "pt-BR": "Facilitar o trabalho das equipes",
+    "es": "Facilitar el trabajo de los equipos"
+  },
+  "Objectif à préciser ensemble": {
+    "en": "To clarify together",
+    "pt-BR": "A definir em conjunto",
+    "es": "Por concretar juntos"
+  },
+  "Où en êtes-vous dans votre réflexion sur les applications ?": {
+    "en": "Where are you in your thinking about your applications?",
+    "pt-BR": "Em que ponto está sua reflexão sobre os aplicativos?",
+    "es": "¿En qué punto está su reflexión sobre las aplicaciones?"
+  },
+  "Améliorer les outils existants": {
+    "en": "Improve existing tools",
+    "pt-BR": "Melhorar as ferramentas existentes",
+    "es": "Mejorar las herramientas existentes"
+  },
+  "Envisager certains remplacements": {
+    "en": "Consider replacing some tools",
+    "pt-BR": "Considerar algumas substituições",
+    "es": "Considerar algunas sustituciones"
+  },
+  "Un projet de modernisation est déjà engagé": {
+    "en": "A modernisation project is already underway",
+    "pt-BR": "Um projeto de modernização já está em andamento",
+    "es": "Ya hay un proyecto de modernización en marcha"
+  },
+  "Comparer les possibilités": {
+    "en": "Compare the possibilities",
+    "pt-BR": "Comparar as possibilidades",
+    "es": "Comparar las posibilidades"
+  },
+  "Nous ne savons pas encore": {
+    "en": "We don’t know yet",
+    "pt-BR": "Ainda não sabemos",
+    "es": "Aún no lo sabemos"
+  },
+  "Votre calendrier": {
+    "en": "Your timeline",
+    "pt-BR": "Seu calendário",
+    "es": "Su calendario"
+  },
+  "Dans quel délai aimeriez-vous obtenir les premiers résultats ?": {
+    "en": "When would you like to see the first results?",
+    "pt-BR": "Em quanto tempo gostaria de obter os primeiros resultados?",
+    "es": "¿En qué plazo le gustaría obtener los primeros resultados?"
+  },
+  "6 à 12 mois": {
+    "en": "6–12 months",
+    "pt-BR": "6 a 12 meses",
+    "es": "6 a 12 meses"
+  },
+  "Au-delà de 12 mois": {
+    "en": "More than 12 months",
+    "pt-BR": "Mais de 12 meses",
+    "es": "Más de 12 meses"
+  },
+  "Calendrier à définir ensemble": {
+    "en": "Timeline to agree together",
+    "pt-BR": "Prazo a definir em conjunto",
+    "es": "Calendario por definir juntos"
+  },
+  "Quelle tâche ou situation aimeriez-vous améliorer en premier ? (Facultatif)": {
+    "en": "Which task or situation would you like to improve first? (Optional)",
+    "pt-BR": "Qual tarefa ou situação gostaria de melhorar primeiro? (Opcional)",
+    "es": "¿Qué tarea o situación le gustaría mejorar primero? (Opcional)"
+  },
+  "Exemple : des informations sont ressaisies entre trois outils avant de préparer notre planning. Maximum 2 000 caractères.": {
+    "en": "Example: information is re-entered across three tools before preparing our schedule. Maximum 2,000 characters.",
+    "pt-BR": "Exemplo: informações são redigitadas entre três ferramentas antes de preparar nosso planejamento. Máximo de 2.000 caracteres.",
+    "es": "Ejemplo: se vuelven a introducir datos entre tres herramientas antes de preparar nuestra planificación. Máximo 2.000 caracteres."
+  },
+  "Vos réponses seront reprises sur la page contact. Vous pourrez les modifier avant d’envoyer votre demande. La validation de ce questionnaire n’envoie aucun email.": {
+    "en": "Your answers will be carried over to Contact. You can edit them before sending your request. Submitting this questionnaire does not send an email.",
+    "pt-BR": "Suas respostas serão retomadas na página de contato. Você poderá alterá-las antes de enviar sua solicitação. Validar este questionário não envia nenhum email.",
+    "es": "Sus respuestas se trasladarán a Contacto. Podrá modificarlas antes de enviar su solicitud. Validar este cuestionario no envía ningún email."
+  },
+  "Continuer pour étudier mon cas": {
+    "en": "Continue to explore my case",
+    "pt-BR": "Continuar para estudar meu caso",
+    "es": "Continuar para estudiar mi caso"
+  },
+  "Synthèse à copier": {
+    "en": "Summary to copy",
+    "pt-BR": "Síntese para copiar",
+    "es": "Síntesis para copiar"
+  },
+  "Ouvrir le contact": {
+    "en": "Open Contact",
+    "pt-BR": "Abrir o contato",
+    "es": "Abrir Contacto"
+  },
+  "Activez JavaScript pour transférer vos réponses, ou contactez-nous directement.": {
+    "en": "Enable JavaScript to transfer your answers, or contact us directly.",
+    "pt-BR": "Ative o JavaScript para transferir suas respostas ou entre em contato diretamente.",
+    "es": "Active JavaScript para trasladar sus respuestas o contáctenos directamente."
+  },
+  "Et si on étudiait votre cas ? — CLN Performance": {
+    "en": "What if we explored your case? — CLN Performance",
+    "pt-BR": "Que tal estudarmos o seu caso? — CLN Performance",
+    "es": "¿Y si estudiáramos su caso? — CLN Performance"
+  },
+  "Décrivez vos applications, leurs échanges, vos équipes et vos priorités pour préparer une étude de votre cas avec CLN Performance.": {
+    "en": "Describe your applications, their connections, your teams and priorities to prepare a discussion of your case with CLN Performance.",
+    "pt-BR": "Descreva seus aplicativos, suas conexões, equipes e prioridades para preparar o estudo do seu caso com a CLN Performance.",
+    "es": "Describa sus aplicaciones, sus conexiones, equipos y prioridades para preparar el estudio de su caso con CLN Performance."
+  },
+  "Votre situation": {
+    "en": "Your situation",
+    "pt-BR": "Sua situação",
+    "es": "Su situación"
+  },
+  "Votre situation sera incluse automatiquement dans l’email envoyé à CLN. Vous pouvez la modifier ou la compléter avant l’envoi.": {
+    "en": "Your situation will be included automatically in the email sent to CLN. You can edit or expand it before sending.",
+    "pt-BR": "Sua situação será incluída automaticamente no email enviado à CLN. Você pode alterá-la ou completá-la antes de enviar.",
+    "es": "Su situación se incluirá automáticamente en el email enviado a CLN. Puede modificarla o completarla antes de enviar."
+  },
+  "Le formulaire utilise votre nom, votre adresse email et votre situation pour vous répondre. L’organisation est facultative. Les réponses au questionnaire préremplissent automatiquement « Votre situation » après votre validation. Vous pouvez les modifier ; ce contenu est transmis uniquement lorsque vous envoyez le formulaire de contact. Évitez les informations sensibles ou confidentielles inutiles.": {
+    "en": "The form uses your name, email address and situation to reply to you. Your organisation is optional. After you validate the questionnaire, its answers automatically fill “Your situation”. You can edit them; this content is transmitted only when you send the contact form. Avoid unnecessary sensitive or confidential information.",
+    "pt-BR": "O formulário usa seu nome, email e situação para responder. A organização é opcional. Após validar o questionário, as respostas preenchem automaticamente “Sua situação”. Você pode alterá-las; o conteúdo só é transmitido quando envia o formulário de contato. Evite informações sensíveis ou confidenciais desnecessárias.",
+    "es": "El formulario utiliza su nombre, correo y situación para responderle. La organización es opcional. Tras validar el cuestionario, las respuestas rellenan automáticamente «Su situación». Puede modificarlas; el contenido solo se transmite al enviar el formulario de contacto. Evite información sensible o confidencial innecesaria."
+  },
+  "Questionnaire et brouillon dans votre navigateur": {
+    "en": "Questionnaire and draft in your browser",
+    "pt-BR": "Questionário e rascunho no navegador",
+    "es": "Cuestionario y borrador en su navegador"
+  },
+  "Le questionnaire prépare une synthèse dans votre navigateur sans envoyer vos réponses à CLN. Sa validation l’enregistre temporairement dans l’onglet et ouvre la page contact, où « Votre situation » est préremplie et modifiable. Aucun email n’est envoyé à ce stade.": {
+    "en": "The questionnaire prepares a summary in your browser without sending your answers to CLN. Validating it temporarily stores it in the tab and opens Contact, where “Your situation” is prefilled and editable. No email is sent at this stage.",
+    "pt-BR": "O questionário prepara uma síntese no navegador sem enviar suas respostas à CLN. A validação a salva temporariamente na aba e abre o contato, com “Sua situação” preenchida e editável. Nenhum email é enviado nessa etapa.",
+    "es": "El cuestionario prepara una síntesis en su navegador sin enviar las respuestas a CLN. Al validarlo, se guarda temporalmente en la pestaña y se abre Contacto, con «Su situación» rellenada y editable. En esta fase no se envía ningún email."
+  },
+  "Le transfert expire après trente minutes et est supprimé après sa reprise sur Contact. Un brouillon de contact peut être conservé dans l’onglet pendant trente minutes après votre dernière modification pour reprendre un envoi en échec ; il est effacé après confirmation du succès. Vous pouvez supprimer les données du site dans votre navigateur. Le choix de langue peut être conservé un an. Ces stockages ne servent pas au suivi publicitaire.": {
+    "en": "The transfer expires after thirty minutes and is removed after being applied on Contact. A contact draft may be kept in the tab for thirty minutes after your last edit to recover from a failed submission; it is cleared after confirmed success. You can delete site data in your browser. Language choice may be kept for one year. This storage is not used for advertising tracking.",
+    "pt-BR": "A transferência expira após trinta minutos e é apagada depois de aplicada no contato. Um rascunho pode ficar na aba por trinta minutos após a última alteração para retomar um envio que falhou; é apagado após a confirmação do sucesso. Você pode excluir os dados do site no navegador. O idioma pode ser conservado por um ano. Esses armazenamentos não servem para rastreamento publicitário.",
+    "es": "La transferencia caduca a los treinta minutos y se elimina después de aplicarse en Contacto. Puede conservarse un borrador en la pestaña durante treinta minutos tras la última modificación para reanudar un envío fallido; se elimina tras confirmar el éxito. Puede borrar los datos del sitio en su navegador. El idioma puede conservarse un año. Estos almacenamientos no se usan para seguimiento publicitario."
+  },
+  "Mise à jour : 30 octobre 2026": {
+    "en": "Updated: 30 October 2026",
+    "pt-BR": "Atualizado em 30 de outubro de 2026",
+    "es": "Actualizado el 30 de octubre de 2026"
   }
 }

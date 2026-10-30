@@ -24,7 +24,7 @@ class Page(HTMLParser):
   s=re.sub(r'\s+',' ',s).strip()
   if s:self.text.append(s)
 root=Path(__file__).resolve().parents[1];names=['index','solutions','pipelines','approche','realisations','diagnostic','contact','merci','mentions-legales','confidentialite'];pages={n+'.html':Page(root/(n+'.html')) for n in names};catalog=json.loads((root/'i18n/static.json').read_text())
-for required in ['recommendation-add','need-context','need-add','human-dialog','contact-form']:
+for required in ['message','case-transfer-notice','case-draft-warning','human-dialog','contact-form']:
  assert required in pages['contact.html'].ids,required
 for name,page in pages.items():
  scripts=[urlsplit(u).path for u in page.links if urlsplit(u).path.endswith('.js')]
@@ -62,12 +62,12 @@ assert 'pipelines' in pages['index.html'].ids
 for name in pages:
  text=(root/name).read_text()
  nav=re.search(r'<nav\b.*?</nav>',text,re.S).group(0)
- assert len(re.findall(r'<a\b',nav))==7,(name,'seven navigation links')
+ assert len(re.findall(r'<a\b',nav))==5,(name,'five navigation links')
  assert 'pipelines.html' in nav,(name,'pipeline navigation')
 import xml.etree.ElementTree as ET
 urls={node.text for node in ET.parse(root/'sitemap.xml').iter() if node.tag.endswith('}loc')}
 assert 'https://cln-performance.com/pipelines.html' in urls
-print('PASS V5 pipeline structure, seven-link shared navigation and sitemap.')
+print('PASS V5 pipeline structure, five-link shared navigation and sitemap.')
 
 # V6 editorial acceptance: first-screen promise and enrichment visible at destination.
 from html import unescape
@@ -80,6 +80,6 @@ for obsolete in ['Moins de tâches répétitives','Du temps pour votre activité
  assert obsolete not in home,obsolete
 for term in ['contexte contractuel','priorité','outil de planification','applications déjà utilisées']:
  assert term in unescape(pipeline),term
-assert 'version:6,generatedAt' in (root/'diagnostic.js').read_text()
-assert 'data.version!==6' in (root/'contact.js').read_text()
+assert 'version:11,id,' in (root/'diagnostic.js').read_text()
+assert 'caseData.valid(item)' in (root/'contact.js').read_text()
 print('PASS V10 first-screen capital promise and V6, progressive enrichment, destination value and legacy summary version isolation.')

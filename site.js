@@ -77,9 +77,9 @@
     const nav=document.querySelector('.navbar');
     if(nav){const box=document.createElement('label');box.className='language-picker';box.htmlFor='site-language';const label=document.createElement('span');label.id='language-label';box.append(label);const select=document.createElement('select');select.id='site-language';[['fr','Français'],['en','English'],['pt-BR','Português (Brasil)'],['es','Español']].forEach(([value,text])=>{const o=document.createElement('option');o.value=value;o.textContent=text;select.append(o);});box.append(select);nav.prepend(box);select.addEventListener('change',()=>CLN.setLanguage(select.value));}
     render();document.documentElement.dataset.i18nReady='true';
-    document.addEventListener('invalid',event=>{const el=event.target;if(!el.validity)return;let key='required';if(el.type==='checkbox')key='check_required';else if(el.validity.typeMismatch)key='email_invalid';else if(el.validity.badInput||el.validity.stepMismatch||el.validity.rangeOverflow||el.validity.rangeUnderflow)key='number_invalid';el.setCustomValidity(CLN.t(key));},true);
+    document.addEventListener('invalid',event=>{const el=event.target;if(!el.validity||el.validity.customError)return;let key='required';if(el.type==='checkbox')key='check_required';else if(el.validity.typeMismatch)key='email_invalid';else if(el.validity.badInput||el.validity.stepMismatch||el.validity.rangeOverflow||el.validity.rangeUnderflow)key='number_invalid';el.setCustomValidity(CLN.t(key));},true);
     document.addEventListener('input',event=>{if(event.target.setCustomValidity)event.target.setCustomValidity('');});
-    if(new URLSearchParams(location.search).get('status')==='success'){try{sessionStorage.removeItem('clnContactDraft');}catch(_){}}
+    if(new URLSearchParams(location.search).get('status')==='success'){try{sessionStorage.removeItem('clnContactDraft');sessionStorage.removeItem('clnCaseTransfer');}catch(_){}}
     return CLN;
   }).catch(()=>{document.documentElement.dataset.i18nReady='error';const send=document.querySelector('#contact-form button[type="submit"]');if(send)send.disabled=true;});
 })();

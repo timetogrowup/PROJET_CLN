@@ -145,4 +145,8 @@ apply_home_capital_roi(root, catalog, messages)
 (root/'i18n/messages.json').write_text(json.dumps(messages,ensure_ascii=False,indent=2)+'\n')
 import runpy
 runpy.run_path(str(root/'scripts/update_privacy_v4.py'))
-print('V6 pages generated; new content translated in four languages.')
+from case_journey import apply as apply_case_journey
+apply_case_journey(root, catalog, messages)
+(root/'i18n/static.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
+(root/'i18n/messages.json').write_text(json.dumps(messages,ensure_ascii=False,indent=2)+'\n')
+print('V11 pages generated; navigation and case journey translated in four languages.')

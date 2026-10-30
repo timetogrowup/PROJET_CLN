@@ -850,5 +850,353 @@
     "en": "Investment comparison: summary at month 36",
     "pt-BR": "Comparação dos investimentos: síntese no mês 36",
     "es": "Comparación de inversiones: síntesis en el mes 36"
+  },
+  "case.title": {
+    "fr": "Votre situation",
+    "en": "Your situation",
+    "pt-BR": "Sua situação",
+    "es": "Su situación"
+  },
+  "case.free": {
+    "fr": "Votre cas concret",
+    "en": "Your specific case",
+    "pt-BR": "Seu caso concreto",
+    "es": "Su caso concreto"
+  },
+  "case.environment": {
+    "fr": "Votre environnement",
+    "en": "Your environment",
+    "pt-BR": "Seu ambiente",
+    "es": "Su entorno"
+  },
+  "case.functioning": {
+    "fr": "Votre fonctionnement",
+    "en": "How your tools work",
+    "pt-BR": "Seu funcionamento",
+    "es": "Su funcionamiento"
+  },
+  "case.objectives": {
+    "fr": "Vos objectifs",
+    "en": "Your objectives",
+    "pt-BR": "Seus objetivos",
+    "es": "Sus objetivos"
+  },
+  "case.calendar": {
+    "fr": "Votre calendrier",
+    "en": "Your timeline",
+    "pt-BR": "Seu calendário",
+    "es": "Su calendario"
+  },
+  "case.select": {
+    "fr": "Choisissez au moins une réponse, ou l’option à préciser ensemble.",
+    "en": "Choose at least one answer, or the option to clarify together.",
+    "pt-BR": "Escolha ao menos uma resposta ou a opção a definir em conjunto.",
+    "es": "Elija al menos una respuesta o la opción por concretar juntos."
+  },
+  "case.max": {
+    "fr": "Choisissez deux objectifs maximum.",
+    "en": "Choose no more than two objectives.",
+    "pt-BR": "Escolha no máximo dois objetivos.",
+    "es": "Elija un máximo de dos objetivos."
+  },
+  "case.expired": {
+    "fr": "Cette synthèse est ancienne, expirée ou indisponible. Vous pouvez refaire le questionnaire ou décrire directement votre situation ci-dessous.",
+    "en": "This summary is outdated, expired or unavailable. You can redo the questionnaire or describe your situation below.",
+    "pt-BR": "Esta síntese é antiga, expirou ou está indisponível. Você pode refazer o questionário ou descrever sua situação abaixo.",
+    "es": "Esta síntesis es antigua, ha caducado o no está disponible. Puede repetir el cuestionario o describir su situación a continuación."
+  },
+  "case.storage": {
+    "fr": "Le navigateur ne permet pas le transfert automatique. Copiez la synthèse ci-dessous, puis ouvrez le contact pour la coller dans « Votre situation ».",
+    "en": "Your browser does not allow automatic transfer. Copy the summary below, then open Contact and paste it into “Your situation”.",
+    "pt-BR": "Seu navegador não permite a transferência automática. Copie a síntese abaixo e abra o contato para colá-la em “Sua situação”.",
+    "es": "Su navegador no permite la transferencia automática. Copie la síntesis y abra Contacto para pegarla en «Su situación»."
+  },
+  "case.draft_error": {
+    "fr": "Le navigateur ne permet pas de sauvegarder votre brouillon. Conservez une copie de votre situation avant de quitter la page ou de tenter l’envoi.",
+    "en": "Your browser cannot save the draft. Keep a copy of your situation before leaving the page or attempting to send.",
+    "pt-BR": "Seu navegador não permite salvar o rascunho. Guarde uma cópia da situação antes de sair da página ou tentar enviar.",
+    "es": "Su navegador no permite guardar el borrador. Conserve una copia de su situación antes de salir de la página o intentar enviar."
+  },
+  "case.field.applications": {
+    "fr": "Applications concernées",
+    "en": "Applications involved",
+    "pt-BR": "Aplicativos envolvidos",
+    "es": "Aplicaciones implicadas"
+  },
+  "case.choice.applications.a1_3": {
+    "fr": "1 à 3",
+    "en": "1–3",
+    "pt-BR": "1 a 3",
+    "es": "1 a 3"
+  },
+  "case.choice.applications.a4_10": {
+    "fr": "4 à 10",
+    "en": "4–10",
+    "pt-BR": "4 a 10",
+    "es": "4 a 10"
+  },
+  "case.choice.applications.a11_20": {
+    "fr": "11 à 20",
+    "en": "11–20",
+    "pt-BR": "11 a 20",
+    "es": "11 a 20"
+  },
+  "case.choice.applications.a20_plus": {
+    "fr": "Plus de 20",
+    "en": "More than 20",
+    "pt-BR": "Mais de 20",
+    "es": "Más de 20"
+  },
+  "case.choice.applications.inconnu": {
+    "fr": "Je ne sais pas encore",
+    "en": "I don’t know yet",
+    "pt-BR": "Ainda não sei",
+    "es": "Aún no lo sé"
+  },
+  "case.field.people": {
+    "fr": "Collaborateurs utilisateurs",
+    "en": "People using these applications",
+    "pt-BR": "Colaboradores que usam os aplicativos",
+    "es": "Colaboradores que utilizan las aplicaciones"
+  },
+  "case.choice.people.p1_10": {
+    "fr": "1 à 10",
+    "en": "1–10",
+    "pt-BR": "1 a 10",
+    "es": "1 a 10"
+  },
+  "case.choice.people.p11_50": {
+    "fr": "11 à 50",
+    "en": "11–50",
+    "pt-BR": "11 a 50",
+    "es": "11 a 50"
+  },
+  "case.choice.people.p51_200": {
+    "fr": "51 à 200",
+    "en": "51–200",
+    "pt-BR": "51 a 200",
+    "es": "51 a 200"
+  },
+  "case.choice.people.p200_plus": {
+    "fr": "Plus de 200",
+    "en": "More than 200",
+    "pt-BR": "Mais de 200",
+    "es": "Más de 200"
+  },
+  "case.choice.people.inconnu": {
+    "fr": "Je ne sais pas encore",
+    "en": "I don’t know yet",
+    "pt-BR": "Ainda não sei",
+    "es": "Aún no lo sé"
+  },
+  "case.field.connections": {
+    "fr": "Échanges entre applications",
+    "en": "Exchanges between applications",
+    "pt-BR": "Trocas entre aplicativos",
+    "es": "Intercambios entre aplicaciones"
+  },
+  "case.choice.connections.integrated": {
+    "fr": "Elles sont largement interconnectées",
+    "en": "They are largely interconnected",
+    "pt-BR": "Estão amplamente interconectados",
+    "es": "Están ampliamente interconectadas"
+  },
+  "case.choice.connections.partial": {
+    "fr": "Certaines échangent automatiquement",
+    "en": "Some exchange data automatically",
+    "pt-BR": "Alguns trocam dados automaticamente",
+    "es": "Algunas intercambian datos automáticamente"
+  },
+  "case.choice.connections.files": {
+    "fr": "Surtout par des fichiers ou des ressaisies",
+    "en": "Mainly through files or duplicate entry",
+    "pt-BR": "Principalmente por arquivos ou redigitação",
+    "es": "Sobre todo mediante archivos o doble introducción de datos"
+  },
+  "case.choice.connections.separate": {
+    "fr": "Elles fonctionnent principalement séparément",
+    "en": "They mainly work separately",
+    "pt-BR": "Funcionam principalmente separados",
+    "es": "Funcionan principalmente por separado"
+  },
+  "case.choice.connections.inconnu": {
+    "fr": "Je ne sais pas",
+    "en": "I don’t know",
+    "pt-BR": "Não sei",
+    "es": "No lo sé"
+  },
+  "case.field.difficulties": {
+    "fr": "Difficultés rencontrées",
+    "en": "Current difficulties",
+    "pt-BR": "Dificuldades encontradas",
+    "es": "Dificultades actuales"
+  },
+  "case.choice.difficulties.reentry": {
+    "fr": "Ressaisies",
+    "en": "Duplicate data entry",
+    "pt-BR": "Redigitação",
+    "es": "Doble introducción de datos"
+  },
+  "case.choice.difficulties.repetitive": {
+    "fr": "Tâches répétitives",
+    "en": "Repetitive tasks",
+    "pt-BR": "Tarefas repetitivas",
+    "es": "Tareas repetitivas"
+  },
+  "case.choice.difficulties.quality": {
+    "fr": "Données dispersées ou incohérentes",
+    "en": "Scattered or inconsistent data",
+    "pt-BR": "Dados dispersos ou incoerentes",
+    "es": "Datos dispersos o incoherentes"
+  },
+  "case.choice.difficulties.consolidation": {
+    "fr": "Informations difficiles à réunir",
+    "en": "Information is difficult to bring together",
+    "pt-BR": "Informações difíceis de reunir",
+    "es": "Información difícil de reunir"
+  },
+  "case.choice.difficulties.handoffs": {
+    "fr": "Nombreux passages de relais",
+    "en": "Too many handovers",
+    "pt-BR": "Muitas transferências entre pessoas",
+    "es": "Numerosos traspasos entre personas"
+  },
+  "case.choice.difficulties.visibility": {
+    "fr": "Difficulté à suivre l’activité",
+    "en": "Difficulty tracking activity",
+    "pt-BR": "Dificuldade para acompanhar a atividade",
+    "es": "Dificultad para seguir la actividad"
+  },
+  "case.choice.difficulties.other": {
+    "fr": "Autre difficulté",
+    "en": "Another difficulty",
+    "pt-BR": "Outra dificuldade",
+    "es": "Otra dificultad"
+  },
+  "case.choice.difficulties.inconnu": {
+    "fr": "Situation à préciser ensemble",
+    "en": "To clarify together",
+    "pt-BR": "A definir em conjunto",
+    "es": "Por concretar juntos"
+  },
+  "case.field.goals": {
+    "fr": "Objectifs prioritaires",
+    "en": "Priority objectives",
+    "pt-BR": "Objetivos prioritários",
+    "es": "Objetivos prioritarios"
+  },
+  "case.choice.goals.productivity": {
+    "fr": "Gagner en productivité",
+    "en": "Improve productivity",
+    "pt-BR": "Ganhar produtividade",
+    "es": "Mejorar la productividad"
+  },
+  "case.choice.goals.modernise": {
+    "fr": "Moderniser le système d’information",
+    "en": "Modernise the IT system",
+    "pt-BR": "Modernizar o sistema de informação",
+    "es": "Modernizar el sistema de información"
+  },
+  "case.choice.goals.connect": {
+    "fr": "Mieux connecter les applications",
+    "en": "Connect applications more effectively",
+    "pt-BR": "Conectar melhor os aplicativos",
+    "es": "Conectar mejor las aplicaciones"
+  },
+  "case.choice.goals.quality": {
+    "fr": "Fiabiliser les données",
+    "en": "Make data more reliable",
+    "pt-BR": "Tornar os dados mais confiáveis",
+    "es": "Hacer más fiables los datos"
+  },
+  "case.choice.goals.steer": {
+    "fr": "Améliorer le pilotage",
+    "en": "Improve management visibility",
+    "pt-BR": "Melhorar a gestão e o acompanhamento",
+    "es": "Mejorar la gestión y el seguimiento"
+  },
+  "case.choice.goals.teams": {
+    "fr": "Faciliter le travail des équipes",
+    "en": "Make work easier for teams",
+    "pt-BR": "Facilitar o trabalho das equipes",
+    "es": "Facilitar el trabajo de los equipos"
+  },
+  "case.choice.goals.inconnu": {
+    "fr": "Objectif à préciser ensemble",
+    "en": "To clarify together",
+    "pt-BR": "A definir em conjunto",
+    "es": "Por concretar juntos"
+  },
+  "case.field.approach": {
+    "fr": "Réflexion sur les applications",
+    "en": "Current thinking about applications",
+    "pt-BR": "Reflexão sobre os aplicativos",
+    "es": "Reflexión sobre las aplicaciones"
+  },
+  "case.choice.approach.existing": {
+    "fr": "Améliorer les outils existants",
+    "en": "Improve existing tools",
+    "pt-BR": "Melhorar as ferramentas existentes",
+    "es": "Mejorar las herramientas existentes"
+  },
+  "case.choice.approach.replacement": {
+    "fr": "Envisager certains remplacements",
+    "en": "Consider replacing some tools",
+    "pt-BR": "Considerar algumas substituições",
+    "es": "Considerar algunas sustituciones"
+  },
+  "case.choice.approach.ongoing": {
+    "fr": "Un projet de modernisation est déjà engagé",
+    "en": "A modernisation project is already underway",
+    "pt-BR": "Um projeto de modernização já está em andamento",
+    "es": "Ya hay un proyecto de modernización en marcha"
+  },
+  "case.choice.approach.compare": {
+    "fr": "Comparer les possibilités",
+    "en": "Compare the possibilities",
+    "pt-BR": "Comparar as possibilidades",
+    "es": "Comparar las posibilidades"
+  },
+  "case.choice.approach.inconnu": {
+    "fr": "Nous ne savons pas encore",
+    "en": "We don’t know yet",
+    "pt-BR": "Ainda não sabemos",
+    "es": "Aún no lo sabemos"
+  },
+  "case.field.horizon": {
+    "fr": "Premiers résultats souhaités",
+    "en": "Desired timing for first results",
+    "pt-BR": "Prazo desejado para os primeiros resultados",
+    "es": "Plazo deseado para los primeros resultados"
+  },
+  "case.choice.horizon.under3": {
+    "fr": "Moins de 3 mois",
+    "en": "Less than 3 months",
+    "pt-BR": "Menos de 3 meses",
+    "es": "Menos de 3 meses"
+  },
+  "case.choice.horizon.m3_6": {
+    "fr": "3 à 6 mois",
+    "en": "3–6 months",
+    "pt-BR": "3 a 6 meses",
+    "es": "3 a 6 meses"
+  },
+  "case.choice.horizon.m6_12": {
+    "fr": "6 à 12 mois",
+    "en": "6–12 months",
+    "pt-BR": "6 a 12 meses",
+    "es": "6 a 12 meses"
+  },
+  "case.choice.horizon.over12": {
+    "fr": "Au-delà de 12 mois",
+    "en": "More than 12 months",
+    "pt-BR": "Mais de 12 meses",
+    "es": "Más de 12 meses"
+  },
+  "case.choice.horizon.inconnu": {
+    "fr": "Calendrier à définir ensemble",
+    "en": "Timeline to agree together",
+    "pt-BR": "Prazo a definir em conjunto",
+    "es": "Calendario por definir juntos"
   }
 }

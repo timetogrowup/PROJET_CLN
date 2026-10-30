@@ -442,3 +442,11 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - Accueil public https://cln-performance.com/ vérifié dans les quatre langues. Dix-sept fichiers HTTP 200 avec SHA-256 identiques. Pause, agrandissement, Échap et focus vérifiés après correction.
 - Contrôles locaux : catalogues 595/142, dix pages et 203 références, tests ROI et lecteurs V7/V8/V9/V10, génération idempotente. Seize dispositions Chrome de 320 à 1280 px, sans débordement ; contenu sans JavaScript contrôlé. Safari et téléphones physiques non testés. Pas d’envoi de formulaire.
 - Besoin, spécifications, stratégie et rapport de recette mis à jour selon la livraison effective. Courbes et calendriers explicitement illustratifs.
+
+## 30 octobre 2026 — V11 : étude de cas et contact prérempli
+- Cadrage enregistré avant développement : `773ee2954b3ed7f5be19c18a9f78e8085cdbc491`.
+- Menus à cinq liens ; pages Vos besoins et Exemples concrets conservées avec leurs liens hors menu. Questionnaire renommé « Et si on étudiait votre cas ? ».
+- Questions sur applications, collaborateurs, interconnexions, difficultés, objectifs, réflexion et délai ; texte libre. Validation vers le contact avec « Votre situation » automatiquement prérempli, modifiable et effectivement soumis dans le mail.
+- Transfert/brouillon d'onglet de trente minutes, conservation des modifications et gestion des anciennes versions. Quatre langues et confidentialité actualisée.
+- Tests locaux/Chrome réussis : 32 dispositions, parcours quatre langues, tests JS, PHP sécurité et capture de quatre corps d'emails simulés. Aucun email réel ; API/SMTP de production inchangés.
+- Publication et recette publique en préparation ; détails dans `docs/RECETTE_PARCOURS_ETUDE_CAS_V11.md`.

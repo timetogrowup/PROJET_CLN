@@ -2,21 +2,36 @@ CLN.ready.then(async () => {
   if(document.documentElement.dataset.i18nReady!=='true')return;
   const form=document.querySelector('#contact-form');if(!form)return;
   const button=form.querySelector('[type="submit"]'),dialog=document.querySelector('#human-dialog'),check=document.querySelector('#human-check'),confirm=document.querySelector('#human-confirm'),cancel=document.querySelector('#human-cancel'),retry=document.querySelector('#human-retry'),humanStatus=document.querySelector('#human-status'),alert=document.querySelector('#form-alert');
-  const preview=document.querySelector('#recommendation-preview'),content=document.querySelector('#recommendation-content'),date=document.querySelector('#recommendation-date'),message=form.elements.message;
-  for(const el of [humanStatus,alert,content,date])el.dataset.dynamic='true';
-  let summaryBase='';
-  let challenge=null,state='closed',generation=0,controller=null,statusKey='',previousPrefill='',data=new URLSearchParams(location.search).get('summary')==='1'?CLN.readSummary():null;
-  const params=new URLSearchParams(location.search),status=params.get('status');
-  const storageKey='clnContactDraft';
-  try{const draft=JSON.parse(sessionStorage.getItem(storageKey)||'null');if(status==='success'){sessionStorage.removeItem(storageKey);}else if(draft&&draft.expires>Date.now()){for(const key of ['name','_replyto','company','message'])if(typeof draft.fields?.[key]==='string')form.elements[key].value=draft.fields[key];}else sessionStorage.removeItem(storageKey);}catch(_){}
-  function renderSummary(){
-    if(!data){preview.hidden=true;return;}preview.hidden=false;
-    const add=document.querySelector('#recommendation-add');
-    if(data.version!==6||!data.answers){content.replaceChildren();const note=document.createElement('p');note.textContent=CLN.t('v4.old');const link=document.createElement('a');link.href='diagnostic.html?lang='+encodeURIComponent(CLN.lang);link.className='text-link';link.textContent=CLN.t('v4.refresh');content.append(note,link);add.hidden=true;return;}
-    add.hidden=false;add.disabled=Boolean(previousPrefill);if(previousPrefill)add.textContent=CLN.t('v4.added');
-    const text=CLN.summaryText(data.answers);content.textContent=text;content.style.whiteSpace='pre-line';date.textContent=CLN.t('summary_date',{date:new Intl.DateTimeFormat(CLN.lang,{dateStyle:'long',timeStyle:'short'}).format(new Date(data.generatedAt))});
-    
+  const message=form.elements.message,notice=document.querySelector('#case-transfer-notice'),restart=document.querySelector('#case-restart'),draftWarning=document.querySelector('#case-draft-warning'),caseData=window.CLNCase;
+  for(const el of [humanStatus,alert,notice,draftWarning])el.dataset.dynamic='true';
+  let challenge=null,state='closed',generation=0,controller=null,statusKey='';
+  const params=new URLSearchParams(location.search),status=params.get('status'),storageKey='clnContactDraft';
+  let summaryId='',caseAnswers=null,generatedText='',expired=false,draftFailed=false;
+  function saveDraft(){
+    try{const fields={};for(const key of ['name','_replyto','company','message'])fields[key]=form.elements[key].value;sessionStorage.setItem(storageKey,JSON.stringify({fields,summaryId,caseAnswers,generatedText,expires:Date.now()+caseData.ttl}));draftFailed=false;}
+    catch(_){draftFailed=true;}
+    draftWarning.hidden=!draftFailed;if(draftFailed)draftWarning.textContent=CLN.t('case.draft_error');
   }
+  let draft=null;
+  try{
+    const stored=JSON.parse(sessionStorage.getItem(storageKey)||'null');
+    if(status==='success'){sessionStorage.removeItem(storageKey);sessionStorage.removeItem('clnCaseTransfer');}
+    else if(stored&&Number.isFinite(stored.expires)&&stored.expires>Date.now()&&stored.expires<=Date.now()+caseData.ttl){
+      draft=stored;for(const key of ['name','_replyto','company','message'])if(typeof draft.fields?.[key]==='string')form.elements[key].value=draft.fields[key];
+      summaryId=typeof draft.summaryId==='string'?draft.summaryId:'';caseAnswers=draft.caseAnswers||null;generatedText=typeof draft.generatedText==='string'?draft.generatedText:'';
+    }else sessionStorage.removeItem(storageKey);
+  }catch(_){}
+  if(params.get('summary')==='1'&&status!=='success'){
+    let item=null;try{item=JSON.parse(sessionStorage.getItem('clnCaseTransfer')||'null');}catch(_){}
+    if(caseData.valid(item)){
+      if(item.id!==summaryId){caseAnswers=caseData.clean(item.answers);summaryId=item.id;generatedText=caseData.summary(caseAnswers);message.value=generatedText;saveDraft();}
+      // Keep the transfer if draft persistence failed, so reload can recover the initial answers.
+      if(!draftFailed)try{sessionStorage.removeItem('clnCaseTransfer');}catch(_){}
+    }else if(!summaryId){expired=true;notice.textContent=CLN.t('case.expired');notice.hidden=false;restart.hidden=false;}
+  }
+  const needLabels={ressaisies:'v4.problems.ressaisies',repetitif:'v4.problems.repetitif',chiffres:'v4.problems.chiffres',suivi:'v4.problems.suivi'};
+  if(!message.value&&Object.hasOwn(needLabels,params.get('need'))){message.value=CLN.t('v4.need_added',{label:CLN.t(needLabels[params.get('need')])});saveDraft();}
+  form.addEventListener('input',saveDraft);form.addEventListener('change',saveDraft);
   function showAlert(){if(!status)return;const known=['invalid','error','rate','human_required','human_invalid','human_used','forbidden','too_large'];if(!known.includes(status))return;const seconds=Math.min(3600,Math.max(1,Number(params.get('wait'))||60));alert.textContent=CLN.t(status,{minutes:new Intl.NumberFormat(CLN.lang).format(Math.ceil(seconds/60))});alert.className='form-alert form-alert--error';alert.hidden=false;}
   function renderHuman(){
     form.elements.lang.value=CLN.lang;showAlert();
@@ -78,31 +93,19 @@ CLN.ready.then(async () => {
     if(!form.reportValidity()){dialog.close();return;}
     state='sending';statusKey='human_sending';button.disabled=true;renderHuman();
     form.elements.human_token.value=challenge.token;form.elements.human_confirmed.value='1';
-    try{const fields={};for(const k of ['name','_replyto','company','message'])fields[k]=form.elements[k].value;sessionStorage.setItem(storageKey,JSON.stringify({fields,expires:Date.now()+30*60000}));}catch(_){}
+    saveDraft();
     HTMLFormElement.prototype.submit.call(form);
   });
-  document.querySelector('#recommendation-add').addEventListener('click',()=>{
-    if(!data||data.version!==6||!data.answers||previousPrefill)return;
-    const text=CLN.summaryText(data.answers);
-    summaryBase=message.value;
-    message.value=message.value?message.value+'\n\n'+text:text;
-    previousPrefill=message.value;renderSummary();message.focus();
+  window.addEventListener('cln:language',()=>{
+    if(caseAnswers&&message.value===generatedText){generatedText=caseData.summary(caseAnswers);message.value=generatedText;saveDraft();}
+    if(expired)notice.textContent=CLN.t('case.expired');if(draftFailed)draftWarning.textContent=CLN.t('case.draft_error');
+    renderHuman();positionDialog();
   });
-  const needSelect=document.querySelector('#need-context');
-  const needLabels={ressaisies:'v4.problems.ressaisies',repetitif:'v4.problems.repetitif',chiffres:'v4.problems.chiffres',suivi:'v4.problems.suivi'};
-  if(Object.hasOwn(needLabels,params.get('need')))needSelect.value=params.get('need');
-  document.querySelector('#need-add').addEventListener('click',()=>{
-    if(!Object.hasOwn(needLabels,needSelect.value))return;
-    const text=CLN.t('v4.need_added',{label:CLN.t(needLabels[needSelect.value])});
-    message.value=message.value?message.value+'\n\n'+text:text;message.focus();
-  });
-  document.querySelector('#recommendation-clear').addEventListener('click',()=>{try{localStorage.removeItem('clnRecommendation');}catch(_){}if(previousPrefill&&message.value===previousPrefill)message.value=summaryBase;previousPrefill='';summaryBase='';data=null;renderSummary();});
-  window.addEventListener('cln:language',()=>{renderSummary();renderHuman();positionDialog();});
   form.addEventListener('submit',event=>{
     event.preventDefault();if(state==='sending'||dialog.open)return;
     if(!form.reportValidity())return;
     dialog.showModal();positionDialog(true);prepare();
   });
   window.addEventListener('pageshow',event=>{if(event.persisted){state='closed';if(dialog.open)dialog.close();reset();}});
-  renderSummary();showAlert();button.disabled=false;
+  showAlert();button.disabled=false;
 });
