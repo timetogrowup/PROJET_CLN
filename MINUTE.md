@@ -462,4 +462,10 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - Refonte de « Comment nous travaillons » : diagnostic en quelques jours sur périmètre défini avec conditions visibles, livrables, intervention chirurgicale et perturbations minimisées, quatre étapes statiques, usage intensif de l'IA en développement et intégration éventuelle dans les pipelines.
 - Investissement initial limité et rémunération progressive dans une lecture plus courte, détails natifs ; autonomie et modalités commerciales conservées. Deux CTA vers le questionnaire V11. Quatre langues et ancres existantes préservées.
 - Contrôles de contenu, catalogues, liens, génération, régressions V7–V11 et recette Chrome réussis. Seize dispositions sans débordement, détails au clavier et sans JavaScript. Aucun changement du contact ou de l'API.
-- Publication et recette publique en préparation ; détails dans `docs/RECETTE_DIAGNOSTIC_INTERVENTION_V12.md`.
+- Publication et recette publique réussies ; détails dans `docs/RECETTE_DIAGNOSTIC_INTERVENTION_V12.md`.
+
+### Clôture V12 — 30 octobre 2026
+- Version `163b615b517eb41d4ef5a1c029094ebf97497f36`, GitHub Pages 41087397831 réussi dès la première tentative.
+- Page publique : https://cln-performance.com/approche.html?lang=fr . Quatre langues, étapes, détails au clavier, CTA et deux ancres entrantes vérifiés. Six fichiers HTTP 200 avec empreintes identiques.
+- Diagnostic et conditions au premier niveau, approche peu invasive, développement assisté intensivement par IA, IA éventuelle dans les pipelines et coûts cadrés. Livrables et lecture progressive livrés selon le besoin.
+- Documents et recette mis à jour. Pas de changement du questionnaire/contact ou de l'API. Limites de vérification : Safari/WebKit et appareils physiques non exécutés.

@@ -1,5 +1,5 @@
 # Spécifications techniques — Démarche CLN — V12
-Date : 30 octobre 2026. Statut : avant développement.
+Date : 30 octobre 2026. Statut : réalisé et vérifié.
 
 ## Architecture et composants
 Site statique conservé, aucun nouvel appel réseau métier ni bibliothèque. Nouveau module scripts/approach_diagnostic.py appelé à la fin de build_pedagogy.py, après V11 et avant écriture finale des catalogues. Il remplace uniquement main, titre et description de approche.html et lui ajoute une classe de page dédiée. Conserver header/footer V11 et les cinq entrées. CSS dédié dans styles.css, cache V12 sur cette page uniquement. Aucun JavaScript nouveau et aucun média lourd.
@@ -20,3 +20,10 @@ Conserver l'identité et les couleurs du site. Colonnes et grille de quatre éta
 - Non-régression du questionnaire/contact V11 et accueil V10 par tests existants appropriés, sans email réel.
 - Chrome : quatre langues, présentation, ouverture au clavier des détails, CTA vers questionnaire, retour, ancres, tailles disponibles et absence de débordement.
 - Publication GitHub Pages, statut et empreintes des fichiers publics, lecture des quatre langues sur domaine. Documenter toute limite Safari/appareils physiques.
+
+## Livraison effective — 30 octobre 2026
+Version applicative `163b615b517eb41d4ef5a1c029094ebf97497f36` publiée avec succès sur GitHub Pages, [exécution 41087397831](https://github.com/timetogrowup/PROJET_CLN/actions/runs/41087397831), première tentative. Page : https://cln-performance.com/approche.html?lang=fr .
+
+Livré : diagnostic/conditions/livrables visibles, trois engagements, quatre étapes statiques, deux usages de l'IA, investissement/rémunération en lecture progressive, FAQ et deux CTA. Quatre langues, détails natifs au clavier, ancres #pipeline et #remuneration conservées. Aucun nouveau JavaScript, média ou traitement serveur ; autres pages conservées.
+
+Contrôles : catalogues 714/200, dix pages et 186 références, génération idempotente et régressions pertinentes V7–V11. Chrome : quatre langues, détails au clavier, CTA avec langue, seize dispositions sans débordement et lecture sans JavaScript. Six fichiers publics HTTP 200 et SHA-256 identiques ; contenu, liens et ancres vérifiés sur le domaine. Safari/WebKit et téléphones physiques non testés. Détails : [rapport de recette](RECETTE_DIAGNOSTIC_INTERVENTION_V12.md).

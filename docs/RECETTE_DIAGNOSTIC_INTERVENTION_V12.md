@@ -1,5 +1,5 @@
 # Recette — Page Comment nous travaillons — V12
-Date : 30 octobre 2026. Statut : recette locale réussie, publication en préparation.
+Date : 30 octobre 2026. Statut : livré, publié et vérifié en ligne.
 
 ## Réalisation
 Page reconstruite autour d'un diagnostic initial en quelques jours et de conditions visibles : périmètre défini, interlocuteurs/informations disponibles, calendrier de réalisation convenu ensuite. Livrables affichés au premier niveau. Intervention chirurgicale peu invasive, trois engagements, quatre étapes statiques, deux usages de l'IA, investissement et rémunération avec détails dépliables, FAQ et deux CTA vers le questionnaire. Ancres #pipeline et #remuneration préservées. Quatre langues, aucun média ou JavaScript ajouté. Les autres pages et les services de contact sont inchangés.
@@ -23,4 +23,10 @@ Page reconstruite autour d'un diagnostic initial en quelques jours et de conditi
 Chrome disponible ; Safari/WebKit et appareils physiques non testés dans cette recette. Les fenêtres intégrées contrôlent les mises en page CSS sans simuler un appareil réel. Aucun test d'email réel, les traitements du questionnaire/contact et PHP n'étant pas modifiés. Les délais, coûts et gains restent cadrés par projet ; aucun chiffre financier ajouté.
 
 ## Publication
-En préparation ; références et vérifications publiques à compléter après déploiement.
+Version `163b615b517eb41d4ef5a1c029094ebf97497f36`. [Déploiement GitHub Pages 41087397831](https://github.com/timetogrowup/PROJET_CLN/actions/runs/41087397831) réussi à la première tentative.
+
+Six fichiers contrôlés HTTP 200 et SHA-256 identiques : approche.html, styles.css, i18n/static.json, index.html, diagnostic.html et contact.html. Les trois derniers confirment la préservation des pages de parcours.
+
+Recette publique FR/EN/PT-BR/ES : titres traduits, quatre étapes, détails de rémunération ouverts par Entrée, CTA vers le questionnaire avec langue conservée, aucun débordement. Accès directs à #pipeline et #remuneration vérifiés.
+
+Adresse : https://cln-performance.com/approche.html?lang=fr .

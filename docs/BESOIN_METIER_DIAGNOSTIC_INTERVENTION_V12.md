@@ -1,5 +1,5 @@
 # Besoin métier — Diagnostic et intervention peu invasive — V12
-Date : 30 octobre 2026. Statut : approuvé, avant réalisation.
+Date : 30 octobre 2026. Statut : livré et vérifié en ligne.
 
 ## Objectif et publics
 Faire comprendre aux dirigeants, responsables opérationnels, SI et transformation que CLN commence par un diagnostic, propose un premier périmètre utile, puis intervient rapidement et avec précision pour valoriser l'existant en limitant les perturbations. Rendre visibles les livrables, la maîtrise de l'investissement et les deux usages de l'IA.
@@ -31,3 +31,10 @@ CA02. Quatre étapes lisibles, trois engagements et deux usages de l'IA compréh
 CA03. Ancres et liens conservés ; cinq entrées du menu, questionnaire V11 inchangé.
 CA04. Quatre langues complètes, responsive sans débordement, détails utilisables au clavier et lecture possible sans JavaScript.
 CA05. Tests adaptés au changement, publication et vérification sur le domaine ; documents et journal mis à jour.
+
+## Livraison effective — 30 octobre 2026
+Version applicative `163b615b517eb41d4ef5a1c029094ebf97497f36` publiée avec succès sur GitHub Pages, [exécution 41087397831](https://github.com/timetogrowup/PROJET_CLN/actions/runs/41087397831), première tentative. Page : https://cln-performance.com/approche.html?lang=fr .
+
+Livré : diagnostic/conditions/livrables visibles, trois engagements, quatre étapes statiques, deux usages de l'IA, investissement/rémunération en lecture progressive, FAQ et deux CTA. Quatre langues, détails natifs au clavier, ancres #pipeline et #remuneration conservées. Aucun nouveau JavaScript, média ou traitement serveur ; autres pages conservées.
+
+Contrôles : catalogues 714/200, dix pages et 186 références, génération idempotente et régressions pertinentes V7–V11. Chrome : quatre langues, détails au clavier, CTA avec langue, seize dispositions sans débordement et lecture sans JavaScript. Six fichiers publics HTTP 200 et SHA-256 identiques ; contenu, liens et ancres vérifiés sur le domaine. Safari/WebKit et téléphones physiques non testés. Détails : [rapport de recette](RECETTE_DIAGNOSTIC_INTERVENTION_V12.md).
