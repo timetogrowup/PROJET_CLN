@@ -60,4 +60,5 @@ def apply(root,catalog,messages):
  old=re.sub(r'<script defer src="pipeline-animation.js[^\"]*">\s*</script>\s*','',old)
  old=old.replace('</head>','<script defer src="pipeline-animation.js?v=20261030-v10"></script>\n</head>')
  old=re.sub(r'\?v=202610(?:29-v\d+|30-v10)','?v=20261030-v10',old)
+ old=re.sub(r'site\.js\?v=[^"\s]+','site.js?v=20261030-v10r1',old)
  path.write_text(re.sub(r'>\s*<','>\n<',old))

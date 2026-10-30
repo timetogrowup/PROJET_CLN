@@ -26,6 +26,7 @@ Les assertions historiques interdisant « chirurgicale » à l'accueil et imposa
 - Pause utilisateur, ouverture de la synthèse 1200 px, pause pendant le dialog, Échap, fermeture, retour de focus et pause préservée : succès.
 - Seize fenêtres intégrées, largeurs externes 320/390/768/1280 px × quatre langues : aucune extension horizontale de page ; langues chargées. Largeurs utiles 305/375/753/1265 px avec les barres de défilement de Chrome.
 - Fenêtre 390 px avec JavaScript bloqué : contenu français et structure présents, aucun débordement ; contrôles vidéo masqués.
+- Liens « Identifier vos premiers gains » vers diagnostic.html et « Parlons de votre écosystème » vers contact.html : navigation et formulaire visibles, langue conservée, sans soumission.
 - Captures de travail contrôlées visuellement : hiérarchie du premier écran, flèche à côté, comparatif traduit, étapes et courbes.
 
 ## Médias
@@ -34,5 +35,8 @@ Les assertions historiques interdisant « chirurgicale » à l'accueil et imposa
 ## Limites de vérification
 Pas de test sur téléphone physique, ni Safari/WebKit dans cette recette. Les fenêtres intégrées vérifient les mises en page CSS, sans prétendre remplacer un test sur appareil réel. Le mouvement réduit est vérifié par les tests unitaires et les règles CSS, sans session navigateur dédiée à cette préférence. Aucun envoi réel du formulaire. Les calendriers et courbes restent des illustrations et non des engagements contractuels.
 
+## Anomalie détectée et corrigée
+Le contrôle public a révélé une course entre l’autoplay de la flèche et sa sortie de l’écran, notamment lors des accès directs au comparatif. Le contrôleur diffère désormais le chargement tant que la visibilité n’est pas établie, et revérifie les conditions lors de la résolution de play() et des événements playing tardifs. Test unitaire ajouté et navigation directe vérifiée dans les quatre langues sur l’aperçu : flèche arrêtée, comparatif en lecture. Référence de cache du script de l’accueil renouvelée.
+
 ## Publication
-En préparation. Les références du commit et les contrôles publics seront complétés après déploiement.
+Première publication applicative `c6445f1b97eb152c4c0013920ff164162dcb7239` réussie (GitHub Pages, exécution 41067622889). Seize fichiers publics contrôlés HTTP 200 et SHA-256 identiques au code livré. Quatre langues, lecture et contrôles de la synthèse vérifiés sur le domaine. Correction du mouvement en cours de republication ; contrôle final à compléter.

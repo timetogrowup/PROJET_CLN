@@ -91,7 +91,7 @@
   const figure = video.closest('.brand-signature');
   const button = figure.querySelector('.brand-motion-toggle');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  let loaded = false, manuallyPaused = false, inView = true;
+  let loaded = false, manuallyPaused = false, inView = !('IntersectionObserver' in window);
   video.muted = true;
   function label() {
     const key = video.paused ? 'brand.play' : 'brand.pause';
@@ -99,15 +99,16 @@
     button.textContent = window.CLN?.t(key) || (video.paused ? 'Lire l’animation' : 'Mettre l’animation en pause');
   }
   function stop() { video.pause(); figure.classList.remove('is-playing'); label(); }
+  function allowed() { return !reduced.matches && !manuallyPaused && inView && !document.hidden; }
   async function play() {
-    if (reduced.matches || manuallyPaused || !inView || document.hidden) return;
+    if (!allowed()) return;
     if (!loaded) {
       video.querySelectorAll('source').forEach(s => {s.src = s.dataset.src;});
       video.load(); loaded = true;
     }
-    try { await video.play(); } catch (_) { label(); }
+    try { await video.play(); if (!allowed()) stop(); else label(); } catch (_) { label(); }
   }
-  video.addEventListener('playing', () => {figure.classList.add('is-playing'); label();});
+  video.addEventListener('playing', () => {if (allowed()) {figure.classList.add('is-playing'); label();} else stop();});
   video.addEventListener('pause', label);
   video.addEventListener('error', stop);
   button.addEventListener('click', () => {
