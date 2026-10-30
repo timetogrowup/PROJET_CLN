@@ -427,3 +427,11 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - Cas chantier PROTYS visible après l'introduction de Nos pipelines en action dans les quatre langues ; ancien exemple dépliable et lien #exemple fonctionnels.
 - Dix-sept fichiers publics en HTTP 200, empreintes identiques à la livraison. Lecture FR/EN/PT-BR/ES, pause, agrandissement 1320 px, Échap, retour du focus et pause volontaire conservée vérifiés dans Chrome public.
 - Quatre GIF de présentation sauvegardés et remis ; rapport et trois documents de cadrage actualisés. Les tests sur téléphones physiques et Safari restent à effectuer ; modes sans JS/réduction de mouvement couverts par structure et tests unitaires. Aucun changement de l'API ni envoi de formulaire.
+
+## 30 octobre 2026 — V10 : accueil, capital existant et retour sur investissement
+
+- Demande approuvée : présenter CLN comme une petite structure intervenant de manière ciblée et chirurgicale ; conserver la flèche, valoriser les outils et les compétences, expliquer l'automatisation et le bon usage de l'investissement.
+- Besoin, spécifications et stratégie enregistrés avant développement (commit de cadrage `3cd316321b123abdba8a9bc4a327ec1f577df807`).
+- Accueil réécrit en quatre langues, comparatif approuvé CLN à gauche (3 étapes/9 mois) et remplacement à droite (9 étapes/36 mois), deux courbes indépendantes aux mêmes échelles. Vidéos optimisées et images statiques ; transcription, pause et agrandissement.
+- Tests statiques/unitaires et recette Chrome locale réussis. Pas de changement des formulaires, traitements serveur ou autres pages éditoriales. Publication et recette publique à compléter après déploiement.
+- Détails : `docs/RECETTE_ACCUEIL_CAPITAL_ROI_V10.md`.

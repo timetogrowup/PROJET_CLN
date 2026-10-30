@@ -11,9 +11,9 @@ for(const engine of [chromium,webkit]){
  for(const lang of langs){
   await p.goto(base+'/index.html?lang='+lang);await p.waitForFunction(()=>document.documentElement.dataset.i18nReady==='true');
   const sections=await p.locator('main > section').evaluateAll(items=>items.map(e=>({id:e.id,hero:e.classList.contains('hero')})));
-  assert(sections[0].hero&&sections[1].id==='pipelines');checks++;
-  assert.equal(await p.locator('#pipelines .pipeline-overview li').count(),5);checks++;
-  await p.locator('#pipelines a').click();await p.waitForFunction(()=>document.documentElement.dataset.i18nReady==='true');
+  assert(sections[0].hero&&sections[1].id==='capital'&&sections[3].id==='investissement'&&sections[4].id==='pipelines');checks++;
+  assert.equal(await p.locator('#pipelines .home-principles article').count(),3);checks++;
+  await p.locator('#pipelines a[href*="pipelines.html"]').click();await p.waitForFunction(()=>document.documentElement.dataset.i18nReady==='true');
   assert.equal(await p.locator('html').getAttribute('lang'),lang);assert((await p.url()).includes('pipelines.html'));checks++;
   assert.equal(await p.locator('nav a.active').count(),1);assert((await p.locator('nav a.active').getAttribute('href')).includes('pipelines.html'));checks++;
   assert.equal(await p.locator('.pipeline-steps > li').count(),5);assert.equal(await p.locator('#capacites article').count(),4);checks++;

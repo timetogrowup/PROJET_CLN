@@ -139,6 +139,8 @@ from pipeline_animation import apply as apply_pipeline_animation
 apply_pipeline_animation(root, messages, catalog)
 from protys_case import apply as apply_protys_case
 apply_protys_case(root, catalog)
+from home_capital_roi import apply as apply_home_capital_roi
+apply_home_capital_roi(root, catalog, messages)
 (root/'i18n/static.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
 (root/'i18n/messages.json').write_text(json.dumps(messages,ensure_ascii=False,indent=2)+'\n')
 import runpy

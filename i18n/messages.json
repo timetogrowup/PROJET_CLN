@@ -838,5 +838,17 @@
     "en": "Enlarged CLN pipeline diagram",
     "pt-BR": "Diagrama ampliado do pipeline CLN",
     "es": "Esquema ampliado del pipeline CLN"
+  },
+  "roi.expand": {
+    "fr": "Agrandir la synthèse",
+    "en": "Enlarge the summary",
+    "pt-BR": "Ampliar a síntese",
+    "es": "Ampliar la síntesis"
+  },
+  "roi.dialog": {
+    "fr": "Comparaison des investissements : synthèse au mois 36",
+    "en": "Investment comparison: summary at month 36",
+    "pt-BR": "Comparação dos investimentos: síntese no mês 36",
+    "es": "Comparación de inversiones: síntesis en el mes 36"
   }
 }

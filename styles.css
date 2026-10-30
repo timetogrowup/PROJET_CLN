@@ -720,3 +720,34 @@ button,a {overflow-wrap:anywhere;}
 .pipeline-other-example{padding:1rem 0;}
 .pipeline-other-example>summary{font-size:1.1rem;}
 .pipeline-other-example .pipeline-steps{margin-top:1.5rem;}
+
+/* V10: home narrative — capital, useful automation and illustrative payback. */
+.home-page .hero{gap:2.25rem;padding-top:.5rem;}
+.home-page .hero h1{font-size:clamp(2rem,3.5vw,2.8rem);margin:.5rem 0 1rem;}
+.home-page .hero p{margin-block:.75rem;}
+.home-page .hero .hero-tagline{font-size:.78rem;letter-spacing:.11em;}
+.home-page .brand-signature{max-width:440px;}
+.home-page main>section+section{margin-top:4.5rem;}
+.home-page main h2{font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.25;letter-spacing:-.02em;}
+.home-capital{background:#eef3f7;border-left:5px solid #315f84;padding:2rem;border-radius:0 18px 18px 0;}
+.home-capital h2{max-width:35ch;margin-block:.5rem 1.5rem;color:#163954;}
+.home-copy-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;}
+.home-copy-columns>p{margin-top:0;}
+.home-productivity{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:3rem;align-items:start;}
+.home-productivity h2{margin-top:.5rem;}
+.home-productivity>div+div{padding-top:1.2rem;}
+.home-page #investissement>h2{max-width:31ch;}
+.roi-demo{border-radius:14px;}
+.roi-media{aspect-ratio:12 / 11;border-radius:14px;}
+.home-page .pipeline-controls{justify-content:flex-start;}
+.home-page .roi-transcript{background:var(--bg-light);padding:1rem 1.25rem;border-radius:10px;}
+.roi-transcript h3{font-size:1.15rem;color:#163954;}
+.roi-transcript ol{padding-left:1.4rem;}
+.roi-transcript li{margin-block:.5rem;}
+.home-roi-takeaway{font-size:clamp(1.25rem,2.1vw,1.6rem);font-weight:700;line-height:1.4;color:#163954;max-width:46ch;}
+#pipeline-dialog[data-kind=roi] .pipeline-zoom-scroll img{width:1200px;min-width:1200px;}
+.home-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.75rem;margin-block:2rem;}
+.home-principles article{border-top:3px solid #315f84;padding-top:.75rem;}
+.home-principles h3{font-size:1.35rem;margin:.25rem 0;color:#163954;}
+.home-method{margin-top:2.5rem;border-top:1px solid #d9dfe6;padding-top:1.5rem;}
+@media(max-width:760px){.home-copy-columns,.home-productivity,.home-principles{grid-template-columns:minmax(0,1fr);gap:1rem;}.home-page main>section+section{margin-top:3rem;}.home-capital{padding:1.25rem;}.home-productivity>div+div{padding-top:0;}.home-page .brand-signature{order:0;max-width:360px;}.home-page .hero{gap:1.5rem;}.home-page .hero .actions{margin-bottom:.5rem;}}

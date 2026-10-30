@@ -47,7 +47,7 @@ for name,page in pages.items():
 assert not missing,'Missing translations: '+repr(sorted(missing))
 for key in ['ressaisies','repetitif','chiffres','suivi']:assert key in pages['solutions.html'].ids
 for name in ['index','solutions','pipelines','approche','realisations','contact']:
- text=(root/(name+'.html')).read_text();assert 'chirurgicale' not in text and '40 %' not in text and '60 %' not in text
+ text=(root/(name+'.html')).read_text();assert (name=='index' or 'chirurgicale' not in text) and '40 %' not in text and '60 %' not in text
 print('PASS',len(pages),'pages,',links,'local references/anchors, metadata, skip links and complete visible translation coverage.')
 
 # V5 structural invariants for the explanatory page and shared menu.
@@ -73,7 +73,8 @@ print('PASS V5 pipeline structure, seven-link shared navigation and sitemap.')
 from html import unescape
 home=unescape((root/'index.html').read_text())
 hero=re.search(r'<section class="hero">(.*?)</section>',home,re.S).group(1)
-for term in ['pipelines de données','applications existantes','enrichies','applications qui reçoivent','sans les modifier']:
+# V10 approved home replaces the V6 hero promise, preserving its ecosystem focus.
+for term in ['petite structure','chirurgicale','périmètre précis','applications existantes','enrichissons vos données','résultats mesurables']:
  assert term in hero,term
 for obsolete in ['Moins de tâches répétitives','Du temps pour votre activité','éviter les ressaisies']:
  assert obsolete not in home,obsolete
@@ -81,4 +82,4 @@ for term in ['contexte contractuel','priorité','outil de planification','applic
  assert term in unescape(pipeline),term
 assert 'version:6,generatedAt' in (root/'diagnostic.js').read_text()
 assert 'data.version!==6' in (root/'contact.js').read_text()
-print('PASS V6 first-screen ecosystem promise, progressive enrichment, destination value and legacy summary version isolation.')
+print('PASS V10 first-screen capital promise and V6, progressive enrichment, destination value and legacy summary version isolation.')
