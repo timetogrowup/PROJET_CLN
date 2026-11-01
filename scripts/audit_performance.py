@@ -48,6 +48,6 @@ def apply(root,catalog):
  p=root/'diagnostic.html';s=p.read_text().replace('</section>',P('Vous pouvez demander uniquement un audit de performance : choisissez cette option dans votre réflexion sur les applications. Ce questionnaire prépare un échange ; il ne calcule aucune note et ne vous engage à aucun travail.','You can request a performance audit only: select that option under your current thinking about applications. This questionnaire prepares a discussion; it calculates no score and commits you to no work.','Você pode solicitar somente uma auditoria de desempenho: selecione essa opção na reflexão sobre os aplicativos. Este questionário prepara uma conversa; não calcula nenhuma nota e não implica compromisso com intervenções.','Puede solicitar únicamente una auditoría de rendimiento: seleccione esa opción en su reflexión sobre las aplicaciones. Este cuestionario prepara una conversación; no calcula ninguna nota ni le compromete a realizar trabajos.')+'</section>',1);p.write_text(s)
  # Bust only the changed shared schema on both consumers. No contact behavior changes.
  for name in ['diagnostic','contact']:
-  p=root/(name+'.html');s=p.read_text();s=re.sub(r'case-data.js\?v=[^" ]+','case-data.js?v=20261101-audit',s);p.write_text(s)
+  p=root/(name+'.html');s=p.read_text();s=re.sub(r'case-data.js\?v=[^" ]+','case-data.js?v=20261101-audit-multi',s);p.write_text(s)
  for name in ['index','approche','pipelines','diagnostic']:
   p=root/(name+'.html');p.write_text(re.sub(r'>\s*<','>\n<',p.read_text()))

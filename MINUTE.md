@@ -483,3 +483,8 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - Publié : GitHub Pages 41311994659 réussi. Vérifié en production : seize fichiers HTTP 200/SHA-256 identiques, quatre pages éditoriales dans les quatre langues, quatre transferts audit vers contact avec texte libre conservé et sans envoi.
 - Limites : smartphones physiques, certification accessibilité exhaustive et réception SMTP réelle non testés ; aucune anomalie bloquante résiduelle constatée. PHP absent localement mais contrôlé avec succès en CI.
 - Besoin/spécifications/stratégie et README actualisés ; détail fichiers/tests/retour arrière dans docs/RECETTE_AUDIT_PERFORMANCE_V1.md. Prévu / Réalisé / Testé / Publié / Vérifié en production : terminé dans le périmètre décrit.
+
+## 1 novembre 2026 — Multisélection de la réflexion sur les applications
+- Demande : permettre plusieurs réponses à « Où en êtes-vous dans votre réflexion sur les applications ? ».
+- Réalisé : cases à cocher, aide « Plusieurs choix possibles » dans les quatre langues, sans maximum ; « Nous ne savons pas encore » exclusif. Toutes les sélections passent dans la synthèse contact. Générateur mis à jour, schéma et cache des deux pages adaptés, anciens transferts V11 compatibles. API et autres questions conservées.
+- Tests locaux réussis : audit-performance, case-journey avec audit + existing + compare, catalogues, liens et métadonnées des dix pages, case_static/génération idempotente et syntaxe du schéma. Aucun email envoyé. Publication et contrôle public suivis dans la réponse de livraison ; ne pas confondre cette recette ciblée avec la matrice complète de la livraison précédente.

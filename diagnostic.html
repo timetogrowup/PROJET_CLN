@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="styles.css?v=20261030-v11" />
 <script defer src="site.js?v=20261030-v11">
 </script>
-<script defer src="case-data.js?v=20261101-audit">
+<script defer src="case-data.js?v=20261101-audit-multi">
 </script>
 <script defer src="diagnostic.js?v=20261030-v11">
 </script>
@@ -135,19 +135,20 @@
 </fieldset>
 <fieldset>
 <legend>Où en êtes-vous dans votre réflexion sur les applications ?</legend>
+<p class="helper-text" id="approach-help">Plusieurs choix possibles.</p>
 <div class="case-options">
 <label for="case-approach-audit">
-<input id="case-approach-audit" type="radio" name="approach" value="audit" required/>Un audit de performance autonome, sans engagement de travaux</label>
+<input id="case-approach-audit" type="checkbox" name="approach" value="audit" aria-describedby="approach-help"/>Un audit de performance autonome, sans engagement de travaux</label>
 <label for="case-approach-existing">
-<input id="case-approach-existing" type="radio" name="approach" value="existing" required/>Améliorer les outils existants</label>
+<input id="case-approach-existing" type="checkbox" name="approach" value="existing" aria-describedby="approach-help"/>Améliorer les outils existants</label>
 <label for="case-approach-replacement">
-<input id="case-approach-replacement" type="radio" name="approach" value="replacement" required/>Envisager certains remplacements</label>
+<input id="case-approach-replacement" type="checkbox" name="approach" value="replacement" aria-describedby="approach-help"/>Envisager certains remplacements</label>
 <label for="case-approach-ongoing">
-<input id="case-approach-ongoing" type="radio" name="approach" value="ongoing" required/>Un projet de modernisation est déjà engagé</label>
+<input id="case-approach-ongoing" type="checkbox" name="approach" value="ongoing" aria-describedby="approach-help"/>Un projet de modernisation est déjà engagé</label>
 <label for="case-approach-compare">
-<input id="case-approach-compare" type="radio" name="approach" value="compare" required/>Comparer les possibilités</label>
+<input id="case-approach-compare" type="checkbox" name="approach" value="compare" aria-describedby="approach-help"/>Comparer les possibilités</label>
 <label for="case-approach-inconnu">
-<input id="case-approach-inconnu" type="radio" name="approach" value="inconnu" required/>Nous ne savons pas encore</label>
+<input id="case-approach-inconnu" type="checkbox" name="approach" value="inconnu" aria-describedby="approach-help"/>Nous ne savons pas encore</label>
 </div>
 </fieldset>
 <h2>Votre calendrier</h2>
