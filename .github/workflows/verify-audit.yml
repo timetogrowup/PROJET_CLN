@@ -1,0 +1,49 @@
+name: Verify standalone performance audit
+on:
+  push:
+    branches: [work/audit-performance]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install media test dependency
+        run: |
+          python3 -m pip install Pillow==11.3.0
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+      - name: Static, schema, media and generation checks
+        run: |
+          node tests/i18n.mjs
+          node tests/audit-performance.mjs
+          node tests/case-journey.mjs
+          node tests/brand-motion.mjs
+          node tests/pipeline-animation.mjs
+          python3 tests/pedagogy_static.py
+          python3 tests/approach_static.py
+          python3 tests/home_roi_static.py
+          python3 tests/case_static.py
+          python3 tests/pipeline_static.py
+          python3 tests/protys_static.py
+          for file in site.js case-data.js diagnostic.js contact.js pipeline-animation.js; do node --check "$file"; done
+      - name: PHP security and simulated email
+        run: |
+          php -l contact.php
+          php -l contact_security.php
+          php tests/security.php
+          python3 tests/test_api.py
+          python3 tests/test_case_email.py
+      - name: Install pinned test browsers
+        run: |
+          npm install --no-save --package-lock=false playwright@1.56.1
+          npx playwright install --with-deps chromium webkit
+      - name: Four languages, ten pages, responsive and contact regression
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 >/tmp/cln-audit-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          node tests/browser.mjs

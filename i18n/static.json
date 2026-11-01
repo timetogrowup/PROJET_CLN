@@ -3568,5 +3568,160 @@
     "en": "We make extensive use of AI to assist analysis, coding, testing and documentation. It accelerates development while adapting to your technology environment. Technical choices and deliverables remain subject to review, testing and validation.",
     "pt-BR": "Usamos intensivamente a IA para apoiar a análise, a escrita do código, os testes e a documentação. Ela acelera os desenvolvimentos, adaptando-nos ao seu ambiente tecnológico. As escolhas técnicas e as entregas continuam sendo revisadas, testadas e validadas.",
     "es": "Utilizamos intensivamente la IA para apoyar el análisis, la escritura del código, las pruebas y la documentación. Acelera los desarrollos adaptándonos a su entorno tecnológico. Las decisiones técnicas y los desarrollos siguen siendo revisados, probados y validados."
+  },
+  "Un audit de performance autonome, sans engagement de travaux": {
+    "en": "A standalone performance audit, with no commitment to further work",
+    "pt-BR": "Uma auditoria de desempenho independente, sem compromisso com intervenções",
+    "es": "Una auditoría de rendimiento independiente, sin compromiso de realizar trabajos"
+  },
+  "Un audit de performance autonome pour décider librement": {
+    "en": "A standalone performance audit so you can decide freely",
+    "pt-BR": "Uma auditoria de desempenho independente para decidir livremente",
+    "es": "Una auditoría de rendimiento independiente para decidir libremente"
+  },
+  "Mesurer avant de décider. Intervenir seulement lorsque cela crée de la valeur.": {
+    "en": "Measure before deciding. Intervene only when it creates value.",
+    "pt-BR": "Medir antes de decidir. Intervir somente quando isso gera valor.",
+    "es": "Medir antes de decidir. Intervenir solo cuando aporta valor."
+  },
+  "Comprendre vos processus métier, évaluer leur efficacité et quantifier les gains potentiels avant tout investissement. Un audit court, ciblé et proportionné à vos enjeux, qui peut aussi recommander de maintenir l’existant ou de différer les améliorations.": {
+    "en": "Understand your business processes, assess their efficiency and quantify potential gains before investing. A short, focused audit proportionate to your needs, which may also recommend keeping things as they are or deferring improvements.",
+    "pt-BR": "Entender seus processos de negócio, avaliar sua eficiência e quantificar os ganhos potenciais antes de investir. Uma auditoria curta, focada e proporcional aos seus desafios, que também pode recomendar manter o existente ou adiar melhorias.",
+    "es": "Comprender sus procesos de negocio, evaluar su eficacia y cuantificar los beneficios potenciales antes de invertir. Una auditoría breve, centrada y proporcionada a sus necesidades, que también puede recomendar mantener lo existente o aplazar mejoras."
+  },
+  "L’audit est une prestation complète et indépendante. Son rapport conserve sa valeur : vous pouvez ne pas engager de travaux, reporter votre décision, poursuivre avec CLN ou confier les travaux à un autre prestataire.": {
+    "en": "The audit is a complete, independent service. Its report retains its value: you can choose no further work, defer your decision, continue with CLN or appoint another provider.",
+    "pt-BR": "A auditoria é um serviço completo e independente. Seu relatório mantém seu valor: você pode não realizar intervenções, adiar sua decisão, continuar com a CLN ou contratar outro prestador.",
+    "es": "La auditoría es un servicio completo e independiente. Su informe conserva su valor: puede no realizar trabajos, aplazar su decisión, continuar con CLN o contratar a otro proveedor."
+  },
+  "Découvrir l’audit et ses livrables": {
+    "en": "Explore the audit and its deliverables",
+    "pt-BR": "Conheça a auditoria e suas entregas",
+    "es": "Conozca la auditoría y sus entregables"
+  },
+  "Phase 1 : un audit de performance autonome.": {
+    "en": "Phase 1: a standalone performance audit.",
+    "pt-BR": "Fase 1: uma auditoria de desempenho independente.",
+    "es": "Fase 1: una auditoría de rendimiento independiente."
+  },
+  "Nous étudions vos processus métier avec les personnes concernées, mesurons leur efficacité actuelle et identifions les dysfonctionnements et les opportunités. La performance métier guide l’analyse ; la technologie reste un moyen.": {
+    "en": "We study your business processes with the people involved, measure their current efficiency and identify problems and opportunities. Business performance guides the analysis; technology remains a means.",
+    "pt-BR": "Estudamos seus processos de negócio com as pessoas envolvidas, medimos sua eficiência atual e identificamos problemas e oportunidades. O desempenho do negócio orienta a análise; a tecnologia continua sendo um meio.",
+    "es": "Estudiamos sus procesos de negocio con las personas implicadas, medimos su eficacia actual e identificamos problemas y oportunidades. El rendimiento del negocio guía el análisis; la tecnología es un medio."
+  },
+  "Sur un périmètre défini, avec les interlocuteurs et les informations nécessaires disponibles. L’audit est court, ciblé et proportionné aux enjeux ; son calendrier et son budget sont convenus ensemble selon les données à examiner.": {
+    "en": "Within a defined scope, with the necessary people and information available. The audit is short, focused and proportionate to the stakes; its timeline and budget are agreed together according to the data to examine.",
+    "pt-BR": "Em um escopo definido, com os interlocutores e as informações necessárias disponíveis. A auditoria é curta, focada e proporcional aos desafios; seu prazo e orçamento são acordados conforme os dados a examinar.",
+    "es": "Sobre un alcance definido, con los interlocutores y la información necesarios disponibles. La auditoría es breve, centrada y proporcionada a las necesidades; su calendario y presupuesto se acuerdan según los datos que examinar."
+  },
+  "Un rapport exploitable : diagnostic des processus, évaluation de leur performance, gains potentiels chiffrés lorsque les données le permettent, faisabilité, coûts, risques et intérêt économique des améliorations, puis une recommandation argumentée.": {
+    "en": "An actionable report: process diagnosis, performance assessment, quantified potential gains where data allows, feasibility, costs, risks and economic value of improvements, followed by an evidence-based recommendation.",
+    "pt-BR": "Um relatório utilizável: diagnóstico dos processos, avaliação de desempenho, ganhos potenciais quantificados quando os dados permitirem, viabilidade, custos, riscos e interesse econômico das melhorias, seguidos de uma recomendação fundamentada.",
+    "es": "Un informe utilizable: diagnóstico de los procesos, evaluación de su rendimiento, beneficios potenciales cuantificados cuando los datos lo permitan, viabilidad, costes, riesgos e interés económico de las mejoras, y una recomendación fundamentada."
+  },
+  "Une évaluation transparente, pas une promesse de gains": {
+    "en": "A transparent assessment, not a promise of gains",
+    "pt-BR": "Uma avaliação transparente, sem promessas de ganhos",
+    "es": "Una evaluación transparente, sin promesas de beneficios"
+  },
+  "Une note de performance de 0 à 100 peut être établie à partir de critères adaptés : délais, qualité, charge de travail, fiabilité et maîtrise des risques. Critères, pondérations, seuils et sources sont explicités avec vous. Si les données sont insuffisantes, nous le signalons et ne produisons pas de note sans fondement.": {
+    "en": "A performance score from 0 to 100 may be established using tailored criteria: lead times, quality, workload, reliability and risk control. Criteria, weights, thresholds and sources are explained with you. If data is insufficient, we say so and do not produce an unsupported score.",
+    "pt-BR": "Uma nota de desempenho de 0 a 100 pode ser definida com critérios adaptados: prazos, qualidade, carga de trabalho, confiabilidade e controle de riscos. Critérios, pesos, limites e fontes são explicitados com você. Se os dados forem insuficientes, informamos e não produzimos uma nota sem fundamento.",
+    "es": "Puede establecerse una nota de rendimiento de 0 a 100 con criterios adaptados: plazos, calidad, carga de trabajo, fiabilidad y control de riesgos. Se explicitan los criterios, ponderaciones, umbrales y fuentes. Si los datos son insuficientes, lo indicamos y no damos una nota sin fundamento."
+  },
+  "Les données mesurées, les estimations et les hypothèses sont distinguées. Les gains potentiels indiquent leur base de calcul, la période, les coûts et les incertitudes. Aucun résultat n’est inventé ; du temps libéré n’est pas automatiquement une économie financière.": {
+    "en": "Measured data, estimates and assumptions are distinguished. Potential gains state their calculation basis, period, costs and uncertainties. No results are invented; time freed up is not automatically a financial saving.",
+    "pt-BR": "Dados medidos, estimativas e hipóteses são diferenciados. Os ganhos potenciais apresentam a base de cálculo, o período, os custos e as incertezas. Nenhum resultado é inventado; tempo liberado não é automaticamente economia financeira.",
+    "es": "Se distinguen los datos medidos, las estimaciones y las hipótesis. Los beneficios potenciales indican su base de cálculo, periodo, costes e incertidumbres. No se inventan resultados; el tiempo liberado no equivale automáticamente a un ahorro financiero."
+  },
+  "Trois conclusions possibles, sans préférence commerciale": {
+    "en": "Three possible conclusions, without commercial bias",
+    "pt-BR": "Três conclusões possíveis, sem preferência comercial",
+    "es": "Tres conclusiones posibles, sin preferencia comercial"
+  },
+  "A — Maintenir l’existant": {
+    "en": "A — Keep the current setup",
+    "pt-BR": "A — Manter o existente",
+    "es": "A — Mantener lo existente"
+  },
+  "Les processus sont suffisamment performants ou les gains ne justifient pas les investissements. Nous recommandons de ne pas engager de travaux.": {
+    "en": "Processes perform well enough or gains do not justify the investment. We recommend no further work.",
+    "pt-BR": "Os processos são suficientemente eficientes ou os ganhos não justificam o investimento. Recomendamos não realizar intervenções.",
+    "es": "Los procesos son suficientemente eficientes o los beneficios no justifican la inversión. Recomendamos no realizar trabajos."
+  },
+  "B — Différer les améliorations": {
+    "en": "B — Defer improvements",
+    "pt-BR": "B — Adiar as melhorias",
+    "es": "B — Aplazar las mejoras"
+  },
+  "Des opportunités existent, mais intervenir maintenant n’est pas pertinent. Le rapport précise les conditions qui pourraient justifier un réexamen ultérieur.": {
+    "en": "Opportunities exist, but acting now is not appropriate. The report sets out conditions that could justify a later review.",
+    "pt-BR": "Existem oportunidades, mas intervir agora não é pertinente. O relatório explicita as condições que podem justificar uma reavaliação futura.",
+    "es": "Existen oportunidades, pero intervenir ahora no es pertinente. El informe indica las condiciones que podrían justificar una revisión posterior."
+  },
+  "C — Engager une intervention ciblée": {
+    "en": "C — Undertake targeted work",
+    "pt-BR": "C — Realizar uma intervenção focada",
+    "es": "C — Emprender una intervención concreta"
+  },
+  "Les gains potentiels justifient une amélioration au regard des coûts et des risques. Vous décidez librement de la suite et du prestataire.": {
+    "en": "Potential gains justify improvement in light of costs and risks. You freely decide what happens next and who carries out the work.",
+    "pt-BR": "Os ganhos potenciais justificam uma melhoria diante dos custos e riscos. Você decide livremente os próximos passos e o prestador.",
+    "es": "Los beneficios potenciales justifican una mejora teniendo en cuenta costes y riesgos. Usted elige libremente cómo continuar y con qué proveedor."
+  },
+  "Phase 2 : une intervention ciblée facultative.": {
+    "en": "Phase 2: optional targeted work.",
+    "pt-BR": "Fase 2: uma intervenção focada opcional.",
+    "es": "Fase 2: una intervención concreta opcional."
+  },
+  "Si vous retenez CLN, un accord distinct définit le périmètre limité, les objectifs métier chiffrés, la situation initiale mesurée et les indicateurs de réussite. Coûts et délais sont estimés avec vous. Des échanges métier réguliers et la mesure des résultats accompagnent la réalisation ; la rapidité dépend du périmètre, des accès et des contraintes de votre SI.": {
+    "en": "If you choose CLN, a separate agreement defines the limited scope, quantified business objectives, measured baseline and success indicators. Costs and timelines are estimated with you. Regular business discussions and result measurement support delivery; speed depends on scope, access and IT constraints.",
+    "pt-BR": "Se escolher a CLN, um acordo separado define o escopo limitado, objetivos de negócio quantificados, situação inicial medida e indicadores de sucesso. Custos e prazos são estimados com você. Trocas regulares com o negócio e medição dos resultados acompanham a execução; a rapidez depende do escopo, dos acessos e das restrições do ambiente de TI.",
+    "es": "Si elige CLN, un acuerdo distinto define el alcance limitado, objetivos de negocio cuantificados, situación inicial medida e indicadores de éxito. Los costes y plazos se estiman conjuntamente. El diálogo regular con el negocio y la medición de resultados acompañan la ejecución; la rapidez depende del alcance, accesos y restricciones del SI."
+  },
+  "De l’audit à votre décision ; une réalisation seulement si vous la choisissez.": {
+    "en": "From audit to your decision; delivery only if you choose it.",
+    "pt-BR": "Da auditoria à sua decisão; execução somente se você escolher.",
+    "es": "De la auditoría a su decisión; ejecución solo si la elige."
+  },
+  "Remettre le rapport et recommander de maintenir, différer ou intervenir. Vous décidez ; les étapes de réalisation suivantes sont facultatives.": {
+    "en": "Deliver the report and recommend keeping, deferring or intervening. You decide; the following delivery steps are optional.",
+    "pt-BR": "Entregar o relatório e recomendar manter, adiar ou intervir. Você decide; as etapas seguintes de execução são opcionais.",
+    "es": "Entregar el informe y recomendar mantener, aplazar o intervenir. Usted decide; las siguientes etapas de ejecución son opcionales."
+  },
+  "La performance métier d’abord. Des moyens techniques adaptés.": {
+    "en": "Business performance first. Appropriate technical means.",
+    "pt-BR": "O desempenho do negócio primeiro. Meios técnicos adaptados.",
+    "es": "El rendimiento del negocio primero. Medios técnicos adaptados."
+  },
+  "Nous privilégions les pipelines, les interconnexions, l’enrichissement des données et les automatisations ciblées lorsque cela répond aux objectifs métier. L’IA peut accélérer l’analyse, le code, les tests et la documentation lorsqu’elle est adaptée. Les choix techniques et les réalisations restent revus, testés et validés.": {
+    "en": "We favour pipelines, interconnections, data enrichment and targeted automation when they serve business objectives. AI can accelerate analysis, coding, testing and documentation when appropriate. Technical choices and deliverables remain reviewed, tested and validated.",
+    "pt-BR": "Priorizamos pipelines, interconexões, enriquecimento de dados e automações focadas quando atendem aos objetivos de negócio. A IA pode acelerar a análise, o código, os testes e a documentação quando adequada. As escolhas técnicas e as entregas continuam revisadas, testadas e validadas.",
+    "es": "Priorizamos pipelines, interconexiones, enriquecimiento de datos y automatizaciones concretas cuando responden a los objetivos del negocio. La IA puede acelerar el análisis, código, pruebas y documentación cuando resulta adecuada. Las decisiones técnicas y las realizaciones siguen revisándose, probándose y validándose."
+  },
+  "Le budget de l’audit est convenu indépendamment des travaux ultérieurs. Si vous choisissez une intervention, le réemploi de vos outils, un périmètre réduit et une mise en service progressive concentrent l’investissement sur la valeur métier. Le budget, la durée et les gains attendus sont évalués avant réalisation.": {
+    "en": "The audit budget is agreed independently of subsequent work. If you choose an intervention, reusing your tools, a limited scope and gradual rollout focus investment on business value. Budget, duration and expected gains are assessed before delivery.",
+    "pt-BR": "O orçamento da auditoria é acordado independentemente das intervenções posteriores. Se escolher uma intervenção, reutilizar suas ferramentas, limitar o escopo e implantar progressivamente concentra o investimento no valor do negócio. Orçamento, duração e ganhos esperados são avaliados antes da execução.",
+    "es": "El presupuesto de la auditoría se acuerda con independencia de los trabajos posteriores. Si elige una intervención, reutilizar sus herramientas, limitar el alcance e implantar progresivamente concentra la inversión en el valor del negocio. Presupuesto, duración y beneficios esperados se evalúan antes de realizarla."
+  },
+  "Audit de performance autonome — CLN Performance": {
+    "en": "Standalone performance audit — CLN Performance",
+    "pt-BR": "Auditoria de desempenho independente — CLN Performance",
+    "es": "Auditoría de rendimiento independiente — CLN Performance"
+  },
+  "Un audit autonome pour mesurer vos processus et décider librement. Maintenir, différer ou engager une intervention ciblée facultative.": {
+    "en": "An independent audit to measure your processes and decide freely. Keep, defer or choose optional targeted work.",
+    "pt-BR": "Uma auditoria independente para medir seus processos e decidir livremente. Manter, adiar ou escolher uma intervenção focada opcional.",
+    "es": "Una auditoría independiente para medir sus procesos y decidir libremente. Mantener, aplazar o elegir una intervención concreta opcional."
+  },
+  "Un pipeline est un moyen, pas une fin : les délais, la qualité et la charge du processus sont évalués avant de décider. L’audit autonome peut recommander de conserver l’existant ; après une intervention choisie, les résultats sont comparés à la situation initiale.": {
+    "en": "A pipeline is a means, not an end: process lead times, quality and workload are assessed before deciding. The independent audit may recommend keeping the current setup; after a chosen intervention, results are compared with the baseline.",
+    "pt-BR": "Um pipeline é um meio, não um fim: prazos, qualidade e carga do processo são avaliados antes da decisão. A auditoria independente pode recomendar manter o existente; após uma intervenção escolhida, os resultados são comparados à situação inicial.",
+    "es": "Un pipeline es un medio, no un fin: se evalúan plazos, calidad y carga del proceso antes de decidir. La auditoría independiente puede recomendar mantener lo existente; tras una intervención elegida, se comparan los resultados con la situación inicial."
+  },
+  "Vous pouvez demander uniquement un audit de performance : choisissez cette option dans votre réflexion sur les applications. Ce questionnaire prépare un échange ; il ne calcule aucune note et ne vous engage à aucun travail.": {
+    "en": "You can request a performance audit only: select that option under your current thinking about applications. This questionnaire prepares a discussion; it calculates no score and commits you to no work.",
+    "pt-BR": "Você pode solicitar somente uma auditoria de desempenho: selecione essa opção na reflexão sobre os aplicativos. Este questionário prepara uma conversa; não calcula nenhuma nota e não implica compromisso com intervenções.",
+    "es": "Puede solicitar únicamente una auditoría de rendimiento: seleccione esa opción en su reflexión sobre las aplicaciones. Este cuestionario prepara una conversación; no calcula ninguna nota ni le compromete a realizar trabajos."
   }
 }

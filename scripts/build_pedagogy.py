@@ -149,6 +149,8 @@ from case_journey import apply as apply_case_journey
 apply_case_journey(root, catalog, messages)
 from approach_diagnostic import apply as apply_approach_diagnostic
 apply_approach_diagnostic(root, catalog)
+from audit_performance import apply as apply_audit_performance
+apply_audit_performance(root, catalog)
 (root/'i18n/static.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
 (root/'i18n/messages.json').write_text(json.dumps(messages,ensure_ascii=False,indent=2)+'\n')
-print('V12 pages generated; diagnostic-first approach translated in four languages.')
+print('Audit performance pages generated in four languages.')

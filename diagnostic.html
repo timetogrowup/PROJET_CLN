@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="styles.css?v=20261030-v11" />
 <script defer src="site.js?v=20261030-v11">
 </script>
-<script defer src="case-data.js?v=20261030-v11">
+<script defer src="case-data.js?v=20261101-audit">
 </script>
 <script defer src="diagnostic.js?v=20261030-v11">
 </script>
@@ -39,6 +39,7 @@
 <p>Vos applications et le savoir-faire de vos équipes constituent un capital. Quelques questions nous aideront à comprendre votre environnement et à identifier les améliorations à explorer ensemble. Une estimation suffit ; aucune expertise technique n’est nécessaire.</p>
 <p>Répondez pour le service ou le processus que vous souhaitez étudier, pas nécessairement pour toute votre entreprise. Toutes les questions fermées sont requises ; vous pouvez indiquer que vous ne savez pas encore.</p>
 <a class="text-link" href="contact.html">Vous préférez nous contacter directement ?</a>
+<p>Vous pouvez demander uniquement un audit de performance : choisissez cette option dans votre réflexion sur les applications. Ce questionnaire prépare un échange ; il ne calcule aucune note et ne vous engage à aucun travail.</p>
 </section>
 <section class="case-questionnaire">
 <form id="diagnostic-form">
@@ -135,6 +136,8 @@
 <fieldset>
 <legend>Où en êtes-vous dans votre réflexion sur les applications ?</legend>
 <div class="case-options">
+<label for="case-approach-audit">
+<input id="case-approach-audit" type="radio" name="approach" value="audit" required/>Un audit de performance autonome, sans engagement de travaux</label>
 <label for="case-approach-existing">
 <input id="case-approach-existing" type="radio" name="approach" value="existing" required/>Améliorer les outils existants</label>
 <label for="case-approach-replacement">

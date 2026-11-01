@@ -1,3 +1,5 @@
+> Évolution audit de performance — 1 novembre 2026 : audit autonome, rapport exploitable, trois conclusions et intervention ciblée facultative dans les quatre langues. [Besoin](docs/BESOIN_METIER_AUDIT_PERFORMANCE_V1.md), [spécifications](docs/SPECIFICATIONS_TECHNIQUES_AUDIT_PERFORMANCE_V1.md), [stratégie](docs/STRATEGIE_DEVELOPPEMENT_AUDIT_PERFORMANCE_V1.md), [recette](docs/RECETTE_AUDIT_PERFORMANCE_V1.md). Le générateur conserve ces évolutions via `scripts/audit_performance.py`. Contrôle dédié : `node tests/audit-performance.mjs` ; workflow **Verify standalone performance audit** (manuel ou branche de travail).
+
 > Actualisation V6 — 29 octobre 2026 : le positionnement commercial courant valorise le SI existant par les pipelines et l’enrichissement des données dans les applications destinataires. Voir [MINUTE](MINUTE.md) et la [recette V6](docs/RECETTE_ECOSYSTEME_PIPELINES_V6.md). Les descriptions antérieures ci-dessous restent historiques lorsqu’elles divergent.
 
 # Mise à jour V5 du 29 octobre 2026

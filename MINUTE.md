@@ -469,3 +469,9 @@ CLN Performance, SASU au capital de 5 000 €, SIRET 893 047 183 00023, siège c
 - Page publique : https://cln-performance.com/approche.html?lang=fr . Quatre langues, étapes, détails au clavier, CTA et deux ancres entrantes vérifiés. Six fichiers HTTP 200 avec empreintes identiques.
 - Diagnostic et conditions au premier niveau, approche peu invasive, développement assisté intensivement par IA, IA éventuelle dans les pipelines et coûts cadrés. Livrables et lecture progressive livrés selon le besoin.
 - Documents et recette mis à jour. Pas de changement du questionnaire/contact ou de l'API. Limites de vérification : Safari/WebKit et appareils physiques non exécutés.
+
+## 1 novembre 2026 — Audit de performance autonome V1
+- Prévu : évolution ciblée accueil/méthode/pipelines/questionnaire, quatre langues, audit indépendant et intervention facultative ; documents AUDIT_PERFORMANCE_V1 et diagnostic préalable.
+- Réalisé : contenus, option audit dans synthèse existante, générateur reproductible, aucune modification API/secrets/styles/médias. Contact uniquement cache du schéma.
+- Testé localement : catalogues, dix pages/liens, génération, régressions médias et parcours V11, choix audit quatre langues ; aperçu Chrome et quatre transferts réels vers message contact sans envoi.
+- CI/Publié/Vérifié en production : en attente ; résultats à compléter dans docs/RECETTE_AUDIT_PERFORMANCE_V1.md. PHP absent localement, tests serveur reportés en CI.

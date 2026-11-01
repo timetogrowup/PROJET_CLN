@@ -1198,5 +1198,11 @@
     "en": "Timeline to agree together",
     "pt-BR": "Prazo a definir em conjunto",
     "es": "Calendario por definir juntos"
+  },
+  "case.choice.approach.audit": {
+    "fr": "Un audit de performance autonome, sans engagement de travaux",
+    "en": "A standalone performance audit, with no commitment to further work",
+    "pt-BR": "Uma auditoria de desempenho independente, sem compromisso com intervenções",
+    "es": "Una auditoría de rendimiento independiente, sin compromiso de realizar trabajos"
   }
 }
