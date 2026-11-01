@@ -33,3 +33,6 @@ Accord distinct : périmètre limité, objectifs métier chiffrés, état initia
 
 ## État
 Voir RECETTE_AUDIT_PERFORMANCE_V1.md et MINUTE.md pour réalisé/testé/publié, distincts de ces critères cibles.
+
+## État de livraison — 1 novembre 2026
+Réalisé conformément au périmètre : quatre pages éditoriales et cache du schéma sur contact, générateur et quatre langues conservés. Choix audit intégré au schéma V11 compatible et à la synthèse existante ; aucun moteur de note ni modification serveur. Référence applicative 4350db82ccad3e9dfc48ef03f06288eb471ea081 ; correctifs CI uniquement 179bf8b et e94cc74 ; fusion main b8641eeb399fc188cb8913f4d27f7ce680db5d02. CI 41311689535 réussie (400 dispositions, PHP et 26 contrôles sécurité, mails simulés). Pages 41311994659 réussie ; seize fichiers publics identiques, quatre langues et quatre parcours audit/contact vérifiés en production. Limites : appareils physiques et SMTP réel non testés. Rapport faisant foi : [recette](RECETTE_AUDIT_PERFORMANCE_V1.md).

@@ -1,5 +1,5 @@
 # Recette — Audit de performance V1
-1 novembre 2026 — publication en attente.
+1 novembre 2026 — livré, testé et vérifié en production. Les entrées intermédiaires ci-dessous conservent leur contexte chronologique.
 
 ## Avant modification
 main 1e0a69db5dd4ac34dd5875955c1ed15fdc73814b. index.html, approche.html, pipelines.html, diagnostic.html et i18n/static.json publics : HTTP 200 et SHA-256 identiques au dépôt. Cadrage local commité avant développement : 5b5aa08.
@@ -18,4 +18,20 @@ Chrome, largeur 1363 px : méthode FR/EN/PT-BR/ES, phases et trois conclusions e
 PHP absent localement : tentatives php -l, sécurité, API et corps email non exécutées avec succès ici. Contrôles déportés au workflow GitHub, à consigner après résultat. Matrice responsive Chromium/WebKit également prévue dans ce workflow. Appareils physiques et réception SMTP réelle hors recette ; API inchangée. Ne pas confondre tests simulés et envoi réel.
 
 ## Publication et production
-À compléter après résultats CI, commit et déploiement Pages. Aucun succès de publication déclaré à ce stade.
+Déploiement applicatif Pages 41311994659 réussi sur main b8641eeb399fc188cb8913f4d27f7ce680db5d02. Contrôles publics détaillés dans la clôture ci-dessous.
+
+## Compléments de recette
+- Accueil et pipelines contrôlés dans Chrome dans les quatre langues : aucun débordement à 1363 px, posters localisés et aucun défaut média constaté. Animation PROTYS : pause et reprise effectives. Détails techniques de méthode : ouverture par Entrée réussie.
+- Git direct sans authentification d’écriture : publication du code via connecteur GitHub, sans secret local. PR : https://github.com/timetogrowup/PROJET_CLN/pull/1 ; commit applicatif 4350db82ccad3e9dfc48ef03f06288eb471ea081.
+- Deux premiers contrôles CI interrompus par dépendances du runner absentes (Pillow, puis ffprobe), corrigées dans le workflow ; aucune modification du site pour ces corrections. Révisions CI 179bf8b0f27b520a16fd8b4e3f13662425a5ed08 puis e94cc7466e70af2d6a2bf850cbff05bfaef848f7.
+- Exécution finale : https://github.com/timetogrowup/PROJET_CLN/actions/runs/41311689535 . Contrôles statiques et PHP/sécurité/API/corps d’emails simulés réussis ; matrice navigateur réussie : 400 dispositions (10 pages × 4 langues × 5 largeurs × Chromium/WebKit), changements de langue, questionnaire, texte libre et rendu sûr.
+
+## CI validée et intégration
+Exécution 41311689535 : succès complet. 26 contrôles de sécurité, tests HTTP et quatre corps d’emails capturés avec double de mailer (aucun SMTP). 400 dispositions réussies de 320 à 1280 px sur Chromium et WebKit ; aucune régression bloquante constatée. PR #1 fusionnée sur main : b8641eeb399fc188cb8913f4d27f7ce680db5d02.
+
+## Clôture — production vérifiée le 1 novembre 2026
+- Déploiement : https://github.com/timetogrowup/PROJET_CLN/actions/runs/41311994659 — succès. Site : https://cln-performance.com/ .
+- Seize fichiers publics HTTP 200, empreintes SHA-256 identiques au code livré : cinq pages HTML concernées, schéma et deux catalogues ; styles, scripts conservés et échantillon de trois médias également identiques.
+- Chrome public : accueil, méthode, pipelines et questionnaire dans les quatre langues ; phases et trois conclusions traduites, aucun débordement à 1363 px, aucun défaut média constaté. Quatre parcours audit → contact effectivement exécutés et vérifiés : intérêt audit localisé dans message, texte libre conservé, aucun envoi. Une exécution navigateur groupée a dépassé son délai ; contrôles repris en lots plus courts et tous confirmés.
+- Aucune anomalie résiduelle bloquante constatée. Appareils physiques et réception SMTP réelle non testés ; accessibilité vérifiée structurellement et au clavier sur les nouveaux contenus, sans certification exhaustive. Les tests PHP ont bien été exécutés en CI malgré l’absence de PHP local.
+- Prévu / Réalisé : périmètre ciblé livré. Testé : contrôles locaux et CI réussis. Publié : main via Pages. Vérifié en production : empreintes, quatre langues et quatre transferts audit sans email.
