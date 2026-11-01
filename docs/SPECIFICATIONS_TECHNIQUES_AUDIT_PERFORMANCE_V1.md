@@ -8,13 +8,13 @@ Architecture statique existante conservée. Module scripts/audit_performance.py 
 Ajouter audit dans les options approach de scripts/case_journey.py et case-data.js. Réutiliser sélection multiple par cases à cocher, nettoyage, validation et synthèse actuels, messages case.choice.approach.audit dans les quatre langues. Pas de nouvelle persistance ni d’appel réseau. Les anciens transferts V11 restent valides. Renouveler URL de cache case-data sur diagnostic/contact. contact.html peut évoluer pour cette seule référence, sans changement de formulaire, contact.js, PHP ou secrets.
 
 ## Accessibilité, responsive et navigation
-Un H1, H2/H3 hiérarchisés, labels radio natifs, pas de choix précoché, trois recommandations sans priorité visuelle. Réutiliser card-grid et CSS responsive. Préserver les ancres #diagnostic, #intervention, #pipeline, #remuneration et liens existants. Textes français lisibles sans JS ; traductions existantes côté navigateur, même propagation du paramètre lang.
+Un H1, H2/H3 hiérarchisés, labels natifs associés aux cases à cocher pour approach et aux boutons radio des autres questions à choix unique, pas de choix précoché, trois recommandations sans priorité visuelle. Réutiliser card-grid et CSS responsive. Préserver les ancres #diagnostic, #intervention, #pipeline, #remuneration et liens existants. Textes français lisibles sans JS ; traductions existantes côté navigateur, même propagation du paramètre lang.
 
 ## Données et confidentialité
 Aucune note calculée, aucune donnée métier client stockée en plus. Réponses du prospect uniquement dans synthèse existante, contact éditable et consentement/envoi actuels. Aucun email réel pour la recette. API OVH inchangée.
 
 ## Vérification
-Contrôles existants : catalogues complets, dix pages et ancres, génération idempotente, syntaxe JS/Python/PHP, tests V7–V11 et API avec simulations. Adapter assertions V12 devenues obsolètes. Ajouter couverture fonctionnelle du choix audit, nettoyage, résumé dans les quatre langues et absence de modification des données libres. Recette navigateur avec aperçu géré lorsque disponible : quatre langues, mobile/ordinateur, liens, radio audit, contact prérempli, médias, console ; consigner limites réelles.
+Contrôles existants : catalogues complets, dix pages et ancres, génération idempotente, syntaxe JS/Python/PHP, tests V7–V11 et API avec simulations. Adapter assertions V12 devenues obsolètes. Ajouter couverture fonctionnelle du choix audit, nettoyage, résumé dans les quatre langues et absence de modification des données libres. Recette navigateur avec aperçu géré lorsque disponible : quatre langues, mobile/ordinateur, liens, cases à cocher de réflexion dont audit, contact prérempli, médias, console ; consigner limites réelles.
 
 ## Publication et retour arrière
 Commit cohérent sur main selon publication GitHub Pages existante. Pas de déploiement Hostinger/OVH. Vérifier exécution Pages, HTTP et empreintes des fichiers livrés sur domaine public. En cas de défaut, corriger ou revert du seul commit applicatif, sans reset forcé ni suppression des modifications tierces. Documenter SHA, exécution et résultats dans la recette et MINUTE.
@@ -24,3 +24,6 @@ Réalisé conformément au périmètre : quatre pages éditoriales et cache du s
 
 ## Ajustement multisélection — 1 novembre 2026
 La question approach accepte plusieurs choix, sans plafond. Le choix inconnu reste exclusif. Les réponses sont transmises sous forme de liste dans la synthèse du contact ; les transferts V11 antérieurs avec une chaîne unique restent acceptés et normalisés. Cache du schéma renouvelé sur questionnaire/contact. Tests de validation, dédoublonnage, choix inconnu, compatibilité et transfert de trois choix dans les quatre langues réussis localement.
+
+### Cache du parcours effectivement livré
+Le schéma case-data.js est référencé avec la version 20261101-audit-multi sur questionnaire/contact. diagnostic.js est référencé avec la version 20261101-multi et redirige vers contact.html?summary=1&lang=<langue>&v=20261101-multi. Ce renouvellement évite qu’une ancienne page Contact chargée depuis le cache rejette les listes de réponses. Aucun changement de l’API ni des données transmises hors synthèse existante.

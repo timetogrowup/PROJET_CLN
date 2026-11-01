@@ -27,7 +27,7 @@ Accord distinct : périmètre limité, objectifs métier chiffrés, état initia
 2. Rapport, notation transparente, sources et incertitudes décrits sans gains inventés.
 3. Trois conclusions et quatre choix client explicites.
 4. Deux phases clairement nommées, suite facultative et délais conditionnés.
-5. Choix audit transmis textuellement dans la synthèse contact dans chaque langue.
+5. Choix multiples de réflexion sur les applications autorisés sans plafond, sauf inconnu exclusif ; toutes les sélections transmises textuellement dans la synthèse contact dans chaque langue.
 6. Liens, traductions, questionnaire, formulaire et médias préservés ; contrôles exécutés consignés sans assimilation à des tests non effectués.
 7. Publication GitHub Pages suivie et fichiers publics comparés au commit livré.
 
@@ -36,3 +36,6 @@ Voir RECETTE_AUDIT_PERFORMANCE_V1.md et MINUTE.md pour réalisé/testé/publié,
 
 ## État de livraison — 1 novembre 2026
 Réalisé conformément au périmètre : quatre pages éditoriales et cache du schéma sur contact, générateur et quatre langues conservés. Choix audit intégré au schéma V11 compatible et à la synthèse existante ; aucun moteur de note ni modification serveur. Référence applicative 4350db82ccad3e9dfc48ef03f06288eb471ea081 ; correctifs CI uniquement 179bf8b et e94cc74 ; fusion main b8641eeb399fc188cb8913f4d27f7ce680db5d02. CI 41311689535 réussie (400 dispositions, PHP et 26 contrôles sécurité, mails simulés). Pages 41311994659 réussie ; seize fichiers publics identiques, quatre langues et quatre parcours audit/contact vérifiés en production. Limites : appareils physiques et SMTP réel non testés. Rapport faisant foi : [recette](RECETTE_AUDIT_PERFORMANCE_V1.md).
+
+## Dernier ajustement livré — Multisélection, 1 novembre 2026
+La question « Où en êtes-vous dans votre réflexion sur les applications ? » utilise des cases à cocher et accepte plusieurs réponses sans plafond. « Nous ne savons pas encore » reste exclusif. Toutes les réponses sélectionnées sont reprises dans le message de contact ; les anciens transferts V11 à choix unique restent compatibles. Les quatre langues sont conservées.
