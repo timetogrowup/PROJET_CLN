@@ -47,7 +47,7 @@ async function questionnaire(fail=false){
  return {w,st,form,inputs,els,dest};
 }
 const q=await questionnaire();const third=q.inputs.find(e=>e.name==='goals'&&e.value==='quality');third.checked=true;q.form.events.change({target:third});q.form.events.submit({preventDefault(){}});assert.equal(q.dest.length,0,'three goals must block transfer');
-const unknown=q.inputs.find(e=>e.name==='goals'&&e.value==='inconnu');unknown.checked=true;q.form.events.change({target:unknown});assert.equal(q.inputs.filter(e=>e.name==='goals'&&e.checked).length,1);q.form.events.submit({preventDefault(){}});assert.equal(q.dest[0],'contact.html?summary=1&lang=fr');assert(!q.dest[0].includes('Ressaisies'));assert.equal(JSON.parse(q.st.getItem('clnCaseTransfer')).version,11);
+const unknown=q.inputs.find(e=>e.name==='goals'&&e.value==='inconnu');unknown.checked=true;q.form.events.change({target:unknown});assert.equal(q.inputs.filter(e=>e.name==='goals'&&e.checked).length,1);q.form.events.submit({preventDefault(){}});assert.equal(q.dest[0],'contact.html?summary=1&lang=fr&v=20261101-multi');assert(!q.dest[0].includes('Ressaisies'));assert.equal(JSON.parse(q.st.getItem('clnCaseTransfer')).version,11);
 const qb=await questionnaire(true);qb.form.events.submit({preventDefault(){}});assert.equal(qb.dest.length,0);assert(!qb.els['case-transfer-fallback'].hidden);assert(qb.els['case-copy'].value.includes('Applications concernées'));
 if(process.argv[2])writeFileSync(process.argv[2],JSON.stringify(mailFixtures));
 console.log('PASS V11: four-language handoff, automatic editable message, reload/error/new transfer, untouched/edited language changes, legacy/expiry, blocked storage, exclusive unknowns/two-goal limit and native form payload. No network or email.');

@@ -49,5 +49,6 @@ def apply(root,catalog):
  # Bust only the changed shared schema on both consumers. No contact behavior changes.
  for name in ['diagnostic','contact']:
   p=root/(name+'.html');s=p.read_text();s=re.sub(r'case-data.js\?v=[^" ]+','case-data.js?v=20261101-audit-multi',s);p.write_text(s)
+ p=root/'diagnostic.html';p.write_text(re.sub(r'diagnostic.js\?v=[^" ]+','diagnostic.js?v=20261101-multi',p.read_text()))
  for name in ['index','approche','pipelines','diagnostic']:
   p=root/(name+'.html');p.write_text(re.sub(r'>\s*<','>\n<',p.read_text()))

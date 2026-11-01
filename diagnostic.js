@@ -24,7 +24,7 @@ CLN.ready.then(()=>{
   const item={version:11,id,generatedAt:new Date().toISOString(),answers:data.clean(raw)};
   try{sessionStorage.setItem('clnCaseTransfer',JSON.stringify(item));}
   catch(_){error.textContent=CLN.t('case.storage');error.hidden=false;copy.value=data.summary(item.answers);fallback.hidden=false;copy.focus();return;}
-  location.assign('contact.html?summary=1&lang='+encodeURIComponent(CLN.lang));
+  location.assign('contact.html?summary=1&lang='+encodeURIComponent(CLN.lang)+'&v=20261101-multi');
  });
  window.addEventListener('cln:language',()=>{validate();if(!error.hidden)error.textContent=CLN.t('case.storage');});
  validate();button.disabled=false;
