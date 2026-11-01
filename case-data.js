@@ -1,7 +1,7 @@
 /* V11: shared, pure case schema. No network or browser persistence here. */
 (() => {
  'use strict';
- const choices={applications:['a1_3','a4_10','a11_20','a20_plus','inconnu'],people:['p1_10','p11_50','p51_200','p200_plus','inconnu'],connections:['integrated','partial','files','separate','inconnu'],difficulties:['reentry','repetitive','quality','consolidation','handoffs','visibility','other','inconnu'],goals:['productivity','modernise','connect','quality','steer','teams','inconnu'],approach:['existing','replacement','ongoing','compare','inconnu'],horizon:['under3','m3_6','m6_12','over12','inconnu']};
+ const choices={applications:['a1_3','a4_10','a11_20','a20_plus','inconnu'],people:['p1_10','p11_50','p51_200','p200_plus','inconnu'],connections:['integrated','partial','files','separate','inconnu'],difficulties:['reentry','repetitive','quality','consolidation','handoffs','visibility','other','inconnu'],goals:['productivity','modernise','connect','quality','steer','teams','inconnu'],approach:['audit','existing','replacement','ongoing','compare','inconnu'],horizon:['under3','m3_6','m6_12','over12','inconnu']};
  const multi=['difficulties','goals'],ttl=30*60000;
  function clean(raw={}){
   if(!raw||typeof raw!=='object'||Array.isArray(raw))raw={};
